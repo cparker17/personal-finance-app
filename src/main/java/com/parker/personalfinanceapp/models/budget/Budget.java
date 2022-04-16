@@ -1,4 +1,4 @@
-package com.parker.personalfinanceapp.models;
+package com.parker.personalfinanceapp.models.budget;
 
 import lombok.*;
 

@@ -1,5 +1,6 @@
-package com.parker.personalfinanceapp.models;
+package com.parker.personalfinanceapp.models.user;
 
+import com.parker.personalfinanceapp.models.budget.Budget;
 import com.sun.istack.NotNull;
 import lombok.*;
 
@@ -7,8 +8,6 @@ import javax.persistence.*;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
 import java.time.LocalDate;
-import java.util.ArrayList;
-import java.util.List;
 
 @Entity
 @Getter

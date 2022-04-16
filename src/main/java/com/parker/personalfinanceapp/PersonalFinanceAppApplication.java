@@ -1,10 +1,10 @@
 package com.parker.personalfinanceapp;
 
-import com.parker.personalfinanceapp.models.Address;
-import com.parker.personalfinanceapp.models.Role;
-import com.parker.personalfinanceapp.models.User;
-import com.parker.personalfinanceapp.repositories.RoleRepo;
-import com.parker.personalfinanceapp.repositories.UserRepo;
+import com.parker.personalfinanceapp.models.user.Address;
+import com.parker.personalfinanceapp.models.user.Role;
+import com.parker.personalfinanceapp.models.user.User;
+import com.parker.personalfinanceapp.repositories.user.RoleRepo;
+import com.parker.personalfinanceapp.repositories.user.UserRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -12,14 +12,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 import org.springframework.security.crypto.password.PasswordEncoder;
 
-import java.io.File;
-import java.io.FileInputStream;
-import java.time.LocalDate;
-import java.util.ArrayList;
-import java.util.List;
-
-import static com.parker.personalfinanceapp.models.Role.Roles.ROLE_ADMIN;
-import static com.parker.personalfinanceapp.models.Role.Roles.ROLE_USER;
+import static com.parker.personalfinanceapp.models.user.Role.Roles.ROLE_ADMIN;
+import static com.parker.personalfinanceapp.models.user.Role.Roles.ROLE_USER;
 
 @SpringBootApplication
 public class PersonalFinanceAppApplication {

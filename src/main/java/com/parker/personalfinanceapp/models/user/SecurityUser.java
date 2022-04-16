@@ -1,4 +1,4 @@
-package com.parker.personalfinanceapp.models;
+package com.parker.personalfinanceapp.models.user;
 
 import lombok.*;
 import org.springframework.security.core.GrantedAuthority;
