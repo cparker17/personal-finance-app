@@ -1,5 +1,6 @@
 package com.parker.personalfinanceapp.models.user;
 
+import com.parker.personalfinanceapp.models.Goal;
 import com.parker.personalfinanceapp.models.budget.Budget;
 import com.sun.istack.NotNull;
 import lombok.*;
@@ -52,6 +53,9 @@ public class User {
 
     @OneToOne
     private Budget budget;
+
+    @OneToOne
+    private Goal goal;
 
     @ManyToOne(cascade = CascadeType.MERGE)
     private Role role;

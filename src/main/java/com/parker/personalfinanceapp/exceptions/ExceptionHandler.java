@@ -9,4 +9,9 @@ public class ExceptionHandler extends Exception {
         model.addAttribute("message", e.getMessage());
         return "error-page";
     }
+
+    public String handleAccountException(NoSuchAccountException e, Model model) {
+        model.addAttribute("message", e.getMessage());
+        return "error-page";
+    }
 }
