@@ -1,6 +1,11 @@
 package com.parker.personalfinanceapp.models.user;
 
+import com.parker.personalfinanceapp.exceptions.NoSuchAccountException;
 import com.parker.personalfinanceapp.models.Goal;
+import com.parker.personalfinanceapp.models.accounts.Account;
+import com.parker.personalfinanceapp.models.accounts.BankAccount;
+import com.parker.personalfinanceapp.models.accounts.LoanAccount;
+import com.parker.personalfinanceapp.models.accounts.RetirementAccount;
 import com.parker.personalfinanceapp.models.budget.Budget;
 import com.sun.istack.NotNull;
 import lombok.*;
@@ -9,6 +14,8 @@ import javax.persistence.*;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
 import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Getter
@@ -57,6 +64,15 @@ public class User {
     @OneToOne
     private Goal goal;
 
+    @OneToMany
+    private List<BankAccount> bankAccounts;
+
+    @OneToMany
+    List<LoanAccount> loanAccounts;
+
+    @OneToMany
+    List<RetirementAccount> retirementAccounts;
+
     @ManyToOne(cascade = CascadeType.MERGE)
     private Role role;
 
@@ -71,4 +87,29 @@ public class User {
 
     @Column(nullable = false)
     private boolean isEnabled = true;
+
+    public void addAccount(Account account, String accountType) throws NoSuchAccountException {
+        switch(accountType) {
+            case "BankAccount":
+                if (bankAccounts == null) {
+                    bankAccounts = new ArrayList<>();
+                } else {
+                    bankAccounts.add((BankAccount) account);
+                }
+            case "LoanAccount":
+                if (loanAccounts == null) {
+                    loanAccounts = new ArrayList<>();
+                } else {
+                    loanAccounts.add((LoanAccount) account);
+                }
+            case "RetirementAccount":
+                if (retirementAccounts == null) {
+                    retirementAccounts = new ArrayList<>();
+                } else {
+                    retirementAccounts.add((RetirementAccount) account);
+                }
+            default:
+                throw new NoSuchAccountException("Account does not exist.");
+        }
+    }
 }

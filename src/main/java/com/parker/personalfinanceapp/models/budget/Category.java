@@ -23,5 +23,14 @@ public class Category {
     private BigDecimal monthlyBudgetAmt;
 
     @OneToMany
-    private List<Transaction> transactions;
+    private List<Deposit> deposits;
+
+    @OneToMany
+    private List<Expense> expenses;
+
+    @OneToMany
+    private List<LoanPayment> loanPayments;
+
+    @OneToMany
+    private List<Withdrawal> withdrawals;
 }

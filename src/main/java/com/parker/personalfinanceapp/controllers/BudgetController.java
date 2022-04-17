@@ -1,5 +1,7 @@
 package com.parker.personalfinanceapp.controllers;
 
+import com.parker.personalfinanceapp.exceptions.NoSuchBudgetException;
+import com.parker.personalfinanceapp.exceptions.NoSuchUserException;
 import com.parker.personalfinanceapp.models.budget.Budget;
 import com.parker.personalfinanceapp.models.user.User;
 import com.parker.personalfinanceapp.models.user.UserFactory;
@@ -24,35 +26,37 @@ public class BudgetController {
     }
 
     @RequestMapping("/new")
-    public String createBudget(Model model, Authentication auth, @RequestParam Budget budget) {
+    public String createBudget(Model model, Authentication auth, @RequestParam Budget budget)
+            throws NoSuchUserException {
         User user = UserFactory.createUser(auth);
         model.addAttribute("budget", budgetService.createBudget(user.getId(), budget));
         return "budget-view";
     }
 
     @RequestMapping("/view")
-    public String viewBudget(Model model, Authentication auth) {
+    public String viewBudget(Model model, Authentication auth) throws NoSuchUserException {
         User user = UserFactory.createUser(auth);
         model.addAttribute("budget", budgetService.getBudget(user.getId()));
         return "budget-view";
     }
 
     @RequestMapping("/edit")
-    public String viewEditBudgetForm(Model model, Authentication auth) {
+    public String viewEditBudgetForm(Model model, Authentication auth) throws NoSuchUserException {
         User user = UserFactory.createUser(auth);
         model.addAttribute("budget", budgetService.getBudget(user.getId()));
         return "budget-edit";
     }
 
     @RequestMapping("/update")
-    public String updateBudget(Model model, Authentication auth, @RequestParam Budget budget) {
+    public String updateBudget(Model model, Authentication auth, @RequestParam Budget budget)
+            throws NoSuchUserException, NoSuchBudgetException {
         User user = UserFactory.createUser(auth);
         model.addAttribute("budget", budgetService.updateBudget(user.getId(), budget));
         return "budget-view";
     }
 
     @RequestMapping("/delete")
-    public String deleteBudget(Authentication auth) {
+    public String deleteBudget(Authentication auth) throws NoSuchBudgetException, NoSuchUserException {
         User user = UserFactory.createUser(auth);
         budgetService.deleteBudget(user.getId());
         return "redirect:/";

@@ -1,6 +1,8 @@
 package com.parker.personalfinanceapp.controllers;
 
+import com.parker.personalfinanceapp.exceptions.NoSuchBudgetException;
 import com.parker.personalfinanceapp.exceptions.NoSuchReportException;
+import com.parker.personalfinanceapp.exceptions.NoSuchUserException;
 import com.parker.personalfinanceapp.models.user.User;
 import com.parker.personalfinanceapp.models.user.UserFactory;
 import com.parker.personalfinanceapp.services.ReportService;
@@ -21,7 +23,7 @@ public class ReportsController {
 
     @GetMapping("/{reportType")
     private String viewReport(Model model, Authentication auth, @PathVariable(name="reportType") String reportType)
-            throws NoSuchReportException {
+            throws NoSuchReportException, NoSuchUserException, NoSuchBudgetException {
         User user = UserFactory.createUser(auth);
         model.addAttribute("report", reportService.getReport(user.getId(), reportType));
         switch(reportType) {

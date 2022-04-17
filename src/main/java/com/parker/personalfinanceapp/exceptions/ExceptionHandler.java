@@ -14,4 +14,14 @@ public class ExceptionHandler extends Exception {
         model.addAttribute("message", e.getMessage());
         return "error-page";
     }
+
+    public String handleUserException(NoSuchUserException e, Model model) {
+        model.addAttribute("message", e.getMessage());
+        return "error-page";
+    }
+
+    public String handleBudgetException(NoSuchBudgetException e, Model model) {
+        model.addAttribute("message", e.getMessage());
+        return "error-page";
+    }
 }

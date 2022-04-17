@@ -2,6 +2,7 @@ package com.parker.personalfinanceapp.controllers;
 
 import com.parker.personalfinanceapp.exceptions.NoSuchAccountException;
 import com.parker.personalfinanceapp.exceptions.NoSuchReportException;
+import com.parker.personalfinanceapp.exceptions.NoSuchUserException;
 import com.parker.personalfinanceapp.models.accounts.Account;
 import com.parker.personalfinanceapp.models.user.User;
 import com.parker.personalfinanceapp.models.user.UserFactory;
@@ -35,9 +36,11 @@ public class AccountController {
 
     @RequestMapping("/new/{accountType}")
     public String createAccount(Model model, Authentication auth,
-                                @PathVariable(name="accountType") String accountType) throws NoSuchAccountException {
+                                @PathVariable(name="accountType") String accountType,
+                                @RequestParam Account account) throws NoSuchAccountException, NoSuchUserException {
         User user = UserFactory.createUser(auth);
-        model.addAttribute("account", accountService.createAccount(user.getId(), accountType));
+        model.addAttribute("account",
+                accountService.createAccount(user.getId(), accountType, account));
         return getAccountView(accountType);
     }
 
@@ -51,12 +54,10 @@ public class AccountController {
     }
 
     @RequestMapping("/edit/{accountId}/{accountType}")
-    public String viewEditAccountPage(Model model, Authentication auth,
-                                      @PathVariable(name="accountId") Long accountId,
+    public String viewEditAccountPage(Model model, @PathVariable(name="accountId") Long accountId,
                                       @PathVariable(name="accountType") String accountType)
             throws NoSuchAccountException {
-        User user = UserFactory.createUser(auth);
-        model.addAttribute("account", accountService.getAccount(user.getId(), accountId));
+        model.addAttribute("account", accountService.getAccount(accountId, accountType));
         switch (accountType) {
             case "BankAccount": return "bank-account-edit";
             case "LoanAccount": return "loan-account-edit";
@@ -73,9 +74,11 @@ public class AccountController {
         return getAccountView(accountType);
     }
 
-    @RequestMapping("/delete")
-    public String deleteAccount(@RequestParam Account account) {
-        accountService.deleteAccount(account);
+    @RequestMapping("/delete/{accountType}")
+    public String deleteAccount(@RequestParam Account account,
+                                @PathVariable(name="accountType") String accountType)
+            throws NoSuchAccountException {
+        accountService.deleteAccount(account, accountType);
         return "redirect:/";
     }
 }
