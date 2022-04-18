@@ -11,7 +11,9 @@ import com.parker.personalfinanceapp.models.reports.ExpenseSummary;
 import com.parker.personalfinanceapp.models.reports.LoansSummary;
 import com.parker.personalfinanceapp.models.user.User;
 import com.parker.personalfinanceapp.models.user.UserFactory;
+import com.parker.personalfinanceapp.repositories.user.UserRepo;
 import com.parker.personalfinanceapp.services.budget.BudgetFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -19,6 +21,9 @@ import java.util.List;
 
 @Service
 public class ReportService {
+    @Autowired
+    UserRepo userRepo;
+
     public Report getReport(Long userId, String reportType) throws NoSuchReportException, NoSuchUserException, NoSuchBudgetException {
         switch (reportType) {
             case "BudgetActual": return getBudgetActualReport(userId);
@@ -29,8 +34,14 @@ public class ReportService {
         }
     }
 
-    private BudgetActualReport getBudgetActualReport(Long userId) {
-        return new BudgetActualReport();
+    private BudgetActualReport getBudgetActualReport(Long userId) throws NoSuchUserException {
+        Budget budget = UserFactory.getUser(userId).getBudget();
+        List<Expense> expenses = new ArrayList<>();
+        budget.getCategories().forEach(category -> expenses.addAll(category.getExpenses()));
+        return BudgetActualReport.builder()
+                .budget(budget)
+                .expenses(expenses)
+                .build();
     }
 
     private AccountsSummary getAccountsSummary(Long userId) throws NoSuchUserException, NoSuchBudgetException {
