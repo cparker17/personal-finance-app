@@ -1,5 +1,6 @@
 package com.parker.personalfinanceapp.controllers;
 
+import com.parker.personalfinanceapp.exceptions.NoSuchUserException;
 import com.parker.personalfinanceapp.models.user.User;
 import com.parker.personalfinanceapp.models.user.UserFactory;
 import com.parker.personalfinanceapp.services.user.UserService;
@@ -17,21 +18,22 @@ public class UserController {
     UserService userService;
 
     @RequestMapping("/view")
-    public String viewUserInfo(Model model, Authentication auth) {
+    public String viewUserInfo(Model model, Authentication auth) throws NoSuchUserException {
         User user = UserFactory.createUser(auth);
         model.addAttribute("user", userService.getUserInfo(user.getId()));
         return "user-view";
     }
 
     @RequestMapping("/edit")
-    public String viewEditUserInfoPage(Model model, Authentication auth) {
+    public String viewEditUserInfoPage(Model model, Authentication auth) throws NoSuchUserException {
         User user = UserFactory.createUser(auth);
         model.addAttribute("user", userService.getUserInfo(user.getId()));
         return "user-edit";
     }
 
     @RequestMapping("/update")
-    public String updateUserInfo(Model model, Authentication auth, @RequestParam User newUser) {
+    public String updateUserInfo(Model model, Authentication auth, @RequestParam User newUser)
+            throws NoSuchUserException {
         User user = UserFactory.createUser(auth);
         model.addAttribute("user", userService.updateUserInfo(user.getId(), newUser));
         return "user-view";

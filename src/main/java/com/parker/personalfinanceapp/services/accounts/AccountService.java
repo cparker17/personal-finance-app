@@ -7,7 +7,6 @@ import com.parker.personalfinanceapp.models.accounts.BankAccount;
 import com.parker.personalfinanceapp.models.accounts.LoanAccount;
 import com.parker.personalfinanceapp.models.accounts.RetirementAccount;
 import com.parker.personalfinanceapp.models.user.User;
-import com.parker.personalfinanceapp.repositories.RetirementPlanRepo;
 import com.parker.personalfinanceapp.repositories.accounts.BankAccountRepo;
 import com.parker.personalfinanceapp.repositories.accounts.LoanAccountRepo;
 import com.parker.personalfinanceapp.repositories.accounts.RetirementAccountRepo;

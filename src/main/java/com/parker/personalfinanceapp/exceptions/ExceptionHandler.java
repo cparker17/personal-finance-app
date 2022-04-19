@@ -24,4 +24,14 @@ public class ExceptionHandler extends Exception {
         model.addAttribute("message", e.getMessage());
         return "error-page";
     }
+
+    public String handleRetirementPlanException(NoSuchRetirementPlanException e, Model model) {
+        model.addAttribute("message", e.getMessage());
+        return "error-page";
+    }
+
+    public String handleGoalException(NoSuchGoalException e, Model model) {
+        model.addAttribute("message", e.getMessage());
+        return "error-page";
+    }
 }

@@ -1,19 +1,66 @@
 package com.parker.personalfinanceapp.services;
 
+import com.parker.personalfinanceapp.exceptions.NoSuchRetirementPlanException;
+import com.parker.personalfinanceapp.exceptions.NoSuchUserException;
 import com.parker.personalfinanceapp.models.RetirementPlan;
+import com.parker.personalfinanceapp.models.user.User;
+import com.parker.personalfinanceapp.models.user.UserFactory;
+import com.parker.personalfinanceapp.repositories.RetirementPlanRepo;
+import com.parker.personalfinanceapp.repositories.user.UserRepo;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import java.util.Optional;
 
 @Service
 public class RetirementPlanService {
-    public RetirementPlan createRetirementPlan(Long userId, RetirementPlan retirementPlan) {
+    @Autowired
+    UserRepo userRepo;
+
+    @Autowired
+    RetirementPlanRepo retirementPlanRepo;
+
+    public RetirementPlan createRetirementPlan(Long userId, RetirementPlan retirementPlan) throws NoSuchUserException {
+        User user = UserFactory.getUser(userId);
+        user.setRetirementPlan(retirementPlan);
+        retirementPlan.setIsOnTrack(isRetirementOnTrack(retirementPlan));
+        userRepo.save(user);
+        return retirementPlanRepo.save(retirementPlan);
     }
 
-    public RetirementPlan getRetirementPlan(Long userID) {
+    private boolean isRetirementOnTrack(RetirementPlan retirementPlan) {
+        //algorithm to determine if retirement is on track or not
+        return true;
     }
 
-    public RetirementPlan updateRetirementPlan(Long userId, RetirementPlan retirementPlan) {
+    public RetirementPlan getRetirementPlan(Long userID) throws NoSuchUserException {
+        return UserFactory.getUser(userID).getRetirementPlan();
     }
 
-    public void deleteRetirementPlan(Long id) {
+    public RetirementPlan updateRetirementPlan(Long userId, RetirementPlan retirementPlan)
+            throws NoSuchRetirementPlanException, NoSuchUserException {
+        User user = UserFactory.getUser(userId);
+        Optional<RetirementPlan> retirementPlanOptional = retirementPlanRepo.findById(user.getRetirementPlan().getId());
+        if (retirementPlanOptional.isPresent()) {
+            retirementPlanRepo.delete(retirementPlanOptional.get());
+        } else {
+            throw new NoSuchRetirementPlanException("Retirement plan does not exist.");
+        }
+        user.setRetirementPlan(retirementPlan);
+        retirementPlan.setIsOnTrack(isRetirementOnTrack(retirementPlan));
+        userRepo.save(user);
+        return retirementPlanRepo.save(retirementPlan);
+    }
+
+    public void deleteRetirementPlan(Long userId) throws NoSuchRetirementPlanException, NoSuchUserException {
+        User user = UserFactory.getUser(userId);
+        Optional<RetirementPlan> retirementPlanOptional = retirementPlanRepo.findById(user.getRetirementPlan().getId());
+        if (retirementPlanOptional.isPresent()) {
+            retirementPlanRepo.delete(retirementPlanOptional.get());
+        } else {
+            throw new NoSuchRetirementPlanException("Retirement plan does not exist.");
+        }
+        user.setRetirementPlan(null);
+        userRepo.save(user);
     }
 }

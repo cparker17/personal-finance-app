@@ -2,6 +2,7 @@ package com.parker.personalfinanceapp.models.user;
 
 import com.parker.personalfinanceapp.exceptions.NoSuchAccountException;
 import com.parker.personalfinanceapp.models.Goal;
+import com.parker.personalfinanceapp.models.RetirementPlan;
 import com.parker.personalfinanceapp.models.accounts.Account;
 import com.parker.personalfinanceapp.models.accounts.BankAccount;
 import com.parker.personalfinanceapp.models.accounts.LoanAccount;
@@ -72,6 +73,9 @@ public class User {
 
     @OneToMany
     List<RetirementAccount> retirementAccounts;
+
+    @OneToOne
+    RetirementPlan retirementPlan;
 
     @ManyToOne(cascade = CascadeType.MERGE)
     private Role role;

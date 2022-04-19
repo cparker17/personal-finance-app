@@ -1,5 +1,7 @@
 package com.parker.personalfinanceapp.controllers;
 
+import com.parker.personalfinanceapp.exceptions.NoSuchGoalException;
+import com.parker.personalfinanceapp.exceptions.NoSuchUserException;
 import com.parker.personalfinanceapp.models.Goal;
 import com.parker.personalfinanceapp.models.user.User;
 import com.parker.personalfinanceapp.models.user.UserFactory;
@@ -24,28 +26,29 @@ public class GoalController {
     }
 
     @RequestMapping("/new")
-    public String createGoal(Model model, Authentication auth, @RequestParam Goal goal) {
+    public String createGoal(Model model, Authentication auth, @RequestParam Goal goal) throws NoSuchUserException {
         User user = UserFactory.createUser(auth);
         model.addAttribute("goal", goalService.createGoal(user.getId(), goal));
         return "goal-view";
     }
 
     @RequestMapping("/edit")
-    public String viewEditGoalPage(Model model, Authentication auth) {
+    public String viewEditGoalPage(Model model, Authentication auth) throws NoSuchUserException {
         User user = UserFactory.createUser(auth);
         model.addAttribute("goal", goalService.getGoal(user.getId()));
         return "goal-edit";
     }
 
     @RequestMapping("/update")
-    public String updateGoal(Model model, Authentication auth, @RequestParam Goal goal) {
+    public String updateGoal(Model model, Authentication auth, @RequestParam Goal goal)
+            throws NoSuchUserException, NoSuchGoalException {
         User user = UserFactory.createUser(auth);
         model.addAttribute("goal", goalService.updateGoal(user.getId(), goal));
         return "goal-view";
     }
 
     @RequestMapping("/delete")
-    public String deleteGoal(Authentication auth) {
+    public String deleteGoal(Authentication auth) throws NoSuchUserException, NoSuchGoalException {
         User user = UserFactory.createUser(auth);
         goalService.deleteGoal(user.getId());
         return "redirect:/";

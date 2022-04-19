@@ -1,6 +1,5 @@
 package com.parker.personalfinanceapp.models.reports;
 
-import com.parker.personalfinanceapp.models.Report;
 import com.parker.personalfinanceapp.models.accounts.BankAccount;
 import com.parker.personalfinanceapp.models.accounts.LoanAccount;
 import com.parker.personalfinanceapp.models.accounts.RetirementAccount;

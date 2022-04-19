@@ -1,6 +1,5 @@
 package com.parker.personalfinanceapp.models.reports;
 
-import com.parker.personalfinanceapp.models.Report;
 import com.parker.personalfinanceapp.models.budget.Budget;
 import com.parker.personalfinanceapp.models.budget.Expense;
 import lombok.*;

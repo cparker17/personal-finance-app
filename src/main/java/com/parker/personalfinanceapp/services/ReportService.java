@@ -6,7 +6,7 @@ import com.parker.personalfinanceapp.exceptions.NoSuchUserException;
 import com.parker.personalfinanceapp.models.budget.*;
 import com.parker.personalfinanceapp.models.reports.AccountsSummary;
 import com.parker.personalfinanceapp.models.reports.BudgetActualReport;
-import com.parker.personalfinanceapp.models.Report;
+import com.parker.personalfinanceapp.models.reports.Report;
 import com.parker.personalfinanceapp.models.reports.ExpenseSummary;
 import com.parker.personalfinanceapp.models.reports.LoansSummary;
 import com.parker.personalfinanceapp.models.user.User;
