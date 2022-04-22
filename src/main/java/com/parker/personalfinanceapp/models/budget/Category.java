@@ -1,10 +1,12 @@
 package com.parker.personalfinanceapp.models.budget;
 
 import com.parker.personalfinanceapp.models.enumerations.CategoryType;
+import com.parker.personalfinanceapp.models.transactions.Expense;
 import lombok.*;
 
 import javax.persistence.*;
 import java.math.BigDecimal;
+import java.util.ArrayList;
 import java.util.List;
 
 @Entity
@@ -23,14 +25,13 @@ public class Category {
     private BigDecimal monthlyBudgetAmt;
 
     @OneToMany
-    private List<Deposit> deposits;
-
-    @OneToMany
     private List<Expense> expenses;
 
-    @OneToMany
-    private List<LoanPayment> loanPayments;
-
-    @OneToMany
-    private List<Withdrawal> withdrawals;
+    public void addExpense(Expense expense) {
+        if (expenses.isEmpty()) {
+            expenses = new ArrayList<>();
+        } else {
+            expenses.add(expense);
+        }
+    }
 }

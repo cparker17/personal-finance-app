@@ -6,7 +6,7 @@ import com.parker.personalfinanceapp.models.Goal;
 import com.parker.personalfinanceapp.models.user.User;
 import com.parker.personalfinanceapp.models.user.UserFactory;
 import com.parker.personalfinanceapp.repositories.GoalRepo;
-import com.parker.personalfinanceapp.repositories.user.UserRepo;
+import com.parker.personalfinanceapp.repositories.UserRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -28,18 +28,12 @@ public class GoalService {
     }
 
     public Goal getGoal(Long userId) throws NoSuchUserException {
-        User user = UserFactory.getUser(userId);
-        return user.getGoal();
+        return UserFactory.getUser(userId).getGoal();
     }
 
     public Goal updateGoal(Long userId, Goal newGoal) throws NoSuchUserException, NoSuchGoalException {
         User user = UserFactory.getUser(userId);
-        Optional<Goal> goalOptional = goalRepo.findById(user.getGoal().getId());
-        if (goalOptional.isPresent()) {
-            goalRepo.delete(goalOptional.get());
-        } else {
-            throw new NoSuchGoalException("Goal does not exist.");
-        }
+        goalRepo.delete(getGoalFromDB(user));
         user.setGoal(newGoal);
         userRepo.save(user);
         return goalRepo.save(newGoal);
@@ -47,13 +41,17 @@ public class GoalService {
 
     public void deleteGoal(Long userId) throws NoSuchGoalException, NoSuchUserException {
         User user = UserFactory.getUser(userId);
+        goalRepo.delete(getGoalFromDB(user));
+        user.setGoal(null);
+        userRepo.save(user);
+    }
+
+    private Goal getGoalFromDB(User user) throws NoSuchUserException, NoSuchGoalException {
         Optional<Goal> goalOptional = goalRepo.findById(user.getGoal().getId());
         if (goalOptional.isPresent()) {
-            goalRepo.delete(goalOptional.get());
+            return goalOptional.get();
         } else {
             throw new NoSuchGoalException("Goal does not exist.");
         }
-        user.setGoal(null);
-        userRepo.save(user);
     }
 }

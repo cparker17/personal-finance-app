@@ -1,10 +1,10 @@
 package com.parker.personalfinanceapp.models.reports;
 
 import com.parker.personalfinanceapp.models.accounts.BankAccount;
-import com.parker.personalfinanceapp.models.accounts.LoanAccount;
+import com.parker.personalfinanceapp.models.accounts.Loan;
 import com.parker.personalfinanceapp.models.accounts.RetirementAccount;
-import com.parker.personalfinanceapp.models.budget.Deposit;
-import com.parker.personalfinanceapp.models.budget.Withdrawal;
+import com.parker.personalfinanceapp.models.transactions.Deposit;
+import com.parker.personalfinanceapp.models.transactions.Withdrawal;
 import lombok.*;
 import java.util.List;
 
@@ -15,7 +15,7 @@ import java.util.List;
 @Builder
 public class AccountsSummary implements Report {
     private List<BankAccount> bankAccounts;
-    private List<LoanAccount> loanAccounts;
+    private List<Loan> loans;
     private List<RetirementAccount> retirementAccounts;
     private List<Deposit> deposits;
     private List<Withdrawal> withdrawals;

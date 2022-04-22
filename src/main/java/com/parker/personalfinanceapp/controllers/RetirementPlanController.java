@@ -3,7 +3,6 @@ package com.parker.personalfinanceapp.controllers;
 import com.parker.personalfinanceapp.exceptions.NoSuchRetirementPlanException;
 import com.parker.personalfinanceapp.exceptions.NoSuchUserException;
 import com.parker.personalfinanceapp.models.RetirementPlan;
-import com.parker.personalfinanceapp.models.user.User;
 import com.parker.personalfinanceapp.models.user.UserFactory;
 import com.parker.personalfinanceapp.services.RetirementPlanService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,32 +27,30 @@ public class RetirementPlanController {
     @RequestMapping("/new")
     public String createRetirementPlan(Model model, Authentication auth, @RequestParam RetirementPlan retirementPlan)
             throws NoSuchUserException {
-        User user = UserFactory.createUser(auth);
         model.addAttribute("plan",
-                retirementPlanService.createRetirementPlan(user.getId(), retirementPlan));
+                retirementPlanService.createRetirementPlan(UserFactory.createUser(auth).getId(), retirementPlan));
         return "retirement-plan-view";
     }
 
     @RequestMapping("/edit")
     public String viewEditRetirementPlanForm(Model model, Authentication auth) throws NoSuchUserException {
-        User user = UserFactory.createUser(auth);
-        model.addAttribute("plan", retirementPlanService.getRetirementPlan(user.getId()));
+        model.addAttribute("plan",
+                retirementPlanService.getRetirementPlan(UserFactory.createUser(auth).getId()));
         return "retirement-plan-edit";
     }
 
     @RequestMapping("/update")
     public String updateRetirementPlan(Model model, Authentication auth, @RequestParam RetirementPlan retirementPlan)
             throws NoSuchRetirementPlanException, NoSuchUserException {
-        User user = UserFactory.createUser(auth);
-        model.addAttribute("plan", retirementPlanService.updateRetirementPlan(user.getId(), retirementPlan));
+        model.addAttribute("plan",
+                retirementPlanService.updateRetirementPlan(UserFactory.createUser(auth).getId(), retirementPlan));
         return "retirement-plan-view";
     }
 
     @RequestMapping("/delete")
-    public String deleteRetirementPlan(Model model, Authentication auth)
+    public String deleteRetirementPlan(Authentication auth)
             throws NoSuchRetirementPlanException, NoSuchUserException {
-        User user = UserFactory.createUser(auth);
-        retirementPlanService.deleteRetirementPlan(user.getId());
+        retirementPlanService.deleteRetirementPlan(UserFactory.createUser(auth).getId());
         return "redirect:/";
     }
 }

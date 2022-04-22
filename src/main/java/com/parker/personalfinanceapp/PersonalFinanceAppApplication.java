@@ -3,8 +3,8 @@ package com.parker.personalfinanceapp;
 import com.parker.personalfinanceapp.models.user.Address;
 import com.parker.personalfinanceapp.models.user.Role;
 import com.parker.personalfinanceapp.models.user.User;
-import com.parker.personalfinanceapp.repositories.user.RoleRepo;
-import com.parker.personalfinanceapp.repositories.user.UserRepo;
+import com.parker.personalfinanceapp.repositories.RoleRepo;
+import com.parker.personalfinanceapp.repositories.UserRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -47,12 +47,12 @@ public class PersonalFinanceAppApplication {
                         .firstName("admin")
                         .lastName("admin")
                         .address(Address.builder()
-                                .streetAddress("3206 Patapsco Rd")
-                                .city("Finksburg")
-                                .state("MD")
-                                .zip("21048")
+                                .streetAddress("address")
+                                .city("city")
+                                .state("state")
+                                .zip("zip")
                                 .build())
-                        .email("rk21048@gmail.com")
+                        .email("email@email.com")
                         .role(roleRepo.findRoleById(2L))
                         .build();
                 userRepo.save(admin);

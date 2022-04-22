@@ -6,7 +6,6 @@ import com.parker.personalfinanceapp.exceptions.NoSuchUserException;
 import com.parker.personalfinanceapp.models.user.User;
 import com.parker.personalfinanceapp.models.user.UserFactory;
 import com.parker.personalfinanceapp.services.ReportService;
-import com.parker.personalfinanceapp.services.budget.BudgetService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
 import org.springframework.stereotype.Controller;
@@ -24,8 +23,8 @@ public class ReportsController {
     @GetMapping("/{reportType")
     private String viewReport(Model model, Authentication auth, @PathVariable(name="reportType") String reportType)
             throws NoSuchReportException, NoSuchUserException, NoSuchBudgetException {
-        User user = UserFactory.createUser(auth);
-        model.addAttribute("report", reportService.getReport(user.getId(), reportType));
+        model.addAttribute("report",
+                reportService.getReport(UserFactory.createUser(auth).getId(), reportType));
         switch(reportType) {
             case "BudgetActual": return "budget-actual-report";
             case "AccountsSummary":  return "accounts-summary";

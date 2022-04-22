@@ -3,7 +3,7 @@ package com.parker.personalfinanceapp.controllers;
 import com.parker.personalfinanceapp.exceptions.NoSuchUserException;
 import com.parker.personalfinanceapp.models.user.User;
 import com.parker.personalfinanceapp.models.user.UserFactory;
-import com.parker.personalfinanceapp.services.user.UserService;
+import com.parker.personalfinanceapp.services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
 import org.springframework.stereotype.Controller;
@@ -19,23 +19,21 @@ public class UserController {
 
     @RequestMapping("/view")
     public String viewUserInfo(Model model, Authentication auth) throws NoSuchUserException {
-        User user = UserFactory.createUser(auth);
-        model.addAttribute("user", userService.getUserInfo(user.getId()));
+        model.addAttribute("user", userService.getUserInfo(UserFactory.createUser(auth).getId()));
         return "user-view";
     }
 
     @RequestMapping("/edit")
     public String viewEditUserInfoPage(Model model, Authentication auth) throws NoSuchUserException {
-        User user = UserFactory.createUser(auth);
-        model.addAttribute("user", userService.getUserInfo(user.getId()));
+        model.addAttribute("user", userService.getUserInfo(UserFactory.createUser(auth).getId()));
         return "user-edit";
     }
 
     @RequestMapping("/update")
     public String updateUserInfo(Model model, Authentication auth, @RequestParam User newUser)
             throws NoSuchUserException {
-        User user = UserFactory.createUser(auth);
-        model.addAttribute("user", userService.updateUserInfo(user.getId(), newUser));
+        model.addAttribute("user",
+                userService.updateUserInfo(UserFactory.createUser(auth).getId(), newUser));
         return "user-view";
     }
 }

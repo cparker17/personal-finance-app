@@ -1,7 +1,7 @@
 package com.parker.personalfinanceapp.models.reports;
 
 import com.parker.personalfinanceapp.models.budget.Category;
-import com.parker.personalfinanceapp.models.budget.Expense;
+import com.parker.personalfinanceapp.models.transactions.Expense;
 import lombok.*;
 
 import java.util.List;

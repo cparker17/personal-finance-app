@@ -1,9 +1,8 @@
 package com.parker.personalfinanceapp.models.reports;
 
-import com.parker.personalfinanceapp.models.accounts.LoanAccount;
-import com.parker.personalfinanceapp.models.budget.LoanPayment;
+import com.parker.personalfinanceapp.models.accounts.Loan;
+import com.parker.personalfinanceapp.models.transactions.LoanPayment;
 import lombok.*;
-
 import java.util.List;
 
 @Getter
@@ -12,6 +11,6 @@ import java.util.List;
 @AllArgsConstructor
 @Builder
 public class LoansSummary implements Report {
-    private List<LoanAccount> loanAccounts;
+    private List<Loan> loans;
     private List<LoanPayment> loanPayments;
 }

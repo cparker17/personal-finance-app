@@ -1,7 +1,7 @@
 package com.parker.personalfinanceapp.models.accounts;
 
 import com.parker.personalfinanceapp.models.enumerations.AccountType;
-import com.parker.personalfinanceapp.models.transactions.Deposit;
+import com.parker.personalfinanceapp.models.transactions.LoanPayment;
 import com.parker.personalfinanceapp.models.transactions.Transaction;
 import lombok.*;
 
@@ -16,29 +16,35 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class RetirementAccount implements Account {
+public class Loan {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
-    private String institutionName;
+    private AccountType accountType;
+
+    private String lenderName;
 
     private Long accountNum;
 
-    private AccountType accountType;
+    private Double interestRate;
 
     private BigDecimal startBalance;
 
     private BigDecimal currentBalance;
 
+    private Integer monthlyDueDate;
+
+    private BigDecimal paymentAmt;
+
     @OneToMany
-    private List<Deposit> deposits;
+    private List<LoanPayment> loanPayments;
 
     public void addTransaction(Transaction transaction) {
-        if (deposits.isEmpty()) {
-            deposits = new ArrayList<>();
+        if (loanPayments.isEmpty()) {
+            loanPayments = new ArrayList<>();
         } else {
-            deposits.add((Deposit) transaction);
+            loanPayments.add((LoanPayment) transaction);
         }
     }
 }

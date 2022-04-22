@@ -1,11 +1,13 @@
-package com.parker.personalfinanceapp.models;
+package com.parker.personalfinanceapp.models.transactions;
 
 import lombok.*;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import java.math.BigDecimal;
+import java.time.LocalDate;
 
 @Entity
 @Getter
@@ -13,16 +15,14 @@ import java.math.BigDecimal;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class RetirementPlan {
+public class Withdrawal implements Transaction {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
-    private Integer currentAge;
+    private Long accountId;
 
-    private Integer retirementAge;
+    private BigDecimal amount;
 
-    private BigDecimal amountNeeded;
-
-    private Boolean isOnTrack;
+    private LocalDate transactionDate;
 }

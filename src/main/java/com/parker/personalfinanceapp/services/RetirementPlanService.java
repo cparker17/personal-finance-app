@@ -6,7 +6,7 @@ import com.parker.personalfinanceapp.models.RetirementPlan;
 import com.parker.personalfinanceapp.models.user.User;
 import com.parker.personalfinanceapp.models.user.UserFactory;
 import com.parker.personalfinanceapp.repositories.RetirementPlanRepo;
-import com.parker.personalfinanceapp.repositories.user.UserRepo;
+import com.parker.personalfinanceapp.repositories.UserRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -40,12 +40,7 @@ public class RetirementPlanService {
     public RetirementPlan updateRetirementPlan(Long userId, RetirementPlan retirementPlan)
             throws NoSuchRetirementPlanException, NoSuchUserException {
         User user = UserFactory.getUser(userId);
-        Optional<RetirementPlan> retirementPlanOptional = retirementPlanRepo.findById(user.getRetirementPlan().getId());
-        if (retirementPlanOptional.isPresent()) {
-            retirementPlanRepo.delete(retirementPlanOptional.get());
-        } else {
-            throw new NoSuchRetirementPlanException("Retirement plan does not exist.");
-        }
+        retirementPlanRepo.delete(getRetirementPlanFromDB(user));
         user.setRetirementPlan(retirementPlan);
         retirementPlan.setIsOnTrack(isRetirementOnTrack(retirementPlan));
         userRepo.save(user);
@@ -54,13 +49,17 @@ public class RetirementPlanService {
 
     public void deleteRetirementPlan(Long userId) throws NoSuchRetirementPlanException, NoSuchUserException {
         User user = UserFactory.getUser(userId);
+        retirementPlanRepo.delete(getRetirementPlanFromDB(user));
+        user.setRetirementPlan(null);
+        userRepo.save(user);
+    }
+
+    private RetirementPlan getRetirementPlanFromDB(User user) throws NoSuchRetirementPlanException {
         Optional<RetirementPlan> retirementPlanOptional = retirementPlanRepo.findById(user.getRetirementPlan().getId());
         if (retirementPlanOptional.isPresent()) {
-            retirementPlanRepo.delete(retirementPlanOptional.get());
+            return retirementPlanOptional.get();
         } else {
             throw new NoSuchRetirementPlanException("Retirement plan does not exist.");
         }
-        user.setRetirementPlan(null);
-        userRepo.save(user);
     }
 }

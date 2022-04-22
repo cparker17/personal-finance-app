@@ -1,16 +1,14 @@
 package com.parker.personalfinanceapp.models.user;
 
-import com.parker.personalfinanceapp.exceptions.NoSuchAccountException;
 import com.parker.personalfinanceapp.models.Goal;
 import com.parker.personalfinanceapp.models.RetirementPlan;
 import com.parker.personalfinanceapp.models.accounts.Account;
 import com.parker.personalfinanceapp.models.accounts.BankAccount;
-import com.parker.personalfinanceapp.models.accounts.LoanAccount;
+import com.parker.personalfinanceapp.models.accounts.Loan;
 import com.parker.personalfinanceapp.models.accounts.RetirementAccount;
 import com.parker.personalfinanceapp.models.budget.Budget;
 import com.sun.istack.NotNull;
 import lombok.*;
-
 import javax.persistence.*;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
@@ -66,13 +64,13 @@ public class User {
     private Goal goal;
 
     @OneToMany
-    private List<BankAccount> bankAccounts;
+    private List<BankAccount> bankAccounts = new ArrayList<>();
 
     @OneToMany
-    List<LoanAccount> loanAccounts;
+    List<Loan> loans = new ArrayList<>();
 
     @OneToMany
-    List<RetirementAccount> retirementAccounts;
+    List<RetirementAccount> retirementAccounts = new ArrayList<>();
 
     @OneToOne
     RetirementPlan retirementPlan;
@@ -92,28 +90,15 @@ public class User {
     @Column(nullable = false)
     private boolean isEnabled = true;
 
-    public void addAccount(Account account, String accountType) throws NoSuchAccountException {
-        switch(accountType) {
-            case "BankAccount":
-                if (bankAccounts == null) {
-                    bankAccounts = new ArrayList<>();
-                } else {
-                    bankAccounts.add((BankAccount) account);
-                }
-            case "LoanAccount":
-                if (loanAccounts == null) {
-                    loanAccounts = new ArrayList<>();
-                } else {
-                    loanAccounts.add((LoanAccount) account);
-                }
-            case "RetirementAccount":
-                if (retirementAccounts == null) {
-                    retirementAccounts = new ArrayList<>();
-                } else {
-                    retirementAccounts.add((RetirementAccount) account);
-                }
-            default:
-                throw new NoSuchAccountException("Account does not exist.");
+    public void addAccount(Account account) {
+        if (account instanceof BankAccount) {
+            bankAccounts.add((BankAccount) account);
+        } else {
+            retirementAccounts.add((RetirementAccount) account);
         }
+    }
+
+    public void addLoan(Loan loan) {
+        loans.add(loan);
     }
 }

@@ -3,6 +3,10 @@ package com.parker.personalfinanceapp.services;
 import com.parker.personalfinanceapp.exceptions.NoSuchBudgetException;
 import com.parker.personalfinanceapp.exceptions.NoSuchReportException;
 import com.parker.personalfinanceapp.exceptions.NoSuchUserException;
+import com.parker.personalfinanceapp.models.transactions.Deposit;
+import com.parker.personalfinanceapp.models.transactions.Expense;
+import com.parker.personalfinanceapp.models.transactions.LoanPayment;
+import com.parker.personalfinanceapp.models.transactions.Withdrawal;
 import com.parker.personalfinanceapp.models.budget.*;
 import com.parker.personalfinanceapp.models.reports.AccountsSummary;
 import com.parker.personalfinanceapp.models.reports.BudgetActualReport;
@@ -11,11 +15,10 @@ import com.parker.personalfinanceapp.models.reports.ExpenseSummary;
 import com.parker.personalfinanceapp.models.reports.LoansSummary;
 import com.parker.personalfinanceapp.models.user.User;
 import com.parker.personalfinanceapp.models.user.UserFactory;
-import com.parker.personalfinanceapp.repositories.user.UserRepo;
-import com.parker.personalfinanceapp.services.budget.BudgetFactory;
+import com.parker.personalfinanceapp.repositories.UserRepo;
+import com.parker.personalfinanceapp.models.budget.BudgetFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -44,48 +47,47 @@ public class ReportService {
                 .build();
     }
 
-    private AccountsSummary getAccountsSummary(Long userId) throws NoSuchUserException, NoSuchBudgetException {
+    private AccountsSummary getAccountsSummary(Long userId) throws NoSuchUserException {
         User user = UserFactory.getUser(userId);
-        Budget budget = BudgetFactory.getBudget(user.getBudget().getId());
         return AccountsSummary.builder()
                 .bankAccounts(user.getBankAccounts())
-                .loanAccounts(user.getLoanAccounts())
+                .loans(user.getLoans())
                 .retirementAccounts(user.getRetirementAccounts())
-                .deposits(getUserDeposits(budget))
-                .withdrawals(getUserWithdrawals(budget))
+                .deposits(getUserDeposits(user))
+                .withdrawals(getUserWithdrawals(user))
                 .build();
     }
 
-    private List<Deposit> getUserDeposits(Budget budget) throws NoSuchBudgetException {
+    private List<Deposit> getUserDeposits(User user) {
         List<Deposit> deposits = new ArrayList<>();
-        budget.getCategories().forEach(category -> deposits.addAll(category.getDeposits()));
+        user.getBankAccounts().forEach(bankAccount -> deposits.addAll(bankAccount.getDeposits()));
+        user.getRetirementAccounts().forEach(retirementAccount -> deposits.addAll(retirementAccount.getDeposits()));
         return deposits;
     }
 
-    private List<Withdrawal> getUserWithdrawals(Budget budget) {
+    private List<Withdrawal> getUserWithdrawals(User user) {
         List<Withdrawal> withdrawals = new ArrayList<>();
-        budget.getCategories().forEach(category -> withdrawals.addAll(category.getWithdrawals()));
+        user.getBankAccounts().forEach(bankAccount -> withdrawals.addAll(bankAccount.getWithdrawals()));
         return withdrawals;
     }
 
-    private LoansSummary getLoansSummary(Long userId) throws NoSuchUserException, NoSuchBudgetException {
+    private LoansSummary getLoansSummary(Long userId) throws NoSuchUserException {
         User user = UserFactory.getUser(userId);
-        Budget budget = BudgetFactory.getBudget(user.getBudget().getId());
         return LoansSummary.builder()
-                .loanAccounts(user.getLoanAccounts())
-                .loanPayments(getUserLoanPayments(budget))
+                .loans(user.getLoans())
+                .loanPayments(getUserLoanPayments(user))
                 .build();
     }
 
-    private List<LoanPayment> getUserLoanPayments(Budget budget) {
+    private List<LoanPayment> getUserLoanPayments(User user) {
         List<LoanPayment> loanPayments = new ArrayList<>();
-        budget.getCategories().forEach(category -> loanPayments.addAll(category.getLoanPayments()));
+        user.getLoans().forEach(loan -> loanPayments.addAll(loan.getLoanPayments()));
         return loanPayments;
     }
 
     private ExpenseSummary getExpenseSummary(Long userId) throws NoSuchBudgetException, NoSuchUserException {
         User user = UserFactory.getUser(userId);
-        Budget budget = BudgetFactory.getBudget(user.getBudget().getId());
+        Budget budget = BudgetFactory.getBudgetFromDB(user.getBudget().getId());
         return ExpenseSummary.builder()
                 .categories(budget.getCategories())
                 .expenses(getUserExpenses(budget))

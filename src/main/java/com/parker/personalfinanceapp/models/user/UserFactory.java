@@ -1,11 +1,10 @@
 package com.parker.personalfinanceapp.models.user;
 
 import com.parker.personalfinanceapp.exceptions.NoSuchUserException;
-import com.parker.personalfinanceapp.repositories.user.UserRepo;
+import com.parker.personalfinanceapp.repositories.UserRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
 import org.springframework.stereotype.Component;
-
 import java.util.Optional;
 
 @Component

@@ -27,30 +27,26 @@ public class GoalController {
 
     @RequestMapping("/new")
     public String createGoal(Model model, Authentication auth, @RequestParam Goal goal) throws NoSuchUserException {
-        User user = UserFactory.createUser(auth);
-        model.addAttribute("goal", goalService.createGoal(user.getId(), goal));
+        model.addAttribute("goal", goalService.createGoal(UserFactory.createUser(auth).getId(), goal));
         return "goal-view";
     }
 
     @RequestMapping("/edit")
     public String viewEditGoalPage(Model model, Authentication auth) throws NoSuchUserException {
-        User user = UserFactory.createUser(auth);
-        model.addAttribute("goal", goalService.getGoal(user.getId()));
+        model.addAttribute("goal", goalService.getGoal(UserFactory.createUser(auth).getId()));
         return "goal-edit";
     }
 
     @RequestMapping("/update")
     public String updateGoal(Model model, Authentication auth, @RequestParam Goal goal)
             throws NoSuchUserException, NoSuchGoalException {
-        User user = UserFactory.createUser(auth);
-        model.addAttribute("goal", goalService.updateGoal(user.getId(), goal));
+        model.addAttribute("goal", goalService.updateGoal(UserFactory.createUser(auth).getId(), goal));
         return "goal-view";
     }
 
     @RequestMapping("/delete")
     public String deleteGoal(Authentication auth) throws NoSuchUserException, NoSuchGoalException {
-        User user = UserFactory.createUser(auth);
-        goalService.deleteGoal(user.getId());
+        goalService.deleteGoal(UserFactory.createUser(auth).getId());
         return "redirect:/";
     }
 }
