@@ -2,8 +2,8 @@ package com.parker.personalfinanceapp.controllers;
 
 import com.parker.personalfinanceapp.exceptions.NoSuchAccountException;
 import com.parker.personalfinanceapp.exceptions.NoSuchTransactionException;
-import com.parker.personalfinanceapp.models.transactions.Transaction;
-import com.parker.personalfinanceapp.models.transactions.TransactionFactory;
+import com.parker.personalfinanceapp.models.Transaction;
+import com.parker.personalfinanceapp.models.TransactionFactory;
 import com.parker.personalfinanceapp.services.TransactionService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -19,7 +19,7 @@ public class TransactionController {
     TransactionService transactionService;
 
     @RequestMapping
-    public String viewTransactionSelectionPage(Model model) {
+    public String viewTransactionSelectionPage() {
         return "transaction-view";
     }
 
@@ -53,7 +53,7 @@ public class TransactionController {
     }
 
     @RequestMapping("/delete/{transactionId}")
-    public String deleteDeposit( @PathVariable(name="transactionId") Long transactionId)
+    public String deleteTransaction( @PathVariable(name="transactionId") Long transactionId)
             throws NoSuchTransactionException {
         transactionService.deleteTransaction(transactionId);
         return "redirect:/";

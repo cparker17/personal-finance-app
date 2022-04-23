@@ -1,6 +1,6 @@
 package com.parker.personalfinanceapp.services;
 
-import com.parker.personalfinanceapp.models.user.SecurityUser;
+import com.parker.personalfinanceapp.models.SecurityUser;
 import com.parker.personalfinanceapp.repositories.UserRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;

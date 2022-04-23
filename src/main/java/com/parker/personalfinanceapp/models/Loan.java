@@ -1,8 +1,5 @@
-package com.parker.personalfinanceapp.models.accounts;
+package com.parker.personalfinanceapp.models;
 
-import com.parker.personalfinanceapp.models.enumerations.AccountType;
-import com.parker.personalfinanceapp.models.transactions.LoanPayment;
-import com.parker.personalfinanceapp.models.transactions.Transaction;
 import lombok.*;
 
 import javax.persistence.*;

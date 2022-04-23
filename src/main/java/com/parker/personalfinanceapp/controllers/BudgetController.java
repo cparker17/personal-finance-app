@@ -2,9 +2,8 @@ package com.parker.personalfinanceapp.controllers;
 
 import com.parker.personalfinanceapp.exceptions.NoSuchBudgetException;
 import com.parker.personalfinanceapp.exceptions.NoSuchUserException;
-import com.parker.personalfinanceapp.models.budget.Budget;
-import com.parker.personalfinanceapp.models.user.User;
-import com.parker.personalfinanceapp.models.user.UserFactory;
+import com.parker.personalfinanceapp.models.Budget;
+import com.parker.personalfinanceapp.models.UserFactory;
 import com.parker.personalfinanceapp.services.BudgetService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
@@ -29,33 +28,33 @@ public class BudgetController {
     public String createBudget(Model model, Authentication auth, @RequestParam Budget budget)
             throws NoSuchUserException {
         model.addAttribute("budget",
-                budgetService.createBudget(UserFactory.createUser(auth).getId(), budget));
+                budgetService.createBudget(UserFactory.createUser(auth), budget));
         return "budget-view";
     }
 
     @RequestMapping("/view")
-    public String viewBudget(Model model, Authentication auth) throws NoSuchUserException {
-        model.addAttribute("budget", budgetService.getBudget(UserFactory.createUser(auth).getId()));
+    public String viewBudget(Model model, Authentication auth) {
+        model.addAttribute("budget", budgetService.getBudget(UserFactory.createUser(auth)));
         return "budget-view";
     }
 
     @RequestMapping("/edit")
-    public String viewEditBudgetForm(Model model, Authentication auth) throws NoSuchUserException {
-        model.addAttribute("budget", budgetService.getBudget(UserFactory.createUser(auth).getId()));
+    public String viewEditBudgetForm(Model model, Authentication auth) {
+        model.addAttribute("budget", budgetService.getBudget(UserFactory.createUser(auth)));
         return "budget-edit";
     }
 
     @RequestMapping("/update")
     public String updateBudget(Model model, Authentication auth, @RequestParam Budget budget)
-            throws NoSuchUserException, NoSuchBudgetException {
+            throws NoSuchBudgetException {
         model.addAttribute("budget",
-                budgetService.updateBudget(UserFactory.createUser(auth).getId(), budget));
+                budgetService.updateBudget(UserFactory.createUser(auth), budget));
         return "budget-view";
     }
 
     @RequestMapping("/delete")
-    public String deleteBudget(Authentication auth) throws NoSuchBudgetException, NoSuchUserException {
-        budgetService.deleteBudget(UserFactory.createUser(auth).getId());
+    public String deleteBudget(Authentication auth) throws NoSuchBudgetException {
+        budgetService.deleteBudget(UserFactory.createUser(auth));
         return "redirect:/";
     }
 }

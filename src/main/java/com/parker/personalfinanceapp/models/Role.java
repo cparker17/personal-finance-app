@@ -1,4 +1,4 @@
-package com.parker.personalfinanceapp.models.user;
+package com.parker.personalfinanceapp.models;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.*;

@@ -1,6 +1,6 @@
 package com.parker.personalfinanceapp.repositories;
 
-import com.parker.personalfinanceapp.models.transactions.Transaction;
+import com.parker.personalfinanceapp.models.Transaction;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

@@ -1,8 +1,5 @@
-package com.parker.personalfinanceapp.models.accounts;
+package com.parker.personalfinanceapp.models;
 
-import com.parker.personalfinanceapp.models.enumerations.AccountType;
-import com.parker.personalfinanceapp.models.transactions.Deposit;
-import com.parker.personalfinanceapp.models.transactions.Transaction;
 import lombok.*;
 
 import javax.persistence.*;
@@ -16,29 +13,32 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class RetirementAccount implements Account {
+public class BankAccount extends Account {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
+    private AccountType accountType;
+
     private String institutionName;
 
     private Long accountNum;
-
-    private AccountType accountType;
 
     private BigDecimal startBalance;
 
     private BigDecimal currentBalance;
 
     @OneToMany
-    private List<Deposit> deposits;
+    private List<Deposit> deposits = new ArrayList<>();
+
+    @OneToMany
+    private List<Withdrawal> withdrawals;
 
     public void addTransaction(Transaction transaction) {
-        if (deposits.isEmpty()) {
-            deposits = new ArrayList<>();
-        } else {
+        if (transaction instanceof Deposit) {
             deposits.add((Deposit) transaction);
+        } else {
+            withdrawals.add((Withdrawal) transaction);
         }
     }
 }

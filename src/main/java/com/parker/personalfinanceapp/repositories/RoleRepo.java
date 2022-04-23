@@ -1,6 +1,6 @@
 package com.parker.personalfinanceapp.repositories;
 
-import com.parker.personalfinanceapp.models.user.Role;
+import com.parker.personalfinanceapp.models.Role;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

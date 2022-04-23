@@ -1,4 +1,4 @@
-package com.parker.personalfinanceapp.models.transactions;
+package com.parker.personalfinanceapp.models;
 
 import com.parker.personalfinanceapp.exceptions.NoSuchTransactionException;
 

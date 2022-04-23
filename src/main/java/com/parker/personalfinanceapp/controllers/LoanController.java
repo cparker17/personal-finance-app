@@ -1,10 +1,8 @@
 package com.parker.personalfinanceapp.controllers;
 
 import com.parker.personalfinanceapp.exceptions.NoSuchAccountException;
-import com.parker.personalfinanceapp.exceptions.NoSuchUserException;
-import com.parker.personalfinanceapp.models.accounts.Loan;
-import com.parker.personalfinanceapp.models.user.User;
-import com.parker.personalfinanceapp.models.user.UserFactory;
+import com.parker.personalfinanceapp.models.Loan;
+import com.parker.personalfinanceapp.models.UserFactory;
 import com.parker.personalfinanceapp.services.LoanService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
@@ -27,9 +25,8 @@ public class LoanController {
     }
 
     @RequestMapping("/new")
-    public String createLoan(Model model, Authentication auth, @RequestParam Loan loan)
-            throws NoSuchUserException {
-        model.addAttribute("loan", loanService.createLoan(UserFactory.createUser(auth).getId(), loan));
+    public String createLoan(Model model, Authentication auth, @RequestParam Loan loan) {
+        model.addAttribute("loan", loanService.createLoan(UserFactory.createUser(auth), loan));
         return "loan-view";
     }
 

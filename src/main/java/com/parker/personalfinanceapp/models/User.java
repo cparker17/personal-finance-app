@@ -1,12 +1,5 @@
-package com.parker.personalfinanceapp.models.user;
+package com.parker.personalfinanceapp.models;
 
-import com.parker.personalfinanceapp.models.Goal;
-import com.parker.personalfinanceapp.models.RetirementPlan;
-import com.parker.personalfinanceapp.models.accounts.Account;
-import com.parker.personalfinanceapp.models.accounts.BankAccount;
-import com.parker.personalfinanceapp.models.accounts.Loan;
-import com.parker.personalfinanceapp.models.accounts.RetirementAccount;
-import com.parker.personalfinanceapp.models.budget.Budget;
 import com.sun.istack.NotNull;
 import lombok.*;
 import javax.persistence.*;

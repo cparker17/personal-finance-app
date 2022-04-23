@@ -1,8 +1,8 @@
 package com.parker.personalfinanceapp.controllers;
 
-import com.parker.personalfinanceapp.models.user.SecurityUser;
-import com.parker.personalfinanceapp.models.user.User;
-import com.parker.personalfinanceapp.models.user.UserFactory;
+import com.parker.personalfinanceapp.models.SecurityUser;
+import com.parker.personalfinanceapp.models.User;
+import com.parker.personalfinanceapp.models.UserFactory;
 import org.springframework.security.core.Authentication;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

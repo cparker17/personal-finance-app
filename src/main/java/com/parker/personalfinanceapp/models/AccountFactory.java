@@ -1,4 +1,4 @@
-package com.parker.personalfinanceapp.models.accounts;
+package com.parker.personalfinanceapp.models;
 
 import com.parker.personalfinanceapp.exceptions.NoSuchAccountException;
 

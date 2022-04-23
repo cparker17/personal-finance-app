@@ -1,6 +1,7 @@
-package com.parker.personalfinanceapp.models.budget;
+package com.parker.personalfinanceapp.models;
 
 import com.parker.personalfinanceapp.exceptions.NoSuchBudgetException;
+import com.parker.personalfinanceapp.models.Budget;
 import com.parker.personalfinanceapp.repositories.BudgetRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 

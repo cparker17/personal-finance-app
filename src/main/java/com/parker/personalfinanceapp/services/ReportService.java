@@ -3,20 +3,20 @@ package com.parker.personalfinanceapp.services;
 import com.parker.personalfinanceapp.exceptions.NoSuchBudgetException;
 import com.parker.personalfinanceapp.exceptions.NoSuchReportException;
 import com.parker.personalfinanceapp.exceptions.NoSuchUserException;
-import com.parker.personalfinanceapp.models.transactions.Deposit;
-import com.parker.personalfinanceapp.models.transactions.Expense;
-import com.parker.personalfinanceapp.models.transactions.LoanPayment;
-import com.parker.personalfinanceapp.models.transactions.Withdrawal;
-import com.parker.personalfinanceapp.models.budget.*;
-import com.parker.personalfinanceapp.models.reports.AccountsSummary;
-import com.parker.personalfinanceapp.models.reports.BudgetActualReport;
-import com.parker.personalfinanceapp.models.reports.Report;
-import com.parker.personalfinanceapp.models.reports.ExpenseSummary;
-import com.parker.personalfinanceapp.models.reports.LoansSummary;
-import com.parker.personalfinanceapp.models.user.User;
-import com.parker.personalfinanceapp.models.user.UserFactory;
+import com.parker.personalfinanceapp.exceptions.PersonalFinanceAppException;
+import com.parker.personalfinanceapp.models.Budget;
+import com.parker.personalfinanceapp.models.Deposit;
+import com.parker.personalfinanceapp.models.Expense;
+import com.parker.personalfinanceapp.models.LoanPayment;
+import com.parker.personalfinanceapp.models.Withdrawal;
+import com.parker.personalfinanceapp.models.AccountsSummary;
+import com.parker.personalfinanceapp.models.BudgetActualReport;
+import com.parker.personalfinanceapp.models.Report;
+import com.parker.personalfinanceapp.models.ExpenseSummary;
+import com.parker.personalfinanceapp.models.User;
+import com.parker.personalfinanceapp.models.UserFactory;
 import com.parker.personalfinanceapp.repositories.UserRepo;
-import com.parker.personalfinanceapp.models.budget.BudgetFactory;
+import com.parker.personalfinanceapp.models.BudgetFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import java.util.ArrayList;
@@ -71,9 +71,9 @@ public class ReportService {
         return withdrawals;
     }
 
-    private LoansSummary getLoansSummary(Long userId) throws NoSuchUserException {
+    private PersonalFinanceAppException.LoansSummary getLoansSummary(Long userId) throws NoSuchUserException {
         User user = UserFactory.getUser(userId);
-        return LoansSummary.builder()
+        return PersonalFinanceAppException.LoansSummary.builder()
                 .loans(user.getLoans())
                 .loanPayments(getUserLoanPayments(user))
                 .build();

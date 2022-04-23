@@ -3,8 +3,7 @@ package com.parker.personalfinanceapp.controllers;
 import com.parker.personalfinanceapp.exceptions.NoSuchBudgetException;
 import com.parker.personalfinanceapp.exceptions.NoSuchReportException;
 import com.parker.personalfinanceapp.exceptions.NoSuchUserException;
-import com.parker.personalfinanceapp.models.user.User;
-import com.parker.personalfinanceapp.models.user.UserFactory;
+import com.parker.personalfinanceapp.models.UserFactory;
 import com.parker.personalfinanceapp.services.ReportService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
@@ -20,7 +19,7 @@ public class ReportsController {
     @Autowired
     ReportService reportService;
 
-    @GetMapping("/{reportType")
+    @GetMapping("/{reportType}")
     private String viewReport(Model model, Authentication auth, @PathVariable(name="reportType") String reportType)
             throws NoSuchReportException, NoSuchUserException, NoSuchBudgetException {
         model.addAttribute("report",

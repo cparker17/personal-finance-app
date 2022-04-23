@@ -1,11 +1,9 @@
 package com.parker.personalfinanceapp.services;
 
 import com.parker.personalfinanceapp.exceptions.NoSuchBudgetException;
-import com.parker.personalfinanceapp.exceptions.NoSuchUserException;
-import com.parker.personalfinanceapp.models.budget.Budget;
-import com.parker.personalfinanceapp.models.budget.BudgetFactory;
-import com.parker.personalfinanceapp.models.user.User;
-import com.parker.personalfinanceapp.models.user.UserFactory;
+import com.parker.personalfinanceapp.models.Budget;
+import com.parker.personalfinanceapp.models.BudgetFactory;
+import com.parker.personalfinanceapp.models.User;
 import com.parker.personalfinanceapp.repositories.BudgetRepo;
 import com.parker.personalfinanceapp.repositories.UserRepo;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,34 +19,31 @@ public class BudgetService {
     BudgetRepo budgetRepo;
 
     @Transactional
-    public Budget createBudget(Long userId, Budget budget) throws NoSuchUserException {
-        User user = UserFactory.getUser(userId);
-        user.setBudget(budget);
-        userRepo.save(user);
+    public Budget createBudget(User user, Budget budget) {
+        setUserBudget(user, budget);
         return budgetRepo.save(budget);
     }
 
-    @Transactional
-    public Budget getBudget(Long userId) throws NoSuchUserException {
-        return UserFactory.getUser(userId).getBudget();
+    private void setUserBudget(User user, Budget budget) {
+        user.setBudget(budget);
+        userRepo.save(user);
     }
 
     @Transactional
-    public Budget updateBudget(Long userId, Budget budget) throws NoSuchUserException, NoSuchBudgetException {
-        User user = UserFactory.getUser(userId);
-        user.setBudget(budget);
-        userRepo.save(user);
+    public Budget getBudget(User user) {
+        return user.getBudget();
+    }
+
+    @Transactional
+    public Budget updateBudget(User user, Budget budget) throws NoSuchBudgetException {
+        setUserBudget(user, budget);
         budgetRepo.delete(BudgetFactory.getBudgetFromDB(budget.getId()));
         return budgetRepo.save(budget);
     }
 
     @Transactional
-    public void deleteBudget(Long userId) throws NoSuchBudgetException, NoSuchUserException {
-        User user = UserFactory.getUser(userId);
-        user.setBudget(null);
-        userRepo.save(user);
+    public void deleteBudget(User user) throws NoSuchBudgetException {
+        setUserBudget(user, null);
         budgetRepo.delete(BudgetFactory.getBudgetFromDB(user.getBudget().getId()));
     }
-
-
 }

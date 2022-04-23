@@ -2,9 +2,9 @@ package com.parker.personalfinanceapp.services;
 
 import com.parker.personalfinanceapp.exceptions.NoSuchAccountException;
 import com.parker.personalfinanceapp.exceptions.NoSuchUserException;
-import com.parker.personalfinanceapp.models.accounts.Account;
-import com.parker.personalfinanceapp.models.user.User;
-import com.parker.personalfinanceapp.models.user.UserFactory;
+import com.parker.personalfinanceapp.models.Account;
+import com.parker.personalfinanceapp.models.User;
+import com.parker.personalfinanceapp.models.UserFactory;
 import com.parker.personalfinanceapp.repositories.AccountRepo;
 import com.parker.personalfinanceapp.repositories.UserRepo;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -38,13 +38,14 @@ public class AccountService {
         accountRepo.delete(getAccountFromDB(account.getId()));
     }
 
-    @Transactional
-    public Account createAccount(Long userId, Account account)
-            throws NoSuchUserException {
-        User user = UserFactory.getUser(userId);
+    public Account createAccount(User user, Account account) {
+        addAccountToUser(user, account);
+        return accountRepo.save(account);
+    }
+
+    private void addAccountToUser(User user, Account account) {
         user.addAccount(account);
         userRepo.save(user);
-        return accountRepo.save(account);
     }
 
     private Account getAccountFromDB(Long accountId) throws NoSuchAccountException {

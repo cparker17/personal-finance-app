@@ -1,10 +1,8 @@
 package com.parker.personalfinanceapp.services;
 
 import com.parker.personalfinanceapp.exceptions.NoSuchRetirementPlanException;
-import com.parker.personalfinanceapp.exceptions.NoSuchUserException;
 import com.parker.personalfinanceapp.models.RetirementPlan;
-import com.parker.personalfinanceapp.models.user.User;
-import com.parker.personalfinanceapp.models.user.UserFactory;
+import com.parker.personalfinanceapp.models.User;
 import com.parker.personalfinanceapp.repositories.RetirementPlanRepo;
 import com.parker.personalfinanceapp.repositories.UserRepo;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,12 +18,15 @@ public class RetirementPlanService {
     @Autowired
     RetirementPlanRepo retirementPlanRepo;
 
-    public RetirementPlan createRetirementPlan(Long userId, RetirementPlan retirementPlan) throws NoSuchUserException {
-        User user = UserFactory.getUser(userId);
+    public RetirementPlan createRetirementPlan(User user, RetirementPlan retirementPlan) {
+        addRetirementPlanToUser(user, retirementPlan);
+        return retirementPlanRepo.save(retirementPlan);
+    }
+
+    private void addRetirementPlanToUser(User user, RetirementPlan retirementPlan) {
         user.setRetirementPlan(retirementPlan);
         retirementPlan.setIsOnTrack(isRetirementOnTrack(retirementPlan));
         userRepo.save(user);
-        return retirementPlanRepo.save(retirementPlan);
     }
 
     private boolean isRetirementOnTrack(RetirementPlan retirementPlan) {
@@ -33,22 +34,18 @@ public class RetirementPlanService {
         return true;
     }
 
-    public RetirementPlan getRetirementPlan(Long userID) throws NoSuchUserException {
-        return UserFactory.getUser(userID).getRetirementPlan();
+    public RetirementPlan getRetirementPlan(User user) {
+        return user.getRetirementPlan();
     }
 
-    public RetirementPlan updateRetirementPlan(Long userId, RetirementPlan retirementPlan)
-            throws NoSuchRetirementPlanException, NoSuchUserException {
-        User user = UserFactory.getUser(userId);
+    public RetirementPlan updateRetirementPlan(User user, RetirementPlan retirementPlan)
+            throws NoSuchRetirementPlanException {
         retirementPlanRepo.delete(getRetirementPlanFromDB(user));
-        user.setRetirementPlan(retirementPlan);
-        retirementPlan.setIsOnTrack(isRetirementOnTrack(retirementPlan));
-        userRepo.save(user);
+        addRetirementPlanToUser(user, retirementPlan);
         return retirementPlanRepo.save(retirementPlan);
     }
 
-    public void deleteRetirementPlan(Long userId) throws NoSuchRetirementPlanException, NoSuchUserException {
-        User user = UserFactory.getUser(userId);
+    public void deleteRetirementPlan(User user) throws NoSuchRetirementPlanException {
         retirementPlanRepo.delete(getRetirementPlanFromDB(user));
         user.setRetirementPlan(null);
         userRepo.save(user);

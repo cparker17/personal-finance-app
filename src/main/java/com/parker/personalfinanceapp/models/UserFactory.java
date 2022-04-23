@@ -1,4 +1,4 @@
-package com.parker.personalfinanceapp.models.user;
+package com.parker.personalfinanceapp.models;
 
 import com.parker.personalfinanceapp.exceptions.NoSuchUserException;
 import com.parker.personalfinanceapp.repositories.UserRepo;

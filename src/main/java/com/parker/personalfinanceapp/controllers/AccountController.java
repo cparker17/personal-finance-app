@@ -1,11 +1,9 @@
 package com.parker.personalfinanceapp.controllers;
 
 import com.parker.personalfinanceapp.exceptions.NoSuchAccountException;
-import com.parker.personalfinanceapp.exceptions.NoSuchUserException;
-import com.parker.personalfinanceapp.models.accounts.Account;
-import com.parker.personalfinanceapp.models.accounts.AccountFactory;
-import com.parker.personalfinanceapp.models.user.User;
-import com.parker.personalfinanceapp.models.user.UserFactory;
+import com.parker.personalfinanceapp.models.Account;
+import com.parker.personalfinanceapp.models.AccountFactory;
+import com.parker.personalfinanceapp.models.UserFactory;
 import com.parker.personalfinanceapp.services.AccountService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
@@ -29,11 +27,9 @@ public class AccountController {
     }
 
     @RequestMapping("/new")
-    public String createAccount(Model model, Authentication auth, @RequestParam Account account)
-            throws NoSuchUserException {
-        User user = UserFactory.createUser(auth);
+    public String createAccount(Model model, Authentication auth, @RequestParam Account account) {
         model.addAttribute("account",
-                accountService.createAccount(user.getId(), account));
+                accountService.createAccount(UserFactory.createUser(auth), account));
         return "account-view";
     }
 

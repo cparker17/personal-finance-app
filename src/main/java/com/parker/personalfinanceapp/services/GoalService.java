@@ -1,10 +1,8 @@
 package com.parker.personalfinanceapp.services;
 
 import com.parker.personalfinanceapp.exceptions.NoSuchGoalException;
-import com.parker.personalfinanceapp.exceptions.NoSuchUserException;
 import com.parker.personalfinanceapp.models.Goal;
-import com.parker.personalfinanceapp.models.user.User;
-import com.parker.personalfinanceapp.models.user.UserFactory;
+import com.parker.personalfinanceapp.models.User;
 import com.parker.personalfinanceapp.repositories.GoalRepo;
 import com.parker.personalfinanceapp.repositories.UserRepo;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,33 +18,32 @@ public class GoalService {
     @Autowired
     UserRepo userRepo;
 
-    public Goal createGoal(Long userId, Goal goal) throws NoSuchUserException {
-        User user = UserFactory.getUser(userId);
-        user.setGoal(goal);
-        userRepo.save(user);
+    public Goal createGoal(User user, Goal goal) {
+        setUserGoal(user, goal);
         return goalRepo.save(goal);
     }
 
-    public Goal getGoal(Long userId) throws NoSuchUserException {
-        return UserFactory.getUser(userId).getGoal();
+    private void setUserGoal(User user, Goal goal) {
+        user.setGoal(goal);
+        userRepo.save(user);
     }
 
-    public Goal updateGoal(Long userId, Goal newGoal) throws NoSuchUserException, NoSuchGoalException {
-        User user = UserFactory.getUser(userId);
+    public Goal getGoal(User user) {
+        return user.getGoal();
+    }
+
+    public Goal updateGoal(User user, Goal newGoal) throws NoSuchGoalException {
         goalRepo.delete(getGoalFromDB(user));
-        user.setGoal(newGoal);
-        userRepo.save(user);
+        setUserGoal(user, newGoal);
         return goalRepo.save(newGoal);
     }
 
-    public void deleteGoal(Long userId) throws NoSuchGoalException, NoSuchUserException {
-        User user = UserFactory.getUser(userId);
+    public void deleteGoal(User user) throws NoSuchGoalException {
         goalRepo.delete(getGoalFromDB(user));
-        user.setGoal(null);
-        userRepo.save(user);
+        setUserGoal(user, null);
     }
 
-    private Goal getGoalFromDB(User user) throws NoSuchUserException, NoSuchGoalException {
+    private Goal getGoalFromDB(User user) throws NoSuchGoalException {
         Optional<Goal> goalOptional = goalRepo.findById(user.getGoal().getId());
         if (goalOptional.isPresent()) {
             return goalOptional.get();

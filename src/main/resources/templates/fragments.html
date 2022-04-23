@@ -31,7 +31,7 @@
                         <a class="nav-link active dropdown-toggle" data-toggle="dropdown" href="#" role="button"
                            aria-haspopup="true" aria-expanded="false">Budget</a>
                         <div class="dropdown-menu">
-                            <a class="dropdown-item" href="#">Expenses</a>
+                            <a class="dropdown-item" href="#" >Expenses</a>
                             <a class="dropdown-item" href="#">Deposits</a>
                             <a class="dropdown-item" href="#">Accounts</a>
                             <a class="dropdown-item" href="#">Loans</a>
@@ -39,11 +39,10 @@
                         </div>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link active dropdown-toggle" data-toggle="dropdown" href="#" role="button"
-                           aria-haspopup="true" aria-expanded="false">Reports</a>
+                        <a class="nav-link active dropdown-toggle" data-toggle="dropdown">Reports</a>
                         <div class="dropdown-menu">
                             <a class="dropdown-item" href="#">Budget vs. Actual</a>
-                            <a class="dropdown-item" href="#">Expense Summary</a>
+                            <a class="dropdown-item" th:href="@{/reports/{ExpenseSummary}}">Expense Summary</a>
                             <a class="dropdown-item" href="#">Deposit Summary</a>
                             <a class="dropdown-item" href="#">Accounts Summary</a>
                             <a class="dropdown-item" href="#">Loans Summary</a>

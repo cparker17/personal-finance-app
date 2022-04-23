@@ -1,4 +1,4 @@
-package com.parker.personalfinanceapp.models.enumerations;
+package com.parker.personalfinanceapp.models;
 
 import javax.persistence.Enumerated;
 

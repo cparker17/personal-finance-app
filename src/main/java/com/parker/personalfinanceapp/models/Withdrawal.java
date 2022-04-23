@@ -1,4 +1,4 @@
-package com.parker.personalfinanceapp.models.transactions;
+package com.parker.personalfinanceapp.models;
 
 import lombok.*;
 
@@ -15,7 +15,7 @@ import java.time.LocalDate;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class LoanPayment implements Transaction {
+public class Withdrawal extends Transaction {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
