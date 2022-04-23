@@ -19,21 +19,20 @@ public class UserController {
 
     @RequestMapping("/view")
     public String viewUserInfo(Model model, Authentication auth) throws NoSuchUserException {
-        model.addAttribute("user", userService.getUserInfo(UserFactory.createUser(auth).getId()));
+        model.addAttribute("user", userService.getUserInfo(UserFactory.createUser(auth)));
         return "user-view";
     }
 
     @RequestMapping("/edit")
     public String viewEditUserInfoPage(Model model, Authentication auth) throws NoSuchUserException {
-        model.addAttribute("user", userService.getUserInfo(UserFactory.createUser(auth).getId()));
+        model.addAttribute("user", userService.getUserInfo(UserFactory.createUser(auth)));
         return "user-edit";
     }
 
     @RequestMapping("/update")
-    public String updateUserInfo(Model model, Authentication auth, @RequestParam User newUser)
-            throws NoSuchUserException {
+    public String updateUserInfo(Model model, Authentication auth, @RequestParam User newUser) {
         model.addAttribute("user",
-                userService.updateUserInfo(UserFactory.createUser(auth).getId(), newUser));
+                userService.updateUserInfo(UserFactory.createUser(auth), newUser));
         return "user-view";
     }
 }

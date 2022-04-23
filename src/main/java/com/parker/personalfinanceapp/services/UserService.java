@@ -12,12 +12,11 @@ public class UserService {
     @Autowired
     UserRepo userRepo;
 
-    public User getUserInfo(Long userId) throws NoSuchUserException {
-        return UserFactory.getUser(userId);
+    public User getUserInfo(User user) throws NoSuchUserException {
+        return UserFactory.getUser(user.getId());
     }
 
-    public User updateUserInfo(Long userId, User newUser) throws NoSuchUserException {
-        User user = UserFactory.getUser(userId);
+    public User updateUserInfo(User user, User newUser) {
         user.setAddress(newUser.getAddress());
         user.setBirthDate(newUser.getBirthDate());
         user.setEmail(newUser.getEmail());
