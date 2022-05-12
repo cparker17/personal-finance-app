@@ -28,19 +28,18 @@
                         <li class="nav-item">
                             <a class="nav-link active" aria-current="page" th:href="@{/}">Home</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" th:href="@{/books}">Files</a>
-                        </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link active dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button"
-                               aria-haspopup="true" aria-expanded="false">Budget</a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDarkDropDownMenuLink">
-                                <li><a class="dropdown-item" href="#">Expenses</a></li>
-                                <li><a class="dropdown-item" href="#">Deposits</a></li>
-                                <li><a class="dropdown-item" href="#">Accounts</a></li>
-                                <li><a class="dropdown-item" href="#">Loans</a></li>
-                                <li><a class="dropdown-item" href="#">Savings</a></li>
-                            </ul>
+                            <a class="nav-link active dropdown-toggle"  data-bs-toggle="dropdown"
+                               role="button" aria-haspopup="true" aria-expanded="false"
+                               th:href="@{/books}">Files</a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="#">Receipts</a>
+                                <a class="dropdown-item" th:href="">Statements</a>
+                                <a class="dropdown-item" th:href="">Bills</a>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" th:href="@{/budget/view}">Budget</a>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link active dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button"
