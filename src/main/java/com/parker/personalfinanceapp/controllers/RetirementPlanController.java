@@ -23,6 +23,12 @@ public class RetirementPlanController {
         return "retirement-plan-new";
     }
 
+    @RequestMapping("/view")
+    public String viewRetirementPlan(Model model, Authentication auth) {
+        model.addAttribute("plan", retirementPlanService.getRetirementPlan(UserFactory.createUser(auth)));
+        return "retirement-plan-view";
+    }
+
     @RequestMapping("/new")
     public String createRetirementPlan(Model model, Authentication auth, @RequestParam RetirementPlan retirementPlan) {
         model.addAttribute("plan",

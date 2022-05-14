@@ -1,10 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <div th:replace="fragments :: header"/></div>
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
 <body>
-
+<div th:replace="fragments :: navigation"/>
+<div class="container align-content-center">
+<table class="table table-striped border border-dark">
+    <thead>
+    <tr>
+        <th>#</th>
+        <th>Category</th>
+        <th>Amount Budgeted</th>
+        <th>Type</th>
+    </tr>
+    </thead>
+    <tbody>
+    <div >
+    <tr th:each="category : ${budget.categories}">
+        <td th:text="${category.id}">#</td>
+        <td th:text="${category.name}">Name</td>
+        <td th:text="${category.monthlyBudgetAmt}">Amount</td>
+        <td th:text="${category.categoryType}">Type</td>
+    </tr>
+    </div>
+    </tbody>
+</table>
+</div>
 </body>
 </html>
