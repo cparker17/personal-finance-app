@@ -1,10 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+    <div th:replace="fragments :: header"/></div>
+    <title>Edit Budget</title>
 </head>
 <body>
-
+    <div th:replace="fragments :: navigation"/>
+    <form action="#" th:action="@{/budget/update}" th:object="${category}" method="post">
+    <table>
+        <tr>
+            <td>Id:</td>
+            <td><input type="text" th:field="*{id}" readonly/></td>
+        </tr>
+        <tr>
+            <td>Category Name:</td>
+            <td><input type="text" th:field="*{name}" required/></td>
+        </tr>
+        <tr>
+            <td>Monthly Budget Amount:</td>
+            <td><input type="number" th:field="*{monthlyBudgetAmt}" required/></td>
+        </tr>
+        <tr>
+            <td colspan="2"><button type="submit" class="btn btn-light text-dark border-dark">Save</button></td>
+        </tr>
+    </table>
+    </form>
 </body>
 </html>

@@ -9,9 +9,9 @@ import java.util.Optional;
 
 public class BudgetFactory {
     @Autowired
-    static BudgetRepo budgetRepo;
+    BudgetRepo budgetRepo;
 
-    public static Budget getBudgetFromDB(Long id) throws NoSuchBudgetException {
+    public Budget getBudgetFromDB(Long id) throws NoSuchBudgetException {
         Optional<Budget> budgetOptional = budgetRepo.findById(id);
         if (budgetOptional.isPresent()) {
             return budgetOptional.get();

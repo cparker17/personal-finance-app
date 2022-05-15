@@ -10,6 +10,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.Optional;
+
 @Service
 public class BudgetService {
     @Autowired
@@ -30,20 +32,25 @@ public class BudgetService {
     }
 
     @Transactional
-    public Budget getBudget(User user) {
-        return user.getBudget();
+    public Budget getBudget(User user) throws NoSuchBudgetException {
+        Optional<Budget> budgetOptional = budgetRepo.findById(user.getBudget().getId());
+        if (budgetOptional.isPresent()) {
+            return budgetOptional.get();
+        } else {
+            throw new NoSuchBudgetException("Budget does not exist.");
+        }
     }
 
     @Transactional
     public Budget updateBudget(User user, Budget budget) throws NoSuchBudgetException {
         setUserBudget(user, budget);
-        budgetRepo.delete(BudgetFactory.getBudgetFromDB(budget.getId()));
+        budgetRepo.delete(getBudget(user));
         return budgetRepo.save(budget);
     }
 
     @Transactional
     public void deleteBudget(User user) throws NoSuchBudgetException {
         setUserBudget(user, null);
-        budgetRepo.delete(BudgetFactory.getBudgetFromDB(user.getBudget().getId()));
+        budgetRepo.delete(getBudget(user));
     }
 }

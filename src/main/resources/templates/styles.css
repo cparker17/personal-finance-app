@@ -2,3 +2,13 @@
     margin-left:7px;
     margin-right:7px;
 }
+
+.tbl {
+    text-align: center;
+}
+
+th {
+    background-color: black;
+    color: white;
+    font-weight: bold;
+}

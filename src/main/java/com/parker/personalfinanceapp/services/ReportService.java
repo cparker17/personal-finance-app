@@ -27,6 +27,9 @@ public class ReportService {
     @Autowired
     UserRepo userRepo;
 
+    @Autowired
+    BudgetService budgetService;
+
     public Report getReport(Long userId, String reportType) throws NoSuchReportException, NoSuchUserException, NoSuchBudgetException {
         switch (reportType) {
             case "BudgetActual": return getBudgetActualReport(userId);
@@ -87,7 +90,7 @@ public class ReportService {
 
     private ExpenseSummary getExpenseSummary(Long userId) throws NoSuchBudgetException, NoSuchUserException {
         User user = UserFactory.getUser(userId);
-        Budget budget = BudgetFactory.getBudgetFromDB(user.getBudget().getId());
+        Budget budget = budgetService.getBudget(user);
         return ExpenseSummary.builder()
                 .categories(budget.getCategories())
                 .expenses(getUserExpenses(budget))

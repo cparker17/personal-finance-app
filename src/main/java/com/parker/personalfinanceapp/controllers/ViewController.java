@@ -40,4 +40,9 @@ public class ViewController {
         model.addAttribute("user", UserFactory.createUser(auth));
         return "update-user";
     }
+
+    @GetMapping("/help")
+    public String viewHelpPage() {
+        return "help";
+    }
 }
