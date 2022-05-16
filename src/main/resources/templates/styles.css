@@ -12,3 +12,8 @@ th {
     color: white;
     font-weight: bold;
 }
+
+#linear {
+    background-color: cornflowerblue;
+    background-image: linear-gradient(cornflowerblue, white);
+}

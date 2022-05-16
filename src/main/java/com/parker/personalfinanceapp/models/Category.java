@@ -22,6 +22,9 @@ public class Category {
 
     private CategoryType categoryType;
 
+    @Transient
+    private String type;
+
     private BigDecimal monthlyBudgetAmt;
 
     @OneToMany

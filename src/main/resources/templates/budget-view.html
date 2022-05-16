@@ -4,12 +4,21 @@
     <div th:replace="fragments :: header"/></div>
     <meta charset="UTF-8">
     <title>Title</title>
+    <style>
+        #linear {
+            background-color: cornflowerblue;
+            background-image: radial-gradient(cornflowerblue, white);
+        }
+    </style>
 </head>
 <body>
-<div th:replace="fragments :: navigation"/>
-<div class="container align-content-center">
-<table class="table table-striped border border-dark">
-    <thead style="background-color: black; color:white; font-weight:bold">
+<div th:replace="fragments :: navigation"/><br><br>
+<div class="container col-7 align-content-center">
+    <h1 class="text-center">Budget</h1><br>
+<table class="table table-striped border rounded border-dark">
+    <thead id="linear" style="background-color: cornflowerblue;
+            background-image: radial-gradient(cornflowerblue, white);
+            font-weight:bold">
     <tr>
         <th>#</th>
         <th>Category</th>
@@ -20,7 +29,7 @@
     <tbody>
     <div >
     <tr th:each="category : ${budget.categories}">
-        <td><a class="text-decoration-none fw-bold" th:href="@{'/budget/edit/' + ${category.id}}" th:text="${category.id}">#</a></td>
+        <td><a class="fw-bold" th:href="@{'/budget/edit/' + ${category.id}}" th:text="${category.id}">#</a></td>
         <td th:text="${category.name}">Name</td>
         <td th:text="'$' + ${category.monthlyBudgetAmt}">Amount</td>
         <td th:text="${category.categoryType}">Type</td>
