@@ -12,9 +12,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 public class ViewController {
 
-    @GetMapping("/home")
+    @GetMapping("/")
     public String viewHomePage() {
-        return "index";
+        return "fragments";
     }
 
     @GetMapping("/register")
@@ -23,11 +23,11 @@ public class ViewController {
         return "register";
     }
 
-    @GetMapping("/")
-    public String viewSignInPage(Model model) {
-        model.addAttribute("securityUser", new SecurityUser());
-        return "login";
-    }
+//    @GetMapping("/")
+//    public String viewSignInPage(Model model) {
+//        model.addAttribute("securityUser", new SecurityUser());
+//        return "login";
+//    }
 
     @GetMapping("/register-form")
     public String viewRegisterAccountPage(Model model) {

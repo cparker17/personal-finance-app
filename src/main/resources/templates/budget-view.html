@@ -15,28 +15,29 @@
 <div th:replace="fragments :: navigation"/><br><br>
 <div class="container col-7 align-content-center">
     <h1 class="text-center">Budget</h1><br>
-<table class="table table-striped border rounded border-dark">
-    <thead id="linear" style="background-color: cornflowerblue;
+    <table class="table table-striped border rounded border-dark">
+        <thead id="linear" style="background-color: cornflowerblue;
             background-image: radial-gradient(cornflowerblue, white);
             font-weight:bold">
-    <tr>
-        <th>#</th>
-        <th>Category</th>
-        <th>Amount Budgeted</th>
-        <th>Type</th>
-    </tr>
-    </thead>
-    <tbody>
-    <div >
-    <tr th:each="category : ${budget.categories}">
-        <td><a class="fw-bold" th:href="@{'/budget/edit/' + ${category.id}}" th:text="${category.id}">#</a></td>
-        <td th:text="${category.name}">Name</td>
-        <td th:text="'$' + ${category.monthlyBudgetAmt}">Amount</td>
-        <td th:text="${category.categoryType}">Type</td>
-    </tr>
-    </div>
-    </tbody>
-</table>
+        <tr>
+            <th>#</th>
+            <th>Category</th>
+            <th>Amount Budgeted</th>
+            <th>Type</th>
+        </tr>
+        </thead>
+        <tbody>
+        <div >
+            <tr th:each="category : ${budget.categories}">
+                <td><a class="fw-bold" th:href="@{'/budget/edit/' + ${category.id}}" th:text="${category.id}">#</a></td>
+                <td th:text="${category.name}">Name</td>
+                <td th:text="'$' + ${category.monthlyBudgetAmt}">Amount</td>
+                <td th:text="${category.categoryType}">Type</td>
+            </tr>
+        </div>
+        </tbody>
+    </table>
 </div>
+<div th:replace="fragments :: footer"/>
 </body>
 </html>
