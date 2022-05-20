@@ -14,7 +14,7 @@ public class ViewController {
 
     @GetMapping("/")
     public String viewHomePage() {
-        return "fragments";
+        return "index";
     }
 
     @GetMapping("/register")
@@ -23,11 +23,11 @@ public class ViewController {
         return "register";
     }
 
-//    @GetMapping("/")
-//    public String viewSignInPage(Model model) {
-//        model.addAttribute("securityUser", new SecurityUser());
-//        return "login";
-//    }
+    @GetMapping("/login")
+    public String viewSignInPage(Model model) {
+        model.addAttribute("securityUser", new SecurityUser());
+        return "login";
+    }
 
     @GetMapping("/register-form")
     public String viewRegisterAccountPage(Model model) {

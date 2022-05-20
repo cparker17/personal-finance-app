@@ -1,40 +1,28 @@
-2022-05-18 00:16:10.815  WARN 13249 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=16m36s675ms).
-2022-05-18 00:33:20.253  WARN 13249 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=16m39s391ms).
-2022-05-18 01:49:12.664  WARN 13249 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m51s557ms).
-2022-05-18 03:05:09.080  WARN 13249 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m55s600ms).
-2022-05-18 03:21:03.145  WARN 13249 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m54s65ms).
-2022-05-18 03:27:07.277  WARN 13249 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=5m4s129ms).
-2022-05-18 03:44:15.477  WARN 13249 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=16m38s183ms).
-2022-05-18 04:01:04.523  WARN 13249 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=16m19s42ms).
-2022-05-18 05:10:59.623  WARN 13249 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m24s134ms).
-2022-05-18 06:17:17.774  INFO 13249 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2022-05-18 06:17:17.781  INFO 13249 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2022-05-18 06:17:17.792  INFO 13249 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2022-05-18 06:18:24.849  INFO 14765 --- [restartedMain] c.p.p.PersonalFinanceAppApplication      : Starting PersonalFinanceAppApplication using Java 11.0.13 on Chriss-MBP with PID 14765 (/Users/chrisparker/Documents/personal-finance-app/target/classes started by chrisparker in /Users/chrisparker/Documents/personal-finance-app)
-2022-05-18 06:18:24.852 DEBUG 14765 --- [restartedMain] c.p.p.PersonalFinanceAppApplication      : Running with Spring Boot v2.6.6, Spring v5.3.18
-2022-05-18 06:18:24.853  INFO 14765 --- [restartedMain] c.p.p.PersonalFinanceAppApplication      : No active profile set, falling back to 1 default profile: "default"
-2022-05-18 06:18:24.931  INFO 14765 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2022-05-18 06:18:24.932  INFO 14765 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2022-05-18 06:18:25.845  INFO 14765 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2022-05-18 06:18:25.937  INFO 14765 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 86 ms. Found 9 JPA repository interfaces.
-2022-05-18 06:18:26.641  INFO 14765 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2022-05-18 06:18:26.649  INFO 14765 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-05-18 06:18:26.650  INFO 14765 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.60]
-2022-05-18 06:18:26.717  INFO 14765 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2022-05-18 06:18:26.717  INFO 14765 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1785 ms
-2022-05-18 06:18:26.850  INFO 14765 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2022-05-18 06:18:26.872  INFO 14765 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.7.Final
-2022-05-18 06:18:26.965  INFO 14765 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2022-05-18 06:18:27.011  INFO 14765 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2022-05-18 06:18:27.108  INFO 14765 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2022-05-18 06:18:27.116  INFO 14765 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
-2022-05-18 06:18:28.146  INFO 14765 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2022-05-18 06:18:28.152  INFO 14765 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2022-05-18 06:18:28.575  WARN 14765 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2022-05-18 06:18:28.740  INFO 14765 --- [restartedMain] f.a.AutowiredAnnotationBeanPostProcessor : Autowired annotation is not supported on static fields: static com.parker.personalfinanceapp.repositories.UserRepo com.parker.personalfinanceapp.models.UserFactory.userRepo
-2022-05-18 06:18:28.947  INFO 14765 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
-2022-05-18 06:18:29.048  INFO 14765 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will not secure any request
-2022-05-18 06:18:29.050  WARN 14765 --- [restartedMain] o.s.s.c.a.web.builders.WebSecurity       : 
+2022-05-19 15:59:42.022  INFO 19876 --- [restartedMain] c.p.p.PersonalFinanceAppApplication      : Starting PersonalFinanceAppApplication using Java 11.0.13 on Chriss-MBP with PID 19876 (/Users/chrisparker/Documents/personal-finance-app/target/classes started by chrisparker in /Users/chrisparker/Documents/personal-finance-app)
+2022-05-19 15:59:42.027 DEBUG 19876 --- [restartedMain] c.p.p.PersonalFinanceAppApplication      : Running with Spring Boot v2.6.6, Spring v5.3.18
+2022-05-19 15:59:42.029  INFO 19876 --- [restartedMain] c.p.p.PersonalFinanceAppApplication      : No active profile set, falling back to 1 default profile: "default"
+2022-05-19 15:59:42.103  INFO 19876 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-05-19 15:59:42.104  INFO 19876 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-05-19 15:59:43.118  INFO 19876 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-05-19 15:59:43.220  INFO 19876 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 95 ms. Found 9 JPA repository interfaces.
+2022-05-19 15:59:44.064  INFO 19876 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-05-19 15:59:44.073  INFO 19876 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-05-19 15:59:44.078  INFO 19876 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.60]
+2022-05-19 15:59:44.146  INFO 19876 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-05-19 15:59:44.148  INFO 19876 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2043 ms
+2022-05-19 15:59:44.284  INFO 19876 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-05-19 15:59:44.311  INFO 19876 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.7.Final
+2022-05-19 15:59:44.428  INFO 19876 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-05-19 15:59:44.487  INFO 19876 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-05-19 15:59:44.654  INFO 19876 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-05-19 15:59:44.667  INFO 19876 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2022-05-19 15:59:45.893  INFO 19876 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-05-19 15:59:45.902  INFO 19876 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-05-19 15:59:46.434  WARN 19876 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-05-19 15:59:46.638  INFO 19876 --- [restartedMain] f.a.AutowiredAnnotationBeanPostProcessor : Autowired annotation is not supported on static fields: static com.parker.personalfinanceapp.repositories.UserRepo com.parker.personalfinanceapp.models.UserFactory.userRepo
+2022-05-19 15:59:46.892  INFO 19876 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2022-05-19 15:59:46.999  INFO 19876 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will not secure any request
+2022-05-19 15:59:47.001  WARN 19876 --- [restartedMain] o.s.s.c.a.web.builders.WebSecurity       : 
 
 ********************************************************************
 **********        Security debugging is enabled.       *************
@@ -43,467 +31,19 @@
 ********************************************************************
 
 
-2022-05-18 06:18:29.275  INFO 14765 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2022-05-18 06:18:29.309  INFO 14765 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2022-05-18 06:18:29.321  INFO 14765 --- [restartedMain] c.p.p.PersonalFinanceAppApplication      : Started PersonalFinanceAppApplication in 4.973 seconds (JVM running for 5.994)
-2022-05-18 06:18:30.088  INFO 14765 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2022-05-18 06:18:30.090  INFO 14765 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2022-05-18 06:18:30.091  INFO 14765 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2022-05-18 06:18:30.098  INFO 14765 --- [http-nio-8080-exec-1] Spring Security Debugger                 : 
+2022-05-19 15:59:47.271  INFO 19876 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-05-19 15:59:47.317  INFO 19876 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-05-19 15:59:47.340  INFO 19876 --- [restartedMain] c.p.p.PersonalFinanceAppApplication      : Started PersonalFinanceAppApplication in 5.94 seconds (JVM running for 7.277)
+2022-05-19 15:59:48.980  INFO 19876 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-05-19 15:59:48.981  INFO 19876 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-05-19 15:59:48.984  INFO 19876 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2022-05-19 15:59:48.990  INFO 19876 --- [http-nio-8080-exec-1] Spring Security Debugger                 : 
 
 ************************************************************
 
 Request received for GET '/':
 
-org.apache.catalina.connector.RequestFacade@3b1c4b9d
-
-servletPath:/
-pathInfo:null
-headers: 
-host: localhost:8080
-connection: keep-alive
-sec-ch-ua: " Not A;Brand";v="99", "Chromium";v="101", "Google Chrome";v="101"
-sec-ch-ua-mobile: ?0
-sec-ch-ua-platform: "macOS"
-upgrade-insecure-requests: 1
-user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.64 Safari/537.36
-accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
-sec-fetch-site: none
-sec-fetch-mode: navigate
-sec-fetch-user: ?1
-sec-fetch-dest: document
-accept-encoding: gzip, deflate, br
-accept-language: en-US,en;q=0.9
-cookie: Idea-e9a85424=da753aa3-6eaa-40f2-b7b7-8a2140ca190a; Webstorm-f156c96b=af2df56d-b02c-4e9d-bd4b-6bba820f1549; _ga=GA1.1.1796180098.1648247297; JSESSIONID=9DFA3E206DDB6BB3174E7594C4B43E37
-
-
-Security filter chain: [
-  WebAsyncManagerIntegrationFilter
-  SecurityContextPersistenceFilter
-  HeaderWriterFilter
-  LogoutFilter
-  UsernamePasswordAuthenticationFilter
-  RequestCacheAwareFilter
-  SecurityContextHolderAwareRequestFilter
-  AnonymousAuthenticationFilter
-  SessionManagementFilter
-  ExceptionTranslationFilter
-  FilterSecurityInterceptor
-]
-
-
-************************************************************
-
-
-2022-05-18 06:19:25.072  INFO 14765 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2022-05-18 06:19:25.077  INFO 14765 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2022-05-18 06:19:25.090  INFO 14765 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2022-05-18 06:19:32.353  INFO 14784 --- [restartedMain] c.p.p.PersonalFinanceAppApplication      : Starting PersonalFinanceAppApplication using Java 11.0.13 on Chriss-MBP with PID 14784 (/Users/chrisparker/Documents/personal-finance-app/target/classes started by chrisparker in /Users/chrisparker/Documents/personal-finance-app)
-2022-05-18 06:19:32.354 DEBUG 14784 --- [restartedMain] c.p.p.PersonalFinanceAppApplication      : Running with Spring Boot v2.6.6, Spring v5.3.18
-2022-05-18 06:19:32.354  INFO 14784 --- [restartedMain] c.p.p.PersonalFinanceAppApplication      : No active profile set, falling back to 1 default profile: "default"
-2022-05-18 06:19:32.416  INFO 14784 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2022-05-18 06:19:32.417  INFO 14784 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2022-05-18 06:19:33.231  INFO 14784 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2022-05-18 06:19:33.338  INFO 14784 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 102 ms. Found 9 JPA repository interfaces.
-2022-05-18 06:19:33.943  INFO 14784 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2022-05-18 06:19:33.950  INFO 14784 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-05-18 06:19:33.950  INFO 14784 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.60]
-2022-05-18 06:19:34.012  INFO 14784 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2022-05-18 06:19:34.012  INFO 14784 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1594 ms
-2022-05-18 06:19:34.122  INFO 14784 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2022-05-18 06:19:34.137  INFO 14784 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.7.Final
-2022-05-18 06:19:34.217  INFO 14784 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2022-05-18 06:19:34.257  INFO 14784 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2022-05-18 06:19:34.336  INFO 14784 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2022-05-18 06:19:34.344  INFO 14784 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
-2022-05-18 06:19:35.279  INFO 14784 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2022-05-18 06:19:35.285  INFO 14784 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2022-05-18 06:19:35.674  WARN 14784 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2022-05-18 06:19:35.829  INFO 14784 --- [restartedMain] f.a.AutowiredAnnotationBeanPostProcessor : Autowired annotation is not supported on static fields: static com.parker.personalfinanceapp.repositories.UserRepo com.parker.personalfinanceapp.models.UserFactory.userRepo
-2022-05-18 06:19:36.022  INFO 14784 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
-2022-05-18 06:19:36.116  INFO 14784 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will not secure any request
-2022-05-18 06:19:36.118  WARN 14784 --- [restartedMain] o.s.s.c.a.web.builders.WebSecurity       : 
-
-********************************************************************
-**********        Security debugging is enabled.       *************
-**********    This may include sensitive information.  *************
-**********      Do not use in a production system!     *************
-********************************************************************
-
-
-2022-05-18 06:19:36.330  INFO 14784 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2022-05-18 06:19:36.364  INFO 14784 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2022-05-18 06:19:36.376  INFO 14784 --- [restartedMain] c.p.p.PersonalFinanceAppApplication      : Started PersonalFinanceAppApplication in 4.605 seconds (JVM running for 5.446)
-2022-05-18 06:19:39.664  INFO 14784 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2022-05-18 06:19:39.666  INFO 14784 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2022-05-18 06:19:39.668  INFO 14784 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2022-05-18 06:19:39.674  INFO 14784 --- [http-nio-8080-exec-1] Spring Security Debugger                 : 
-
-************************************************************
-
-Request received for GET '/':
-
-org.apache.catalina.connector.RequestFacade@7ec39537
-
-servletPath:/
-pathInfo:null
-headers: 
-host: localhost:8080
-connection: keep-alive
-cache-control: max-age=0
-sec-ch-ua: " Not A;Brand";v="99", "Chromium";v="101", "Google Chrome";v="101"
-sec-ch-ua-mobile: ?0
-sec-ch-ua-platform: "macOS"
-upgrade-insecure-requests: 1
-user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.64 Safari/537.36
-accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
-sec-fetch-site: none
-sec-fetch-mode: navigate
-sec-fetch-user: ?1
-sec-fetch-dest: document
-accept-encoding: gzip, deflate, br
-accept-language: en-US,en;q=0.9
-cookie: Idea-e9a85424=da753aa3-6eaa-40f2-b7b7-8a2140ca190a; Webstorm-f156c96b=af2df56d-b02c-4e9d-bd4b-6bba820f1549; _ga=GA1.1.1796180098.1648247297; JSESSIONID=9DFA3E206DDB6BB3174E7594C4B43E37
-
-
-Security filter chain: [
-  WebAsyncManagerIntegrationFilter
-  SecurityContextPersistenceFilter
-  HeaderWriterFilter
-  LogoutFilter
-  UsernamePasswordAuthenticationFilter
-  RequestCacheAwareFilter
-  SecurityContextHolderAwareRequestFilter
-  AnonymousAuthenticationFilter
-  SessionManagementFilter
-  ExceptionTranslationFilter
-  FilterSecurityInterceptor
-]
-
-
-************************************************************
-
-
-2022-05-18 06:20:02.437  INFO 14784 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2022-05-18 06:20:02.442  INFO 14784 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2022-05-18 06:20:02.455  INFO 14784 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2022-05-18 06:20:18.489  INFO 14797 --- [restartedMain] c.p.p.PersonalFinanceAppApplication      : Starting PersonalFinanceAppApplication using Java 11.0.13 on Chriss-MBP with PID 14797 (/Users/chrisparker/Documents/personal-finance-app/target/classes started by chrisparker in /Users/chrisparker/Documents/personal-finance-app)
-2022-05-18 06:20:18.490 DEBUG 14797 --- [restartedMain] c.p.p.PersonalFinanceAppApplication      : Running with Spring Boot v2.6.6, Spring v5.3.18
-2022-05-18 06:20:18.491  INFO 14797 --- [restartedMain] c.p.p.PersonalFinanceAppApplication      : No active profile set, falling back to 1 default profile: "default"
-2022-05-18 06:20:18.549  INFO 14797 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2022-05-18 06:20:18.550  INFO 14797 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2022-05-18 06:20:19.437  INFO 14797 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2022-05-18 06:20:19.539  INFO 14797 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 97 ms. Found 9 JPA repository interfaces.
-2022-05-18 06:20:20.212  INFO 14797 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2022-05-18 06:20:20.220  INFO 14797 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-05-18 06:20:20.220  INFO 14797 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.60]
-2022-05-18 06:20:20.286  INFO 14797 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2022-05-18 06:20:20.287  INFO 14797 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1737 ms
-2022-05-18 06:20:20.413  INFO 14797 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2022-05-18 06:20:20.432  INFO 14797 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.7.Final
-2022-05-18 06:20:20.517  INFO 14797 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2022-05-18 06:20:20.565  INFO 14797 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2022-05-18 06:20:20.651  INFO 14797 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2022-05-18 06:20:20.657  INFO 14797 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
-2022-05-18 06:20:21.648  INFO 14797 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2022-05-18 06:20:21.654  INFO 14797 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2022-05-18 06:20:22.063  WARN 14797 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2022-05-18 06:20:22.235  INFO 14797 --- [restartedMain] f.a.AutowiredAnnotationBeanPostProcessor : Autowired annotation is not supported on static fields: static com.parker.personalfinanceapp.repositories.UserRepo com.parker.personalfinanceapp.models.UserFactory.userRepo
-2022-05-18 06:20:22.442  INFO 14797 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
-2022-05-18 06:20:22.547  INFO 14797 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will not secure any request
-2022-05-18 06:20:22.550  WARN 14797 --- [restartedMain] o.s.s.c.a.web.builders.WebSecurity       : 
-
-********************************************************************
-**********        Security debugging is enabled.       *************
-**********    This may include sensitive information.  *************
-**********      Do not use in a production system!     *************
-********************************************************************
-
-
-2022-05-18 06:20:22.783  INFO 14797 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2022-05-18 06:20:22.818  INFO 14797 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2022-05-18 06:20:22.830  INFO 14797 --- [restartedMain] c.p.p.PersonalFinanceAppApplication      : Started PersonalFinanceAppApplication in 4.946 seconds (JVM running for 5.757)
-2022-05-18 06:20:24.206  INFO 14797 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2022-05-18 06:20:24.208  INFO 14797 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2022-05-18 06:20:24.209  INFO 14797 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2022-05-18 06:20:24.217  INFO 14797 --- [http-nio-8080-exec-1] Spring Security Debugger                 : 
-
-************************************************************
-
-Request received for GET '/':
-
-org.apache.catalina.connector.RequestFacade@a439c20
-
-servletPath:/
-pathInfo:null
-headers: 
-host: localhost:8080
-connection: keep-alive
-cache-control: max-age=0
-sec-ch-ua: " Not A;Brand";v="99", "Chromium";v="101", "Google Chrome";v="101"
-sec-ch-ua-mobile: ?0
-sec-ch-ua-platform: "macOS"
-upgrade-insecure-requests: 1
-user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.64 Safari/537.36
-accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
-sec-fetch-site: none
-sec-fetch-mode: navigate
-sec-fetch-user: ?1
-sec-fetch-dest: document
-accept-encoding: gzip, deflate, br
-accept-language: en-US,en;q=0.9
-cookie: Idea-e9a85424=da753aa3-6eaa-40f2-b7b7-8a2140ca190a; Webstorm-f156c96b=af2df56d-b02c-4e9d-bd4b-6bba820f1549; _ga=GA1.1.1796180098.1648247297; JSESSIONID=9DFA3E206DDB6BB3174E7594C4B43E37
-
-
-Security filter chain: [
-  WebAsyncManagerIntegrationFilter
-  SecurityContextPersistenceFilter
-  HeaderWriterFilter
-  LogoutFilter
-  UsernamePasswordAuthenticationFilter
-  RequestCacheAwareFilter
-  SecurityContextHolderAwareRequestFilter
-  AnonymousAuthenticationFilter
-  SessionManagementFilter
-  ExceptionTranslationFilter
-  FilterSecurityInterceptor
-]
-
-
-************************************************************
-
-
-2022-05-18 06:20:29.064  INFO 14797 --- [http-nio-8080-exec-2] Spring Security Debugger                 : 
-
-************************************************************
-
-Request received for POST '/login':
-
-org.apache.catalina.connector.RequestFacade@a439c20
-
-servletPath:/login
-pathInfo:null
-headers: 
-host: localhost:8080
-connection: keep-alive
-content-length: 27
-cache-control: max-age=0
-sec-ch-ua: " Not A;Brand";v="99", "Chromium";v="101", "Google Chrome";v="101"
-sec-ch-ua-mobile: ?0
-sec-ch-ua-platform: "macOS"
-upgrade-insecure-requests: 1
-origin: http://localhost:8080
-content-type: application/x-www-form-urlencoded
-user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.64 Safari/537.36
-accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
-sec-fetch-site: same-origin
-sec-fetch-mode: navigate
-sec-fetch-user: ?1
-sec-fetch-dest: document
-referer: http://localhost:8080/
-accept-encoding: gzip, deflate, br
-accept-language: en-US,en;q=0.9
-cookie: Idea-e9a85424=da753aa3-6eaa-40f2-b7b7-8a2140ca190a; Webstorm-f156c96b=af2df56d-b02c-4e9d-bd4b-6bba820f1549; _ga=GA1.1.1796180098.1648247297; JSESSIONID=9DFA3E206DDB6BB3174E7594C4B43E37
-
-
-Security filter chain: [
-  WebAsyncManagerIntegrationFilter
-  SecurityContextPersistenceFilter
-  HeaderWriterFilter
-  LogoutFilter
-  UsernamePasswordAuthenticationFilter
-  RequestCacheAwareFilter
-  SecurityContextHolderAwareRequestFilter
-  AnonymousAuthenticationFilter
-  SessionManagementFilter
-  ExceptionTranslationFilter
-  FilterSecurityInterceptor
-]
-
-
-************************************************************
-
-
-2022-05-18 06:20:29.318  INFO 14797 --- [http-nio-8080-exec-2] Spring Security Debugger                 : 
-
-************************************************************
-
-New HTTP session created: 5B17865CD54F38CAA1A21BB8FB512BD3
-
-Call stack: 
-
-	at org.springframework.security.web.debug.Logger.info(Logger.java:46)
-	at org.springframework.security.web.debug.DebugFilter$DebugRequestWrapper.getSession(DebugFilter.java:171)
-	at org.springframework.security.web.debug.DebugFilter$DebugRequestWrapper.getSession(DebugFilter.java:181)
-	at javax.servlet.http.HttpServletRequestWrapper.getSession(HttpServletRequestWrapper.java:244)
-	at org.springframework.security.web.context.HttpSessionSecurityContextRepository$SaveToSessionResponseWrapper.createNewSessionIfAllowed(HttpSessionSecurityContextRepository.java:398)
-	at org.springframework.security.web.context.HttpSessionSecurityContextRepository$SaveToSessionResponseWrapper.saveContext(HttpSessionSecurityContextRepository.java:351)
-	at org.springframework.security.web.context.SaveContextOnUpdateOrErrorResponseWrapper.onResponseCommitted(SaveContextOnUpdateOrErrorResponseWrapper.java:84)
-	at org.springframework.security.web.util.OnCommittedResponseWrapper.doOnResponseCommitted(OnCommittedResponseWrapper.java:251)
-	at org.springframework.security.web.util.OnCommittedResponseWrapper.sendRedirect(OnCommittedResponseWrapper.java:135)
-	at javax.servlet.http.HttpServletResponseWrapper.sendRedirect(HttpServletResponseWrapper.java:138)
-	at org.springframework.security.web.util.OnCommittedResponseWrapper.sendRedirect(OnCommittedResponseWrapper.java:136)
-	at org.springframework.security.web.DefaultRedirectStrategy.sendRedirect(DefaultRedirectStrategy.java:59)
-	at org.springframework.security.web.authentication.AbstractAuthenticationTargetUrlRequestHandler.handle(AbstractAuthenticationTargetUrlRequestHandler.java:92)
-	at org.springframework.security.web.authentication.SimpleUrlAuthenticationSuccessHandler.onAuthenticationSuccess(SimpleUrlAuthenticationSuccessHandler.java:62)
-	at org.springframework.security.web.authentication.SavedRequestAwareAuthenticationSuccessHandler.onAuthenticationSuccess(SavedRequestAwareAuthenticationSuccessHandler.java:78)
-	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.successfulAuthentication(AbstractAuthenticationProcessingFilter.java:324)
-	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:233)
-	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:213)
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
-	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:103)
-	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:89)
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
-	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
-	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
-	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:110)
-	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:80)
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
-	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:55)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
-	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336)
-	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:211)
-	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:183)
-	at org.springframework.security.web.debug.DebugFilter.invokeWithWrappedRequest(DebugFilter.java:90)
-	at org.springframework.security.web.debug.DebugFilter.doFilter(DebugFilter.java:78)
-	at org.springframework.security.web.debug.DebugFilter.doFilter(DebugFilter.java:67)
-	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:354)
-	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:267)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
-	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
-	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
-	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360)
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:889)
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1743)
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
-	at java.base/java.lang.Thread.run(Thread.java:834)
-
-
-************************************************************
-
-
-2022-05-18 06:20:29.322  INFO 14797 --- [http-nio-8080-exec-3] Spring Security Debugger                 : 
-
-************************************************************
-
-Request received for GET '/':
-
-org.apache.catalina.connector.RequestFacade@a439c20
-
-servletPath:/
-pathInfo:null
-headers: 
-host: localhost:8080
-connection: keep-alive
-cache-control: max-age=0
-upgrade-insecure-requests: 1
-user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.64 Safari/537.36
-accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
-sec-fetch-site: same-origin
-sec-fetch-mode: navigate
-sec-fetch-user: ?1
-sec-fetch-dest: document
-sec-ch-ua: " Not A;Brand";v="99", "Chromium";v="101", "Google Chrome";v="101"
-sec-ch-ua-mobile: ?0
-sec-ch-ua-platform: "macOS"
-referer: http://localhost:8080/
-accept-encoding: gzip, deflate, br
-accept-language: en-US,en;q=0.9
-cookie: Idea-e9a85424=da753aa3-6eaa-40f2-b7b7-8a2140ca190a; Webstorm-f156c96b=af2df56d-b02c-4e9d-bd4b-6bba820f1549; _ga=GA1.1.1796180098.1648247297; JSESSIONID=5B17865CD54F38CAA1A21BB8FB512BD3
-
-
-Security filter chain: [
-  WebAsyncManagerIntegrationFilter
-  SecurityContextPersistenceFilter
-  HeaderWriterFilter
-  LogoutFilter
-  UsernamePasswordAuthenticationFilter
-  RequestCacheAwareFilter
-  SecurityContextHolderAwareRequestFilter
-  AnonymousAuthenticationFilter
-  SessionManagementFilter
-  ExceptionTranslationFilter
-  FilterSecurityInterceptor
-]
-
-
-************************************************************
-
-
-2022-05-18 06:21:09.900  INFO 14797 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2022-05-18 06:21:09.906  INFO 14797 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2022-05-18 06:21:09.920  INFO 14797 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2022-05-18 06:21:15.608  INFO 14809 --- [restartedMain] c.p.p.PersonalFinanceAppApplication      : Starting PersonalFinanceAppApplication using Java 11.0.13 on Chriss-MBP with PID 14809 (/Users/chrisparker/Documents/personal-finance-app/target/classes started by chrisparker in /Users/chrisparker/Documents/personal-finance-app)
-2022-05-18 06:21:15.610 DEBUG 14809 --- [restartedMain] c.p.p.PersonalFinanceAppApplication      : Running with Spring Boot v2.6.6, Spring v5.3.18
-2022-05-18 06:21:15.611  INFO 14809 --- [restartedMain] c.p.p.PersonalFinanceAppApplication      : No active profile set, falling back to 1 default profile: "default"
-2022-05-18 06:21:15.686  INFO 14809 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2022-05-18 06:21:15.686  INFO 14809 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2022-05-18 06:21:16.556  INFO 14809 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2022-05-18 06:21:16.662  INFO 14809 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 100 ms. Found 9 JPA repository interfaces.
-2022-05-18 06:21:17.370  INFO 14809 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2022-05-18 06:21:17.378  INFO 14809 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-05-18 06:21:17.378  INFO 14809 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.60]
-2022-05-18 06:21:17.435  INFO 14809 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2022-05-18 06:21:17.436  INFO 14809 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1749 ms
-2022-05-18 06:21:17.484  WARN 14809 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Cannot deserialize session attribute [SPRING_SECURITY_CONTEXT] for session [5B17865CD54F38CAA1A21BB8FB512BD3]
-2022-05-18 06:21:17.566  INFO 14809 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2022-05-18 06:21:17.587  INFO 14809 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.7.Final
-2022-05-18 06:21:17.681  INFO 14809 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2022-05-18 06:21:17.729  INFO 14809 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2022-05-18 06:21:17.881  INFO 14809 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2022-05-18 06:21:17.890  INFO 14809 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
-2022-05-18 06:21:18.890  INFO 14809 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2022-05-18 06:21:18.899  INFO 14809 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2022-05-18 06:21:19.326  WARN 14809 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2022-05-18 06:21:19.491  INFO 14809 --- [restartedMain] f.a.AutowiredAnnotationBeanPostProcessor : Autowired annotation is not supported on static fields: static com.parker.personalfinanceapp.repositories.UserRepo com.parker.personalfinanceapp.models.UserFactory.userRepo
-2022-05-18 06:21:19.704  INFO 14809 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
-2022-05-18 06:21:19.804  INFO 14809 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will not secure any request
-2022-05-18 06:21:19.806  WARN 14809 --- [restartedMain] o.s.s.c.a.web.builders.WebSecurity       : 
-
-********************************************************************
-**********        Security debugging is enabled.       *************
-**********    This may include sensitive information.  *************
-**********      Do not use in a production system!     *************
-********************************************************************
-
-
-2022-05-18 06:21:20.034  INFO 14809 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2022-05-18 06:21:20.069  INFO 14809 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2022-05-18 06:21:20.082  INFO 14809 --- [restartedMain] c.p.p.PersonalFinanceAppApplication      : Started PersonalFinanceAppApplication in 4.973 seconds (JVM running for 5.84)
-2022-05-18 06:21:21.125  INFO 14809 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2022-05-18 06:21:21.127  INFO 14809 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2022-05-18 06:21:21.128  INFO 14809 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2022-05-18 06:21:21.137  INFO 14809 --- [http-nio-8080-exec-1] Spring Security Debugger                 : 
-
-************************************************************
-
-Request received for GET '/':
-
-org.apache.catalina.connector.RequestFacade@495a7834
+org.apache.catalina.connector.RequestFacade@17b20a84
 
 servletPath:/
 pathInfo:null
@@ -543,13 +83,13 @@ Security filter chain: [
 ************************************************************
 
 
-2022-05-18 06:21:23.640  INFO 14809 --- [http-nio-8080-exec-2] Spring Security Debugger                 : 
+2022-05-19 15:59:50.808  INFO 19876 --- [http-nio-8080-exec-2] Spring Security Debugger                 : 
 
 ************************************************************
 
 Request received for GET '/styles.css':
 
-org.apache.catalina.connector.RequestFacade@495a7834
+org.apache.catalina.connector.RequestFacade@17b20a84
 
 servletPath:/styles.css
 pathInfo:null
@@ -588,13 +128,13 @@ Security filter chain: [
 ************************************************************
 
 
-2022-05-18 06:21:23.650  INFO 14809 --- [http-nio-8080-exec-2] Spring Security Debugger                 : 
+2022-05-19 15:59:50.820  INFO 19876 --- [http-nio-8080-exec-2] Spring Security Debugger                 : 
 
 ************************************************************
 
 Request received for GET '/error':
 
-org.apache.catalina.core.ApplicationHttpRequest@5841d883
+org.apache.catalina.core.ApplicationHttpRequest@703db4b4
 
 servletPath:/error
 pathInfo:null
@@ -633,34 +173,364 @@ Security filter chain: [
 ************************************************************
 
 
-2022-05-18 06:21:54.609  INFO 14809 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2022-05-18 06:21:54.615  INFO 14809 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2022-05-18 06:21:54.628  INFO 14809 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2022-05-18 06:22:01.564  INFO 14819 --- [restartedMain] c.p.p.PersonalFinanceAppApplication      : Starting PersonalFinanceAppApplication using Java 11.0.13 on Chriss-MBP with PID 14819 (/Users/chrisparker/Documents/personal-finance-app/target/classes started by chrisparker in /Users/chrisparker/Documents/personal-finance-app)
-2022-05-18 06:22:01.565 DEBUG 14819 --- [restartedMain] c.p.p.PersonalFinanceAppApplication      : Running with Spring Boot v2.6.6, Spring v5.3.18
-2022-05-18 06:22:01.566  INFO 14819 --- [restartedMain] c.p.p.PersonalFinanceAppApplication      : No active profile set, falling back to 1 default profile: "default"
-2022-05-18 06:22:01.621  INFO 14819 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2022-05-18 06:22:01.621  INFO 14819 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2022-05-18 06:22:02.499  INFO 14819 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2022-05-18 06:22:02.593  INFO 14819 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 88 ms. Found 9 JPA repository interfaces.
-2022-05-18 06:22:03.253  INFO 14819 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2022-05-18 06:22:03.261  INFO 14819 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-05-18 06:22:03.262  INFO 14819 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.60]
-2022-05-18 06:22:03.319  INFO 14819 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2022-05-18 06:22:03.320  INFO 14819 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1698 ms
-2022-05-18 06:22:03.435  INFO 14819 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2022-05-18 06:22:03.455  INFO 14819 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.7.Final
-2022-05-18 06:22:03.550  INFO 14819 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2022-05-18 06:22:03.597  INFO 14819 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2022-05-18 06:22:03.686  INFO 14819 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2022-05-18 06:22:03.693  INFO 14819 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
-2022-05-18 06:22:04.694  INFO 14819 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2022-05-18 06:22:04.699  INFO 14819 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2022-05-18 06:22:05.115  WARN 14819 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2022-05-18 06:22:05.282  INFO 14819 --- [restartedMain] f.a.AutowiredAnnotationBeanPostProcessor : Autowired annotation is not supported on static fields: static com.parker.personalfinanceapp.repositories.UserRepo com.parker.personalfinanceapp.models.UserFactory.userRepo
-2022-05-18 06:22:05.498  INFO 14819 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
-2022-05-18 06:22:05.601  INFO 14819 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will not secure any request
-2022-05-18 06:22:05.603  WARN 14819 --- [restartedMain] o.s.s.c.a.web.builders.WebSecurity       : 
+2022-05-19 16:01:11.432  INFO 19876 --- [http-nio-8080-exec-4] Spring Security Debugger                 : 
+
+************************************************************
+
+Request received for GET '/':
+
+org.apache.catalina.connector.RequestFacade@17b20a84
+
+servletPath:/
+pathInfo:null
+headers: 
+host: localhost:8080
+connection: keep-alive
+sec-ch-ua: " Not A;Brand";v="99", "Chromium";v="101", "Google Chrome";v="101"
+sec-ch-ua-mobile: ?0
+sec-ch-ua-platform: "macOS"
+upgrade-insecure-requests: 1
+user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.64 Safari/537.36
+accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+sec-fetch-site: none
+sec-fetch-mode: navigate
+sec-fetch-user: ?1
+sec-fetch-dest: document
+accept-encoding: gzip, deflate, br
+accept-language: en-US,en;q=0.9
+cookie: Idea-e9a85424=da753aa3-6eaa-40f2-b7b7-8a2140ca190a; Webstorm-f156c96b=af2df56d-b02c-4e9d-bd4b-6bba820f1549; _ga=GA1.1.1796180098.1648247297; JSESSIONID=5B17865CD54F38CAA1A21BB8FB512BD3
+
+
+Security filter chain: [
+  WebAsyncManagerIntegrationFilter
+  SecurityContextPersistenceFilter
+  HeaderWriterFilter
+  LogoutFilter
+  UsernamePasswordAuthenticationFilter
+  RequestCacheAwareFilter
+  SecurityContextHolderAwareRequestFilter
+  AnonymousAuthenticationFilter
+  SessionManagementFilter
+  ExceptionTranslationFilter
+  FilterSecurityInterceptor
+]
+
+
+************************************************************
+
+
+2022-05-19 16:02:27.293  INFO 19876 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-05-19 16:02:27.299  INFO 19876 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-05-19 16:02:27.311  INFO 19876 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-05-19 16:02:34.460  INFO 19933 --- [restartedMain] c.p.p.PersonalFinanceAppApplication      : Starting PersonalFinanceAppApplication using Java 11.0.13 on Chriss-MBP with PID 19933 (/Users/chrisparker/Documents/personal-finance-app/target/classes started by chrisparker in /Users/chrisparker/Documents/personal-finance-app)
+2022-05-19 16:02:34.463 DEBUG 19933 --- [restartedMain] c.p.p.PersonalFinanceAppApplication      : Running with Spring Boot v2.6.6, Spring v5.3.18
+2022-05-19 16:02:34.464  INFO 19933 --- [restartedMain] c.p.p.PersonalFinanceAppApplication      : No active profile set, falling back to 1 default profile: "default"
+2022-05-19 16:02:34.551  INFO 19933 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-05-19 16:02:34.551  INFO 19933 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-05-19 16:02:35.657  INFO 19933 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-05-19 16:02:35.774  INFO 19933 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 109 ms. Found 9 JPA repository interfaces.
+2022-05-19 16:02:36.490  INFO 19933 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-05-19 16:02:36.499  INFO 19933 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-05-19 16:02:36.499  INFO 19933 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.60]
+2022-05-19 16:02:36.578  INFO 19933 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-05-19 16:02:36.579  INFO 19933 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2027 ms
+2022-05-19 16:02:36.709  INFO 19933 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-05-19 16:02:36.734  INFO 19933 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.7.Final
+2022-05-19 16:02:36.833  INFO 19933 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-05-19 16:02:36.881  INFO 19933 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-05-19 16:02:36.980  INFO 19933 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-05-19 16:02:36.990  INFO 19933 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2022-05-19 16:02:38.090  INFO 19933 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-05-19 16:02:38.097  INFO 19933 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-05-19 16:02:38.580  WARN 19933 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-05-19 16:02:38.779  INFO 19933 --- [restartedMain] f.a.AutowiredAnnotationBeanPostProcessor : Autowired annotation is not supported on static fields: static com.parker.personalfinanceapp.repositories.UserRepo com.parker.personalfinanceapp.models.UserFactory.userRepo
+2022-05-19 16:02:39.019  WARN 19933 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'springSecurityFilterChain' defined in class path resource [org/springframework/security/config/annotation/web/configuration/WebSecurityConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [javax.servlet.Filter]: Factory method 'springSecurityFilterChain' threw exception; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'mvcHandlerMappingIntrospector' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Invocation of init method failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'viewController' method 
+com.parker.personalfinanceapp.controllers.ViewController#viewSignInPage(Model)
+to {GET [/]}: There is already 'viewController' bean method
+com.parker.personalfinanceapp.controllers.ViewController#viewHomePage() mapped.
+2022-05-19 16:02:39.021  INFO 19933 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-05-19 16:02:39.024  INFO 19933 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-05-19 16:02:39.040  INFO 19933 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-05-19 16:02:39.044  INFO 19933 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2022-05-19 16:02:39.057  INFO 19933 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-05-19 16:02:39.076 ERROR 19933 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'springSecurityFilterChain' defined in class path resource [org/springframework/security/config/annotation/web/configuration/WebSecurityConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [javax.servlet.Filter]: Factory method 'springSecurityFilterChain' threw exception; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'mvcHandlerMappingIntrospector' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Invocation of init method failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'viewController' method 
+com.parker.personalfinanceapp.controllers.ViewController#viewSignInPage(Model)
+to {GET [/]}: There is already 'viewController' bean method
+com.parker.personalfinanceapp.controllers.ViewController#viewHomePage() mapped.
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:658) ~[spring-beans-5.3.18.jar:5.3.18]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:486) ~[spring-beans-5.3.18.jar:5.3.18]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1352) ~[spring-beans-5.3.18.jar:5.3.18]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1195) ~[spring-beans-5.3.18.jar:5.3.18]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582) ~[spring-beans-5.3.18.jar:5.3.18]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.18.jar:5.3.18]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.18.jar:5.3.18]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.18.jar:5.3.18]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.18.jar:5.3.18]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.18.jar:5.3.18]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322) ~[spring-beans-5.3.18.jar:5.3.18]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.18.jar:5.3.18]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:953) ~[spring-beans-5.3.18.jar:5.3.18]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918) ~[spring-context-5.3.18.jar:5.3.18]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.18.jar:5.3.18]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145) ~[spring-boot-2.6.6.jar:2.6.6]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:740) ~[spring-boot-2.6.6.jar:2.6.6]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:415) ~[spring-boot-2.6.6.jar:2.6.6]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:303) ~[spring-boot-2.6.6.jar:2.6.6]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1312) ~[spring-boot-2.6.6.jar:2.6.6]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1301) ~[spring-boot-2.6.6.jar:2.6.6]
+	at com.parker.personalfinanceapp.PersonalFinanceAppApplication.main(PersonalFinanceAppApplication.java:43) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) ~[spring-boot-devtools-2.6.6.jar:2.6.6]
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [javax.servlet.Filter]: Factory method 'springSecurityFilterChain' threw exception; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'mvcHandlerMappingIntrospector' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Invocation of init method failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'viewController' method 
+com.parker.personalfinanceapp.controllers.ViewController#viewSignInPage(Model)
+to {GET [/]}: There is already 'viewController' bean method
+com.parker.personalfinanceapp.controllers.ViewController#viewHomePage() mapped.
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185) ~[spring-beans-5.3.18.jar:5.3.18]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653) ~[spring-beans-5.3.18.jar:5.3.18]
+	... 26 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'mvcHandlerMappingIntrospector' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Invocation of init method failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'viewController' method 
+com.parker.personalfinanceapp.controllers.ViewController#viewSignInPage(Model)
+to {GET [/]}: There is already 'viewController' bean method
+com.parker.personalfinanceapp.controllers.ViewController#viewHomePage() mapped.
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1804) ~[spring-beans-5.3.18.jar:5.3.18]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620) ~[spring-beans-5.3.18.jar:5.3.18]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.18.jar:5.3.18]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.18.jar:5.3.18]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.18.jar:5.3.18]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.18.jar:5.3.18]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:213) ~[spring-beans-5.3.18.jar:5.3.18]
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1160) ~[spring-context-5.3.18.jar:5.3.18]
+	at org.springframework.security.config.annotation.web.AbstractRequestMatcherRegistry.createMvcMatchers(AbstractRequestMatcherRegistry.java:170) ~[spring-security-config-5.6.2.jar:5.6.2]
+	at org.springframework.security.config.annotation.web.configurers.ExpressionUrlAuthorizationConfigurer$ExpressionInterceptUrlRegistry.mvcMatchers(ExpressionUrlAuthorizationConfigurer.java:225) ~[spring-security-config-5.6.2.jar:5.6.2]
+	at org.springframework.security.config.annotation.web.configurers.ExpressionUrlAuthorizationConfigurer$ExpressionInterceptUrlRegistry.mvcMatchers(ExpressionUrlAuthorizationConfigurer.java:230) ~[spring-security-config-5.6.2.jar:5.6.2]
+	at com.parker.personalfinanceapp.configurations.SecurityConfig.configure(SecurityConfig.java:30) ~[classes/:na]
+	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter.getHttp(WebSecurityConfigurerAdapter.java:217) ~[spring-security-config-5.6.2.jar:5.6.2]
+	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter.init(WebSecurityConfigurerAdapter.java:315) ~[spring-security-config-5.6.2.jar:5.6.2]
+	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter.init(WebSecurityConfigurerAdapter.java:93) ~[spring-security-config-5.6.2.jar:5.6.2]
+	at com.parker.personalfinanceapp.configurations.SecurityConfig$$EnhancerBySpringCGLIB$$d7d422f9.init(<generated>) ~[classes/:na]
+	at org.springframework.security.config.annotation.AbstractConfiguredSecurityBuilder.init(AbstractConfiguredSecurityBuilder.java:338) ~[spring-security-config-5.6.2.jar:5.6.2]
+	at org.springframework.security.config.annotation.AbstractConfiguredSecurityBuilder.doBuild(AbstractConfiguredSecurityBuilder.java:300) ~[spring-security-config-5.6.2.jar:5.6.2]
+	at org.springframework.security.config.annotation.AbstractSecurityBuilder.build(AbstractSecurityBuilder.java:38) ~[spring-security-config-5.6.2.jar:5.6.2]
+	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfiguration.springSecurityFilterChain(WebSecurityConfiguration.java:127) ~[spring-security-config-5.6.2.jar:5.6.2]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566) ~[na:na]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154) ~[spring-beans-5.3.18.jar:5.3.18]
+	... 27 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'viewController' method 
+com.parker.personalfinanceapp.controllers.ViewController#viewSignInPage(Model)
+to {GET [/]}: There is already 'viewController' bean method
+com.parker.personalfinanceapp.controllers.ViewController#viewHomePage() mapped.
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1804) ~[spring-beans-5.3.18.jar:5.3.18]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620) ~[spring-beans-5.3.18.jar:5.3.18]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.18.jar:5.3.18]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.18.jar:5.3.18]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.18.jar:5.3.18]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.18.jar:5.3.18]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.18.jar:5.3.18]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeansOfType(DefaultListableBeanFactory.java:671) ~[spring-beans-5.3.18.jar:5.3.18]
+	at org.springframework.context.support.AbstractApplicationContext.getBeansOfType(AbstractApplicationContext.java:1308) ~[spring-context-5.3.18.jar:5.3.18]
+	at org.springframework.beans.factory.BeanFactoryUtils.beansOfTypeIncludingAncestors(BeanFactoryUtils.java:378) ~[spring-beans-5.3.18.jar:5.3.18]
+	at org.springframework.web.servlet.handler.HandlerMappingIntrospector.initHandlerMappings(HandlerMappingIntrospector.java:226) ~[spring-webmvc-5.3.18.jar:5.3.18]
+	at org.springframework.web.servlet.handler.HandlerMappingIntrospector.afterPropertiesSet(HandlerMappingIntrospector.java:115) ~[spring-webmvc-5.3.18.jar:5.3.18]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863) ~[spring-beans-5.3.18.jar:5.3.18]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800) ~[spring-beans-5.3.18.jar:5.3.18]
+	... 51 common frames omitted
+Caused by: java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'viewController' method 
+com.parker.personalfinanceapp.controllers.ViewController#viewSignInPage(Model)
+to {GET [/]}: There is already 'viewController' bean method
+com.parker.personalfinanceapp.controllers.ViewController#viewHomePage() mapped.
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.validateMethodMapping(AbstractHandlerMethodMapping.java:669) ~[spring-webmvc-5.3.18.jar:5.3.18]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:635) ~[spring-webmvc-5.3.18.jar:5.3.18]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.registerHandlerMethod(AbstractHandlerMethodMapping.java:332) ~[spring-webmvc-5.3.18.jar:5.3.18]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod(RequestMappingHandlerMapping.java:420) ~[spring-webmvc-5.3.18.jar:5.3.18]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod(RequestMappingHandlerMapping.java:76) ~[spring-webmvc-5.3.18.jar:5.3.18]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.lambda$detectHandlerMethods$2(AbstractHandlerMethodMapping.java:299) ~[spring-webmvc-5.3.18.jar:5.3.18]
+	at java.base/java.util.LinkedHashMap.forEach(LinkedHashMap.java:684) ~[na:na]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.detectHandlerMethods(AbstractHandlerMethodMapping.java:297) ~[spring-webmvc-5.3.18.jar:5.3.18]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.processCandidateBean(AbstractHandlerMethodMapping.java:266) ~[spring-webmvc-5.3.18.jar:5.3.18]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.initHandlerMethods(AbstractHandlerMethodMapping.java:225) ~[spring-webmvc-5.3.18.jar:5.3.18]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.afterPropertiesSet(AbstractHandlerMethodMapping.java:213) ~[spring-webmvc-5.3.18.jar:5.3.18]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.afterPropertiesSet(RequestMappingHandlerMapping.java:205) ~[spring-webmvc-5.3.18.jar:5.3.18]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863) ~[spring-beans-5.3.18.jar:5.3.18]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800) ~[spring-beans-5.3.18.jar:5.3.18]
+	... 64 common frames omitted
+
+2022-05-19 16:02:57.333  INFO 19946 --- [restartedMain] c.p.p.PersonalFinanceAppApplication      : Starting PersonalFinanceAppApplication using Java 11.0.13 on Chriss-MBP with PID 19946 (/Users/chrisparker/Documents/personal-finance-app/target/classes started by chrisparker in /Users/chrisparker/Documents/personal-finance-app)
+2022-05-19 16:02:57.335 DEBUG 19946 --- [restartedMain] c.p.p.PersonalFinanceAppApplication      : Running with Spring Boot v2.6.6, Spring v5.3.18
+2022-05-19 16:02:57.335  INFO 19946 --- [restartedMain] c.p.p.PersonalFinanceAppApplication      : No active profile set, falling back to 1 default profile: "default"
+2022-05-19 16:02:57.474  INFO 19946 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-05-19 16:02:57.475  INFO 19946 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-05-19 16:02:58.467  INFO 19946 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-05-19 16:02:58.580  INFO 19946 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 107 ms. Found 9 JPA repository interfaces.
+2022-05-19 16:02:59.331  INFO 19946 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-05-19 16:02:59.341  INFO 19946 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-05-19 16:02:59.342  INFO 19946 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.60]
+2022-05-19 16:02:59.420  INFO 19946 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-05-19 16:02:59.421  INFO 19946 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1945 ms
+2022-05-19 16:02:59.555  INFO 19946 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-05-19 16:02:59.586  INFO 19946 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.7.Final
+2022-05-19 16:02:59.692  INFO 19946 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-05-19 16:02:59.746  INFO 19946 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-05-19 16:02:59.855  INFO 19946 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-05-19 16:02:59.864  INFO 19946 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2022-05-19 16:03:01.012  INFO 19946 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-05-19 16:03:01.020  INFO 19946 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-05-19 16:03:01.510  WARN 19946 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-05-19 16:03:01.681  INFO 19946 --- [restartedMain] f.a.AutowiredAnnotationBeanPostProcessor : Autowired annotation is not supported on static fields: static com.parker.personalfinanceapp.repositories.UserRepo com.parker.personalfinanceapp.models.UserFactory.userRepo
+2022-05-19 16:03:01.896  WARN 19946 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'springSecurityFilterChain' defined in class path resource [org/springframework/security/config/annotation/web/configuration/WebSecurityConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [javax.servlet.Filter]: Factory method 'springSecurityFilterChain' threw exception; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'mvcHandlerMappingIntrospector' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Invocation of init method failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'viewController' method 
+com.parker.personalfinanceapp.controllers.ViewController#viewSignInPage(Model)
+to {GET [/]}: There is already 'viewController' bean method
+com.parker.personalfinanceapp.controllers.ViewController#viewHomePage() mapped.
+2022-05-19 16:03:01.899  INFO 19946 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-05-19 16:03:01.901  INFO 19946 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-05-19 16:03:01.918  INFO 19946 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-05-19 16:03:01.923  INFO 19946 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2022-05-19 16:03:01.936  INFO 19946 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-05-19 16:03:01.952 ERROR 19946 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'springSecurityFilterChain' defined in class path resource [org/springframework/security/config/annotation/web/configuration/WebSecurityConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [javax.servlet.Filter]: Factory method 'springSecurityFilterChain' threw exception; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'mvcHandlerMappingIntrospector' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Invocation of init method failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'viewController' method 
+com.parker.personalfinanceapp.controllers.ViewController#viewSignInPage(Model)
+to {GET [/]}: There is already 'viewController' bean method
+com.parker.personalfinanceapp.controllers.ViewController#viewHomePage() mapped.
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:658) ~[spring-beans-5.3.18.jar:5.3.18]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:486) ~[spring-beans-5.3.18.jar:5.3.18]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1352) ~[spring-beans-5.3.18.jar:5.3.18]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1195) ~[spring-beans-5.3.18.jar:5.3.18]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582) ~[spring-beans-5.3.18.jar:5.3.18]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.18.jar:5.3.18]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.18.jar:5.3.18]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.18.jar:5.3.18]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.18.jar:5.3.18]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.18.jar:5.3.18]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322) ~[spring-beans-5.3.18.jar:5.3.18]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.18.jar:5.3.18]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:953) ~[spring-beans-5.3.18.jar:5.3.18]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918) ~[spring-context-5.3.18.jar:5.3.18]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.18.jar:5.3.18]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145) ~[spring-boot-2.6.6.jar:2.6.6]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:740) ~[spring-boot-2.6.6.jar:2.6.6]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:415) ~[spring-boot-2.6.6.jar:2.6.6]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:303) ~[spring-boot-2.6.6.jar:2.6.6]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1312) ~[spring-boot-2.6.6.jar:2.6.6]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1301) ~[spring-boot-2.6.6.jar:2.6.6]
+	at com.parker.personalfinanceapp.PersonalFinanceAppApplication.main(PersonalFinanceAppApplication.java:43) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) ~[spring-boot-devtools-2.6.6.jar:2.6.6]
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [javax.servlet.Filter]: Factory method 'springSecurityFilterChain' threw exception; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'mvcHandlerMappingIntrospector' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Invocation of init method failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'viewController' method 
+com.parker.personalfinanceapp.controllers.ViewController#viewSignInPage(Model)
+to {GET [/]}: There is already 'viewController' bean method
+com.parker.personalfinanceapp.controllers.ViewController#viewHomePage() mapped.
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185) ~[spring-beans-5.3.18.jar:5.3.18]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653) ~[spring-beans-5.3.18.jar:5.3.18]
+	... 26 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'mvcHandlerMappingIntrospector' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Invocation of init method failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'viewController' method 
+com.parker.personalfinanceapp.controllers.ViewController#viewSignInPage(Model)
+to {GET [/]}: There is already 'viewController' bean method
+com.parker.personalfinanceapp.controllers.ViewController#viewHomePage() mapped.
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1804) ~[spring-beans-5.3.18.jar:5.3.18]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620) ~[spring-beans-5.3.18.jar:5.3.18]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.18.jar:5.3.18]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.18.jar:5.3.18]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.18.jar:5.3.18]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.18.jar:5.3.18]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:213) ~[spring-beans-5.3.18.jar:5.3.18]
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1160) ~[spring-context-5.3.18.jar:5.3.18]
+	at org.springframework.security.config.annotation.web.AbstractRequestMatcherRegistry.createMvcMatchers(AbstractRequestMatcherRegistry.java:170) ~[spring-security-config-5.6.2.jar:5.6.2]
+	at org.springframework.security.config.annotation.web.configurers.ExpressionUrlAuthorizationConfigurer$ExpressionInterceptUrlRegistry.mvcMatchers(ExpressionUrlAuthorizationConfigurer.java:225) ~[spring-security-config-5.6.2.jar:5.6.2]
+	at org.springframework.security.config.annotation.web.configurers.ExpressionUrlAuthorizationConfigurer$ExpressionInterceptUrlRegistry.mvcMatchers(ExpressionUrlAuthorizationConfigurer.java:230) ~[spring-security-config-5.6.2.jar:5.6.2]
+	at com.parker.personalfinanceapp.configurations.SecurityConfig.configure(SecurityConfig.java:30) ~[classes/:na]
+	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter.getHttp(WebSecurityConfigurerAdapter.java:217) ~[spring-security-config-5.6.2.jar:5.6.2]
+	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter.init(WebSecurityConfigurerAdapter.java:315) ~[spring-security-config-5.6.2.jar:5.6.2]
+	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter.init(WebSecurityConfigurerAdapter.java:93) ~[spring-security-config-5.6.2.jar:5.6.2]
+	at com.parker.personalfinanceapp.configurations.SecurityConfig$$EnhancerBySpringCGLIB$$dc4dc298.init(<generated>) ~[classes/:na]
+	at org.springframework.security.config.annotation.AbstractConfiguredSecurityBuilder.init(AbstractConfiguredSecurityBuilder.java:338) ~[spring-security-config-5.6.2.jar:5.6.2]
+	at org.springframework.security.config.annotation.AbstractConfiguredSecurityBuilder.doBuild(AbstractConfiguredSecurityBuilder.java:300) ~[spring-security-config-5.6.2.jar:5.6.2]
+	at org.springframework.security.config.annotation.AbstractSecurityBuilder.build(AbstractSecurityBuilder.java:38) ~[spring-security-config-5.6.2.jar:5.6.2]
+	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfiguration.springSecurityFilterChain(WebSecurityConfiguration.java:127) ~[spring-security-config-5.6.2.jar:5.6.2]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566) ~[na:na]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154) ~[spring-beans-5.3.18.jar:5.3.18]
+	... 27 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'viewController' method 
+com.parker.personalfinanceapp.controllers.ViewController#viewSignInPage(Model)
+to {GET [/]}: There is already 'viewController' bean method
+com.parker.personalfinanceapp.controllers.ViewController#viewHomePage() mapped.
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1804) ~[spring-beans-5.3.18.jar:5.3.18]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620) ~[spring-beans-5.3.18.jar:5.3.18]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.18.jar:5.3.18]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.18.jar:5.3.18]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.18.jar:5.3.18]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.18.jar:5.3.18]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.18.jar:5.3.18]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeansOfType(DefaultListableBeanFactory.java:671) ~[spring-beans-5.3.18.jar:5.3.18]
+	at org.springframework.context.support.AbstractApplicationContext.getBeansOfType(AbstractApplicationContext.java:1308) ~[spring-context-5.3.18.jar:5.3.18]
+	at org.springframework.beans.factory.BeanFactoryUtils.beansOfTypeIncludingAncestors(BeanFactoryUtils.java:378) ~[spring-beans-5.3.18.jar:5.3.18]
+	at org.springframework.web.servlet.handler.HandlerMappingIntrospector.initHandlerMappings(HandlerMappingIntrospector.java:226) ~[spring-webmvc-5.3.18.jar:5.3.18]
+	at org.springframework.web.servlet.handler.HandlerMappingIntrospector.afterPropertiesSet(HandlerMappingIntrospector.java:115) ~[spring-webmvc-5.3.18.jar:5.3.18]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863) ~[spring-beans-5.3.18.jar:5.3.18]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800) ~[spring-beans-5.3.18.jar:5.3.18]
+	... 51 common frames omitted
+Caused by: java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'viewController' method 
+com.parker.personalfinanceapp.controllers.ViewController#viewSignInPage(Model)
+to {GET [/]}: There is already 'viewController' bean method
+com.parker.personalfinanceapp.controllers.ViewController#viewHomePage() mapped.
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.validateMethodMapping(AbstractHandlerMethodMapping.java:669) ~[spring-webmvc-5.3.18.jar:5.3.18]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:635) ~[spring-webmvc-5.3.18.jar:5.3.18]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.registerHandlerMethod(AbstractHandlerMethodMapping.java:332) ~[spring-webmvc-5.3.18.jar:5.3.18]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod(RequestMappingHandlerMapping.java:420) ~[spring-webmvc-5.3.18.jar:5.3.18]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod(RequestMappingHandlerMapping.java:76) ~[spring-webmvc-5.3.18.jar:5.3.18]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.lambda$detectHandlerMethods$2(AbstractHandlerMethodMapping.java:299) ~[spring-webmvc-5.3.18.jar:5.3.18]
+	at java.base/java.util.LinkedHashMap.forEach(LinkedHashMap.java:684) ~[na:na]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.detectHandlerMethods(AbstractHandlerMethodMapping.java:297) ~[spring-webmvc-5.3.18.jar:5.3.18]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.processCandidateBean(AbstractHandlerMethodMapping.java:266) ~[spring-webmvc-5.3.18.jar:5.3.18]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.initHandlerMethods(AbstractHandlerMethodMapping.java:225) ~[spring-webmvc-5.3.18.jar:5.3.18]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.afterPropertiesSet(AbstractHandlerMethodMapping.java:213) ~[spring-webmvc-5.3.18.jar:5.3.18]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.afterPropertiesSet(RequestMappingHandlerMapping.java:205) ~[spring-webmvc-5.3.18.jar:5.3.18]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863) ~[spring-beans-5.3.18.jar:5.3.18]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800) ~[spring-beans-5.3.18.jar:5.3.18]
+	... 64 common frames omitted
+
+2022-05-19 16:04:23.901  INFO 19957 --- [restartedMain] c.p.p.PersonalFinanceAppApplication      : Starting PersonalFinanceAppApplication using Java 11.0.13 on Chriss-MBP with PID 19957 (/Users/chrisparker/Documents/personal-finance-app/target/classes started by chrisparker in /Users/chrisparker/Documents/personal-finance-app)
+2022-05-19 16:04:23.902 DEBUG 19957 --- [restartedMain] c.p.p.PersonalFinanceAppApplication      : Running with Spring Boot v2.6.6, Spring v5.3.18
+2022-05-19 16:04:23.902  INFO 19957 --- [restartedMain] c.p.p.PersonalFinanceAppApplication      : No active profile set, falling back to 1 default profile: "default"
+2022-05-19 16:04:23.967  INFO 19957 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-05-19 16:04:23.967  INFO 19957 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-05-19 16:04:24.893  INFO 19957 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-05-19 16:04:24.991  INFO 19957 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 92 ms. Found 9 JPA repository interfaces.
+2022-05-19 16:04:25.672  INFO 19957 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-05-19 16:04:25.680  INFO 19957 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-05-19 16:04:25.680  INFO 19957 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.60]
+2022-05-19 16:04:25.758  INFO 19957 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-05-19 16:04:25.759  INFO 19957 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1791 ms
+2022-05-19 16:04:25.875  INFO 19957 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-05-19 16:04:25.898  INFO 19957 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.7.Final
+2022-05-19 16:04:26.018  INFO 19957 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-05-19 16:04:26.064  INFO 19957 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-05-19 16:04:26.158  INFO 19957 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-05-19 16:04:26.171  INFO 19957 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2022-05-19 16:04:27.209  INFO 19957 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-05-19 16:04:27.216  INFO 19957 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-05-19 16:04:27.659  WARN 19957 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-05-19 16:04:27.835  INFO 19957 --- [restartedMain] f.a.AutowiredAnnotationBeanPostProcessor : Autowired annotation is not supported on static fields: static com.parker.personalfinanceapp.repositories.UserRepo com.parker.personalfinanceapp.models.UserFactory.userRepo
+2022-05-19 16:04:28.044  INFO 19957 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2022-05-19 16:04:28.151  INFO 19957 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will not secure any request
+2022-05-19 16:04:28.153  WARN 19957 --- [restartedMain] o.s.s.c.a.web.builders.WebSecurity       : 
 
 ********************************************************************
 **********        Security debugging is enabled.       *************
@@ -669,19 +539,19 @@ Security filter chain: [
 ********************************************************************
 
 
-2022-05-18 06:22:05.826  INFO 14819 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2022-05-18 06:22:05.860  INFO 14819 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2022-05-18 06:22:05.873  INFO 14819 --- [restartedMain] c.p.p.PersonalFinanceAppApplication      : Started PersonalFinanceAppApplication in 4.829 seconds (JVM running for 6.492)
-2022-05-18 06:22:09.810  INFO 14819 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2022-05-18 06:22:09.812  INFO 14819 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2022-05-18 06:22:09.813  INFO 14819 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2022-05-18 06:22:09.822  INFO 14819 --- [http-nio-8080-exec-1] Spring Security Debugger                 : 
+2022-05-19 16:04:28.401  INFO 19957 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-05-19 16:04:28.438  INFO 19957 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-05-19 16:04:28.453  INFO 19957 --- [restartedMain] c.p.p.PersonalFinanceAppApplication      : Started PersonalFinanceAppApplication in 5.233 seconds (JVM running for 6.149)
+2022-05-19 16:04:29.084  INFO 19957 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-05-19 16:04:29.086  INFO 19957 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-05-19 16:04:29.088  INFO 19957 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-05-19 16:04:29.096  INFO 19957 --- [http-nio-8080-exec-1] Spring Security Debugger                 : 
 
 ************************************************************
 
 Request received for GET '/':
 
-org.apache.catalina.connector.RequestFacade@211d59a6
+org.apache.catalina.connector.RequestFacade@6869bfd9
 
 servletPath:/
 pathInfo:null
@@ -722,15 +592,15 @@ Security filter chain: [
 ************************************************************
 
 
-2022-05-18 06:22:11.949  INFO 14819 --- [http-nio-8080-exec-2] Spring Security Debugger                 : 
+2022-05-19 16:04:30.815  INFO 19957 --- [http-nio-8080-exec-3] Spring Security Debugger                 : 
 
 ************************************************************
 
-Request received for GET '/styles.css':
+Request received for GET '/static/css/styles.css':
 
-org.apache.catalina.connector.RequestFacade@211d59a6
+org.apache.catalina.connector.RequestFacade@6869bfd9
 
-servletPath:/styles.css
+servletPath:/static/css/styles.css
 pathInfo:null
 headers: 
 host: localhost:8080
@@ -767,13 +637,13 @@ Security filter chain: [
 ************************************************************
 
 
-2022-05-18 06:22:11.957  INFO 14819 --- [http-nio-8080-exec-2] Spring Security Debugger                 : 
+2022-05-19 16:04:30.827  INFO 19957 --- [http-nio-8080-exec-3] Spring Security Debugger                 : 
 
 ************************************************************
 
 Request received for GET '/error':
 
-org.apache.catalina.core.ApplicationHttpRequest@499346c2
+org.apache.catalina.core.ApplicationHttpRequest@30955089
 
 servletPath:/error
 pathInfo:null
@@ -812,20 +682,19 @@ Security filter chain: [
 ************************************************************
 
 
-2022-05-18 06:22:42.298  INFO 14819 --- [http-nio-8080-exec-3] Spring Security Debugger                 : 
+2022-05-19 16:04:38.327  INFO 19957 --- [http-nio-8080-exec-2] Spring Security Debugger                 : 
 
 ************************************************************
 
 Request received for GET '/':
 
-org.apache.catalina.connector.RequestFacade@211d59a6
+org.apache.catalina.connector.RequestFacade@6869bfd9
 
 servletPath:/
 pathInfo:null
 headers: 
 host: localhost:8080
 connection: keep-alive
-cache-control: max-age=0
 sec-ch-ua: " Not A;Brand";v="99", "Chromium";v="101", "Google Chrome";v="101"
 sec-ch-ua-mobile: ?0
 sec-ch-ua-platform: "macOS"
@@ -859,28 +728,29 @@ Security filter chain: [
 ************************************************************
 
 
-2022-05-18 06:22:42.343  INFO 14819 --- [http-nio-8080-exec-4] Spring Security Debugger                 : 
+2022-05-19 16:04:41.146  INFO 19957 --- [http-nio-8080-exec-4] Spring Security Debugger                 : 
 
 ************************************************************
 
-Request received for GET '/styles.css':
+Request received for GET '/static/css/styles.css':
 
-org.apache.catalina.connector.RequestFacade@211d59a6
+org.apache.catalina.connector.RequestFacade@6869bfd9
 
-servletPath:/styles.css
+servletPath:/static/css/styles.css
 pathInfo:null
 headers: 
 host: localhost:8080
 connection: keep-alive
 sec-ch-ua: " Not A;Brand";v="99", "Chromium";v="101", "Google Chrome";v="101"
 sec-ch-ua-mobile: ?0
-user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.64 Safari/537.36
 sec-ch-ua-platform: "macOS"
-accept: text/css,*/*;q=0.1
+upgrade-insecure-requests: 1
+user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.64 Safari/537.36
+accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
 sec-fetch-site: same-origin
-sec-fetch-mode: no-cors
-sec-fetch-dest: style
-referer: http://localhost:8080/
+sec-fetch-mode: navigate
+sec-fetch-user: ?1
+sec-fetch-dest: document
 accept-encoding: gzip, deflate, br
 accept-language: en-US,en;q=0.9
 cookie: Idea-e9a85424=da753aa3-6eaa-40f2-b7b7-8a2140ca190a; Webstorm-f156c96b=af2df56d-b02c-4e9d-bd4b-6bba820f1549; _ga=GA1.1.1796180098.1648247297; JSESSIONID=5B17865CD54F38CAA1A21BB8FB512BD3
@@ -904,13 +774,13 @@ Security filter chain: [
 ************************************************************
 
 
-2022-05-18 06:22:42.351  INFO 14819 --- [http-nio-8080-exec-4] Spring Security Debugger                 : 
+2022-05-19 16:04:41.165  INFO 19957 --- [http-nio-8080-exec-4] Spring Security Debugger                 : 
 
 ************************************************************
 
 Request received for GET '/error':
 
-org.apache.catalina.core.ApplicationHttpRequest@2cb9899d
+org.apache.catalina.core.ApplicationHttpRequest@4e08983f
 
 servletPath:/error
 pathInfo:null
@@ -919,6 +789,140 @@ host: localhost:8080
 connection: keep-alive
 sec-ch-ua: " Not A;Brand";v="99", "Chromium";v="101", "Google Chrome";v="101"
 sec-ch-ua-mobile: ?0
+sec-ch-ua-platform: "macOS"
+upgrade-insecure-requests: 1
+user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.64 Safari/537.36
+accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+sec-fetch-site: same-origin
+sec-fetch-mode: navigate
+sec-fetch-user: ?1
+sec-fetch-dest: document
+accept-encoding: gzip, deflate, br
+accept-language: en-US,en;q=0.9
+cookie: Idea-e9a85424=da753aa3-6eaa-40f2-b7b7-8a2140ca190a; Webstorm-f156c96b=af2df56d-b02c-4e9d-bd4b-6bba820f1549; _ga=GA1.1.1796180098.1648247297; JSESSIONID=5B17865CD54F38CAA1A21BB8FB512BD3
+
+
+Security filter chain: [
+  WebAsyncManagerIntegrationFilter
+  SecurityContextPersistenceFilter
+  HeaderWriterFilter
+  LogoutFilter
+  UsernamePasswordAuthenticationFilter
+  RequestCacheAwareFilter
+  SecurityContextHolderAwareRequestFilter
+  AnonymousAuthenticationFilter
+  SessionManagementFilter
+  ExceptionTranslationFilter
+  FilterSecurityInterceptor
+]
+
+
+************************************************************
+
+
+2022-05-19 16:06:10.007  INFO 19957 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-05-19 16:06:10.015  INFO 19957 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-05-19 16:06:10.027  INFO 19957 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-05-19 16:07:27.130  INFO 19990 --- [restartedMain] c.p.p.PersonalFinanceAppApplication      : Starting PersonalFinanceAppApplication using Java 11.0.13 on Chriss-MBP with PID 19990 (/Users/chrisparker/Documents/personal-finance-app/target/classes started by chrisparker in /Users/chrisparker/Documents/personal-finance-app)
+2022-05-19 16:07:27.132 DEBUG 19990 --- [restartedMain] c.p.p.PersonalFinanceAppApplication      : Running with Spring Boot v2.6.6, Spring v5.3.18
+2022-05-19 16:07:27.133  INFO 19990 --- [restartedMain] c.p.p.PersonalFinanceAppApplication      : No active profile set, falling back to 1 default profile: "default"
+2022-05-19 16:07:27.239  INFO 19990 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-05-19 16:07:27.241  INFO 19990 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-05-19 16:07:28.183  INFO 19990 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-05-19 16:07:28.277  INFO 19990 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 89 ms. Found 9 JPA repository interfaces.
+2022-05-19 16:07:28.948  INFO 19990 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-05-19 16:07:28.956  INFO 19990 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-05-19 16:07:28.956  INFO 19990 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.60]
+2022-05-19 16:07:29.017  INFO 19990 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-05-19 16:07:29.018  INFO 19990 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1777 ms
+2022-05-19 16:07:29.143  INFO 19990 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-05-19 16:07:29.165  INFO 19990 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.7.Final
+2022-05-19 16:07:29.267  INFO 19990 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-05-19 16:07:29.321  INFO 19990 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-05-19 16:07:29.473  INFO 19990 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-05-19 16:07:29.483  INFO 19990 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2022-05-19 16:07:30.602  INFO 19990 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-05-19 16:07:30.608  INFO 19990 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-05-19 16:07:31.076  WARN 19990 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-05-19 16:07:31.251  INFO 19990 --- [restartedMain] f.a.AutowiredAnnotationBeanPostProcessor : Autowired annotation is not supported on static fields: static com.parker.personalfinanceapp.repositories.UserRepo com.parker.personalfinanceapp.models.UserFactory.userRepo
+2022-05-19 16:07:31.484  INFO 19990 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2022-05-19 16:07:31.583  INFO 19990 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will not secure any request
+2022-05-19 16:07:31.585  WARN 19990 --- [restartedMain] o.s.s.c.a.web.builders.WebSecurity       : 
+
+********************************************************************
+**********        Security debugging is enabled.       *************
+**********    This may include sensitive information.  *************
+**********      Do not use in a production system!     *************
+********************************************************************
+
+
+2022-05-19 16:07:31.845  INFO 19990 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-05-19 16:07:31.886  INFO 19990 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-05-19 16:07:31.901  INFO 19990 --- [restartedMain] c.p.p.PersonalFinanceAppApplication      : Started PersonalFinanceAppApplication in 5.363 seconds (JVM running for 6.306)
+2022-05-19 16:07:36.181  INFO 19990 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-05-19 16:07:36.183  INFO 19990 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-05-19 16:07:36.184  INFO 19990 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-05-19 16:07:36.196  INFO 19990 --- [http-nio-8080-exec-1] Spring Security Debugger                 : 
+
+************************************************************
+
+Request received for GET '/':
+
+org.apache.catalina.connector.RequestFacade@6869bfd9
+
+servletPath:/
+pathInfo:null
+headers: 
+host: localhost:8080
+connection: keep-alive
+sec-ch-ua: " Not A;Brand";v="99", "Chromium";v="101", "Google Chrome";v="101"
+sec-ch-ua-mobile: ?0
+sec-ch-ua-platform: "macOS"
+upgrade-insecure-requests: 1
+user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.64 Safari/537.36
+accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+sec-fetch-site: none
+sec-fetch-mode: navigate
+sec-fetch-user: ?1
+sec-fetch-dest: document
+accept-encoding: gzip, deflate, br
+accept-language: en-US,en;q=0.9
+cookie: Idea-e9a85424=da753aa3-6eaa-40f2-b7b7-8a2140ca190a; Webstorm-f156c96b=af2df56d-b02c-4e9d-bd4b-6bba820f1549; _ga=GA1.1.1796180098.1648247297; JSESSIONID=5B17865CD54F38CAA1A21BB8FB512BD3
+
+
+Security filter chain: [
+  WebAsyncManagerIntegrationFilter
+  SecurityContextPersistenceFilter
+  HeaderWriterFilter
+  LogoutFilter
+  UsernamePasswordAuthenticationFilter
+  RequestCacheAwareFilter
+  SecurityContextHolderAwareRequestFilter
+  AnonymousAuthenticationFilter
+  SessionManagementFilter
+  ExceptionTranslationFilter
+  FilterSecurityInterceptor
+]
+
+
+************************************************************
+
+
+2022-05-19 16:07:38.475  INFO 19990 --- [http-nio-8080-exec-2] Spring Security Debugger                 : 
+
+************************************************************
+
+Request received for GET '/css/styles.css':
+
+org.apache.catalina.connector.RequestFacade@6869bfd9
+
+servletPath:/css/styles.css
+pathInfo:null
+headers: 
+host: localhost:8080
+connection: keep-alive
+sec-ch-ua: " Not A;Brand";v="99", "Chromium";v="101", "Google Chrome";v="101"
+sec-ch-ua-mobile: ?0
 user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.64 Safari/537.36
 sec-ch-ua-platform: "macOS"
 accept: text/css,*/*;q=0.1
@@ -949,13 +953,196 @@ Security filter chain: [
 ************************************************************
 
 
-2022-05-18 06:23:29.538  INFO 14819 --- [http-nio-8080-exec-5] Spring Security Debugger                 : 
+2022-05-19 16:07:46.846  INFO 19990 --- [http-nio-8080-exec-3] Spring Security Debugger                 : 
+
+************************************************************
+
+Request received for GET '/':
+
+org.apache.catalina.connector.RequestFacade@6869bfd9
+
+servletPath:/
+pathInfo:null
+headers: 
+host: localhost:8080
+connection: keep-alive
+sec-ch-ua: " Not A;Brand";v="99", "Chromium";v="101", "Google Chrome";v="101"
+sec-ch-ua-mobile: ?0
+sec-ch-ua-platform: "macOS"
+upgrade-insecure-requests: 1
+user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.64 Safari/537.36
+accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+sec-fetch-site: none
+sec-fetch-mode: navigate
+sec-fetch-user: ?1
+sec-fetch-dest: document
+accept-encoding: gzip, deflate, br
+accept-language: en-US,en;q=0.9
+cookie: Idea-e9a85424=da753aa3-6eaa-40f2-b7b7-8a2140ca190a; Webstorm-f156c96b=af2df56d-b02c-4e9d-bd4b-6bba820f1549; _ga=GA1.1.1796180098.1648247297; JSESSIONID=5B17865CD54F38CAA1A21BB8FB512BD3
+
+
+Security filter chain: [
+  WebAsyncManagerIntegrationFilter
+  SecurityContextPersistenceFilter
+  HeaderWriterFilter
+  LogoutFilter
+  UsernamePasswordAuthenticationFilter
+  RequestCacheAwareFilter
+  SecurityContextHolderAwareRequestFilter
+  AnonymousAuthenticationFilter
+  SessionManagementFilter
+  ExceptionTranslationFilter
+  FilterSecurityInterceptor
+]
+
+
+************************************************************
+
+
+2022-05-19 16:07:48.279  INFO 19990 --- [http-nio-8080-exec-4] Spring Security Debugger                 : 
+
+************************************************************
+
+Request received for GET '/css/styles.css':
+
+org.apache.catalina.connector.RequestFacade@6869bfd9
+
+servletPath:/css/styles.css
+pathInfo:null
+headers: 
+host: localhost:8080
+connection: keep-alive
+sec-ch-ua: " Not A;Brand";v="99", "Chromium";v="101", "Google Chrome";v="101"
+sec-ch-ua-mobile: ?0
+sec-ch-ua-platform: "macOS"
+upgrade-insecure-requests: 1
+user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.64 Safari/537.36
+accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+sec-fetch-site: same-origin
+sec-fetch-mode: navigate
+sec-fetch-user: ?1
+sec-fetch-dest: document
+accept-encoding: gzip, deflate, br
+accept-language: en-US,en;q=0.9
+cookie: Idea-e9a85424=da753aa3-6eaa-40f2-b7b7-8a2140ca190a; Webstorm-f156c96b=af2df56d-b02c-4e9d-bd4b-6bba820f1549; _ga=GA1.1.1796180098.1648247297; JSESSIONID=5B17865CD54F38CAA1A21BB8FB512BD3
+
+
+Security filter chain: [
+  WebAsyncManagerIntegrationFilter
+  SecurityContextPersistenceFilter
+  HeaderWriterFilter
+  LogoutFilter
+  UsernamePasswordAuthenticationFilter
+  RequestCacheAwareFilter
+  SecurityContextHolderAwareRequestFilter
+  AnonymousAuthenticationFilter
+  SessionManagementFilter
+  ExceptionTranslationFilter
+  FilterSecurityInterceptor
+]
+
+
+************************************************************
+
+
+2022-05-19 16:07:59.950  INFO 19990 --- [http-nio-8080-exec-5] Spring Security Debugger                 : 
+
+************************************************************
+
+Request received for GET '/':
+
+org.apache.catalina.connector.RequestFacade@6869bfd9
+
+servletPath:/
+pathInfo:null
+headers: 
+host: localhost:8080
+connection: keep-alive
+sec-ch-ua: " Not A;Brand";v="99", "Chromium";v="101", "Google Chrome";v="101"
+sec-ch-ua-mobile: ?0
+sec-ch-ua-platform: "macOS"
+upgrade-insecure-requests: 1
+user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.64 Safari/537.36
+accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+sec-fetch-site: none
+sec-fetch-mode: navigate
+sec-fetch-user: ?1
+sec-fetch-dest: document
+accept-encoding: gzip, deflate, br
+accept-language: en-US,en;q=0.9
+cookie: Idea-e9a85424=da753aa3-6eaa-40f2-b7b7-8a2140ca190a; Webstorm-f156c96b=af2df56d-b02c-4e9d-bd4b-6bba820f1549; _ga=GA1.1.1796180098.1648247297; JSESSIONID=5B17865CD54F38CAA1A21BB8FB512BD3
+
+
+Security filter chain: [
+  WebAsyncManagerIntegrationFilter
+  SecurityContextPersistenceFilter
+  HeaderWriterFilter
+  LogoutFilter
+  UsernamePasswordAuthenticationFilter
+  RequestCacheAwareFilter
+  SecurityContextHolderAwareRequestFilter
+  AnonymousAuthenticationFilter
+  SessionManagementFilter
+  ExceptionTranslationFilter
+  FilterSecurityInterceptor
+]
+
+
+************************************************************
+
+
+2022-05-19 16:07:59.996  INFO 19990 --- [http-nio-8080-exec-6] Spring Security Debugger                 : 
+
+************************************************************
+
+Request received for GET '/css/styles.css':
+
+org.apache.catalina.connector.RequestFacade@6869bfd9
+
+servletPath:/css/styles.css
+pathInfo:null
+headers: 
+host: localhost:8080
+connection: keep-alive
+sec-ch-ua: " Not A;Brand";v="99", "Chromium";v="101", "Google Chrome";v="101"
+sec-ch-ua-mobile: ?0
+user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.64 Safari/537.36
+sec-ch-ua-platform: "macOS"
+accept: text/css,*/*;q=0.1
+sec-fetch-site: same-origin
+sec-fetch-mode: no-cors
+sec-fetch-dest: style
+referer: http://localhost:8080/
+accept-encoding: gzip, deflate, br
+accept-language: en-US,en;q=0.9
+cookie: Idea-e9a85424=da753aa3-6eaa-40f2-b7b7-8a2140ca190a; Webstorm-f156c96b=af2df56d-b02c-4e9d-bd4b-6bba820f1549; _ga=GA1.1.1796180098.1648247297; JSESSIONID=5B17865CD54F38CAA1A21BB8FB512BD3
+
+
+Security filter chain: [
+  WebAsyncManagerIntegrationFilter
+  SecurityContextPersistenceFilter
+  HeaderWriterFilter
+  LogoutFilter
+  UsernamePasswordAuthenticationFilter
+  RequestCacheAwareFilter
+  SecurityContextHolderAwareRequestFilter
+  AnonymousAuthenticationFilter
+  SessionManagementFilter
+  ExceptionTranslationFilter
+  FilterSecurityInterceptor
+]
+
+
+************************************************************
+
+
+2022-05-19 16:08:26.891  INFO 19990 --- [http-nio-8080-exec-7] Spring Security Debugger                 : 
 
 ************************************************************
 
 Request received for GET '/help':
 
-org.apache.catalina.connector.RequestFacade@211d59a6
+org.apache.catalina.connector.RequestFacade@6869bfd9
 
 servletPath:/help
 pathInfo:null
@@ -996,15 +1183,15 @@ Security filter chain: [
 ************************************************************
 
 
-2022-05-18 06:23:29.627  INFO 14819 --- [http-nio-8080-exec-6] Spring Security Debugger                 : 
+2022-05-19 16:08:26.936  INFO 19990 --- [http-nio-8080-exec-8] Spring Security Debugger                 : 
 
 ************************************************************
 
-Request received for GET '/styles.css':
+Request received for GET '/css/styles.css':
 
-org.apache.catalina.connector.RequestFacade@211d59a6
+org.apache.catalina.connector.RequestFacade@6869bfd9
 
-servletPath:/styles.css
+servletPath:/css/styles.css
 pathInfo:null
 headers: 
 host: localhost:8080
@@ -1041,28 +1228,29 @@ Security filter chain: [
 ************************************************************
 
 
-2022-05-18 06:23:29.630  INFO 14819 --- [http-nio-8080-exec-6] Spring Security Debugger                 : 
+2022-05-19 16:08:59.970  INFO 19990 --- [http-nio-8080-exec-10] Spring Security Debugger                 : 
 
 ************************************************************
 
-Request received for GET '/error':
+Request received for GET '/':
 
-org.apache.catalina.core.ApplicationHttpRequest@6adba8b
+org.apache.catalina.connector.RequestFacade@6869bfd9
 
-servletPath:/error
+servletPath:/
 pathInfo:null
 headers: 
 host: localhost:8080
 connection: keep-alive
 sec-ch-ua: " Not A;Brand";v="99", "Chromium";v="101", "Google Chrome";v="101"
 sec-ch-ua-mobile: ?0
-user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.64 Safari/537.36
 sec-ch-ua-platform: "macOS"
-accept: text/css,*/*;q=0.1
-sec-fetch-site: same-origin
-sec-fetch-mode: no-cors
-sec-fetch-dest: style
-referer: http://localhost:8080/help
+upgrade-insecure-requests: 1
+user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.64 Safari/537.36
+accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+sec-fetch-site: none
+sec-fetch-mode: navigate
+sec-fetch-user: ?1
+sec-fetch-dest: document
 accept-encoding: gzip, deflate, br
 accept-language: en-US,en;q=0.9
 cookie: Idea-e9a85424=da753aa3-6eaa-40f2-b7b7-8a2140ca190a; Webstorm-f156c96b=af2df56d-b02c-4e9d-bd4b-6bba820f1549; _ga=GA1.1.1796180098.1648247297; JSESSIONID=5B17865CD54F38CAA1A21BB8FB512BD3
@@ -1086,6 +1274,96 @@ Security filter chain: [
 ************************************************************
 
 
-2022-05-18 06:24:08.401  INFO 14819 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2022-05-18 06:24:08.406  INFO 14819 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2022-05-18 06:24:08.420  INFO 14819 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-05-19 16:09:00.036  INFO 19990 --- [http-nio-8080-exec-1] Spring Security Debugger                 : 
+
+************************************************************
+
+Request received for GET '/css/styles.css':
+
+org.apache.catalina.connector.RequestFacade@6869bfd9
+
+servletPath:/css/styles.css
+pathInfo:null
+headers: 
+host: localhost:8080
+connection: keep-alive
+sec-ch-ua: " Not A;Brand";v="99", "Chromium";v="101", "Google Chrome";v="101"
+sec-ch-ua-mobile: ?0
+user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.64 Safari/537.36
+sec-ch-ua-platform: "macOS"
+accept: text/css,*/*;q=0.1
+sec-fetch-site: same-origin
+sec-fetch-mode: no-cors
+sec-fetch-dest: style
+referer: http://localhost:8080/
+accept-encoding: gzip, deflate, br
+accept-language: en-US,en;q=0.9
+cookie: Idea-e9a85424=da753aa3-6eaa-40f2-b7b7-8a2140ca190a; Webstorm-f156c96b=af2df56d-b02c-4e9d-bd4b-6bba820f1549; _ga=GA1.1.1796180098.1648247297; JSESSIONID=5B17865CD54F38CAA1A21BB8FB512BD3
+
+
+Security filter chain: [
+  WebAsyncManagerIntegrationFilter
+  SecurityContextPersistenceFilter
+  HeaderWriterFilter
+  LogoutFilter
+  UsernamePasswordAuthenticationFilter
+  RequestCacheAwareFilter
+  SecurityContextHolderAwareRequestFilter
+  AnonymousAuthenticationFilter
+  SessionManagementFilter
+  ExceptionTranslationFilter
+  FilterSecurityInterceptor
+]
+
+
+************************************************************
+
+
+2022-05-19 16:12:10.656  INFO 19990 --- [http-nio-8080-exec-4] Spring Security Debugger                 : 
+
+************************************************************
+
+Request received for GET '/css/styles.css':
+
+org.apache.catalina.connector.RequestFacade@6869bfd9
+
+servletPath:/css/styles.css
+pathInfo:null
+headers: 
+host: localhost:8080
+connection: keep-alive
+sec-ch-ua: " Not A;Brand";v="99", "Chromium";v="101", "Google Chrome";v="101"
+sec-ch-ua-mobile: ?0
+user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.64 Safari/537.36
+sec-ch-ua-platform: "macOS"
+accept: text/css,*/*;q=0.1
+sec-fetch-site: same-origin
+sec-fetch-mode: no-cors
+sec-fetch-dest: style
+referer: http://localhost:8080/
+accept-encoding: gzip, deflate, br
+accept-language: en-US,en;q=0.9
+cookie: Idea-e9a85424=da753aa3-6eaa-40f2-b7b7-8a2140ca190a; Webstorm-f156c96b=af2df56d-b02c-4e9d-bd4b-6bba820f1549; _ga=GA1.1.1796180098.1648247297; JSESSIONID=5B17865CD54F38CAA1A21BB8FB512BD3
+
+
+Security filter chain: [
+  WebAsyncManagerIntegrationFilter
+  SecurityContextPersistenceFilter
+  HeaderWriterFilter
+  LogoutFilter
+  UsernamePasswordAuthenticationFilter
+  RequestCacheAwareFilter
+  SecurityContextHolderAwareRequestFilter
+  AnonymousAuthenticationFilter
+  SessionManagementFilter
+  ExceptionTranslationFilter
+  FilterSecurityInterceptor
+]
+
+
+************************************************************
+
+
+2022-05-19 16:30:41.481  INFO 19990 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-05-19 16:30:41.487  INFO 19990 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-05-19 16:30:41.504  INFO 19990 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
