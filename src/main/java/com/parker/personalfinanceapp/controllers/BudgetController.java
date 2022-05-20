@@ -2,7 +2,6 @@ package com.parker.personalfinanceapp.controllers;
 
 import com.parker.personalfinanceapp.exceptions.NoSuchBudgetException;
 import com.parker.personalfinanceapp.exceptions.NoSuchCategoryException;
-import com.parker.personalfinanceapp.exceptions.NoSuchUserException;
 import com.parker.personalfinanceapp.models.Budget;
 import com.parker.personalfinanceapp.models.Category;
 import com.parker.personalfinanceapp.models.UserFactory;
@@ -33,8 +32,7 @@ public class BudgetController {
     }
 
     @RequestMapping("/new")
-    public String createBudget(Model model, Authentication auth, @RequestParam Budget budget)
-            throws NoSuchUserException {
+    public String createBudget(Model model, Authentication auth, @RequestParam Budget budget) {
         model.addAttribute("budget",
                 budgetService.createBudget(UserFactory.createUser(auth), budget));
         return "budget-view";

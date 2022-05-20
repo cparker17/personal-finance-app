@@ -13,26 +13,29 @@
 </head>
 <body>
 <div th:replace="fragments :: navigation"/><br><br>
-<div class="container col-7 align-content-center">
+<div class="container col-9 align-content-center">
     <h1 class="text-center">Budget</h1><br>
     <table class="table table-striped border rounded border-dark">
-        <thead id="linear" style="background-color: cornflowerblue;
-            background-image: radial-gradient(cornflowerblue, white);
-            font-weight:bold">
+        <thead>
         <tr>
             <th>#</th>
             <th>Category</th>
             <th>Amount Budgeted</th>
             <th>Type</th>
+            <th>Actions</th>
         </tr>
         </thead>
         <tbody>
         <div >
             <tr th:each="category : ${budget.categories}">
-                <td><a class="fw-bold" th:href="@{'/budget/edit/' + ${category.id}}" th:text="${category.id}">#</a></td>
+                <td th:text="${category.id}">#</td>
                 <td th:text="${category.name}">Name</td>
                 <td th:text="'$' + ${category.monthlyBudgetAmt}">Amount</td>
                 <td th:text="${category.categoryType}">Type</td>
+                <td>
+                    <a class="button btn-light btn-sm border border-dark rounded text-decoration-none" th:href="@{'/budget/edit/' + ${category.id}}">Update</a>
+                    <a class="button btn-light btn-sm border border-dark rounded text-decoration-none" th:href="@{'/budget/delete/' + ${category.id}}">Delete</a>
+                </td>
             </tr>
         </div>
         </tbody>

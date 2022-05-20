@@ -11,30 +11,30 @@
 </head>
 <body>
 <div th:fragment="navigation">
-    <nav id="linear" class="navbar navbar-expand-lg navbar-light fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top border-bottom">
         <div class="container-fluid">
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent"
                     aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <a class="navbar-brand" href="#"><strong>Personal Finance Plus</strong></a>
+            <a class="navbar-brand" href="#" th:href="@{/}"><strong>Personal Finance Plus</strong></a>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="nav navbar-nav ms-auto">
                     <li class="nav-item">
-                        <form class="d-flex" th:action="@{/books/search}">
+                        <form class="d-flex" th:action="@{/search}">
                             <input class="form-control" type="search" placeholder="Search..."
                                    aria-label="Search" name="searchText">
                         </form>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="#">Dashboard</a>
+                        <a class="nav-link active" href="#" th:href="@{/}">Dashboard</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link " href="#">Settings</a>
+                        <a class="nav-link " href="#" th:href="@{/budget/view}">Settings</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link " href="#">Profile</a>
+                        <a class="nav-link " href="#" th:href="@{/user/view}">Profile</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link " href="#" th:href="@{/help}">Help</a>
@@ -47,7 +47,7 @@
                     </li>
                     <li class="nav-item">
                         <div sec:authorize="!isAuthenticated()">
-                            <a class="nav-link active" aria-current="page" href="#" th:href="@{/sign-in}"><strong>Sign
+                            <a class="nav-link active" aria-current="page" href="#" th:href="@{/login}"><strong>Sign
                                 In</strong></a>
                         </div>
                     </li>
@@ -55,42 +55,6 @@
             </div>
         </div>
     </nav>
-</div>
-<div th:fragment="sidebar">
-    <div id="main-container" class="container-fluid">
-        <div class="row">
-            <div class="col-sm-3 col-md-2 d-none d-sm-block sidebar">
-
-                <ul class="nav flex-column">
-                    <li class="active"><a href="#">Overview</a></li>
-                    <li><a href="#">Reports</a></li>
-                </ul>
-                <br>
-                <ul class="nav flex-column">
-                    <li><a href="#">Goals</a></li>
-                    <li><a href="#">Retirement</a></li>
-                    <li><a href="#">Files</a></li>
-                </ul>
-            </div>
-            <div id="main-content-container" class="col-sm-9 col-md-10 container-fluid">
-                <h1>Dashboard</h1>
-                <div class="row">
-                    <div class="col-md-4 text-center">
-                        <a href="#"><img src="https://image.shutterstock.com/image-photo/glass-jar-coins-inscription-deposit-260nw-1250974528.jpg" width="300" height="200" alt="Generic"></a>
-                        <h4><a href="#" class="text-decoration-none text-dark">Deposits</a></h4>
-                    </div>
-                    <div class="col-md-4 text-center">
-                        <a href="#"><img src="https://www.mimeo.com/wp-content/uploads/2022/03/Check-out-how-an-expense-tracking-app-simplifies-reimbursements-1.jpg" width="300" height="200" alt="Generic"></a>
-                        <h4><a href="#" class="text-decoration-none text-dark">Expenses</a></h4>
-                    </div>
-                    <div class=" col-md-4 text-center">
-                        <a href="#"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAANgAAADpCAMAAABx2AnXAAABjFBMVEX///8WxcoREiQq3eL1uYXptSsAAADa2tscJjDosAAAwse77O4AwcjJ7e/136t/2dzvyG7rwE756szBw8f/9uERHipcYmccGyagr6oZiZAVz9QZZGwaO0MAGDDJoCsAETCuiyuWmJ0ACxwAFSMJHjBXTS7h8d/xvCuAaS0AABfp6syY4OL35sKvsbb//OsVtLl6iYTc9PUedoDz1IvptS8sMjsAABr61bgAAA8Xo6nm5uZBSFCmtK/v8vHMzMzO1tOBhYkwzJi9xsNv5epL4Oao7vKL6e3v/Pza+Phsb3WeoqY2PkZN0NX99e/5y6Z127Y2q4CQnJhrfXdZWmN7e4Jl1NdwXy5YTi7zwlyy9f750oJ/6OyZ7e/74rBh5efX7t9FQS9rur774s/5wJDR0byu6tRa1Knn4NfOs5e/7NtUxI2Lwo/ftYy0saLbwqv+wpnI3sRm1q6Q4MOe1rPktn343MSp28dyup8AmlvN4tpZvJatzcGMw67XtJGpvKBXwrzLj1rWondwoKanw8dVXPIcAAAPx0lEQVR4nO2di2Pa2JXGL+BBGMF4HBJD2n1UcZsscUhMMsiMhIR4WQiMHwFvZ8fUbu21M26nyYaO7XHjbKftP77nSiD0AowtJMHyJRYgHr4/n++ee+5FCITmmmuuueaaa6655pprrrnmmmuuueaaa6655pprDInkkiMiRWe5Kr6wQ/JVnORaCvscU2TNOa5oxDkuny9MOga25SSXL7zlFFfaQSNiRdIOgUWdBnPKi852MQc72RxsDjYHm4PNweZgczBvg4XDkUkp7CZYZImcmJYiLoKFJzgJXAvPweySM2BLroItTe63uAu2L+94+JWteuE+mE8Be7C4bKMWv5RfdN9VsK0u2EMbX95bYHxzxRY1U94A8/XAYslHtugJpYK5WXlowJ6EbNGqCrblHbBH/35P/dqbYI9+/2/31H/+2jNgYS3Yb599cS89+w8tmM87YL+xE0z0HtjiHeQ5sIhoAlt88Hx8LU8D2H8Fxlb7W8+BpU1gz+4AtmkB5urSgC9sBvu6Mj7YwVeeA4uawdrjg5XMYOmI18CW7wL2nRnMcxH7dvMOYG9MYFV3IxYxg311MD5Y+ctFI1jUZTDSBPampDT2MFAKlNqBcrkcODiEtgMvXD3sbuGyXQocHAwEI13uYxZgZaWxlUplkzyIHmxWDqvRcmAzWglEyQAZwNtqG3YewM/mYDCX+5gJbPHLLlhAxBRkG8DEKgxVVQCrymDRAElGSzAqlNO9oeGF58DWBoNVA5vkZrRERssk4LTJaJsk2+RmhYxukmVUliPW64/PTWAVz4H9Tk11AdzHAgelwCF0K+hj0K8OD+EmbANluY+VBoOtuQy2NBhsHD2dArAXamsPyQoEKXBAyj2pQvYyRYUsKbvLfbBn3gd7rnKhahUdBiqIFMVAII1IJAOWkUiig8AmiqZFFezINEC7DKYsBevAnvYaS0K7q2QAQeZAB2UEoxaSIwdbSI9VyJSoPRhsyXNgR1qwqBjAcUJtDFZC2JkVUb4LkAMiqT72a4+BKccS6sCqalZEZAXBYIYqVYATxbYog5VRFO9uowqJVLCK18B8ZjC1sYGDdBQbriJWwHPlaLWC5GxRqlYhkIF2mhSHgPUXgj0C9kxt7CEMUmIlUIJBC0LVlk1YFstlSI5pMlCCzIhKvce2lz0P9rUKVkJpnA4rqIotJ8LFAe5mkBVFCF0bbquuDWyawLa8BrbcXxkot+Wsd1CR64u2PKiV1N2limbiJi96eArMNwRsDMmLHjown9tgogHs2zusDHTXBrwNdpcJdHdtwNtg390J7NAEFnEbLG0EK90FTJ5C68DCXgN7Ux6NMQ1gYXvA5LUBT1nRCNZfGbgfmOg5sN/dDey558FejIa4DVjadbCoAez5aAgrPTWAVT0H9uLpnWSMWNR1MBIZ5mN3lGGAjrqe7o1g95AWjHQdrDKrYGsGsOU3A/TVeGCu9zEj2JtBz3qxaOD4WivvRWwJGbIi/yS0GguFQi3hUeiR0AqFHtWasEFfGsAWX2pf01grVrwG9sVLKruaTa2uJiUhuZoUpORqtsY+WX1iBnsgvxhHgBBqGMDWvAa2jGoCJRAUJaRicCWWgg0Puygz2AuEYrWUFMxmV1McWvY42BtOkqQVHn5qtRXYULCJCbAPvTF0Mdx+IhZrYTCew9xasCXXwfZ1YIsP+OyqbMUnLcWKT7AVV1frJrAvlKP3OAYElw89BuYzgL2s1Vm2HmNZVqDqbJ0S4FZKYllzxL74rgF6KQtfLHsLTF6874MtD36WCUyf7yHja8H23QbzGcAGf/5h2XJQ1koLpj1PgxfA7iXPguFjgp8N1Ggub4H5+mC//9U99dtHngQLPfrXe0pz3L3PfTCxCxa3Rd4BC3fBsq8f26Gk58CC3/zCBvmCngGLdMGSv7RF3U8jid4Bs7ePeQAMr5jKEfsXW+QhsGo3eXxjx+fwX2UVsLT7YPioYCV5+GxQpJs8dKe+cilig8HwKenG1KsuWNUDYKQlGEBtLZFp/dnvBp6RzwQW9SIYburWWlT+OA+pa2B00Cuqj/ISWEULhv/6+2RVfag4xWBrKljEt7UU7Z2AjmPyubyhgphOsD+sVXun5eTyxVwCVDRM8QGsFcoYZQVGug+GT1j54E2jdx8OVKKnnGF9EMCkYDKZ7H1mejWJb3gErNHog+GEtt//rb1A9cXp33IFMD4Vi8VSwSdYWSGG5T5Y43hje2Fh4eS/5d8WifxCc05YxgCVyzP5RILQ1Ub9PpZSxPRum8DWHAJrHF9gpJ5+/JsP8nnvTo4wMBUJDkgJxOFOtmUFZpQbYN0w6bTd6EYKelQxsacPFAek2GE8QjnoZEvaBqYHyHmwixMj1MLCRqMLhQOVIxiiqEAV8zhQ0Il4PoY3CBUThnfwRpYePbClyYIdm6lOjmWofBeGEE87nSMgwFA4NfA8n1I2MQ4RCWbMM7k6A2bm2j7W53PmvIB1JuZz8jO4GA5XLMUraYFLGIboW4PtTxKsYfLgO0Pq448KXaX5okwCgSK4/kvkirrDsccA0+60G8yQM77Xj1GQJhLcWaFw2pGjhnKMxUvgTrY2jhedANMF7Ifvdflc7lFM8eiPf/rT0yqqdgqFDpOzeI08DNFjndvPCTBNwH74swpVzKuRyb8/WfjwYeF/xFN0WiiIOc78GgwM0eguYLqTYtsLpgnYSU6TzxGRomr4AReQSzY2YJA7+tgBsFMib34R4xB9e7DJJY8LTS6E4ijH4EEqVovxEpMSlLsx18bGycapnBk5Ky/KQ/QYnSwy+YhpRuZjBup0LsUQLWDiqVqMO5bvVcC2T6qdjwXsRd3zxc7HMzzAcYh8dXt9k500mDZ1NLCjYq0YIVA13MMaXegTBWwbdkHQjvqd7Hxn56gA/zuQPRjE4JnKbaVETLesaC+YNtc3EESMp7rFeOND36NyH/tLFQjOumDiOVw/A6adwsdTsCIeolPjiJgsmC7XN/B41A3H8QftPdsbJz/+5ei8U0Afu2DnZwXxrLDTwY/lcI0C2ePlWHo4UbALbfOP5fFI3m2qiS+OCmLn/FSE4kPuY+LZmQylFl45fJzUeJokmL71x+8S+Ubj2DR9Wfjhj2dIREeAUyioWVE/P9vjUOPFeHqoX9yyE8yirLfSewjU2al4hAq49Cgq8zNd5aUZz8fRxMAsZmFmbTeKcnW/c9rB2b5YNKx4KOM5VmVtTC1NCOxWATvGhQV32i3vTxlDhdyDEsm1rTt8DY0OzLYvy7hFwDbkB3I5TpmRnXKaClmFYvIMsRUZa6ZpKbu4LkZzves2PAdV7tHpucholnFkiefXDLG+ThBjTccsZds5e00TTKtwaSbSxTyvTxPi5eXu1dVPn4g9O8Ds+z6aUUbcNk6kNYFKX1//9Wp399Pu7u5f83LE7vk1SuHIvl1co4z4vTGfqyUix3y6ucnnP+UJgsjDJieD3S9eSwPXIseQnFVHGfHPmkCp+RwxDMHzxWIslsoB9x7WOhZB3Gkcs1XpfXwuplFcn035PH15ySTeYq2b5QGwNTx4iCM7mDFQzM3Vp/yeBZKst66DkT7cx8P7H0ZwvVcDBRXh3vrbt3uplDWWbMeEy2DgQqWrRv53BJjCxBQT64rz9hRBHHNFWTzPEzq5CbamKWF+HMolD2AEX4xB+/k8cRu5Bxb1aUeavw0FezeEABJ8/hNzfXl9c9O55rii1XKcg1Jd2NMwM24TfD7P53G4eBiULzs7nXMgYDjMcNrBCx0wfykc7RTSeDXBTa2ZD575YTBYA8+31Kojz4lVkZFvQQ/LEziviFCId3bOdhBKFF3EIn0W9c5gM170ntebT+YMbznjoaBbXeUTFuunTkm0XHwemBlPikXFdD3JfEY2hQ/2upkOK9YF6gAzvuNze2/X9+Q6XvNFq9wAPldzh/WcwtqM7+XcV9zDtRN/fXV1ySFd243rHa6C/cH6nRArM/79588Kmlxx7MFIllt/u54jsDu1X5Srxs81KOjgr39pffRkxMKMP2N9fs+rbErN+3Y9USSuLz9dXnJpvT9dwxL3H79+/frVLc34swJ2gSuPHpuqBODe7P50s3t1fenusIzkwxQiAPbaOjPemLD+/vm4d8CUylZTq3jMxhBXuzc/XcH8UjP5dFpp+Z21bwBswKG8n7V5/uJdw/B8lQ2qYTVuRSIPM2h5pcMtI/YKjluZcdtIpajHxif6nqyBJ3Nv9wjCnYj1y17ZjNb5o2dG5YgVa1mxgYr4g83OS9QeHILN+HiYGTdGvFqfrZ9M3HFiRV8fDjfjABfqpYmbMvl0w4npLUMVJZvRurK6WRjiQoN6bDnIkG44cc2c3Aebccz3AtS4Oe/EqNUsZYgZx15b7rI57ERIGpaWCw/MjHd5N4BRTvbgpCzDNcKMd1pfZhx24gCsIWYM++xYOJ+4BoMNqBkn+ZWLdmowmKUZI1tTES40/BDWx6ZqODLBr/60WcPAwgYzhrdsez978hoG5nulNWN4isKFRh1NrTFjZH+KwoVGgamZMezYh5rs0nAwbMZ/RCOQ48XRL+UtjQDzPf4n/iDKtOR4jYZjheXz4qKpCxcaARa27WgK5zWUa6ryu0HDbFgd/XTvaiZtiDWTNsQaZMMpTPB6DbDhNCZ4vWbShlgzaUMsM9fW9NsQayZtiDWTNsSaSRtizaQNsWbShlgzaUOsmbQh1kzaEGsmbYg1kzbEmkkbYs2kDbF8s2hDrH/e6jD56RMKzqiQf0Y1B5s2DQWjad2t7s90qAtWh59MXLme6d2XbDaTmbr6UJb2h5oZ/5RIAaOlFTopJLNJfzIbFPx0MkvTyWAqVatJVDAbDPrpYDDDB4N1gXW5vbdWN2JxKhtvtahWsEVJLSpDUS2WYgk2GJSYJkXwGZYg2BhLZOruRWxQL6Bp3GNo+ZLuP6oLlqT8kiQlJWklGBRoyh+UWs1snSdaEhXigyupWD0YYgja4S6WWak347Q/XqdhywrNTDKT9MclwMjQIdgfp5usIEEQhIzASlSz1RSaTSqrBaObsI9akVosWNJPZZOSwNLZIE20KDYVrKf4bDbE8HGHwZKCwNagBTUW3MQKLAV/fKFZk7JwKbVqgtBsBSWJomotgZL8VAauNzMSrQXz07VWnKIzIcofbzalpp9qNmlKEvg6kSGkWItKtVieJbLOgtE4CmytDgBCK9OkWhASAf7HYbMiQBPBV0II9kPUahSbEQQA76ZAFUyK0xmhRYeEVnYlCHdnMnSTEpLJJktTK9msBH+PoFQf2IYJKU7X4/E6mNEfoll/yM9m47Ajk2TpOh2CK/FQk63TWTab8bPNDEuzyV4SUMcxHMAkLf/Av6S8K5mUxzK8G/bQnhzF1DbR+vb9/6w8pllzsGnT/wFl+6ndroWNmAAAAABJRU5ErkJggg==" width="225" height="200" alt="Generic"></a>
-                        <h4><a href="#" class="text-decoration-none text-dark">Withdrawals</a></h4>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
 </div>
 </div>
 <div th:fragment="footer">

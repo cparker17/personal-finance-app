@@ -45,4 +45,9 @@ public class ViewController {
     public String viewHelpPage() {
         return "help";
     }
+
+    @GetMapping("/search")
+    public String displaySearchResults(Model model) {
+        return "search-results";
+    }
 }

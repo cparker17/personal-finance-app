@@ -1,7 +1,6 @@
 package com.parker.personalfinanceapp.controllers;
 
 import com.parker.personalfinanceapp.exceptions.NoSuchGoalException;
-import com.parker.personalfinanceapp.exceptions.NoSuchUserException;
 import com.parker.personalfinanceapp.models.Goal;
 import com.parker.personalfinanceapp.models.UserFactory;
 import com.parker.personalfinanceapp.services.GoalService;
@@ -30,6 +29,11 @@ public class GoalController {
         return "goal-view";
     }
 
+    @RequestMapping("/view")
+    public String viewGoal(Model model, Authentication auth) {
+        model.addAttribute("goal", goalService.getGoal(UserFactory.createUser(auth)));
+        return "goal-view";
+    }
     @RequestMapping("/edit")
     public String viewEditGoalPage(Model model, Authentication auth) {
         model.addAttribute("goal", goalService.getGoal(UserFactory.createUser(auth)));
@@ -38,7 +42,7 @@ public class GoalController {
 
     @RequestMapping("/update")
     public String updateGoal(Model model, Authentication auth, @RequestParam Goal goal)
-            throws NoSuchUserException, NoSuchGoalException {
+            throws  NoSuchGoalException {
         model.addAttribute("goal", goalService.updateGoal(UserFactory.createUser(auth), goal));
         return "goal-view";
     }

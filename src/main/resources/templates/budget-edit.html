@@ -14,23 +14,23 @@
 <body>
 <div th:replace="fragments :: navigation"/>
 <br><br>
-    <div id="linear" class="container border rounded border-dark col-7" style="padding: 25px">
+    <div class="container border rounded bg-light border-dark col-7" style="padding: 25px">
         <h1 class="text-center">Category Update</h1><br>
         <form action="#" th:action="@{/budget/update}" th:object="${category}" method="post">
             <div class="form-group">
-            <label for="id">Id:</label>
+            <label for="id" class="fw-bold">Id:</label>
             <input class="form-control" type="text" id="id" th:field="*{id}" disabled><br>
             </div>
             <div class="form-group">
-            <label for="name">Category Name:</label>
+            <label class="fw-bold" for="name">Category Name:</label>
             <input class="form-control" type="text" id="name" th:field="*{name}" required><br>
             </div>
             <div class="form-group">
-            <label for="amt">Monthly Budget Amount:</label>
+            <label class="fw-bold" for="amt">Monthly Budget Amount:</label>
             <input class="form-control" type="number" id="amt" th:field="*{monthlyBudgetAmt}" required><br>
             </div>
             <div class="form-group">
-            <label for="type">Category Type:</label>
+            <label class="fw-bold" for="type">Category Type:</label>
             <select class="form-control" id="type" th:value="*{type}" required>
                 <option value="" selected>Please select...</option>
                 <option>Needs</option>

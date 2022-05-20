@@ -9,7 +9,41 @@
 <body>
 <div th:replace="fragments :: navigation"></div>
 <div>
-<div th:replace="fragments :: sidebar"></div>
+    <div id="main-container" class="container-fluid">
+        <div class="row">
+            <div class="col-sm-3 col-md-2 d-none d-sm-block bg-light sidebar">
+                <ul class="nav flex-column text-dark">
+                    <li class="active">
+                        <a href="#" th:href="@{/}">Overview</a>
+                    </li>
+                    <li>
+                        <a href="#" th:href="@{/}">Reports</a>
+                    </li>
+                </ul>
+                <br>
+                <ul class="nav flex-column text-dark">
+                    <li><a href="#" th:href="@{/goal/view}">Goals</a></li>
+                    <li><a href="#" th:href="@{/retirement/view}">Retirement</a></li>
+                    <li><a href="#">Files</a></li>
+                </ul>
+            </div>
+            <div id="main-content-container" class="col-sm-9 col-md-10 container-fluid">
+                <br>
+                <h1 th:text="'Welcome Chris,'">Welcome NAME</h1><br>
+                <div class="row">
+                    <div class="col-md-3 text-center border border-dark dashboard-box">
+                        <h4><a href="#" class="text-decoration-none text-dark">Deposits</a></h4>
+                    </div>
+                    <div class="col-md-3 text-center border border-dark dashboard-box">
+                        <h4><a href="#" class="text-decoration-none text-dark">Expenses</a></h4>
+                    </div>
+                    <div class=" col-md-3 text-center border border-dark dashboard-box">
+                        <h4><a href="#" class="text-decoration-none text-dark">Withdrawals</a></h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 <div th:replace="fragments :: footer"></div>
 </body>
