@@ -5,9 +5,11 @@
 <html lang="en">
 <head>
     <div th:replace="fragments :: header"></div>
+    <script src="https://kit.fontawesome.com/e8b27fd1d7.js" crossorigin="anonymous"></script>
 </head>
 <body>
-<div th:replace="fragments :: navigation"/><br><br>
+<div th:replace="fragments :: navigation"/>
+<br><br>
 <center><h3>Please sign in</h3><br>
     <div class="mb-3 col-3">
         <div th:if="${param.error}">
@@ -17,12 +19,19 @@
             You have been logged out.
         </div>
         <form th:action="@{/login}" method="post">
-            <div class="text-align:center">
-                <input type="text" name="username" class="form-control m-2" placeholder="Username"/>
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="fa-solid fa-user p-2"></i></span>
+                </div>
+                <input type="text" name="username" class="form-control" placeholder="Username"/>
             </div>
-            <div>
-                <input type="password" name="password" class="form-control m-2" placeholder="Password"/>
-            </div><br>
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="fa-solid fa-key p-2"></i></span>
+                </div>
+                <input type="password" name="password" class="form-control" placeholder="Password"/>
+            </div>
+            <br>
             <input type="submit" class="btn bg-light text-dark border-dark" value="Sign in"/>
         </form>
     </div>

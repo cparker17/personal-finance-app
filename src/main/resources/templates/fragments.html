@@ -8,33 +8,40 @@
           integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
           crossorigin="anonymous">
     <link rel="stylesheet" th:href="@{/css/styles.css}">
+    <script src="https://kit.fontawesome.com/e8b27fd1d7.js" crossorigin="anonymous"></script>
 </head>
 <body>
 <div th:fragment="navigation">
-    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top border-bottom border-dark">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top border-bottom border-dark shadow-lg">
         <div class="container-fluid">
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent"
                     aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
+            <i class="fa-solid fa-money-check-dollar m-2 fa-xl"></i>
             <a class="navbar-brand" href="#" th:href="@{/}"><strong>Personal Finance Plus</strong></a>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="nav navbar-nav ms-auto">
                     <li class="nav-item">
-                        <form class="d-flex" th:action="@{/search}">
+                        <form class="d-flex form-inline" th:action="@{/search}">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="fas fa-search p-1"></i></span>
+                            </div>
                             <input class="form-control" type="search" placeholder="Search..."
                                    aria-label="Search" name="searchText">
                         </form>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="#" th:href="@{/}">Dashboard</a>
+                        <a sec:authorize="isAuthenticated()" class="nav-link active" href="#"
+                           th:href="@{/}">Dashboard</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link " href="#" th:href="@{/budget/view}">Settings</a>
+                        <a sec:authorize="isAuthenticated()" class="nav-link " href="#" th:href="@{/budget/view}">Settings</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link " href="#" th:href="@{/user/view}">Profile</a>
+                        <a sec:authorize="isAuthenticated()" class="nav-link " href="#"
+                           th:href="@{/user/view}">Profile</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link " href="#" th:href="@{/help}">Help</a>

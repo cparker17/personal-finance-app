@@ -5,16 +5,17 @@
 <head>
     <div th:replace="fragments :: header"></div>
     <title>Home Page</title>
+    <script src="https://kit.fontawesome.com/e8b27fd1d7.js" crossorigin="anonymous"></script>
 </head>
 <body>
 <div th:replace="fragments :: navigation"></div>
 <div>
     <div id="main-container" class="container-fluid">
         <div class="row">
-            <div class="col-sm-3 col-md-2 d-none d-sm-block bg-light sidebar">
+            <div class="col-sm-3 col-md-2 d-none d-sm-block bg-light sidebar shadow-lg">
                 <ul class="nav flex-column text-dark">
                     <li class="active">
-                        <br><a href="#" th:href="@{/}">Overview</a>
+                        <a href="#" th:href="@{/}">Overview</a>
                     </li>
                     <li>
                         <a href="#" th:href="@{/}">Reports</a>
@@ -29,25 +30,44 @@
             </div>
             <div id="main-content-container" class="col-sm-9 col-md-10 container-fluid">
                 <br>
-                <h1 th:text="'Welcome Chris,'">Welcome NAME</h1><br>
+                <div class="jumbotron jumbotron-fluid m-5">
+                    <h1 class="display-3">Welcome User,</h1>
+                    <p class="lead" style="text-indent: 50px">Please select the type of transaction you want to add or update:</p>
+                </div>
+                <br>
                 <div class="row">
                     <div class="col-md-3 text-center border border-dark dashboard-box">
                         <h4><a href="#" class="text-decoration-none text-dark">Deposits</a></h4>
-                        <p>Content to be added</p>
-                        <p>More content to be added</p>
-                        <p>More content to be added</p>
+                        <ul class="list">
+                            <li><a class="button btn-light btn-sm border border-dark rounded text-decoration-none"
+                                   th:href="@{/}">Add New</a></li>
+                            <li><a class="button btn-light btn-sm border border-dark rounded text-decoration-none"
+                                   th:href="@{/}">Update</a></li>
+                            <li><a class="button btn-light btn-sm border border-dark rounded text-decoration-none"
+                                   th:href="@{/}">View Recent</a></li>
+                        </ul>
                     </div>
                     <div class="col-md-3 text-center border border-dark dashboard-box">
                         <h4><a href="#" class="text-decoration-none text-dark">Expenses</a></h4>
-                        <p>Content to be added</p>
-                        <p>More content to be added</p>
-                        <p>More content to be added</p>
+                        <ul class="list">
+                            <li><a class="button btn-light btn-sm border border-dark rounded text-decoration-none"
+                                   th:href="@{/}">Add New</a></li>
+                            <li><a class="button btn-light btn-sm border border-dark rounded text-decoration-none"
+                                   th:href="@{/}">Update</a></li>
+                            <li><a class="button btn-light btn-sm border border-dark rounded text-decoration-none"
+                                   th:href="@{/}">View Recent</a></li>
+                        </ul>
                     </div>
                     <div class=" col-md-3 text-center border border-dark dashboard-box">
                         <h4><a href="#" class="text-decoration-none text-dark">Withdrawals</a></h4>
-                        <p>Content to be added</p>
-                        <p>More content to be added</p>
-                        <p>More content to be added</p>
+                        <ul class="list">
+                            <li><a class="button btn-light btn-sm border border-dark rounded text-decoration-none"
+                                   th:href="@{/}">Add New</a></li>
+                            <li><a class="button btn-light btn-sm border border-dark rounded text-decoration-none"
+                                   th:href="@{/}">Update</a></li>
+                            <li><a class="button btn-light btn-sm border border-dark rounded text-decoration-none"
+                                   th:href="@{/}">View Recent</a></li>
+                        </ul>
                     </div>
                 </div>
             </div>
