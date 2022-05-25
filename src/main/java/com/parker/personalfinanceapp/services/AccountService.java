@@ -2,14 +2,14 @@ package com.parker.personalfinanceapp.services;
 
 import com.parker.personalfinanceapp.exceptions.NoSuchAccountException;
 import com.parker.personalfinanceapp.exceptions.NoSuchUserException;
-import com.parker.personalfinanceapp.models.Account;
-import com.parker.personalfinanceapp.models.User;
-import com.parker.personalfinanceapp.models.UserFactory;
+import com.parker.personalfinanceapp.models.*;
 import com.parker.personalfinanceapp.repositories.AccountRepo;
 import com.parker.personalfinanceapp.repositories.UserRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+
+import java.util.List;
 import java.util.Optional;
 
 @Service
@@ -54,6 +54,24 @@ public class AccountService {
             return accountOptional.get();
         } else {
             throw new NoSuchAccountException("Account does not exist.");
+        }
+    }
+
+    public List<BankAccount> getAllBankAccounts(Long userId) throws NoSuchUserException {
+        Optional<User> userOptional = userRepo.findById(userId);
+        if (userOptional.isPresent()) {
+            return userOptional.get().getBankAccounts();
+        } else {
+            throw new NoSuchUserException("User does not exist.");
+        }
+    }
+
+    public List<RetirementAccount> getAllRetirementAccounts(Long userId) throws NoSuchUserException {
+        Optional<User> userOptional = userRepo.findById(userId);
+        if (userOptional.isPresent()) {
+            return userOptional.get().getRetirementAccounts();
+        } else {
+            throw new NoSuchUserException("User does not exist.");
         }
     }
 }
