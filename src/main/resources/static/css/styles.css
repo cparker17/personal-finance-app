@@ -46,11 +46,6 @@ body {
     height: 100%;
 }
 
-#main-container,
-#main-container .row {
-
-}
-
 .dashboard-box {
     margin: 10px;
     box-shadow: 2px 2px 2px 2px lightgrey;
@@ -62,6 +57,11 @@ body {
 
 .button {
     margin: 5px;
+}
+
+.card {
+    border-color: black;
+    box-shadow: 2px 2px 2px 2px lightgrey;
 }
 
 

@@ -62,10 +62,10 @@ public class ViewController {
 
     @GetMapping("/overview")
     public String displayOverview(Model model, Authentication auth) throws NoSuchUserException {
-        Long userId = UserFactory.createUser(auth).getId();
-        model.addAttribute("loans", loanService.getAllLoans(userId));
-        model.addAttribute("bankAccounts", accountService.getAllBankAccounts(userId));
-        model.addAttribute("retirementAccounts", accountService.getAllRetirementAccounts(userId));
+        //Long userId = UserFactory.createUser(auth).getId();
+//        model.addAttribute("loans", loanService.getAllLoans(userId));
+//        model.addAttribute("bankAccounts", accountService.getAllBankAccounts(userId));
+//        model.addAttribute("retirementAccounts", accountService.getAllRetirementAccounts(userId));
         return "overview";
     }
 }

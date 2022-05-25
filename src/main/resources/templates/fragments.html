@@ -63,6 +63,22 @@
         </div>
     </nav>
 </div>
+<div th:fragment="sidebar">
+    <ul class="nav flex-column text-dark">
+        <li class="active">
+            <a href="#" th:href="@{/}">Overview</a>
+        </li>
+        <li>
+            <a href="#" th:href="@{/}">Reports</a>
+        </li>
+    </ul>
+    <br>
+    <ul class="nav flex-column text-dark">
+        <li><a href="#" th:href="@{/goal/view}">Goals</a></li>
+        <li><a href="#" th:href="@{/retirement/view}">Retirement</a></li>
+        <li><a href="#">Files</a></li>
+    </ul>
+</div>
 <div th:fragment="footer">
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js"
