@@ -13,20 +13,7 @@
     <div id="main-container" class="container-fluid">
         <div class="row">
             <div class="col-sm-3 col-md-2 d-none d-sm-block bg-light sidebar shadow-lg">
-                <ul class="nav flex-column text-dark">
-                    <li class="active">
-                        <a href="#" th:href="@{/overview}">Overview</a>
-                    </li>
-                    <li>
-                        <a href="#" th:href="@{/}">Reports</a>
-                    </li>
-                </ul>
-                <br>
-                <ul class="nav flex-column text-dark">
-                    <li><a href="#" th:href="@{/goal/view}">Goals</a></li>
-                    <li><a href="#" th:href="@{/retirement/view}">Retirement</a></li>
-                    <li><a href="#">Files</a></li>
-                </ul>
+                <div th:replace="fragments :: sidebar"></div>
             </div>
             <div id="main-content-container" class="col-sm-9 col-md-10 container-fluid">
                 <br>
@@ -39,33 +26,33 @@
                     <div class="col-md-3 text-center border border-dark dashboard-box">
                         <h4><a href="#" class="text-decoration-none text-dark">Deposits</a></h4>
                         <ul class="list">
-                            <li><a class="button btn-light btn-sm border border-dark rounded text-decoration-none"
+                            <li><a class="btn btn-outline-success btn-sm rounded text-decoration-none"
                                    th:href="@{/}">Add New</a></li>
-                            <li><a class="button btn-light btn-sm border border-dark rounded text-decoration-none"
+                            <li><a class="btn btn-outline-success btn-sm rounded text-decoration-none"
                                    th:href="@{/}">Update</a></li>
-                            <li><a class="button btn-light btn-sm border border-dark rounded text-decoration-none"
+                            <li><a class="btn btn-outline-success btn-sm rounded text-decoration-none"
                                    th:href="@{/}">View Recent</a></li>
                         </ul>
                     </div>
                     <div class="col-md-3 text-center border border-dark dashboard-box">
                         <h4><a href="#" class="text-decoration-none text-dark">Expenses</a></h4>
                         <ul class="list">
-                            <li><a class="button btn-light btn-sm border border-dark rounded text-decoration-none"
+                            <li><a class="btn btn-outline-success btn-sm rounded text-decoration-none"
                                    th:href="@{/}">Add New</a></li>
-                            <li><a class="button btn-light btn-sm border border-dark rounded text-decoration-none"
+                            <li><a class="btn btn-outline-success btn-sm rounded text-decoration-none"
                                    th:href="@{/}">Update</a></li>
-                            <li><a class="button btn-light btn-sm border border-dark rounded text-decoration-none"
+                            <li><a class="btn btn-outline-success btn-sm rounded text-decoration-none"
                                    th:href="@{/}">View Recent</a></li>
                         </ul>
                     </div>
                     <div class=" col-md-3 text-center border border-dark dashboard-box">
                         <h4><a href="#" class="text-decoration-none text-dark">Withdrawals</a></h4>
                         <ul class="list">
-                            <li><a class="button btn-light btn-sm border border-dark rounded text-decoration-none"
+                            <li><a class="btn btn-outline-success btn-sm rounded text-decoration-none"
                                    th:href="@{/}">Add New</a></li>
-                            <li><a class="button btn-light btn-sm border border-dark rounded text-decoration-none"
+                            <li><a class="btn btn-outline-success btn-sm rounded text-decoration-none"
                                    th:href="@{/}">Update</a></li>
-                            <li><a class="button btn-light btn-sm border border-dark rounded text-decoration-none"
+                            <li><a class="btn btn-outline-success btn-sm rounded text-decoration-none"
                                    th:href="@{/}">View Recent</a></li>
                         </ul>
                     </div>

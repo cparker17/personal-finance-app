@@ -1,45 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <div th:replace="fragments :: header"/></div>
+    <div th:replace="fragments :: header"></div>
     <meta charset="UTF-8">
     <title>Title</title>
-    <style>
-        #linear {
-            background-color: cornflowerblue;
-            background-image: radial-gradient(cornflowerblue, white);
-        }
-    </style>
 </head>
 <body>
-<div th:replace="fragments :: navigation"/><br><br>
-<div class="container col-9 align-content-center">
-    <h1 class="text-center">Budget</h1><br>
-    <table class="table table-striped border rounded border-dark">
-        <thead>
-        <tr>
-            <th>#</th>
-            <th>Category</th>
-            <th>Amount Budgeted</th>
-            <th>Type</th>
-            <th>Actions</th>
-        </tr>
-        </thead>
-        <tbody>
-        <div >
-            <tr th:each="category : ${budget.categories}">
-                <td th:text="${category.id}">#</td>
-                <td th:text="${category.name}">Name</td>
-                <td th:text="'$' + ${category.monthlyBudgetAmt}">Amount</td>
-                <td th:text="${category.categoryType}">Type</td>
-                <td>
-                    <a class="button btn-light btn-sm border border-dark rounded text-decoration-none" th:href="@{'/budget/edit/' + ${category.id}}">Update</a>
-                    <a class="button btn-light btn-sm border border-dark rounded text-decoration-none" th:href="@{'/budget/delete/' + ${category.id}}">Delete</a>
-                </td>
-            </tr>
+<div th:replace="fragments :: navigation"></div>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-3 col-md-2 d-none d-sm-block bg-light sidebar shadow-lg">
+            <div th:replace="fragments :: sidebar"></div>
         </div>
-        </tbody>
-    </table>
+        <div class="col-sm-9 col-md-10">
+            <br><br>
+            <h1 class="text-center">Budget</h1><br>
+            <table class="table table-striped border rounded border-dark">
+                <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Category</th>
+                    <th>Amount Budgeted</th>
+                    <th>Type</th>
+                    <th>Actions</th>
+                </tr>
+                </thead>
+                <tbody>
+                <div>
+                    <tr th:each="category : ${budget.categories}">
+                        <td th:text="${category.id}">#</td>
+                        <td th:text="${category.name}">Name</td>
+                        <td th:text="'$' + ${category.monthlyBudgetAmt}">Amount</td>
+                        <td th:text="${category.categoryType}">Type</td>
+                        <td>
+                            <a class="btn btn-outline-success btn-sm rounded text-decoration-none"
+                               th:href="@{'/budget/edit/' + ${category.id}}">Update</a>
+                            <a class="btn btn-outline-success btn-sm rounded text-decoration-none"
+                               th:href="@{'/budget/delete/' + ${category.id}}">Delete</a>
+                        </td>
+                    </tr>
+                </div>
+                </tbody>
+            </table>
+        </div>
+    </div>
 </div>
 <div th:replace="fragments :: footer"/>
 </body>
