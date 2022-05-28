@@ -11,6 +11,7 @@ import org.springframework.security.core.Authentication;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
@@ -26,7 +27,7 @@ public class ViewController {
         return "index";
     }
 
-    @GetMapping("/register")
+    @PostMapping("/register")
     public String viewRegisterPage(Model model) {
         model.addAttribute("user", new User());
         return "register";

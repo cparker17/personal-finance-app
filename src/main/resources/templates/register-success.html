@@ -16,15 +16,10 @@
                 <div th:replace="fragments :: sidebar"></div>
             </div>
             <div id="main-content-container" class="col-sm-9 col-md-10 container-fluid align-content-center">
-                <br>
-                <h1 class="text-center">Personal Finance Plus</h1>
-                <br>
-                <p class="text-center">Welcome to Personal Finance Plus!</p>
-                <p class="text-center">Join today to get your finances in order! </p>
                 <br><br>
-                <center>
-                <a th:href="@{/register-form}" class="btn btn-outline-success btn-lg">Sign Up</a>
-                </center>
+                <h4 class="text-center">Registration completed successfully</h4><br>
+                <br>
+                <a th:href="@{/login}" class="btn btn-outline-success btn-lg">Log In</a>
             </div>
         </div>
     </div>
@@ -32,3 +27,7 @@
 <div th:replace="fragments :: footer"></div>
 </body>
 </html>
+
+
+
+

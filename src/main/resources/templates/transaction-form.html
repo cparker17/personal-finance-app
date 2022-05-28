@@ -26,11 +26,10 @@
                     </div>
                     <div class="form-group">
                         <label class="fw-bold" for="type">Account:</label>
-                        <select class="form-control" id="type" th:value="*{account.id}" required>
-                            <option value="" selected>Please select...</option>
-                            <option>Needs</option>
-                            <option>Wants</option>
-                            <option>Savings</option>
+                        <select class="form-control" id="type"
+                                th:value="*{account.id}" required>
+                            <option value=""  selected>Select Account...</option>
+                            <option th:each="account : ${accounts}" th:text="'Acct #' + ${account.accountNum}">Account</option>
                         </select><br>
                     </div>
                     <input type="submit" value="Save" class="btn btn-light text-dark border-dark">

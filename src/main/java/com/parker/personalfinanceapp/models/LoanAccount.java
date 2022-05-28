@@ -44,4 +44,14 @@ public class LoanAccount extends Account {
             loanPayments.add((LoanPayment) transaction);
         }
     }
+
+    @Override
+    public List<Deposit> getDeposits() {
+        return null;
+    }
+
+    @Override
+    public List<Withdrawal> getWithdrawals() {
+        return null;
+    }
 }

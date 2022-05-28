@@ -39,4 +39,14 @@ public class RetirementAccount extends Account {
             currentBalance = currentBalance.add(transaction.getAmount());
         }
     }
+
+    @Override
+    public List<Withdrawal> getWithdrawals() {
+        return null;
+    }
+
+    @Override
+    public List<LoanPayment> getLoanPayments() {
+        return null;
+    }
 }

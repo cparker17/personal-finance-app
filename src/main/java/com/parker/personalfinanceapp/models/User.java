@@ -57,13 +57,13 @@ public class User {
     private Goal goal;
 
     @OneToMany
-    private List<BankAccount> bankAccounts = new ArrayList<>();
+    private List<Account> bankAccounts = new ArrayList<>();
 
     @OneToMany
-    List<LoanAccount> loanAccounts = new ArrayList<>();
+    List<Account> loanAccounts = new ArrayList<>();
 
     @OneToMany
-    List<RetirementAccount> retirementAccounts = new ArrayList<>();
+    List<Account> retirementAccounts = new ArrayList<>();
 
     @OneToOne
     RetirementPlan retirementPlan;

@@ -2,6 +2,7 @@ package com.parker.personalfinanceapp.services;
 
 import com.parker.personalfinanceapp.exceptions.NoSuchAccountException;
 import com.parker.personalfinanceapp.exceptions.NoSuchUserException;
+import com.parker.personalfinanceapp.models.Account;
 import com.parker.personalfinanceapp.models.LoanAccount;
 import com.parker.personalfinanceapp.models.User;
 import com.parker.personalfinanceapp.repositories.LoanRepo;
@@ -27,7 +28,7 @@ public class LoanService {
     public LoanAccount updateLoan(LoanAccount newLoan) throws NoSuchAccountException {
         LoanAccount loan = getLoanFromDB(newLoan.getId());
         loan.setAccountType(newLoan.getAccountType());
-        loan.setLenderName(newLoan.getLenderName());
+        loan.setInstitutionName(newLoan.getInstitutionName());
         loan.setAccountNum(newLoan.getAccountNum());
         loan.setInterestRate(newLoan.getInterestRate());
         loan.setStartBalance(newLoan.getStartBalance());
@@ -60,10 +61,10 @@ public class LoanService {
         }
     }
 
-    public List<LoanAccount> getAllLoans(Long userId) throws NoSuchUserException {
+    public List<Account> getAllLoans(Long userId) throws NoSuchUserException {
         Optional<User> userOptional = userRepo.findById(userId);
         if (userOptional.isPresent()) {
-            return userOptional.get().getLoans();
+            return userOptional.get().getLoanAccounts();
         } else {
             throw new NoSuchUserException("User does not exist.");
         }

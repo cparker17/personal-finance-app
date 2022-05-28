@@ -37,9 +37,7 @@ public class TransactionController {
                                          Authentication auth) throws NoSuchTransactionException, NoSuchUserException {
         Long userId = UserFactory.createUser(auth).getId();
         model.addAttribute("transaction", TransactionFactory.createTransaction(transactionType));
-        model.addAttribute("bankAccounts", accountService.getAllBankAccounts(userId));
-        model.addAttribute("retirementAccounts", accountService.getAllRetirementAccounts(userId));
-        model.addAttribute("loanAccounts", accountService.getAllLoanAccounts(userId));
+        model.addAttribute("accounts", accountService.getAllAccounts(userId));
         return "transaction-form";
     }
 

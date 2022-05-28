@@ -1,10 +1,14 @@
 package com.parker.personalfinanceapp.models;
 
+import lombok.With;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import java.math.BigDecimal;
+import java.util.Collection;
+import java.util.List;
 
 @Entity
 public abstract class Account {
@@ -24,4 +28,7 @@ public abstract class Account {
     public abstract void setStartBalance(BigDecimal amount);
     public abstract void setCurrentBalance(BigDecimal amount);
     public abstract void addTransaction(Transaction transaction);
+    public abstract List<Deposit> getDeposits();
+    public abstract List<Withdrawal> getWithdrawals();
+    public abstract List<LoanPayment> getLoanPayments();
 }

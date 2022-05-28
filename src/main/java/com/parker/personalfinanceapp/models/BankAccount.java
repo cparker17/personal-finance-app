@@ -45,4 +45,9 @@ public class BankAccount extends Account {
             currentBalance = currentBalance.subtract(transaction.getAmount());
         }
     }
+
+    @Override
+    public List<LoanPayment> getLoanPayments() {
+        return null;
+    }
 }

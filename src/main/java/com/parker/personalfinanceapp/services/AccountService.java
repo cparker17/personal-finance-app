@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
@@ -57,7 +58,7 @@ public class AccountService {
         }
     }
 
-    public List<BankAccount> getAllBankAccounts(Long userId) throws NoSuchUserException {
+    public List<Account> getAllBankAccounts(Long userId) throws NoSuchUserException {
         Optional<User> userOptional = userRepo.findById(userId);
         if (userOptional.isPresent()) {
             return userOptional.get().getBankAccounts();
@@ -66,7 +67,7 @@ public class AccountService {
         }
     }
 
-    public List<RetirementAccount> getAllRetirementAccounts(Long userId) throws NoSuchUserException {
+    public List<Account> getAllRetirementAccounts(Long userId) throws NoSuchUserException {
         Optional<User> userOptional = userRepo.findById(userId);
         if (userOptional.isPresent()) {
             return userOptional.get().getRetirementAccounts();
@@ -75,12 +76,20 @@ public class AccountService {
         }
     }
 
-    public List<LoanAccount> getAllLoanAccounts(Long userId) throws NoSuchUserException {
+    public List<Account> getAllLoanAccounts(Long userId) throws NoSuchUserException {
         Optional<User> userOptional = userRepo.findById(userId);
         if (userOptional.isPresent()) {
             return userOptional.get().getLoanAccounts();
         } else {
             throw new NoSuchUserException("User does not exist.");
         }
+    }
+
+    public List<Account> getAllAccounts(Long userId) throws NoSuchUserException {
+        List<Account> allAccounts = new ArrayList<>();
+        allAccounts.add((Account) getAllBankAccounts(userId));
+        allAccounts.add((Account) getAllLoanAccounts(userId));
+        allAccounts.add((Account) getAllRetirementAccounts(userId));
+        return allAccounts;
     }
 }
