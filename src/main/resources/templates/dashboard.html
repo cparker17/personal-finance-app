@@ -17,8 +17,8 @@
             </div>
             <div id="main-content-container" class="col-sm-9 col-md-10 container-fluid">
                 <br>
-                <div class="jumbotron jumbotron-fluid m-5">
-                    <h1 class="display-3">Welcome User,</h1>
+                <div class="jumbotron jumbotron-fluid m-5" th:object="${user}">
+                    <h1 class="display-3" th:text="'Welcome ' + ${user.firstName} + ','">Welcome User,</h1>
                     <p class="lead" style="text-indent: 50px">Please select the type of transaction you want to add or update:</p>
                 </div>
                 <br>

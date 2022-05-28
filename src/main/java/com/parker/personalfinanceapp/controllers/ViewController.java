@@ -6,6 +6,7 @@ import com.parker.personalfinanceapp.models.User;
 import com.parker.personalfinanceapp.models.UserFactory;
 import com.parker.personalfinanceapp.services.AccountService;
 import com.parker.personalfinanceapp.services.LoanService;
+import com.parker.personalfinanceapp.services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
 import org.springframework.stereotype.Controller;
@@ -22,9 +23,12 @@ public class ViewController {
     @Autowired
     AccountService accountService;
 
+    @Autowired
+    UserService userService;
+
     @GetMapping("/")
     public String viewHomePage() {
-        return "index";
+        return "redirect:/login";
     }
 
     @PostMapping("/register")
@@ -71,7 +75,8 @@ public class ViewController {
     }
 
     @GetMapping("/dashboard")
-    public String displayDashboard(Model model, Authentication auth) {
+    public String displayDashboard(Model model, Authentication auth) throws NoSuchUserException {
+        model.addAttribute("user", userService.getUserInfo(UserFactory.createUser(auth)));
         return "dashboard";
     }
 }

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <div th:replace="fragments :: header"></div>
+    <title>Edit Budget</title>
+</head>
+<body>
+<div th:replace="fragments :: navigation"></div>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-3 col-md-2 d-none d-sm-block bg-light sidebar shadow-lg">
+            <div th:replace="fragments :: sidebar"></div>
+        </div>
+        <div class="col-sm-9 col-md-10">
+            <br><br>
+            <div id="cat-update" class="container border rounded bg-light border-dark col-5" style="padding: 25px">
+                <h1 class="text-center">Monthly Income Update</h1><br>
+                <form action="#" th:action="@{/budget/new-income}" th:object="${income}" method="post">
+                    <div class="form-group">
+                        <label for="id" class="fw-bold">Amount:</label>
+                        <input class="form-control" type="number" id="id" th:field="*{monthlyIncome}" required><br>
+                    </div>
+                    <input type="submit" value="Save" class="btn btn-light text-dark border-dark">
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div th:replace="fragments :: footer"></div>
+</body>
+</html>

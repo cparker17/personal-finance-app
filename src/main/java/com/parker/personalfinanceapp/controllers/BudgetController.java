@@ -2,9 +2,8 @@ package com.parker.personalfinanceapp.controllers;
 
 import com.parker.personalfinanceapp.exceptions.NoSuchBudgetException;
 import com.parker.personalfinanceapp.exceptions.NoSuchCategoryException;
-import com.parker.personalfinanceapp.models.Budget;
-import com.parker.personalfinanceapp.models.Category;
-import com.parker.personalfinanceapp.models.UserFactory;
+import com.parker.personalfinanceapp.exceptions.NoSuchUserException;
+import com.parker.personalfinanceapp.models.*;
 import com.parker.personalfinanceapp.services.BudgetService;
 import com.parker.personalfinanceapp.services.CategoryService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,7 +13,6 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
 @RequestMapping("/budget")
@@ -26,21 +24,26 @@ public class BudgetController {
     CategoryService categoryService;
 
     @RequestMapping("/form")
-    public String viewNewBudgetPage(Model model) {
-        model.addAttribute("budget", new Budget());
+    public String viewNewBudgetCategoryPage(Model model) {
+        model.addAttribute("category", new Category());
         return "budget-new";
     }
 
     @RequestMapping("/new")
-    public String createBudget(Model model, Authentication auth, @RequestParam Budget budget) {
-        model.addAttribute("budget",
-                budgetService.createBudget(UserFactory.createUser(auth), budget));
-        return "budget-view";
+    public String addBudgetCategory(Authentication auth, @ModelAttribute Category category) {
+        User user = UserFactory.createUser(auth);
+        categoryService.createCategory(user.getId(), category);
+        return "redirect:/budget/view";
     }
 
     @RequestMapping("/view")
-    public String viewBudget(Model model, Authentication auth) throws NoSuchBudgetException {
-        model.addAttribute("budget", budgetService.getBudget(UserFactory.createUser(auth)));
+    public String viewBudget(Model model, Authentication auth) throws NoSuchBudgetException, NoSuchUserException {
+        User user = UserFactory.createUser(auth);
+        Budget budget = budgetService.getBudget(user);
+        model.addAttribute("budget", budget);
+        model.addAttribute("needs", budgetService.getNeedsCategories(budget));
+        model.addAttribute("wants", budgetService.getWantsCategories(budget));
+        model.addAttribute("savings", budgetService.getSavingsCategories(budget));
         return "budget-view";
     }
 
@@ -51,15 +54,27 @@ public class BudgetController {
     }
 
     @RequestMapping("/update")
-    public String updateBudget(Model model, Authentication auth, @ModelAttribute(name="category") Category category)
-            throws NoSuchBudgetException {
+    public String updateBudget(@ModelAttribute(name="category") Category category)
+            throws NoSuchBudgetException, NoSuchUserException {
         categoryService.updateCategory(category);
-        model.addAttribute("budget", budgetService.getBudget(UserFactory.createUser(auth)));
-        return "budget-view";
+        return "redirect:/budget/view";
+    }
+
+    @RequestMapping("/income-form")
+    public String displayIncomeForm(Model model) {
+        model.addAttribute("income", new IncomeWrapper());
+        return "income-form";
+    }
+
+    @RequestMapping("/new-income")
+    public String updateMonthlyIncome(@ModelAttribute IncomeWrapper income, Authentication auth)
+            throws NoSuchUserException {
+        budgetService.updateMonthlyIncome(UserFactory.createUser(auth).getId(), income.getMonthlyIncome());
+        return "redirect:/budget/view";
     }
 
     @RequestMapping("/delete")
-    public String deleteBudget(Authentication auth) throws NoSuchBudgetException {
+    public String deleteBudget(Authentication auth) throws NoSuchBudgetException, NoSuchUserException {
         budgetService.deleteBudget(UserFactory.createUser(auth));
         return "redirect:/";
     }

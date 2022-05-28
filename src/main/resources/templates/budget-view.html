@@ -12,36 +12,101 @@
         <div class="col-sm-3 col-md-2 d-none d-sm-block bg-light sidebar shadow-lg">
             <div th:replace="fragments :: sidebar"></div>
         </div>
-        <div class="col-sm-9 col-md-10">
-            <br><br>
-            <h1 class="text-center">Budget</h1><br>
-            <table class="table table-striped border rounded border-dark">
-                <thead>
-                <tr>
-                    <th>#</th>
-                    <th>Category</th>
-                    <th>Amount Budgeted</th>
-                    <th>Type</th>
-                    <th>Actions</th>
-                </tr>
-                </thead>
-                <tbody>
-                <div>
-                    <tr th:each="category : ${budget.categories}">
-                        <td th:text="${category.id}">#</td>
-                        <td th:text="${category.name}">Name</td>
-                        <td th:text="'$' + ${category.monthlyBudgetAmt}">Amount</td>
-                        <td th:text="${category.categoryType}">Type</td>
-                        <td>
-                            <a class="btn btn-outline-success btn-sm rounded text-decoration-none"
-                               th:href="@{'/budget/edit/' + ${category.id}}">Update</a>
-                            <a class="btn btn-outline-success btn-sm rounded text-decoration-none"
-                               th:href="@{'/budget/delete/' + ${category.id}}">Delete</a>
-                        </td>
+        <div class="col-sm-9 col-md10">
+            <div th:if="${#lists.isEmpty(needs) and #lists.isEmpty(wants) and #lists.isEmpty(savings)}">
+                <br><br><br>
+                <h4 class="text-center">You haven't entered any budget categories yet.</h4>
+                <br>
+                <center>
+                    <a th:href="@{/budget/form}" class="btn btn-outline-success btn-lg">Add Category</a>
+                </center>
+            </div>
+            <div th:unless="${#lists.isEmpty(needs) and #lists.isEmpty(wants) and #lists.isEmpty(savings)}">
+                <br><br>
+                <h1 class="text-center">Budget</h1><br>
+                <h5 class="text-center" th:text="'Monthly Income:  ' + ${#numbers.formatCurrency(budget.monthlyIncome)}">Monthly Income</h5>
+                <span class="d-inline">
+                    <center>
+                <a th:href="@{/budget/income-form}" class="btn btn-outline-success btn-sm">Update Income</a>
+                <a th:href="@{/budget/verify}" class="btn btn-outline-success btn-sm">Verify Budget</a>
+                        </center>
+                    </span>
+                <br><br>
+                <h4 th:unless="${#lists.isEmpty(needs)}" class="text-center">NEEDS</h4>
+                <table th:unless="${#lists.isEmpty(needs)}" class="table table-striped border rounded border-dark">
+                    <thead class="bg-success">
+                    <tr>
+                        <th>Expense Category</th>
+                        <th>Monthly Amount</th>
+                        <th>Actions</th>
                     </tr>
-                </div>
-                </tbody>
-            </table>
+                    </thead>
+                    <tbody>
+                    <div>
+                        <tr th:each="category : ${needs}">
+                            <td th:text="${category.name}">Name</td>
+                            <td th:text="'$' + ${category.monthlyBudgetAmt}">Amount</td>
+                            <td>
+                                <a class="btn btn-outline-success btn-sm rounded text-decoration-none"
+                                   th:href="@{'/budget/edit/' + ${category.id}}">Update</a>
+                                <a class="btn btn-outline-success btn-sm rounded text-decoration-none"
+                                   th:href="@{'/budget/delete/' + ${category.id}}">Delete</a>
+                            </td>
+                        </tr>
+                    </div>
+                    </tbody>
+                </table>
+                <br>
+                <h4 th:unless="${#lists.isEmpty(wants)}" class="text-center">WANTS</h4>
+                <table th:unless="${#lists.isEmpty(wants)}" class="table table-striped border rounded border-dark">
+                    <thead class="bg-success">
+                    <tr>
+                        <th>Expense Category</th>
+                        <th>Monthly Amount</th>
+                        <th>Actions</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <div>
+                        <tr th:each="category : ${wants}">
+                            <td th:text="${category.name}">Name</td>
+                            <td th:text="'$' + ${category.monthlyBudgetAmt}">Amount</td>
+                            <td>
+                                <a class="btn btn-outline-success btn-sm rounded text-decoration-none"
+                                   th:href="@{'/budget/edit/' + ${category.id}}">Update</a>
+                                <a class="btn btn-outline-success btn-sm rounded text-decoration-none"
+                                   th:href="@{'/budget/delete/' + ${category.id}}">Delete</a>
+                            </td>
+                        </tr>
+                    </div>
+                    </tbody>
+                </table>
+                <br>
+                <h4 th:unless="${#lists.isEmpty(savings)}" class="text-center">SAVINGS</h4>
+                <table th:unless="${#lists.isEmpty(savings)}" class="table table-striped border rounded border-dark">
+                    <thead class="bg-success">
+                    <tr>
+                        <th>Expense Category</th>
+                        <th>Monthly Amount</th>
+                        <th>Actions</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <div>
+                        <tr th:each="category : ${savings}">
+                            <td th:text="${category.name}">Name</td>
+                            <td th:text="'$' + ${category.monthlyBudgetAmt}">Amount</td>
+                            <td>
+                                <a class="btn btn-outline-success btn-sm rounded text-decoration-none"
+                                   th:href="@{'/budget/edit/' + ${category.id}}">Update</a>
+                                <a class="btn btn-outline-success btn-sm rounded text-decoration-none"
+                                   th:href="@{'/budget/delete/' + ${category.id}}">Delete</a>
+                            </td>
+                        </tr>
+                    </div>
+                    </tbody>
+                </table>
+            </div>
         </div>
     </div>
 </div>

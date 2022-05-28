@@ -1,19 +1,36 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.w3.org/1999/xhtml">
 <head>
-    <div th:replace="fragments :: header"/></div>
-    <title>Help</title>
+    <div th:replace="fragments :: header"></div>
+    <title>Home Page</title>
+    <script src="https://kit.fontawesome.com/e8b27fd1d7.js" crossorigin="anonymous"></script>
 </head>
 <body>
-<div th:replace="fragments :: navigation"/>
-<center><br><br><br><br>
-<iframe width="560"
-        height="315"
-        src="https://www.youtube.com/embed/HQzoZfc3GwQ"
-        title="YouTube video player" frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen></iframe></center><br><br>
-<p class="text-center">Click on the video to learn about the <strong>50/30/20</strong> rule of personal finance!!!</p>
-<div th:replace="fragments :: footer"/></div>
+<div th:replace="fragments :: navigation"></div>
+<div>
+    <div id="main-container" class="container-fluid">
+        <div class="row">
+            <div class="col-sm-3 col-md-2 d-none d-sm-block bg-light sidebar shadow-lg">
+                <div th:replace="fragments :: sidebar"></div>
+            </div>
+            <div id="main-content-container" class="col-sm-9 col-md-10 container-fluid align-content-center">
+                <center><br><br><br><br>
+                    <iframe width="560"
+                            height="315"
+                            src="https://www.youtube.com/embed/HQzoZfc3GwQ"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe></center><br><br>
+                <h5 class="text-center">Click on the video to learn about the <strong>50/30/20</strong> rule of personal finance!!!</h5>
+            </div>
+        </div>
+    </div>
+</div>
+<div th:replace="fragments :: footer"></div>
 </body>
 </html>
+
+
+

@@ -2,9 +2,11 @@ package com.parker.personalfinanceapp.services;
 
 import com.parker.personalfinanceapp.exceptions.DuplicateUserException;
 import com.parker.personalfinanceapp.exceptions.NoSuchUserException;
+import com.parker.personalfinanceapp.models.Budget;
 import com.parker.personalfinanceapp.models.Role;
 import com.parker.personalfinanceapp.models.User;
 import com.parker.personalfinanceapp.models.UserFactory;
+import com.parker.personalfinanceapp.repositories.BudgetRepo;
 import com.parker.personalfinanceapp.repositories.RoleRepo;
 import com.parker.personalfinanceapp.repositories.UserRepo;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,6 +26,9 @@ public class UserService {
 
     @Autowired
     PasswordEncoder passwordEncoder;
+
+    @Autowired
+    BudgetRepo budgetRepo;
 
     public User getUserInfo(User user) throws NoSuchUserException {
         Optional<User> userOptional = userRepo.findById(user.getId());
@@ -52,6 +57,9 @@ public class UserService {
         Role role = roleRepo.findRoleById(1L);
         user.setRole(role);
         user.setPassword(passwordEncoder.encode(user.getPassword()));
+        Budget budget = new Budget();
+        budgetRepo.save(budget);
+        user.setBudget(budget);
         return userRepo.save(user);
     }
 }

@@ -37,7 +37,7 @@
                            th:href="@{/dashboard}">Dashboard</a>
                     </li>
                     <li class="nav-item">
-                        <a sec:authorize="isAuthenticated()" class="nav-link " href="#" th:href="@{/budget/view}">Settings</a>
+                        <a sec:authorize="isAuthenticated()" class="nav-link " href="#" th:href="@{/budget/view}">Budget</a>
                     </li>
                     <li class="nav-item">
                         <a sec:authorize="isAuthenticated()" class="nav-link " href="#"
@@ -74,12 +74,14 @@
     </ul>
     <br>
     <ul class="nav flex-column text-dark">
-        <li><a href="#" th:href="@{/goal/view}">Goals</a></li>
-        <li><a href="#" th:href="@{/retirement/view}">Retirement</a></li>
+        <li><a href="#" th:href="@{/goal/view}">Custom Goal</a></li>
+        <li><a href="#" th:href="@{/retirement/view}">Retirement Plan</a></li>
         <li><a href="#">Files</a></li>
     </ul>
 </div>
 <div th:fragment="footer">
+    <br><br><br><br><br><br>
+    <h6 class="text-center">Copyright &copy; 2022 Parker - All Rights Reserved</h6>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js"
             integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT"
