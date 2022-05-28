@@ -1,7 +1,7 @@
 package com.parker.personalfinanceapp.controllers;
 
 import com.parker.personalfinanceapp.exceptions.NoSuchAccountException;
-import com.parker.personalfinanceapp.models.Loan;
+import com.parker.personalfinanceapp.models.LoanAccount;
 import com.parker.personalfinanceapp.models.UserFactory;
 import com.parker.personalfinanceapp.services.LoanService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,12 +20,12 @@ public class LoanController {
 
     @RequestMapping("/form")
     public String viewNewLoanPage(Model model) {
-        model.addAttribute("loan", new Loan());
+        model.addAttribute("loan", new LoanAccount());
         return "loan-new";
     }
 
     @RequestMapping("/new")
-    public String createLoan(Model model, Authentication auth, @RequestParam Loan loan) {
+    public String createLoan(Model model, Authentication auth, @RequestParam LoanAccount loan) {
         model.addAttribute("loan", loanService.createLoan(UserFactory.createUser(auth), loan));
         return "loan-view";
     }
@@ -38,14 +38,14 @@ public class LoanController {
     }
 
     @RequestMapping("/update")
-    public String updateLoan(Model model, @RequestParam Loan loan)
+    public String updateLoan(Model model, @RequestParam LoanAccount loan)
             throws NoSuchAccountException {
         model.addAttribute("loan", loanService.updateLoan(loan));
         return "loan-view";
     }
 
     @RequestMapping("/delete")
-    public String deleteLoan(@RequestParam Loan loan)
+    public String deleteLoan(@RequestParam LoanAccount loan)
             throws NoSuchAccountException {
         loanService.deleteLoan(loan);
         return "redirect:/";

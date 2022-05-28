@@ -60,7 +60,7 @@ public class User {
     private List<BankAccount> bankAccounts = new ArrayList<>();
 
     @OneToMany
-    List<Loan> loans = new ArrayList<>();
+    List<LoanAccount> loanAccounts = new ArrayList<>();
 
     @OneToMany
     List<RetirementAccount> retirementAccounts = new ArrayList<>();
@@ -91,7 +91,7 @@ public class User {
         }
     }
 
-    public void addLoan(Loan loan) {
-        loans.add(loan);
+    public void addLoan(LoanAccount loan) {
+        loanAccounts.add(loan);
     }
 }

@@ -74,4 +74,13 @@ public class AccountService {
             throw new NoSuchUserException("User does not exist.");
         }
     }
+
+    public List<LoanAccount> getAllLoanAccounts(Long userId) throws NoSuchUserException {
+        Optional<User> userOptional = userRepo.findById(userId);
+        if (userOptional.isPresent()) {
+            return userOptional.get().getLoanAccounts();
+        } else {
+            throw new NoSuchUserException("User does not exist.");
+        }
+    }
 }

@@ -1,6 +1,6 @@
 package com.parker.personalfinanceapp.exceptions;
 
-import com.parker.personalfinanceapp.models.Loan;
+import com.parker.personalfinanceapp.models.LoanAccount;
 import com.parker.personalfinanceapp.models.Report;
 import com.parker.personalfinanceapp.models.LoanPayment;
 import lombok.*;
@@ -18,7 +18,7 @@ public class PersonalFinanceAppException extends Exception {
     @AllArgsConstructor
     @Builder
     public static class LoansSummary implements Report {
-        private List<Loan> loans;
+        private List<LoanAccount> loans;
         private List<LoanPayment> loanPayments;
     }
 }

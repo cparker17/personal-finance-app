@@ -7,13 +7,20 @@ import com.parker.personalfinanceapp.repositories.UserRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.Optional;
+
 @Service
 public class UserService {
     @Autowired
     UserRepo userRepo;
 
     public User getUserInfo(User user) throws NoSuchUserException {
-        return UserFactory.getUser(user.getId());
+        Optional<User> userOptional = userRepo.findById(user.getId());
+        if (userOptional.isPresent()) {
+            return userOptional.get();
+        } else {
+            throw new NoSuchUserException("User does not exist.");
+        }
     }
 
     public User updateUserInfo(User user, User newUser) {

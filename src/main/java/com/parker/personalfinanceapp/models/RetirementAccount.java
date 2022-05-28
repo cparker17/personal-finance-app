@@ -36,6 +36,7 @@ public class RetirementAccount extends Account {
             deposits = new ArrayList<>();
         } else {
             deposits.add((Deposit) transaction);
+            currentBalance = currentBalance.add(transaction.getAmount());
         }
     }
 }

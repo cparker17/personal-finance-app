@@ -10,7 +10,7 @@ import java.util.List;
 @Builder
 public class AccountsSummary implements Report {
     private List<BankAccount> bankAccounts;
-    private List<Loan> loans;
+    private List<LoanAccount> loans;
     private List<RetirementAccount> retirementAccounts;
     private List<Deposit> deposits;
     private List<Withdrawal> withdrawals;

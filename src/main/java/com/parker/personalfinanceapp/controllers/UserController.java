@@ -8,8 +8,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
 @RequestMapping("/user")
@@ -30,7 +30,7 @@ public class UserController {
     }
 
     @RequestMapping("/update")
-    public String updateUserInfo(Model model, Authentication auth, @RequestParam User newUser) {
+    public String updateUserInfo(Model model, Authentication auth, @ModelAttribute User newUser) {
         model.addAttribute("user",
                 userService.updateUserInfo(UserFactory.createUser(auth), newUser));
         return "user-view";

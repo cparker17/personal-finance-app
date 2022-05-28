@@ -76,6 +76,7 @@ public class PersonalFinanceAppApplication {
                                 .zip("zip")
                                 .build())
                         .email("email@email.com")
+                        .phone("555-555-5555")
                         .role(roleRepo.findRoleById(1L))
                         .budget(budgetRepo.save(Budget.builder()
                                 .categories(categoryList)

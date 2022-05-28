@@ -37,8 +37,12 @@ public class BankAccount extends Account {
     public void addTransaction(Transaction transaction) {
         if (transaction instanceof Deposit) {
             deposits.add((Deposit) transaction);
-        } else {
+            currentBalance = currentBalance.add(transaction.getAmount());
+        } else if (transaction instanceof Withdrawal){
             withdrawals.add((Withdrawal) transaction);
+            currentBalance = currentBalance.subtract(transaction.getAmount());
+        } else {
+            currentBalance = currentBalance.subtract(transaction.getAmount());
         }
     }
 }

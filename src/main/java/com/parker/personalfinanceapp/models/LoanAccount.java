@@ -13,14 +13,14 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class Loan {
+public class LoanAccount extends Account {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
     private AccountType accountType;
 
-    private String lenderName;
+    private String institutionName;
 
     private Long accountNum;
 

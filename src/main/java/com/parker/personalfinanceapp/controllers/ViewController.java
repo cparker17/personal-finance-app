@@ -68,4 +68,9 @@ public class ViewController {
 //        model.addAttribute("retirementAccounts", accountService.getAllRetirementAccounts(userId));
         return "overview";
     }
+
+    @GetMapping("/dashboard")
+    public String displayDashboard(Model model, Authentication auth) {
+        return "dashboard";
+    }
 }
