@@ -78,4 +78,10 @@ public class BudgetController {
         budgetService.deleteBudget(UserFactory.createUser(auth));
         return "redirect:/";
     }
+
+    @RequestMapping("/verify")
+    public String verifyBudget(Model model, Authentication auth) throws NoSuchUserException {
+        model.addAttribute("ratios", budgetService.verifyBudget(UserFactory.createUser(auth).getId()));
+        return "budget-verify";
+    }
 }

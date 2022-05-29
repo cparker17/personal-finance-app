@@ -96,4 +96,32 @@ public class BudgetService {
             throw new NoSuchUserException("User not found.");
         }
     }
+
+    public BudgetRatios verifyBudget(Long userId) throws NoSuchUserException {
+        Budget budget;
+        Optional<User> userOptional = userRepo.findById(userId);
+        if (userOptional.isPresent()) {
+            budget = userOptional.get().getBudget();
+            double wantsSum = 0;
+            double needsSum = 0;
+            double savingsSum = 0;
+            for (Category category : budget.getCategories()) {
+                if (category.getCategoryType().equals(CategoryType.NEEDS)) {
+                    wantsSum += category.getMonthlyBudgetAmt().doubleValue();
+                } else if (category.getCategoryType().equals(CategoryType.WANTS)) {
+                    needsSum += category.getMonthlyBudgetAmt().doubleValue();
+                } else {
+                    savingsSum += category.getMonthlyBudgetAmt().doubleValue();
+                }
+            }
+            double totalBudgetAmount = wantsSum + needsSum + savingsSum;
+            BudgetRatios budgetRatios = new BudgetRatios();
+            budgetRatios.setNeedsRatio((int) (needsSum * 100 / totalBudgetAmount));
+            budgetRatios.setWantsRatio((int) (wantsSum * 100 / totalBudgetAmount));
+            budgetRatios.setSavingsRatio(100 - budgetRatios.getNeedsRatio() - budgetRatios.getWantsRatio());
+            return budgetRatios;
+        } else {
+            throw new NoSuchUserException("User not found");
+        }
+    }
 }
