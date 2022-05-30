@@ -28,13 +28,13 @@ public class Category {
     private BigDecimal monthlyBudgetAmt;
 
     @OneToMany
-    private List<Expense> expenses;
+    private List<Transaction> transactions;
 
-    public void addExpense(Expense expense) {
-        if (expenses.isEmpty()) {
-            expenses = new ArrayList<>();
+    public void addExpense(Transaction transaction) {
+        if (transactions.isEmpty()) {
+            transactions = new ArrayList<>();
         } else {
-            expenses.add(expense);
+            transactions.add(transaction);
         }
     }
 }

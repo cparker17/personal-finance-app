@@ -1,9 +1,9 @@
 package com.parker.personalfinanceapp.services;
 
+import com.parker.personalfinanceapp.dto.*;
 import com.parker.personalfinanceapp.exceptions.NoSuchBudgetException;
 import com.parker.personalfinanceapp.exceptions.NoSuchReportException;
 import com.parker.personalfinanceapp.exceptions.NoSuchUserException;
-import com.parker.personalfinanceapp.exceptions.PersonalFinanceAppException;
 import com.parker.personalfinanceapp.models.*;
 import com.parker.personalfinanceapp.repositories.UserRepo;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -38,10 +38,11 @@ public class ReportService {
             throw new NoSuchUserException("User does not exist.");
         }
     }
+
     private BudgetActualReport getBudgetActualReport(Long userId) throws NoSuchUserException {
         Budget budget = getUser(userId).getBudget();
-        List<Expense> expenses = new ArrayList<>();
-        budget.getCategories().forEach(category -> expenses.addAll(category.getExpenses()));
+        List<Transaction> expenses = new ArrayList<>();
+        budget.getCategories().forEach(category -> expenses.addAll(category.getTransactions()));
         return BudgetActualReport.builder()
                 .budget(budget)
                 .expenses(expenses)
@@ -51,24 +52,22 @@ public class ReportService {
     private AccountsSummary getAccountsSummary(Long userId) throws NoSuchUserException {
         User user = getUser(userId);
         return AccountsSummary.builder()
-                .bankAccounts(user.getBankAccounts())
-                .loans(user.getLoanAccounts())
-                .retirementAccounts(user.getRetirementAccounts())
+                .accounts(user.getAccounts())
                 .deposits(getUserDeposits(user))
                 .withdrawals(getUserWithdrawals(user))
                 .build();
     }
 
-    private List<Deposit> getUserDeposits(User user) {
-        List<Deposit> deposits = new ArrayList<>();
-        user.getBankAccounts().forEach(bankAccount -> deposits.addAll(bankAccount.getDeposits()));
-        user.getRetirementAccounts().forEach(retirementAccount -> deposits.addAll(retirementAccount.getDeposits()));
+    private List<Transaction> getUserDeposits(User user) {
+        List<Transaction> deposits = new ArrayList<>();
+        user.getAccounts().forEach(bankAccount -> deposits.addAll(bankAccount.getDeposits()));
+        user.getAccounts().forEach(retirementAccount -> deposits.addAll(retirementAccount.getDeposits()));
         return deposits;
     }
 
-    private List<Withdrawal> getUserWithdrawals(User user) {
-        List<Withdrawal> withdrawals = new ArrayList<>();
-        user.getBankAccounts().forEach(bankAccount -> withdrawals.addAll(bankAccount.getWithdrawals()));
+    private List<Transaction> getUserWithdrawals(User user) {
+        List<Transaction> withdrawals = new ArrayList<>();
+        user.getAccounts().forEach(bankAccount -> withdrawals.addAll(bankAccount.getWithdrawals()));
         return withdrawals;
     }
 
@@ -80,8 +79,8 @@ public class ReportService {
                 .build();
     }
 
-    private List<LoanPayment> getUserLoanPayments(User user) {
-        List<LoanPayment> loanPayments = new ArrayList<>();
+    private List<Transaction> getUserLoanPayments(User user) {
+        List<Transaction> loanPayments = new ArrayList<>();
         user.getLoanAccounts().forEach(loan -> loanPayments.addAll(loan.getLoanPayments()));
         return loanPayments;
     }
@@ -95,9 +94,9 @@ public class ReportService {
                 .build();
     }
 
-    private List<Expense> getUserExpenses(Budget budget) {
-        List<Expense> expenses = new ArrayList<>();
-        budget.getCategories().forEach(category -> expenses.addAll(category.getExpenses()));
+    private List<Transaction> getUserExpenses(Budget budget) {
+        List<Transaction> expenses = new ArrayList<>();
+        budget.getCategories().forEach(category -> expenses.addAll(category.getTransactions()));
         return expenses;
     }
 }

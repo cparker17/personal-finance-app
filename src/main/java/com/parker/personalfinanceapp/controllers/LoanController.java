@@ -1,16 +1,17 @@
 package com.parker.personalfinanceapp.controllers;
 
 import com.parker.personalfinanceapp.exceptions.NoSuchAccountException;
-import com.parker.personalfinanceapp.models.LoanAccount;
+import com.parker.personalfinanceapp.exceptions.NoSuchUserException;
+import com.parker.personalfinanceapp.models.Loan;
 import com.parker.personalfinanceapp.models.UserFactory;
 import com.parker.personalfinanceapp.services.LoanService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
 @RequestMapping("/loan")
@@ -20,14 +21,14 @@ public class LoanController {
 
     @RequestMapping("/form")
     public String viewNewLoanPage(Model model) {
-        model.addAttribute("loan", new LoanAccount());
+        model.addAttribute("loan", new Loan());
         return "loan-new";
     }
 
     @RequestMapping("/new")
-    public String createLoan(Model model, Authentication auth, @RequestParam LoanAccount loan) {
-        model.addAttribute("loan", loanService.createLoan(UserFactory.createUser(auth), loan));
-        return "loan-view";
+    public String createLoan(Authentication auth, @ModelAttribute Loan loan) throws NoSuchUserException {
+        loanService.createLoan(UserFactory.createUser(auth).getId(), loan);
+        return "redirect:/dashboard";
     }
 
     @RequestMapping("/edit/{loanId}")
@@ -38,16 +39,23 @@ public class LoanController {
     }
 
     @RequestMapping("/update")
-    public String updateLoan(Model model, @RequestParam LoanAccount loan)
+    public String updateLoan(@ModelAttribute Loan loan)
             throws NoSuchAccountException {
-        model.addAttribute("loan", loanService.updateLoan(loan));
-        return "loan-view";
+        loanService.updateLoan(loan);
+        return "redirect:/dashboard";
     }
 
-    @RequestMapping("/delete")
-    public String deleteLoan(@RequestParam LoanAccount loan)
+    @RequestMapping("/delete/{loanId}")
+    public String deleteLoan(@PathVariable(name="loanId") Long loanId)
             throws NoSuchAccountException {
-        loanService.deleteLoan(loan);
-        return "redirect:/";
+        loanService.deleteLoan(loanId);
+        return "redirect:/dashboard";
+    }
+
+    @RequestMapping("/view/{loanId}")
+    public String viewLoanInfo(Model model, @PathVariable(name="loanId") Long accountId)
+            throws NoSuchAccountException {
+        model.addAttribute("loan", loanService.getLoan(accountId));
+        return "loan-view";
     }
 }

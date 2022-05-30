@@ -5,7 +5,6 @@ import com.parker.personalfinanceapp.exceptions.NoSuchUserException;
 import com.parker.personalfinanceapp.models.Budget;
 import com.parker.personalfinanceapp.models.Role;
 import com.parker.personalfinanceapp.models.User;
-import com.parker.personalfinanceapp.models.UserFactory;
 import com.parker.personalfinanceapp.repositories.BudgetRepo;
 import com.parker.personalfinanceapp.repositories.RoleRepo;
 import com.parker.personalfinanceapp.repositories.UserRepo;

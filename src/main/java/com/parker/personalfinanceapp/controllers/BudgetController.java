@@ -1,5 +1,7 @@
 package com.parker.personalfinanceapp.controllers;
 
+import com.parker.personalfinanceapp.dto.IncomeWrapper;
+import com.parker.personalfinanceapp.models.UserFactory;
 import com.parker.personalfinanceapp.exceptions.NoSuchBudgetException;
 import com.parker.personalfinanceapp.exceptions.NoSuchCategoryException;
 import com.parker.personalfinanceapp.exceptions.NoSuchUserException;

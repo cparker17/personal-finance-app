@@ -7,8 +7,8 @@ import com.parker.personalfinanceapp.repositories.AccountRepo;
 import com.parker.personalfinanceapp.repositories.UserRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
 
+import javax.swing.text.html.Option;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
@@ -27,21 +27,26 @@ public class AccountService {
 
     public Account updateAccount(Account newAccount) throws NoSuchAccountException {
         Account account = getAccountFromDB(newAccount.getId());
-        account.setAccountType(newAccount.getAccountType());
+        account.setType(newAccount.getType());
         account.setInstitutionName(newAccount.getInstitutionName());
         account.setAccountNum(newAccount.getAccountNum());
-        account.setStartBalance(newAccount.getStartBalance());
+        account.setStartBalance(newAccount.getCurrentBalance());
         account.setCurrentBalance(newAccount.getCurrentBalance());
         return accountRepo.save(newAccount);
     }
 
-    public void deleteAccount(Account account) throws NoSuchAccountException {
-        accountRepo.delete(getAccountFromDB(account.getId()));
+    public void deleteAccount(Long accountId) throws NoSuchAccountException {
+        accountRepo.delete(getAccountFromDB(accountId));
     }
 
-    public Account createAccount(User user, Account account) {
-        addAccountToUser(user, account);
-        return accountRepo.save(account);
+    public void createAccount(Long userId, Account account) {
+        account.setStartBalance(account.getCurrentBalance());
+        accountRepo.save(account);
+        Optional<User> userOptional = userRepo.findById(userId);
+        if (userOptional.isPresent()) {
+            User user = userOptional.get();
+            addAccountToUser(user, account);
+        }
     }
 
     private void addAccountToUser(User user, Account account) {
@@ -61,7 +66,13 @@ public class AccountService {
     public List<Account> getAllBankAccounts(Long userId) throws NoSuchUserException {
         Optional<User> userOptional = userRepo.findById(userId);
         if (userOptional.isPresent()) {
-            return userOptional.get().getBankAccounts();
+            List<Account> bankAccounts = new ArrayList<>();
+            for (Account account : userOptional.get().getAccounts()) {
+                if (account.getType().equals("bankAccount")) {
+                    bankAccounts.add(account);
+                }
+            }
+            return bankAccounts;
         } else {
             throw new NoSuchUserException("User does not exist.");
         }
@@ -70,26 +81,28 @@ public class AccountService {
     public List<Account> getAllRetirementAccounts(Long userId) throws NoSuchUserException {
         Optional<User> userOptional = userRepo.findById(userId);
         if (userOptional.isPresent()) {
-            return userOptional.get().getRetirementAccounts();
+            List<Account> retirementAccounts = new ArrayList<>();
+            for (Account account : userOptional.get().getAccounts()) {
+                if (account.getType().equals("retirementAccount")) {
+                    retirementAccounts.add(account);
+                }
+            }
+            return retirementAccounts;
         } else {
             throw new NoSuchUserException("User does not exist.");
         }
     }
 
-    public List<Account> getAllLoanAccounts(Long userId) throws NoSuchUserException {
+    public List<Account> getAllAccounts(Long userId, String transactionType) throws NoSuchUserException {
         Optional<User> userOptional = userRepo.findById(userId);
         if (userOptional.isPresent()) {
-            return userOptional.get().getLoanAccounts();
-        } else {
-            throw new NoSuchUserException("User does not exist.");
+            User user = userOptional.get();
+            if (transactionType.equals("loan")) {
+               return user.getLoanAccounts();
+            }
         }
-    }
-
-    public List<Account> getAllAccounts(Long userId) throws NoSuchUserException {
         List<Account> allAccounts = new ArrayList<>();
-        allAccounts.add((Account) getAllBankAccounts(userId));
-        allAccounts.add((Account) getAllLoanAccounts(userId));
-        allAccounts.add((Account) getAllRetirementAccounts(userId));
+
         return allAccounts;
     }
 }

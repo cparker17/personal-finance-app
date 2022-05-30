@@ -13,7 +13,7 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class RetirementAccount extends Account {
+public class Loan {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
@@ -22,31 +22,24 @@ public class RetirementAccount extends Account {
 
     private Long accountNum;
 
-    private AccountType accountType;
+    private Double interestRate;
 
     private BigDecimal startBalance;
 
     private BigDecimal currentBalance;
 
+    private Integer monthlyDueDate;
+
+    private BigDecimal paymentAmt;
+
     @OneToMany
-    private List<Deposit> deposits;
+    private List<Transaction> loanPayments;
 
     public void addTransaction(Transaction transaction) {
-        if (deposits.isEmpty()) {
-            deposits = new ArrayList<>();
+        if (loanPayments.isEmpty()) {
+            loanPayments = new ArrayList<>();
         } else {
-            deposits.add((Deposit) transaction);
-            currentBalance = currentBalance.add(transaction.getAmount());
+            loanPayments.add(transaction);
         }
-    }
-
-    @Override
-    public List<Withdrawal> getWithdrawals() {
-        return null;
-    }
-
-    @Override
-    public List<LoanPayment> getLoanPayments() {
-        return null;
     }
 }

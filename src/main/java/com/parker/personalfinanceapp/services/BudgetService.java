@@ -1,5 +1,6 @@
 package com.parker.personalfinanceapp.services;
 
+import com.parker.personalfinanceapp.dto.BudgetRatios;
 import com.parker.personalfinanceapp.exceptions.NoSuchBudgetException;
 import com.parker.personalfinanceapp.exceptions.NoSuchUserException;
 import com.parker.personalfinanceapp.models.*;

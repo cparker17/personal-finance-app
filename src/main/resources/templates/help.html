@@ -12,10 +12,12 @@
 <div>
     <div id="main-container" class="container-fluid">
         <div class="row">
-            <div class="col-sm-3 col-md-2 d-none d-sm-block bg-light sidebar shadow-lg">
+            <div sec:authorize="isAuthenticated()" class="col-sm-3 col-md-2 d-none d-sm-block bg-light sidebar shadow-lg">
                 <div th:replace="fragments :: sidebar"></div>
             </div>
             <div id="main-content-container" class="col-sm-9 col-md-10 container-fluid align-content-center">
+                <br>
+                <h1 class="text-center">50/30/20 Rule of Personal Finance</h1>
                 <center><br><br><br><br>
                     <iframe width="560"
                             height="315"

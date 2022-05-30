@@ -1,5 +1,7 @@
 package com.parker.personalfinanceapp.models;
 
+import lombok.*;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -8,13 +10,25 @@ import java.math.BigDecimal;
 import java.time.LocalDate;
 
 @Entity
-public abstract class Transaction {
+@Getter
+@Setter
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
+public class Transaction {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    Long id;
+    private Long id;
 
-    public abstract void setAmount(BigDecimal amount);
-    public abstract void setTransactionDate(LocalDate date);
-    public abstract BigDecimal getAmount();
-    public abstract LocalDate getTransactionDate();
+    private Long accountId;
+
+    private BigDecimal amount;
+
+    private LocalDate transactionDate;
+
+    private TransactionType type;
+
+    public Transaction(TransactionType transactionType) {
+        this.type = transactionType;
+    }
 }

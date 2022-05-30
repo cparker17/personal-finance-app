@@ -2,8 +2,7 @@ package com.parker.personalfinanceapp.services;
 
 import com.parker.personalfinanceapp.exceptions.NoSuchAccountException;
 import com.parker.personalfinanceapp.exceptions.NoSuchUserException;
-import com.parker.personalfinanceapp.models.Account;
-import com.parker.personalfinanceapp.models.LoanAccount;
+import com.parker.personalfinanceapp.models.Loan;
 import com.parker.personalfinanceapp.models.User;
 import com.parker.personalfinanceapp.repositories.LoanRepo;
 import com.parker.personalfinanceapp.repositories.UserRepo;
@@ -21,39 +20,44 @@ public class LoanService {
     @Autowired
     LoanRepo loanRepo;
 
-    public LoanAccount getLoan(Long loanId) throws NoSuchAccountException {
+    public Loan getLoan(Long loanId) throws NoSuchAccountException {
         return getLoanFromDB(loanId);
     }
 
-    public LoanAccount updateLoan(LoanAccount newLoan) throws NoSuchAccountException {
-        LoanAccount loan = getLoanFromDB(newLoan.getId());
-        loan.setAccountType(newLoan.getAccountType());
+    public Loan updateLoan(Loan newLoan) throws NoSuchAccountException {
+        Loan loan = getLoanFromDB(newLoan.getId());
         loan.setInstitutionName(newLoan.getInstitutionName());
         loan.setAccountNum(newLoan.getAccountNum());
         loan.setInterestRate(newLoan.getInterestRate());
-        loan.setStartBalance(newLoan.getStartBalance());
+        loan.setStartBalance(newLoan.getCurrentBalance());
         loan.setCurrentBalance(newLoan.getCurrentBalance());
         loan.setMonthlyDueDate(newLoan.getMonthlyDueDate());
         loan.setPaymentAmt(newLoan.getPaymentAmt());
         return loanRepo.save(loan);
     }
 
-    public void deleteLoan(LoanAccount loan) throws NoSuchAccountException {
-        loanRepo.delete(getLoanFromDB(loan.getId()));
+    public void deleteLoan(Long loanId) throws NoSuchAccountException {
+        loanRepo.delete(getLoanFromDB(loanId));
     }
 
-    public LoanAccount createLoan(User user, LoanAccount loan) {
-        addLoanToUser(user, loan);
-        return loanRepo.save(loan);
+    public void createLoan(Long userId, Loan loan) throws NoSuchUserException {
+        Optional<User> userOptional = userRepo.findById(userId);
+        if (userOptional.isPresent()) {
+            loanRepo.save(loan);
+            User user = userOptional.get();
+            addLoanToUser(user, loan);
+        } else {
+            throw new NoSuchUserException("User not found.");
+        }
     }
 
-    private void addLoanToUser(User user, LoanAccount loan) {
+    private void addLoanToUser(User user, Loan loan) {
         user.addLoan(loan);
         userRepo.save(user);
     }
 
-    private LoanAccount getLoanFromDB(Long loanId) throws NoSuchAccountException {
-        Optional<LoanAccount> loanOptional = loanRepo.findById(loanId);
+    private Loan getLoanFromDB(Long loanId) throws NoSuchAccountException {
+        Optional<Loan> loanOptional = loanRepo.findById(loanId);
         if (loanOptional.isPresent()) {
             return loanOptional.get();
         } else {
@@ -61,7 +65,7 @@ public class LoanService {
         }
     }
 
-    public List<Account> getAllLoans(Long userId) throws NoSuchUserException {
+    public List<Loan> getAllLoans(Long userId) throws NoSuchUserException {
         Optional<User> userOptional = userRepo.findById(userId);
         if (userOptional.isPresent()) {
             return userOptional.get().getLoanAccounts();

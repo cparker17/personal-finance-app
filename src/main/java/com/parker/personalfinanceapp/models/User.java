@@ -57,13 +57,10 @@ public class User {
     private Goal goal;
 
     @OneToMany
-    private List<Account> bankAccounts = new ArrayList<>();
+    private List<Account> accounts = new ArrayList<>();
 
     @OneToMany
-    List<Account> loanAccounts = new ArrayList<>();
-
-    @OneToMany
-    List<Account> retirementAccounts = new ArrayList<>();
+    List<Loan> loanAccounts = new ArrayList<>();
 
     @OneToOne
     RetirementPlan retirementPlan;
@@ -84,14 +81,10 @@ public class User {
     private boolean isEnabled = true;
 
     public void addAccount(Account account) {
-        if (account instanceof BankAccount) {
-            bankAccounts.add((BankAccount) account);
-        } else {
-            retirementAccounts.add((RetirementAccount) account);
-        }
+        accounts.add(account);
     }
 
-    public void addLoan(LoanAccount loan) {
+    public void addLoan(Loan loan) {
         loanAccounts.add(loan);
     }
 }

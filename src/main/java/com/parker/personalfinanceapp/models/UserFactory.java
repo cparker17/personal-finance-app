@@ -1,6 +1,8 @@
 package com.parker.personalfinanceapp.models;
 
 import com.parker.personalfinanceapp.exceptions.NoSuchUserException;
+import com.parker.personalfinanceapp.models.SecurityUser;
+import com.parker.personalfinanceapp.models.User;
 import com.parker.personalfinanceapp.repositories.UserRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;

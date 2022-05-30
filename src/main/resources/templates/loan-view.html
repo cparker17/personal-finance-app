@@ -1,10 +1,45 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.w3.org/1999/xhtml">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+    <div th:replace="fragments :: header"></div>
+    <title>Loan Info</title>
+    <script src="https://kit.fontawesome.com/e8b27fd1d7.js" crossorigin="anonymous"></script>
 </head>
 <body>
-
+<div th:replace="fragments :: navigation"></div>
+<div>
+    <div id="main-container" class="container-fluid">
+        <div class="row" th:object="${loan}">
+            <div class="col-sm-3 col-md-2 d-none d-sm-block bg-light sidebar shadow-lg">
+                <div th:replace="fragments :: sidebar"></div>
+            </div>
+            <div id="main-content-container" class="col-sm-9 col-md-10 container-fluid align-content-center"
+                 >
+                <br>
+                <h1 class="text-center">Loan Information</h1>
+                <br>
+                <dl class="row">
+                    <dt class="col-sm-3">Institution Name:</dt>
+                    <dd class="col-sm-9" th:text="${loan.institutionName}">Name</dd>
+                    <dt class="col-sm-3">Account #:</dt>
+                    <dd class="col-sm-9" th:text="${loan.accountNum}">Account #</dd>
+                    <dt class="col-sm-3">Interest Rate:</dt>
+                    <dd class="col-sm-9" th:text="${loan.interestRate} + '%'">Rate</dd>
+                    <dt class="col-sm-3">Current Balance:</dt>
+                    <dd class="col-sm-9" th:text="'$' + ${loan.currentBalance}">Balance</dd>
+                    <dt class="col-sm-3">Monthly Due Date:</dt>
+                    <dd class="col-sm-9" th:text="${loan.monthlyDueDate}">Due Date</dd>
+                    <dt class="col-sm-3">Monthly Payment Amount:</dt>
+                    <dd class="col-sm-9" th:text="'$' + ${loan.paymentAmt}">Payment Amount</dd>
+                </dl>
+                <br><br>
+                <a th:href="@{'/loan/edit/' + ${loan.id}}" class="btn btn-outline-success">Update Loan Information</a>
+            </div>
+        </div>
+    </div>
+</div>
+<div th:replace="fragments :: footer"></div>
 </body>
 </html>

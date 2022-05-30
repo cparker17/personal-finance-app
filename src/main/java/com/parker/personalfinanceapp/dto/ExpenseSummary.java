@@ -1,5 +1,7 @@
-package com.parker.personalfinanceapp.models;
+package com.parker.personalfinanceapp.dto;
 
+import com.parker.personalfinanceapp.models.Category;
+import com.parker.personalfinanceapp.models.Transaction;
 import lombok.*;
 
 import java.util.List;
@@ -11,5 +13,5 @@ import java.util.List;
 @Builder
 public class ExpenseSummary implements Report {
     List<Category> categories;
-    List<Expense> expenses;
+    List<Transaction> expenses;
 }

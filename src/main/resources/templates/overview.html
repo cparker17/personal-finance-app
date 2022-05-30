@@ -21,42 +21,59 @@
                 <div class="col-4 mt-5">
                     <div class="card">
                         <div class="card-body">
-                            <h5 class="card-title">BANK ACCOUNTS</h5>
-                            <h6 class="card-subtitle mb-2 text-muted">Acct #:</h6>
-                            <p class="card-text">Balance: <strong>$0.00</strong></p>
-                            <a href="#" class="btn btn-outline-success btn-sm">View Details</a>
-                            <hr>
-                            <h6 class="card-subtitle mb-2 text-muted">Acct #:</h6>
-                            <p class="card-text">Balance: <strong>$0.00</strong></p>
-                            <a href="#" class="btn btn-outline-success btn-sm">View Details</a>
+                            <h5 class="card-title">BANK ACCOUNTS</h5><br>
+                            <div th:each="account : ${bankAccounts}">
+                                <h6 class="card-subtitle mb-2 text-muted" th:text="'Acct #: ' + ${account.accountNum}">
+                                    Acct #:</h6>
+                                <p class="card-text" th:text="'Balance:  ' + ${#numbers.formatCurrency(account.currentBalance)}">Balance: </p>
+                                <span class="d-inline">
+                            <a th:href="@{'account/view/' + ${account.id}}" class="btn btn-outline-success btn-sm">View Details</a>
+                            <a th:href="@{'/edit/form/' + ${account.id}}" class="btn btn-outline-success btn-sm">Update</a>
+                                </span>
+                                <hr>
+                            </div>
+                            <h6 class="card-subtitle mb-2">ACTIONS</h6>
+                            <a th:href="@{/account/form}" class="btn btn-outline-success btn-sm text-center">Add
+                                Account</a>
                         </div>
                     </div>
                 </div>
                 <div class="col-4 mt-5">
                     <div class="card">
                         <div class="card-body">
-                            <h5 class="card-title">LOANS</h5>
-                            <h6 class="card-subtitle mb-2 text-muted">Acct #:</h6>
-                            <p class="card-text">Balance: <strong>$0.00</strong></p>
-                            <a href="#" class="btn btn-outline-success btn-sm">View Details</a>
-                            <hr>
-                            <h6 class="card-subtitle mb-2 text-muted">Acct #:</h6>
-                            <p class="card-text">Balance: <strong>$0.00</strong></p>
-                            <a href="#" class="btn btn-outline-success btn-sm">View Details</a>
-                            <hr>
-                            <h6 class="card-subtitle mb-2 text-muted">Acct #:</h6>
-                            <p class="card-text">Balance: <strong>$0.00</strong></p>
-                            <a href="#" class="btn btn-outline-success btn-sm">View Details</a>
+                            <h5 class="card-title">LOANS</h5><br>
+                            <div th:each="loan : ${loans}">
+                                <h6 class="card-subtitle mb-2 text-muted" th:text="'Acct #: ' + ${loan.accountNum}">
+                                    Acct #:</h6>
+                                <p class="card-text" th:text="'Balance:  ' + ${#numbers.formatCurrency(loan.currentBalance)}">Balance: </p>
+                                <span class="d-inline">
+                            <a th:href="@{'/loan/view/' + ${loan.id}}" class="btn btn-outline-success btn-sm">View Details</a>
+                            <a th:href="@{'/account/form/' + ${loan.id}}" class="btn btn-outline-success btn-sm">Update</a>
+                            </span>
+                                <hr>
+                            </div>
+                            <h6 class="card-subtitle mb-2">ACTIONS</h6>
+                            <a th:href="@{/loan/form}" class="btn btn-outline-success btn-sm text-center">Add Loan</a>
                         </div>
                     </div>
                 </div>
                 <div class="col-4 mt-5">
                     <div class="card">
                         <div class="card-body">
-                            <h5 class="card-title">RETIREMENT ACCOUNTS</h5>
-                            <h6 class="card-subtitle mb-2 text-muted">Acct #:</h6>
-                            <p class="card-text">Balance: <strong>$0.00</strong></p>
-                            <a href="#" class="btn btn-outline-success btn-sm">View Details</a>
+                            <h5 class="card-title">RETIREMENT ACCOUNTS</h5><br>
+                            <div th:each="account : ${retirementAccounts}">
+                                <h6 class="card-subtitle mb-2 text-muted" th:text="'Acct #: ' + ${account.accountNum}">
+                                    Acct #:</h6>
+                                <p class="card-text" th:text="'Balance:  ' + ${#numbers.formatCurrency(account.currentBalance)}">Balance: </p>
+                                <span class="d-inline">
+                           <a th:href="@{'account/view/' + ${account.id}}" class="btn btn-outline-success btn-sm">View Details</a>
+                            <a th:href="@{'/edit/form/' + ${account.id}}" class="btn btn-outline-success btn-sm">Update</a>
+                                </span>
+                                <hr>
+                            </div>
+                            <h6 class="card-subtitle mb-2">ACTIONS</h6>
+                            <a th:href="@{/account/form}" class="btn btn-outline-success btn-sm text-center">Add
+                                Account</a>
                         </div>
                     </div>
                 </div>

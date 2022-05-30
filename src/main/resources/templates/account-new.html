@@ -1,10 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+    <div th:replace="fragments :: header"></div>
+    <title>New Account</title>
 </head>
 <body>
+<div th:replace="fragments :: navigation"></div>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-3 col-md-2 d-none d-sm-block bg-light sidebar shadow-lg">
+            <div th:replace="fragments :: sidebar"></div>
+        </div>
+        <div class="col-sm-9 col-md-10">
+            <br><br>
+            <div id="cat-update" class="container border rounded bg-light border-dark col-5" style="padding: 25px">
+                <h1 class="text-center">New Account</h1><br>
+                <form action="#" th:action="@{/account/new}" th:object="${account}" method="post">
+                    <div class="form-group">
+                        <label class="fw-bold" for="name">Institution Name:</label>
+                        <input class="form-control" type="text" id="name" th:field="*{institutionName}" required><br>
+                    </div>
+                    <div class="form-group">
+                        <label class="fw-bold" for="accountNum">Account #:</label>
+                        <input class="form-control" type="number" id="accountNum" th:field="*{accountNum}" required><br>
+                    </div>
+                    <div class="form-group">
+                        <label class="fw-bold" for="balance">Current Balance:</label>
+                        <input class="form-control" type="number" id="balance" th:field="*{currentBalance}" required><br>
+                    </div>
+                    <div class="form-group">
+                        <label class="fw-bold" for="type">Account Type:</label>
+                        <select class="form-control" id="type" th:field="*{type}" required>
+                            <option value="" selected>Please select...</option>
+                            <option value="bankAccount">Bank Account</option>
+                            <option value="retirementAccount">Retirement Account</option>
+                        </select><br>
+                    </div>
+                    <input type="submit" value="Save" class="btn btn-light text-dark border-dark">
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
 
+<div th:replace="fragments :: footer"></div>
 </body>
 </html>
