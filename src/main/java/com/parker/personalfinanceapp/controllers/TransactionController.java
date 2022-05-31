@@ -7,6 +7,7 @@ import com.parker.personalfinanceapp.exceptions.NoSuchTransactionException;
 import com.parker.personalfinanceapp.exceptions.NoSuchUserException;
 import com.parker.personalfinanceapp.models.*;
 import com.parker.personalfinanceapp.services.AccountService;
+import com.parker.personalfinanceapp.services.LoanService;
 import com.parker.personalfinanceapp.services.TransactionService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
@@ -25,6 +26,9 @@ public class TransactionController {
     @Autowired
     AccountService accountService;
 
+    @Autowired
+    LoanService loanService;
+
     @RequestMapping("/view/{transactionType}")
     public String viewTransactionSelectionPage(Model model,
                                                @PathVariable(name="transactionType") String transactionType,
@@ -40,18 +44,21 @@ public class TransactionController {
                                          @PathVariable(name="transactionType") String transactionType,
                                          Authentication auth) throws NoSuchUserException {
         Long userId = UserFactory.createUser(auth).getId();
-        Transaction transaction = new Transaction(TransactionTypeFactory.createTransactionType(transactionType));
+        Transaction transaction = new Transaction();
         model.addAttribute("transaction", transaction);
-        model.addAttribute("accounts", accountService.getAllAccounts(userId, transactionType));
+        if (transactionType.equals("loanPayment")) {
+            model.addAttribute("accounts", loanService.getAllLoans(userId));
+        } else {
+            model.addAttribute("accounts", accountService.getAllAccounts(userId, transactionType));
+        }
         return "transaction-form";
     }
 
-    @RequestMapping("/new/{accountId}")
-    public String createTransaction(Model model, @PathVariable(name="accountId") Long accountId,
-                                @ModelAttribute Transaction transaction) throws NoSuchAccountException {
-        transactionService.createTransaction(accountId, transaction);
-        model.addAttribute("transaction", transaction);
-        return "transaction-view";
+    @RequestMapping("/new")
+    public String createTransaction(@ModelAttribute Transaction transaction)
+            throws NoSuchAccountException {
+        transactionService.createTransaction(transaction);
+        return "redirect:/dashboard";
     }
 
     @RequestMapping("/edit/{transactionId}")

@@ -96,13 +96,10 @@ public class AccountService {
     public List<Account> getAllAccounts(Long userId, String transactionType) throws NoSuchUserException {
         Optional<User> userOptional = userRepo.findById(userId);
         if (userOptional.isPresent()) {
-            User user = userOptional.get();
-            if (transactionType.equals("loan")) {
-               return user.getLoanAccounts();
-            }
-        }
-        List<Account> allAccounts = new ArrayList<>();
+            return userOptional.get().getAccounts();
 
-        return allAccounts;
+        } else {
+            throw new NoSuchUserException("user not found.");
+        }
     }
 }

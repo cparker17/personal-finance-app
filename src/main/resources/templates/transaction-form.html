@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <div th:replace="fragments :: header"></div>
-    <title>Edit Budget</title>
+    <title>New Transaction</title>
 </head>
 <body>
 <div th:replace="fragments :: navigation"></div>
@@ -14,22 +14,27 @@
         <div class="col-sm-9 col-md-10">
             <br><br>
             <div id="cat-update" class="container border rounded bg-light border-dark col-7" style="padding: 25px">
-                <h1 class="text-center">Profile Update</h1><br>
-                <form action="#" th:action="@{/transaction/create}" th:object="${transaction}" method="post">
-                    <div class="form-group">
-                        <label for="id" class="fw-bold">Id:</label>
-                        <input class="form-control" type="text" id="id" th:field="*{id}" disabled><br>
-                    </div>
+                <h1 class="text-center">New Transaction</h1><br>
+                <form action="#" th:action="@{/transaction/new}" th:object="${transaction}" method="post">
                     <div class="form-group">
                         <label class="fw-bold" for="firstName">Amount:</label>
                         <input class="form-control" type="text" id="firstName" th:field="*{amount}" required><br>
                     </div>
                     <div class="form-group">
-                        <label class="fw-bold" for="type">Account:</label>
-                        <select class="form-control" id="type"
-                                th:value="*{account.id}" required>
-                            <option value=""  selected>Select Account...</option>
-                            <option th:each="account : ${accounts}" th:text="'Acct #' + ${account.accountNum}">Account</option>
+                        <label class="fw-bold" for="type">Transaction Type:</label>
+                        <select class="form-control" id="type" th:field="*{stringType}"required>
+                            <option value="" selected>Select Type...</option>
+                            <option th:value="deposit">Deposit</option>
+                            <option th:value="expense">Expense</option>
+                            <option th:value="withdrawal">Withdrawal</option>
+                            <option th:value="loanPayment">Loan Payment</option>
+                        </select><br>
+                    </div>
+                    <div class="form-group">
+                        <label class="fw-bold" for="acct">Account:</label>
+                        <select class="form-control" id="acct" th:field="*{accountId}"required>
+                            <option value="" selected>Select Account...</option>
+                            <option th:value="${account.id}" th:each="account : ${accounts}" th:text="'Acct #' + ${account.accountNum}">Account</option>
                         </select><br>
                     </div>
                     <input type="submit" value="Save" class="btn btn-light text-dark border-dark">

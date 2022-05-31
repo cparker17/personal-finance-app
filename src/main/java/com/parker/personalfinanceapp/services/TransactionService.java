@@ -6,11 +6,13 @@ import com.parker.personalfinanceapp.exceptions.NoSuchTransactionException;
 import com.parker.personalfinanceapp.exceptions.NoSuchUserException;
 import com.parker.personalfinanceapp.models.*;
 import com.parker.personalfinanceapp.repositories.AccountRepo;
+import com.parker.personalfinanceapp.repositories.LoanRepo;
 import com.parker.personalfinanceapp.repositories.TransactionRepo;
 import com.parker.personalfinanceapp.repositories.UserRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
@@ -26,12 +28,34 @@ public class TransactionService {
     @Autowired
     UserRepo userRepo;
 
-    public void createTransaction(Long accountId, Transaction transaction) throws NoSuchAccountException {
-        Optional<Account> accountOptional = accountRepo.findById(accountId);
-        if (accountOptional.isPresent()) {
-            accountOptional.get().addTransaction(transaction);
+    @Autowired
+    LoanRepo loanRepo;
+
+    public void createTransaction(Transaction transaction) throws NoSuchAccountException {
+        if (transaction.getStringType().equals("loanPayment")) {
+            Optional<Loan> loanOptional = loanRepo.findById(transaction.getAccountId());
+            if (loanOptional.isPresent()) {
+                Loan loan = loanOptional.get();
+                transaction.setTransactionDate(LocalDate.now());
+                transaction.setType(TransactionTypeFactory.createTransactionType(transaction.getStringType()));
+                transactionRepo.save(transaction);
+                loan.addTransaction(transaction);
+                loanRepo.save(loan);
+            } else {
+                throw new NoSuchAccountException("Loan does not exist.");
+            }
         } else {
-            throw new NoSuchAccountException("Account does not exist.");
+            Optional<Account> accountOptional = accountRepo.findById(transaction.getAccountId());
+            if (accountOptional.isPresent()) {
+                Account account = accountOptional.get();
+                transaction.setTransactionDate(LocalDate.now());
+                transaction.setType(TransactionTypeFactory.createTransactionType(transaction.getStringType()));
+                transactionRepo.save(transaction);
+                account.addTransaction(transaction);
+                accountRepo.save(account);
+            } else {
+                throw new NoSuchAccountException("Account does not exist.");
+            }
         }
     }
 

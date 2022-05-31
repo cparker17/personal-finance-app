@@ -2,10 +2,7 @@ package com.parker.personalfinanceapp.models;
 
 import lombok.*;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.math.BigDecimal;
 import java.time.LocalDate;
 
@@ -27,6 +24,9 @@ public class Transaction {
     private LocalDate transactionDate;
 
     private TransactionType type;
+
+    @Transient
+    private String stringType;
 
     public Transaction(TransactionType transactionType) {
         this.type = transactionType;

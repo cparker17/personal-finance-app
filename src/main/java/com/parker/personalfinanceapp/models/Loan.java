@@ -38,8 +38,8 @@ public class Loan {
     public void addTransaction(Transaction transaction) {
         if (loanPayments.isEmpty()) {
             loanPayments = new ArrayList<>();
-        } else {
-            loanPayments.add(transaction);
         }
+        loanPayments.add(transaction);
+        currentBalance = currentBalance.subtract(transaction.getAmount());
     }
 }
