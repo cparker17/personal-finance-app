@@ -25,6 +25,8 @@ public class Transaction {
 
     private TransactionType type;
 
+    private String categoryName;
+
     @Transient
     private String stringType;
 

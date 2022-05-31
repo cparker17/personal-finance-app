@@ -41,7 +41,7 @@ public class BudgetController {
     @RequestMapping("/view")
     public String viewBudget(Model model, Authentication auth) throws NoSuchBudgetException, NoSuchUserException {
         User user = UserFactory.createUser(auth);
-        Budget budget = budgetService.getBudget(user);
+        Budget budget = budgetService.getBudget(user.getId());
         model.addAttribute("budget", budget);
         model.addAttribute("needs", budgetService.getNeedsCategories(budget));
         model.addAttribute("wants", budgetService.getWantsCategories(budget));

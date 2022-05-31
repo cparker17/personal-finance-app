@@ -37,6 +37,13 @@
                             <option th:value="${account.id}" th:each="account : ${accounts}" th:text="'Acct #' + ${account.accountNum}">Account</option>
                         </select><br>
                     </div>
+                    <div class="form-group">
+                        <label class="fw-bold" for="cat">Category:</label>
+                        <select class="form-control" id="cat" th:field="*{categoryName}"required>
+                            <option value="" selected>Select Category...</option>
+                            <option th:value="${category.name}" th:each="category : ${categories}" th:text="${category.name}">Category</option>
+                        </select><br>
+                    </div>
                     <input type="submit" value="Save" class="btn btn-light text-dark border-dark">
                 </form>
             </div>

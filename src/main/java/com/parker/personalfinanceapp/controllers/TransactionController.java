@@ -1,14 +1,14 @@
 package com.parker.personalfinanceapp.controllers;
 
+import com.parker.personalfinanceapp.dto.TransactionTypeWrapper;
+import com.parker.personalfinanceapp.exceptions.NoSuchBudgetException;
 import com.parker.personalfinanceapp.models.TransactionTypeFactory;
 import com.parker.personalfinanceapp.models.UserFactory;
 import com.parker.personalfinanceapp.exceptions.NoSuchAccountException;
 import com.parker.personalfinanceapp.exceptions.NoSuchTransactionException;
 import com.parker.personalfinanceapp.exceptions.NoSuchUserException;
 import com.parker.personalfinanceapp.models.*;
-import com.parker.personalfinanceapp.services.AccountService;
-import com.parker.personalfinanceapp.services.LoanService;
-import com.parker.personalfinanceapp.services.TransactionService;
+import com.parker.personalfinanceapp.services.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
 import org.springframework.stereotype.Controller;
@@ -29,6 +29,9 @@ public class TransactionController {
     @Autowired
     LoanService loanService;
 
+    @Autowired
+    BudgetService budgetService;
+
     @RequestMapping("/view/{transactionType}")
     public String viewTransactionSelectionPage(Model model,
                                                @PathVariable(name="transactionType") String transactionType,
@@ -36,13 +39,14 @@ public class TransactionController {
         User user = UserFactory.createUser(auth);
         model.addAttribute("transactions", transactionService.getAllTransactions(user.getId(),
                 transactionType));
+        model.addAttribute("type", new TransactionTypeWrapper(transactionType));
         return "transaction-view";
     }
 
     @RequestMapping("/form/{transactionType}")
     public String viewNewTransactionPage(Model model,
                                          @PathVariable(name="transactionType") String transactionType,
-                                         Authentication auth) throws NoSuchUserException {
+                                         Authentication auth) throws NoSuchUserException, NoSuchBudgetException {
         Long userId = UserFactory.createUser(auth).getId();
         Transaction transaction = new Transaction();
         model.addAttribute("transaction", transaction);
@@ -51,13 +55,15 @@ public class TransactionController {
         } else {
             model.addAttribute("accounts", accountService.getAllAccounts(userId, transactionType));
         }
+        model.addAttribute("categories", budgetService.getBudget(userId).getCategories());
         return "transaction-form";
     }
 
     @RequestMapping("/new")
-    public String createTransaction(@ModelAttribute Transaction transaction)
+    public String createTransaction(@ModelAttribute Transaction transaction, Authentication auth)
             throws NoSuchAccountException {
-        transactionService.createTransaction(transaction);
+        User user = UserFactory.createUser(auth);
+        transactionService.createTransaction(transaction, user.getId());
         return "redirect:/dashboard";
     }
 

@@ -1,7 +1,5 @@
 package com.parker.personalfinanceapp.models;
 
-import com.parker.personalfinanceapp.models.TransactionType;
-
 public class TransactionTypeFactory {
     public static TransactionType createTransactionType(String type) {
         switch (type) {

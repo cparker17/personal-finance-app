@@ -42,7 +42,7 @@ public class ReportService {
     private BudgetActualReport getBudgetActualReport(Long userId) throws NoSuchUserException {
         Budget budget = getUser(userId).getBudget();
         List<Transaction> expenses = new ArrayList<>();
-        budget.getCategories().forEach(category -> expenses.addAll(category.getTransactions()));
+        //budget.getCategories().forEach(category -> expenses.addAll(category.getTransactions()));
         return BudgetActualReport.builder()
                 .budget(budget)
                 .expenses(expenses)
@@ -86,8 +86,7 @@ public class ReportService {
     }
 
     private ExpenseSummary getExpenseSummary(Long userId) throws NoSuchBudgetException, NoSuchUserException {
-        User user = getUser(userId);
-        Budget budget = budgetService.getBudget(user);
+        Budget budget = budgetService.getBudget(userId);
         return ExpenseSummary.builder()
                 .categories(budget.getCategories())
                 .expenses(getUserExpenses(budget))
@@ -96,7 +95,7 @@ public class ReportService {
 
     private List<Transaction> getUserExpenses(Budget budget) {
         List<Transaction> expenses = new ArrayList<>();
-        budget.getCategories().forEach(category -> expenses.addAll(category.getTransactions()));
+        //budget.getCategories().forEach(category -> expenses.addAll(category.getTransactions()));
         return expenses;
     }
 }

@@ -26,15 +26,4 @@ public class Category {
     private String type;
 
     private BigDecimal monthlyBudgetAmt;
-
-    @OneToMany
-    private List<Transaction> transactions;
-
-    public void addExpense(Transaction transaction) {
-        if (transactions.isEmpty()) {
-            transactions = new ArrayList<>();
-        } else {
-            transactions.add(transaction);
-        }
-    }
 }

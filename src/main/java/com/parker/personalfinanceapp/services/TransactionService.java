@@ -31,30 +31,39 @@ public class TransactionService {
     @Autowired
     LoanRepo loanRepo;
 
-    public void createTransaction(Transaction transaction) throws NoSuchAccountException {
-        if (transaction.getStringType().equals("loanPayment")) {
-            Optional<Loan> loanOptional = loanRepo.findById(transaction.getAccountId());
-            if (loanOptional.isPresent()) {
-                Loan loan = loanOptional.get();
-                transaction.setTransactionDate(LocalDate.now());
-                transaction.setType(TransactionTypeFactory.createTransactionType(transaction.getStringType()));
-                transactionRepo.save(transaction);
-                loan.addTransaction(transaction);
-                loanRepo.save(loan);
+    public void createTransaction(Transaction transaction, Long userId) throws NoSuchAccountException {
+        Optional<User> userOptional = userRepo.findById(userId);
+        if (userOptional.isPresent()) {
+            User user = userOptional.get();
+
+            if (transaction.getStringType().equals("loanPayment")) {
+                Optional<Loan> loanOptional = loanRepo.findById(transaction.getAccountId());
+                if (loanOptional.isPresent()) {
+                    Loan loan = loanOptional.get();
+                    transaction.setTransactionDate(LocalDate.now());
+                    transaction.setType(TransactionTypeFactory.createTransactionType(transaction.getStringType()));
+                    transactionRepo.save(transaction);
+                    loan.addTransaction(transaction);
+                    loanRepo.save(loan);
+                    user.getTransactions().add(transaction);
+                    userRepo.save(user);
+                } else {
+                    throw new NoSuchAccountException("Loan does not exist.");
+                }
             } else {
-                throw new NoSuchAccountException("Loan does not exist.");
-            }
-        } else {
-            Optional<Account> accountOptional = accountRepo.findById(transaction.getAccountId());
-            if (accountOptional.isPresent()) {
-                Account account = accountOptional.get();
-                transaction.setTransactionDate(LocalDate.now());
-                transaction.setType(TransactionTypeFactory.createTransactionType(transaction.getStringType()));
-                transactionRepo.save(transaction);
-                account.addTransaction(transaction);
-                accountRepo.save(account);
-            } else {
-                throw new NoSuchAccountException("Account does not exist.");
+                Optional<Account> accountOptional = accountRepo.findById(transaction.getAccountId());
+                if (accountOptional.isPresent()) {
+                    Account account = accountOptional.get();
+                    transaction.setTransactionDate(LocalDate.now());
+                    transaction.setType(TransactionTypeFactory.createTransactionType(transaction.getStringType()));
+                    transactionRepo.save(transaction);
+                    account.addTransaction(transaction);
+                    accountRepo.save(account);
+                    user.getTransactions().add(transaction);
+                    userRepo.save(user);
+                } else {
+                    throw new NoSuchAccountException("Account does not exist.");
+                }
             }
         }
     }
@@ -89,11 +98,9 @@ public class TransactionService {
         if (userOptional.isPresent()) {
             User user = userOptional.get();
             List<Transaction> transactions = new ArrayList<>();
-            for (Category category : user.getBudget().getCategories()) {
-                for (Transaction transaction : category.getTransactions()) {
-                    if (transaction.getType().equals(TransactionTypeFactory.createTransactionType(transactionType))) {
-                        transactions.add(transaction);
-                    }
+            for (Transaction transaction : user.getTransactions()) {
+                if (transaction.getType().equals(TransactionTypeFactory.createTransactionType(transactionType))) {
+                    transactions.add(transaction);
                 }
             }
             return transactions;

@@ -1,10 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <div th:replace="fragments :: header"></div>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Transactions</title>
 </head>
 <body>
-
+<div th:replace="fragments :: navigation"></div>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-3 col-md-2 d-none d-sm-block bg-light sidebar shadow-lg">
+            <div th:replace="fragments :: sidebar"></div>
+        </div>
+        <div class="col-sm-9 col-md10">
+            <div th:if="${#lists.isEmpty(transactions)}">
+                <br><br><br>
+                <h4 class="text-center">No history.</h4>
+                <br>
+                <center>
+                    <a th:href="@{/dashboard}" class="btn btn-outline-success btn-lg">Return To Dashboard</a>
+                </center>
+            </div>
+            <div th:unless="${#lists.isEmpty(transactions)}">
+                <br><br>
+                <h1 class="text-center" th:text="${type.type}">Transaction Title</h1><br>
+                <br>
+                <table class="table table-striped border rounded border-dark">
+                    <thead class="bg-success">
+                    <tr>
+                        <th>Date Added</th>
+                        <th>Category</th>
+                        <th>Amount</th>
+                        <th>Actions</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <div>
+                        <tr th:each="transaction : ${transactions}">
+                            <td th:text="${transaction.transactionDate}">Name</td>
+                            <td th:text="${transaction.categoryName}">Category</td>
+                            <td th:text="'$' + ${transaction.amount}">Amount</td>
+                            <td>
+                                <a class="btn btn-outline-success btn-sm rounded text-decoration-none"
+                                   th:href="@{'/transaction/edit/' + ${transaction.id}}">Update</a>
+                                <a class="btn btn-outline-success btn-sm rounded text-decoration-none"
+                                   th:href="@{'/transaction/delete/' + ${transaction.id}}">Delete</a>
+                            </td>
+                        </tr>
+                    </div>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+<div th:replace="fragments :: footer"/>
 </body>
 </html>

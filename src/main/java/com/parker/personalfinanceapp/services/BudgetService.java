@@ -35,8 +35,8 @@ public class BudgetService {
     }
 
     @Transactional
-    public Budget getBudget(User user) throws NoSuchBudgetException, NoSuchUserException {
-        Optional<User> userOptional = userRepo.findById(user.getId());
+    public Budget getBudget(Long userId) throws NoSuchBudgetException, NoSuchUserException {
+        Optional<User> userOptional = userRepo.findById(userId);
         if (userOptional.isPresent()) {
             return userOptional.get().getBudget();
         } else {
@@ -47,14 +47,14 @@ public class BudgetService {
     @Transactional
     public Budget updateBudget(User user, Budget budget) throws NoSuchBudgetException, NoSuchUserException {
         setUserBudget(user, budget);
-        budgetRepo.delete(getBudget(user));
+        budgetRepo.delete(getBudget(user.getId()));
         return budgetRepo.save(budget);
     }
 
     @Transactional
     public void deleteBudget(User user) throws NoSuchBudgetException, NoSuchUserException {
         setUserBudget(user, null);
-        budgetRepo.delete(getBudget(user));
+        budgetRepo.delete(getBudget(user.getId()));
     }
 
     public List<Category> getNeedsCategories(Budget budget) {

@@ -65,6 +65,9 @@ public class User {
     @OneToOne
     RetirementPlan retirementPlan;
 
+    @OneToMany
+    List<Transaction> transactions;
+
     @ManyToOne(cascade = CascadeType.MERGE)
     private Role role;
 
