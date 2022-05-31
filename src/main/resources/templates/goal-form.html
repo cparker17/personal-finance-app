@@ -1,10 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+    <div th:replace="fragments :: header"></div>
+    <title>Custom Goal</title>
 </head>
 <body>
+<div th:replace="fragments :: navigation"></div>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-3 col-md-2 d-none d-sm-block bg-light sidebar shadow-lg">
+            <div th:replace="fragments :: sidebar"></div>
+        </div>
+        <div class="col-sm-9 col-md-10">
+            <br><br>
+            <div id="cat-update" class="container border rounded bg-light border-dark col-5" style="padding: 25px">
+                <h1 class="text-center">New Custom Goal</h1><br>
+                <form action="#" th:action="@{/goal/new}" th:object="${goal}" method="post">
+                    <div class="form-group">
+                        <label for="id" class="fw-bold">Name:</label>
+                        <input class="form-control" type="text" id="id" th:field="*{name}" required><br>
+                    </div>
+                    <div class="form-group">
+                        <label for="amt" class="fw-bold">Amount Needed:</label>
+                        <input class="form-control" type="number" id="amt" th:field="*{amountNeeded}" required><br>
+                    </div>
+                    <div class="form-group">
+                        <label for="des" class="fw-bold">Description:</label>
+                        <input class="form-control" type="text" id="des" th:field="*{description}" required><br>
+                    </div>
+                    <input type="submit" value="Save" class="btn btn-light text-dark border-dark">
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
 
+<div th:replace="fragments :: footer"></div>
 </body>
 </html>

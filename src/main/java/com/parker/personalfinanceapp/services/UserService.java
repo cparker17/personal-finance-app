@@ -1,11 +1,14 @@
 package com.parker.personalfinanceapp.services;
 
+import com.parker.personalfinanceapp.dto.BaseCategoryData;
 import com.parker.personalfinanceapp.exceptions.DuplicateUserException;
 import com.parker.personalfinanceapp.exceptions.NoSuchUserException;
 import com.parker.personalfinanceapp.models.Budget;
+import com.parker.personalfinanceapp.models.Category;
 import com.parker.personalfinanceapp.models.Role;
 import com.parker.personalfinanceapp.models.User;
 import com.parker.personalfinanceapp.repositories.BudgetRepo;
+import com.parker.personalfinanceapp.repositories.CategoryRepo;
 import com.parker.personalfinanceapp.repositories.RoleRepo;
 import com.parker.personalfinanceapp.repositories.UserRepo;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,6 +16,7 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.List;
 import java.util.Optional;
 
 @Service
@@ -28,6 +32,9 @@ public class UserService {
 
     @Autowired
     BudgetRepo budgetRepo;
+
+    @Autowired
+    CategoryRepo categoryRepo;
 
     public User getUserInfo(User user) throws NoSuchUserException {
         Optional<User> userOptional = userRepo.findById(user.getId());
@@ -57,6 +64,10 @@ public class UserService {
         user.setRole(role);
         user.setPassword(passwordEncoder.encode(user.getPassword()));
         Budget budget = new Budget();
+        BaseCategoryData baseCategoryData = new BaseCategoryData();
+        List<Category> categoryList = baseCategoryData.getCategoryList();
+        budget.setCategories(categoryList);
+        categoryRepo.saveAll(categoryList);
         budgetRepo.save(budget);
         user.setBudget(budget);
         return userRepo.save(user);

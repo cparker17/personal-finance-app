@@ -1,10 +1,43 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.w3.org/1999/xhtml">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+    <div th:replace="fragments :: header"></div>
+    <title>Custom Goal</title>
+    <script src="https://kit.fontawesome.com/e8b27fd1d7.js" crossorigin="anonymous"></script>
 </head>
 <body>
-
+<div th:replace="fragments :: navigation"></div>
+<div>
+    <div id="main-container" class="container-fluid">
+        <div class="row">
+            <div class="col-sm-3 col-md-2 d-none d-sm-block bg-light sidebar shadow-lg">
+                <div th:replace="fragments :: sidebar"></div>
+            </div>
+            <div id="main-content-container" class="col-sm-9 col-md-10 container-fluid align-content-center"
+                 th:object="${goal}">
+                <br>
+                <h1 class="text-center">Custom Goal</h1>
+                <br>
+                <h4 th:text="'Months to Reach Goal:  ' + ${goal.monthsFromGoal} + ' months'">Target</h4>
+                <br>
+                <dl class="row">
+                    <dt class="col-sm-3">Name:</dt>
+                    <dd class="col-sm-9" th:text="${goal.name}">Name</dd>
+                    <dt class="col-sm-3">Amount Needed:</dt>
+                    <dd class="col-sm-9" th:text="${goal.amountNeeded}">Amount Needed</dd>
+                    <dt class="col-sm-3">Description:</dt>
+                    <dd class="col-sm-9" th:text="${goal.description}">Description</dd>
+                    <dt class="col-sm-3">Date Created:</dt>
+                    <dd class="col-sm-9" th:text="${goal.dateAdded}">Date Created</dd>
+                </dl>
+                <br><br>
+                <a th:href="@{/goal/edit}" class="btn btn-outline-success">Update Custom Goal</a>
+            </div>
+        </div>
+    </div>
+</div>
+<div th:replace="fragments :: footer"></div>
 </body>
 </html>

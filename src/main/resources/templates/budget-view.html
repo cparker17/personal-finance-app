@@ -18,7 +18,7 @@
                 <h4 class="text-center">You haven't entered any budget categories yet.</h4>
                 <br>
                 <center>
-                    <a th:href="@{/budget/form}" class="btn btn-outline-success btn-lg">Add Category</a>
+                    <a th:href="@{/budget/form}" class="btn btn-outline-success btn-sm">Add Category</a>
                 </center>
             </div>
             <div th:unless="${#lists.isEmpty(needs) and #lists.isEmpty(wants) and #lists.isEmpty(savings)}">
@@ -29,6 +29,7 @@
                     <center>
                 <a th:href="@{/budget/income-form}" class="btn btn-outline-success btn-sm">Update Income</a>
                 <a th:href="@{/budget/verify}" class="btn btn-outline-success btn-sm">Verify Budget</a>
+                        <a th:href="@{/budget/form}" class="btn btn-outline-success btn-sm">Add Category</a>
                         </center>
                     </span>
                 <br><br>

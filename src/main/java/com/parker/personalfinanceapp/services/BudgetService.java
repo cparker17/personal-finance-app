@@ -108,9 +108,9 @@ public class BudgetService {
             double savingsSum = 0;
             for (Category category : budget.getCategories()) {
                 if (category.getCategoryType().equals(CategoryType.NEEDS)) {
-                    wantsSum += category.getMonthlyBudgetAmt().doubleValue();
-                } else if (category.getCategoryType().equals(CategoryType.WANTS)) {
                     needsSum += category.getMonthlyBudgetAmt().doubleValue();
+                } else if (category.getCategoryType().equals(CategoryType.WANTS)) {
+                    wantsSum += category.getMonthlyBudgetAmt().doubleValue();
                 } else {
                     savingsSum += category.getMonthlyBudgetAmt().doubleValue();
                 }

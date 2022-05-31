@@ -1,5 +1,6 @@
 package com.parker.personalfinanceapp;
 
+import com.parker.personalfinanceapp.dto.BaseCategoryData;
 import com.parker.personalfinanceapp.models.*;
 import com.parker.personalfinanceapp.repositories.BudgetRepo;
 import com.parker.personalfinanceapp.repositories.CategoryRepo;
@@ -55,14 +56,9 @@ public class PersonalFinanceAppApplication {
             }
 
             if (userRepo.findAll().isEmpty()) {
-                List<Category> categoryList = new ArrayList<>();
-                for (int i = 1; i <= 10; i++) {
-                    categoryList.add(categoryRepo.save(Category.builder()
-                            .categoryType(CategoryType.NEEDS)
-                            .monthlyBudgetAmt(BigDecimal.valueOf(100.00))
-                            .name("Test Category: " + i)
-                            .build()));
-                }
+                BaseCategoryData baseCategoryData = new BaseCategoryData();
+                List<Category> categoryList = baseCategoryData.getCategoryList();
+                categoryRepo.saveAll(categoryList);
 
                 User testUser = User.builder()
                         .username("test")
@@ -80,7 +76,7 @@ public class PersonalFinanceAppApplication {
                         .role(roleRepo.findRoleById(1L))
                         .budget(budgetRepo.save(Budget.builder()
                                 .categories(categoryList)
-                                .monthlyIncome(BigDecimal.valueOf(10000.00)).build()))
+                                .monthlyIncome(BigDecimal.ZERO).build()))
                         .build();
                 userRepo.save(testUser);
             }

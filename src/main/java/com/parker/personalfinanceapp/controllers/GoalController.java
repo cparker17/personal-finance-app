@@ -1,6 +1,8 @@
 package com.parker.personalfinanceapp.controllers;
 
 import com.parker.personalfinanceapp.exceptions.NoSuchGoalException;
+import com.parker.personalfinanceapp.exceptions.NoSuchUserException;
+import com.parker.personalfinanceapp.exceptions.PersonalFinanceAppException;
 import com.parker.personalfinanceapp.models.Goal;
 import com.parker.personalfinanceapp.models.UserFactory;
 import com.parker.personalfinanceapp.services.GoalService;
@@ -8,6 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
@@ -24,18 +27,18 @@ public class GoalController {
     }
 
     @RequestMapping("/new")
-    public String createGoal(Model model, Authentication auth, @RequestParam Goal goal) {
+    public String createGoal(Model model, Authentication auth, @ModelAttribute Goal goal) throws NoSuchUserException {
         model.addAttribute("goal", goalService.createGoal(UserFactory.createUser(auth), goal));
         return "goal-view";
     }
 
     @RequestMapping("/view")
-    public String viewGoal(Model model, Authentication auth) {
+    public String viewGoal(Model model, Authentication auth) throws PersonalFinanceAppException {
         model.addAttribute("goal", goalService.getGoal(UserFactory.createUser(auth)));
         return "goal-view";
     }
     @RequestMapping("/edit")
-    public String viewEditGoalPage(Model model, Authentication auth) {
+    public String viewEditGoalPage(Model model, Authentication auth) throws PersonalFinanceAppException {
         model.addAttribute("goal", goalService.getGoal(UserFactory.createUser(auth)));
         return "goal-edit";
     }

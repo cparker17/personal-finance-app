@@ -17,10 +17,6 @@
                 <h1 class="text-center">Category Update</h1><br>
                 <form action="#" th:action="@{/budget/new}" th:object="${category}" method="post">
                     <div class="form-group">
-                        <label for="id" class="fw-bold">Id:</label>
-                        <input class="form-control" type="text" id="id" th:field="*{id}" disabled><br>
-                    </div>
-                    <div class="form-group">
                         <label class="fw-bold" for="name">Category Name:</label>
                         <input class="form-control" type="text" id="name" th:field="*{name}" required><br>
                     </div>

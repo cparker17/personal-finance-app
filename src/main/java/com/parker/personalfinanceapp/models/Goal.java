@@ -2,10 +2,7 @@ package com.parker.personalfinanceapp.models;
 
 import lombok.*;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
 import java.math.BigDecimal;
 import java.time.LocalDate;
@@ -30,4 +27,7 @@ public class Goal {
     private BigDecimal amountNeeded;
 
     private LocalDate dateAdded;
+
+    @Transient
+    private int monthsFromGoal;
 }

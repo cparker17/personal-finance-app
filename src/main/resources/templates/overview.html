@@ -28,7 +28,7 @@
                                 <p class="card-text" th:text="'Balance:  ' + ${#numbers.formatCurrency(account.currentBalance)}">Balance: </p>
                                 <span class="d-inline">
                             <a th:href="@{'account/view/' + ${account.id}}" class="btn btn-outline-success btn-sm">View Details</a>
-                            <a th:href="@{'/edit/form/' + ${account.id}}" class="btn btn-outline-success btn-sm">Update</a>
+                            <a th:href="@{'/account/edit/' + ${account.id}}" class="btn btn-outline-success btn-sm">Update</a>
                                 </span>
                                 <hr>
                             </div>
@@ -48,7 +48,7 @@
                                 <p class="card-text" th:text="'Balance:  ' + ${#numbers.formatCurrency(loan.currentBalance)}">Balance: </p>
                                 <span class="d-inline">
                             <a th:href="@{'/loan/view/' + ${loan.id}}" class="btn btn-outline-success btn-sm">View Details</a>
-                            <a th:href="@{'/account/form/' + ${loan.id}}" class="btn btn-outline-success btn-sm">Update</a>
+                            <a th:href="@{'/loan/edit/' + ${loan.id}}" class="btn btn-outline-success btn-sm">Update</a>
                             </span>
                                 <hr>
                             </div>
@@ -67,7 +67,7 @@
                                 <p class="card-text" th:text="'Balance:  ' + ${#numbers.formatCurrency(account.currentBalance)}">Balance: </p>
                                 <span class="d-inline">
                            <a th:href="@{'account/view/' + ${account.id}}" class="btn btn-outline-success btn-sm">View Details</a>
-                            <a th:href="@{'/edit/form/' + ${account.id}}" class="btn btn-outline-success btn-sm">Update</a>
+                            <a th:href="@{'/account/edit/' + ${account.id}}" class="btn btn-outline-success btn-sm">Update</a>
                                 </span>
                                 <hr>
                             </div>
