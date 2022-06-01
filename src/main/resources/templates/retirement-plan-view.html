@@ -20,8 +20,12 @@
                 <br>
                 <h1 class="text-center">Retirement Plan</h1>
                 <br>
-                <h4 th:if="${plan.isOnTrack}" th:text="'Retirement on Track: YES''">Target</h4>
-                <h4 th:if="${!plan.isOnTrack}" th:text="'Retirement on Track: NO''">Target</h4>
+                <h4 th:if="${plan.isOnTrack}" th:text="'Retirement on Track: Yes'">Target</h4>
+                <div th:if="${!plan.isOnTrack}">
+                    <h4 th:text="'Retirement on Track: No'">Target</h4>
+                    <h4 th:text="'     ' + 'You will need to work an additional ' + ${plan.additionalYearsToRetirement} +
+                    ' years before you can retire.'">Message</h4>
+                </div>
                 <br>
                 <dl class="row">
                     <dt class="col-sm-3">Current Age:</dt>
@@ -29,7 +33,7 @@
                     <dt class="col-sm-3">Target Retirement Age:</dt>
                     <dd class="col-sm-9" th:text="${plan.retirementAge}">Amount Needed</dd>
                     <dt class="col-sm-3">Amount Needed:</dt>
-                    <dd class="col-sm-9" th:text="${plan.amountNeeded}">Description</dd>
+                    <dd class="col-sm-9" th:text="${#numbers.formatCurrency(plan.amountNeeded)}">Description</dd>
                 </dl>
                 <br><br>
                 <a th:href="@{/retirement/edit}" class="btn btn-outline-success">Update Retirement Plan</a>

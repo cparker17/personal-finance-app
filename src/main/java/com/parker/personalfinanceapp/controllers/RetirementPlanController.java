@@ -46,7 +46,7 @@ public class RetirementPlanController {
     }
 
     @RequestMapping("/update")
-    public String updateRetirementPlan(Model model, Authentication auth, @RequestParam RetirementPlan retirementPlan)
+    public String updateRetirementPlan(Model model, Authentication auth, @ModelAttribute RetirementPlan retirementPlan)
             throws NoSuchRetirementPlanException, NoSuchUserException {
         model.addAttribute("plan",
                 retirementPlanService.updateRetirementPlan(UserFactory.createUser(auth), retirementPlan));
