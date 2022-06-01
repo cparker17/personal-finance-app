@@ -33481,3 +33481,1900 @@ Security filter chain: [
 ************************************************************
 
 
+2022-05-31 20:10:01.650  INFO 6157 --- [http-nio-8080-exec-8] Spring Security Debugger                 : 
+
+************************************************************
+
+Request received for GET '/retirement/view':
+
+org.apache.catalina.connector.RequestFacade@6ce475c9
+
+servletPath:/retirement/view
+pathInfo:null
+headers: 
+host: localhost:8080
+connection: keep-alive
+sec-ch-ua: " Not A;Brand";v="99", "Chromium";v="101", "Google Chrome";v="101"
+sec-ch-ua-mobile: ?0
+sec-ch-ua-platform: "macOS"
+upgrade-insecure-requests: 1
+user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.64 Safari/537.36
+accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+sec-fetch-site: same-origin
+sec-fetch-mode: navigate
+sec-fetch-user: ?1
+sec-fetch-dest: document
+referer: http://localhost:8080/overview
+accept-encoding: gzip, deflate, br
+accept-language: en-US,en;q=0.9
+cookie: Idea-e9a85424=da753aa3-6eaa-40f2-b7b7-8a2140ca190a; Webstorm-f156c96b=af2df56d-b02c-4e9d-bd4b-6bba820f1549; _ga=GA1.1.1796180098.1648247297; JSESSIONID=63D36359115A243BF20DD4D2CEF56154
+
+
+Security filter chain: [
+  WebAsyncManagerIntegrationFilter
+  SecurityContextPersistenceFilter
+  HeaderWriterFilter
+  LogoutFilter
+  UsernamePasswordAuthenticationFilter
+  RequestCacheAwareFilter
+  SecurityContextHolderAwareRequestFilter
+  AnonymousAuthenticationFilter
+  SessionManagementFilter
+  ExceptionTranslationFilter
+  FilterSecurityInterceptor
+]
+
+
+************************************************************
+
+
+2022-05-31 20:10:01.715  INFO 6157 --- [http-nio-8080-exec-9] Spring Security Debugger                 : 
+
+************************************************************
+
+Request received for GET '/css/styles.css':
+
+org.apache.catalina.connector.RequestFacade@6ce475c9
+
+servletPath:/css/styles.css
+pathInfo:null
+headers: 
+host: localhost:8080
+connection: keep-alive
+sec-ch-ua: " Not A;Brand";v="99", "Chromium";v="101", "Google Chrome";v="101"
+sec-ch-ua-mobile: ?0
+user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.64 Safari/537.36
+sec-ch-ua-platform: "macOS"
+accept: text/css,*/*;q=0.1
+sec-fetch-site: same-origin
+sec-fetch-mode: no-cors
+sec-fetch-dest: style
+referer: http://localhost:8080/retirement/view
+accept-encoding: gzip, deflate, br
+accept-language: en-US,en;q=0.9
+cookie: Idea-e9a85424=da753aa3-6eaa-40f2-b7b7-8a2140ca190a; Webstorm-f156c96b=af2df56d-b02c-4e9d-bd4b-6bba820f1549; _ga=GA1.1.1796180098.1648247297; JSESSIONID=63D36359115A243BF20DD4D2CEF56154
+
+
+Security filter chain: [
+  WebAsyncManagerIntegrationFilter
+  SecurityContextPersistenceFilter
+  HeaderWriterFilter
+  LogoutFilter
+  UsernamePasswordAuthenticationFilter
+  RequestCacheAwareFilter
+  SecurityContextHolderAwareRequestFilter
+  AnonymousAuthenticationFilter
+  SessionManagementFilter
+  ExceptionTranslationFilter
+  FilterSecurityInterceptor
+]
+
+
+************************************************************
+
+
+2022-05-31 20:10:06.753  INFO 6157 --- [http-nio-8080-exec-10] Spring Security Debugger                 : 
+
+************************************************************
+
+Request received for GET '/dashboard':
+
+org.apache.catalina.connector.RequestFacade@6ce475c9
+
+servletPath:/dashboard
+pathInfo:null
+headers: 
+host: localhost:8080
+connection: keep-alive
+sec-ch-ua: " Not A;Brand";v="99", "Chromium";v="101", "Google Chrome";v="101"
+sec-ch-ua-mobile: ?0
+sec-ch-ua-platform: "macOS"
+upgrade-insecure-requests: 1
+user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.64 Safari/537.36
+accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+sec-fetch-site: same-origin
+sec-fetch-mode: navigate
+sec-fetch-user: ?1
+sec-fetch-dest: document
+referer: http://localhost:8080/retirement/view
+accept-encoding: gzip, deflate, br
+accept-language: en-US,en;q=0.9
+cookie: Idea-e9a85424=da753aa3-6eaa-40f2-b7b7-8a2140ca190a; Webstorm-f156c96b=af2df56d-b02c-4e9d-bd4b-6bba820f1549; _ga=GA1.1.1796180098.1648247297; JSESSIONID=63D36359115A243BF20DD4D2CEF56154
+
+
+Security filter chain: [
+  WebAsyncManagerIntegrationFilter
+  SecurityContextPersistenceFilter
+  HeaderWriterFilter
+  LogoutFilter
+  UsernamePasswordAuthenticationFilter
+  RequestCacheAwareFilter
+  SecurityContextHolderAwareRequestFilter
+  AnonymousAuthenticationFilter
+  SessionManagementFilter
+  ExceptionTranslationFilter
+  FilterSecurityInterceptor
+]
+
+
+************************************************************
+
+
+2022-05-31 20:10:06.842  INFO 6157 --- [http-nio-8080-exec-1] Spring Security Debugger                 : 
+
+************************************************************
+
+Request received for GET '/css/styles.css':
+
+org.apache.catalina.connector.RequestFacade@6ce475c9
+
+servletPath:/css/styles.css
+pathInfo:null
+headers: 
+host: localhost:8080
+connection: keep-alive
+sec-ch-ua: " Not A;Brand";v="99", "Chromium";v="101", "Google Chrome";v="101"
+sec-ch-ua-mobile: ?0
+user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.64 Safari/537.36
+sec-ch-ua-platform: "macOS"
+accept: text/css,*/*;q=0.1
+sec-fetch-site: same-origin
+sec-fetch-mode: no-cors
+sec-fetch-dest: style
+referer: http://localhost:8080/dashboard
+accept-encoding: gzip, deflate, br
+accept-language: en-US,en;q=0.9
+cookie: Idea-e9a85424=da753aa3-6eaa-40f2-b7b7-8a2140ca190a; Webstorm-f156c96b=af2df56d-b02c-4e9d-bd4b-6bba820f1549; _ga=GA1.1.1796180098.1648247297; JSESSIONID=63D36359115A243BF20DD4D2CEF56154
+
+
+Security filter chain: [
+  WebAsyncManagerIntegrationFilter
+  SecurityContextPersistenceFilter
+  HeaderWriterFilter
+  LogoutFilter
+  UsernamePasswordAuthenticationFilter
+  RequestCacheAwareFilter
+  SecurityContextHolderAwareRequestFilter
+  AnonymousAuthenticationFilter
+  SessionManagementFilter
+  ExceptionTranslationFilter
+  FilterSecurityInterceptor
+]
+
+
+************************************************************
+
+
+2022-05-31 20:13:59.403  INFO 6157 --- [http-nio-8080-exec-4] Spring Security Debugger                 : 
+
+************************************************************
+
+Request received for GET '/goal/form':
+
+org.apache.catalina.connector.RequestFacade@6ce475c9
+
+servletPath:/goal/form
+pathInfo:null
+headers: 
+host: localhost:8080
+connection: keep-alive
+sec-ch-ua: " Not A;Brand";v="99", "Chromium";v="101", "Google Chrome";v="101"
+sec-ch-ua-mobile: ?0
+sec-ch-ua-platform: "macOS"
+upgrade-insecure-requests: 1
+user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.64 Safari/537.36
+accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+sec-fetch-site: same-origin
+sec-fetch-mode: navigate
+sec-fetch-user: ?1
+sec-fetch-dest: document
+referer: http://localhost:8080/dashboard
+accept-encoding: gzip, deflate, br
+accept-language: en-US,en;q=0.9
+cookie: Idea-e9a85424=da753aa3-6eaa-40f2-b7b7-8a2140ca190a; Webstorm-f156c96b=af2df56d-b02c-4e9d-bd4b-6bba820f1549; _ga=GA1.1.1796180098.1648247297; JSESSIONID=63D36359115A243BF20DD4D2CEF56154
+
+
+Security filter chain: [
+  WebAsyncManagerIntegrationFilter
+  SecurityContextPersistenceFilter
+  HeaderWriterFilter
+  LogoutFilter
+  UsernamePasswordAuthenticationFilter
+  RequestCacheAwareFilter
+  SecurityContextHolderAwareRequestFilter
+  AnonymousAuthenticationFilter
+  SessionManagementFilter
+  ExceptionTranslationFilter
+  FilterSecurityInterceptor
+]
+
+
+************************************************************
+
+
+2022-05-31 20:13:59.473  INFO 6157 --- [http-nio-8080-exec-5] Spring Security Debugger                 : 
+
+************************************************************
+
+Request received for GET '/css/styles.css':
+
+org.apache.catalina.connector.RequestFacade@6ce475c9
+
+servletPath:/css/styles.css
+pathInfo:null
+headers: 
+host: localhost:8080
+connection: keep-alive
+sec-ch-ua: " Not A;Brand";v="99", "Chromium";v="101", "Google Chrome";v="101"
+sec-ch-ua-mobile: ?0
+user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.64 Safari/537.36
+sec-ch-ua-platform: "macOS"
+accept: text/css,*/*;q=0.1
+sec-fetch-site: same-origin
+sec-fetch-mode: no-cors
+sec-fetch-dest: style
+referer: http://localhost:8080/goal/form
+accept-encoding: gzip, deflate, br
+accept-language: en-US,en;q=0.9
+cookie: Idea-e9a85424=da753aa3-6eaa-40f2-b7b7-8a2140ca190a; Webstorm-f156c96b=af2df56d-b02c-4e9d-bd4b-6bba820f1549; _ga=GA1.1.1796180098.1648247297; JSESSIONID=63D36359115A243BF20DD4D2CEF56154
+
+
+Security filter chain: [
+  WebAsyncManagerIntegrationFilter
+  SecurityContextPersistenceFilter
+  HeaderWriterFilter
+  LogoutFilter
+  UsernamePasswordAuthenticationFilter
+  RequestCacheAwareFilter
+  SecurityContextHolderAwareRequestFilter
+  AnonymousAuthenticationFilter
+  SessionManagementFilter
+  ExceptionTranslationFilter
+  FilterSecurityInterceptor
+]
+
+
+************************************************************
+
+
+2022-05-31 20:14:08.224  INFO 6157 --- [http-nio-8080-exec-6] Spring Security Debugger                 : 
+
+************************************************************
+
+Request received for GET '/goal/view':
+
+org.apache.catalina.connector.RequestFacade@6ce475c9
+
+servletPath:/goal/view
+pathInfo:null
+headers: 
+host: localhost:8080
+connection: keep-alive
+sec-ch-ua: " Not A;Brand";v="99", "Chromium";v="101", "Google Chrome";v="101"
+sec-ch-ua-mobile: ?0
+sec-ch-ua-platform: "macOS"
+upgrade-insecure-requests: 1
+user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.64 Safari/537.36
+accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+sec-fetch-site: same-origin
+sec-fetch-mode: navigate
+sec-fetch-user: ?1
+sec-fetch-dest: document
+referer: http://localhost:8080/goal/form
+accept-encoding: gzip, deflate, br
+accept-language: en-US,en;q=0.9
+cookie: Idea-e9a85424=da753aa3-6eaa-40f2-b7b7-8a2140ca190a; Webstorm-f156c96b=af2df56d-b02c-4e9d-bd4b-6bba820f1549; _ga=GA1.1.1796180098.1648247297; JSESSIONID=63D36359115A243BF20DD4D2CEF56154
+
+
+Security filter chain: [
+  WebAsyncManagerIntegrationFilter
+  SecurityContextPersistenceFilter
+  HeaderWriterFilter
+  LogoutFilter
+  UsernamePasswordAuthenticationFilter
+  RequestCacheAwareFilter
+  SecurityContextHolderAwareRequestFilter
+  AnonymousAuthenticationFilter
+  SessionManagementFilter
+  ExceptionTranslationFilter
+  FilterSecurityInterceptor
+]
+
+
+************************************************************
+
+
+2022-05-31 20:14:08.308  INFO 6157 --- [http-nio-8080-exec-7] Spring Security Debugger                 : 
+
+************************************************************
+
+Request received for GET '/css/styles.css':
+
+org.apache.catalina.connector.RequestFacade@6ce475c9
+
+servletPath:/css/styles.css
+pathInfo:null
+headers: 
+host: localhost:8080
+connection: keep-alive
+sec-ch-ua: " Not A;Brand";v="99", "Chromium";v="101", "Google Chrome";v="101"
+sec-ch-ua-mobile: ?0
+user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.64 Safari/537.36
+sec-ch-ua-platform: "macOS"
+accept: text/css,*/*;q=0.1
+sec-fetch-site: same-origin
+sec-fetch-mode: no-cors
+sec-fetch-dest: style
+referer: http://localhost:8080/goal/view
+accept-encoding: gzip, deflate, br
+accept-language: en-US,en;q=0.9
+cookie: Idea-e9a85424=da753aa3-6eaa-40f2-b7b7-8a2140ca190a; Webstorm-f156c96b=af2df56d-b02c-4e9d-bd4b-6bba820f1549; _ga=GA1.1.1796180098.1648247297; JSESSIONID=63D36359115A243BF20DD4D2CEF56154
+
+
+Security filter chain: [
+  WebAsyncManagerIntegrationFilter
+  SecurityContextPersistenceFilter
+  HeaderWriterFilter
+  LogoutFilter
+  UsernamePasswordAuthenticationFilter
+  RequestCacheAwareFilter
+  SecurityContextHolderAwareRequestFilter
+  AnonymousAuthenticationFilter
+  SessionManagementFilter
+  ExceptionTranslationFilter
+  FilterSecurityInterceptor
+]
+
+
+************************************************************
+
+
+2022-05-31 20:14:09.102  INFO 6157 --- [http-nio-8080-exec-8] Spring Security Debugger                 : 
+
+************************************************************
+
+Request received for GET '/':
+
+org.apache.catalina.connector.RequestFacade@6ce475c9
+
+servletPath:/
+pathInfo:null
+headers: 
+host: localhost:8080
+connection: keep-alive
+sec-ch-ua: " Not A;Brand";v="99", "Chromium";v="101", "Google Chrome";v="101"
+sec-ch-ua-mobile: ?0
+sec-ch-ua-platform: "macOS"
+upgrade-insecure-requests: 1
+user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.64 Safari/537.36
+accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+sec-fetch-site: same-origin
+sec-fetch-mode: navigate
+sec-fetch-user: ?1
+sec-fetch-dest: document
+referer: http://localhost:8080/goal/view
+accept-encoding: gzip, deflate, br
+accept-language: en-US,en;q=0.9
+cookie: Idea-e9a85424=da753aa3-6eaa-40f2-b7b7-8a2140ca190a; Webstorm-f156c96b=af2df56d-b02c-4e9d-bd4b-6bba820f1549; _ga=GA1.1.1796180098.1648247297; JSESSIONID=63D36359115A243BF20DD4D2CEF56154
+
+
+Security filter chain: [
+  WebAsyncManagerIntegrationFilter
+  SecurityContextPersistenceFilter
+  HeaderWriterFilter
+  LogoutFilter
+  UsernamePasswordAuthenticationFilter
+  RequestCacheAwareFilter
+  SecurityContextHolderAwareRequestFilter
+  AnonymousAuthenticationFilter
+  SessionManagementFilter
+  ExceptionTranslationFilter
+  FilterSecurityInterceptor
+]
+
+
+************************************************************
+
+
+2022-05-31 20:14:09.114  INFO 6157 --- [http-nio-8080-exec-9] Spring Security Debugger                 : 
+
+************************************************************
+
+Request received for GET '/login':
+
+org.apache.catalina.connector.RequestFacade@6ce475c9
+
+servletPath:/login
+pathInfo:null
+headers: 
+host: localhost:8080
+connection: keep-alive
+upgrade-insecure-requests: 1
+user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.64 Safari/537.36
+accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+sec-fetch-site: same-origin
+sec-fetch-mode: navigate
+sec-fetch-user: ?1
+sec-fetch-dest: document
+sec-ch-ua: " Not A;Brand";v="99", "Chromium";v="101", "Google Chrome";v="101"
+sec-ch-ua-mobile: ?0
+sec-ch-ua-platform: "macOS"
+referer: http://localhost:8080/goal/view
+accept-encoding: gzip, deflate, br
+accept-language: en-US,en;q=0.9
+cookie: Idea-e9a85424=da753aa3-6eaa-40f2-b7b7-8a2140ca190a; Webstorm-f156c96b=af2df56d-b02c-4e9d-bd4b-6bba820f1549; _ga=GA1.1.1796180098.1648247297; JSESSIONID=63D36359115A243BF20DD4D2CEF56154
+
+
+Security filter chain: [
+  WebAsyncManagerIntegrationFilter
+  SecurityContextPersistenceFilter
+  HeaderWriterFilter
+  LogoutFilter
+  UsernamePasswordAuthenticationFilter
+  RequestCacheAwareFilter
+  SecurityContextHolderAwareRequestFilter
+  AnonymousAuthenticationFilter
+  SessionManagementFilter
+  ExceptionTranslationFilter
+  FilterSecurityInterceptor
+]
+
+
+************************************************************
+
+
+2022-05-31 20:14:09.153  INFO 6157 --- [http-nio-8080-exec-10] Spring Security Debugger                 : 
+
+************************************************************
+
+Request received for GET '/css/styles.css':
+
+org.apache.catalina.connector.RequestFacade@6ce475c9
+
+servletPath:/css/styles.css
+pathInfo:null
+headers: 
+host: localhost:8080
+connection: keep-alive
+sec-ch-ua: " Not A;Brand";v="99", "Chromium";v="101", "Google Chrome";v="101"
+sec-ch-ua-mobile: ?0
+user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.64 Safari/537.36
+sec-ch-ua-platform: "macOS"
+accept: text/css,*/*;q=0.1
+sec-fetch-site: same-origin
+sec-fetch-mode: no-cors
+sec-fetch-dest: style
+referer: http://localhost:8080/login
+accept-encoding: gzip, deflate, br
+accept-language: en-US,en;q=0.9
+cookie: Idea-e9a85424=da753aa3-6eaa-40f2-b7b7-8a2140ca190a; Webstorm-f156c96b=af2df56d-b02c-4e9d-bd4b-6bba820f1549; _ga=GA1.1.1796180098.1648247297; JSESSIONID=63D36359115A243BF20DD4D2CEF56154
+
+
+Security filter chain: [
+  WebAsyncManagerIntegrationFilter
+  SecurityContextPersistenceFilter
+  HeaderWriterFilter
+  LogoutFilter
+  UsernamePasswordAuthenticationFilter
+  RequestCacheAwareFilter
+  SecurityContextHolderAwareRequestFilter
+  AnonymousAuthenticationFilter
+  SessionManagementFilter
+  ExceptionTranslationFilter
+  FilterSecurityInterceptor
+]
+
+
+************************************************************
+
+
+2022-05-31 20:14:17.786  INFO 6157 --- [http-nio-8080-exec-1] Spring Security Debugger                 : 
+
+************************************************************
+
+Request received for GET '/budget/view':
+
+org.apache.catalina.connector.RequestFacade@6ce475c9
+
+servletPath:/budget/view
+pathInfo:null
+headers: 
+host: localhost:8080
+connection: keep-alive
+sec-ch-ua: " Not A;Brand";v="99", "Chromium";v="101", "Google Chrome";v="101"
+sec-ch-ua-mobile: ?0
+sec-ch-ua-platform: "macOS"
+upgrade-insecure-requests: 1
+user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.64 Safari/537.36
+accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+sec-fetch-site: same-origin
+sec-fetch-mode: navigate
+sec-fetch-user: ?1
+sec-fetch-dest: document
+referer: http://localhost:8080/login
+accept-encoding: gzip, deflate, br
+accept-language: en-US,en;q=0.9
+cookie: Idea-e9a85424=da753aa3-6eaa-40f2-b7b7-8a2140ca190a; Webstorm-f156c96b=af2df56d-b02c-4e9d-bd4b-6bba820f1549; _ga=GA1.1.1796180098.1648247297; JSESSIONID=63D36359115A243BF20DD4D2CEF56154
+
+
+Security filter chain: [
+  WebAsyncManagerIntegrationFilter
+  SecurityContextPersistenceFilter
+  HeaderWriterFilter
+  LogoutFilter
+  UsernamePasswordAuthenticationFilter
+  RequestCacheAwareFilter
+  SecurityContextHolderAwareRequestFilter
+  AnonymousAuthenticationFilter
+  SessionManagementFilter
+  ExceptionTranslationFilter
+  FilterSecurityInterceptor
+]
+
+
+************************************************************
+
+
+2022-05-31 20:14:17.895  INFO 6157 --- [http-nio-8080-exec-2] Spring Security Debugger                 : 
+
+************************************************************
+
+Request received for GET '/css/styles.css':
+
+org.apache.catalina.connector.RequestFacade@6ce475c9
+
+servletPath:/css/styles.css
+pathInfo:null
+headers: 
+host: localhost:8080
+connection: keep-alive
+sec-ch-ua: " Not A;Brand";v="99", "Chromium";v="101", "Google Chrome";v="101"
+sec-ch-ua-mobile: ?0
+user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.64 Safari/537.36
+sec-ch-ua-platform: "macOS"
+accept: text/css,*/*;q=0.1
+sec-fetch-site: same-origin
+sec-fetch-mode: no-cors
+sec-fetch-dest: style
+referer: http://localhost:8080/budget/view
+accept-encoding: gzip, deflate, br
+accept-language: en-US,en;q=0.9
+cookie: Idea-e9a85424=da753aa3-6eaa-40f2-b7b7-8a2140ca190a; Webstorm-f156c96b=af2df56d-b02c-4e9d-bd4b-6bba820f1549; _ga=GA1.1.1796180098.1648247297; JSESSIONID=63D36359115A243BF20DD4D2CEF56154
+
+
+Security filter chain: [
+  WebAsyncManagerIntegrationFilter
+  SecurityContextPersistenceFilter
+  HeaderWriterFilter
+  LogoutFilter
+  UsernamePasswordAuthenticationFilter
+  RequestCacheAwareFilter
+  SecurityContextHolderAwareRequestFilter
+  AnonymousAuthenticationFilter
+  SessionManagementFilter
+  ExceptionTranslationFilter
+  FilterSecurityInterceptor
+]
+
+
+************************************************************
+
+
+2022-05-31 20:14:18.323  INFO 6157 --- [http-nio-8080-exec-3] Spring Security Debugger                 : 
+
+************************************************************
+
+Request received for GET '/dashboard':
+
+org.apache.catalina.connector.RequestFacade@6ce475c9
+
+servletPath:/dashboard
+pathInfo:null
+headers: 
+host: localhost:8080
+connection: keep-alive
+sec-ch-ua: " Not A;Brand";v="99", "Chromium";v="101", "Google Chrome";v="101"
+sec-ch-ua-mobile: ?0
+sec-ch-ua-platform: "macOS"
+upgrade-insecure-requests: 1
+user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.64 Safari/537.36
+accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+sec-fetch-site: same-origin
+sec-fetch-mode: navigate
+sec-fetch-user: ?1
+sec-fetch-dest: document
+referer: http://localhost:8080/budget/view
+accept-encoding: gzip, deflate, br
+accept-language: en-US,en;q=0.9
+cookie: Idea-e9a85424=da753aa3-6eaa-40f2-b7b7-8a2140ca190a; Webstorm-f156c96b=af2df56d-b02c-4e9d-bd4b-6bba820f1549; _ga=GA1.1.1796180098.1648247297; JSESSIONID=63D36359115A243BF20DD4D2CEF56154
+
+
+Security filter chain: [
+  WebAsyncManagerIntegrationFilter
+  SecurityContextPersistenceFilter
+  HeaderWriterFilter
+  LogoutFilter
+  UsernamePasswordAuthenticationFilter
+  RequestCacheAwareFilter
+  SecurityContextHolderAwareRequestFilter
+  AnonymousAuthenticationFilter
+  SessionManagementFilter
+  ExceptionTranslationFilter
+  FilterSecurityInterceptor
+]
+
+
+************************************************************
+
+
+2022-05-31 20:14:18.381  INFO 6157 --- [http-nio-8080-exec-4] Spring Security Debugger                 : 
+
+************************************************************
+
+Request received for GET '/css/styles.css':
+
+org.apache.catalina.connector.RequestFacade@6ce475c9
+
+servletPath:/css/styles.css
+pathInfo:null
+headers: 
+host: localhost:8080
+connection: keep-alive
+sec-ch-ua: " Not A;Brand";v="99", "Chromium";v="101", "Google Chrome";v="101"
+sec-ch-ua-mobile: ?0
+user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.64 Safari/537.36
+sec-ch-ua-platform: "macOS"
+accept: text/css,*/*;q=0.1
+sec-fetch-site: same-origin
+sec-fetch-mode: no-cors
+sec-fetch-dest: style
+referer: http://localhost:8080/dashboard
+accept-encoding: gzip, deflate, br
+accept-language: en-US,en;q=0.9
+cookie: Idea-e9a85424=da753aa3-6eaa-40f2-b7b7-8a2140ca190a; Webstorm-f156c96b=af2df56d-b02c-4e9d-bd4b-6bba820f1549; _ga=GA1.1.1796180098.1648247297; JSESSIONID=63D36359115A243BF20DD4D2CEF56154
+
+
+Security filter chain: [
+  WebAsyncManagerIntegrationFilter
+  SecurityContextPersistenceFilter
+  HeaderWriterFilter
+  LogoutFilter
+  UsernamePasswordAuthenticationFilter
+  RequestCacheAwareFilter
+  SecurityContextHolderAwareRequestFilter
+  AnonymousAuthenticationFilter
+  SessionManagementFilter
+  ExceptionTranslationFilter
+  FilterSecurityInterceptor
+]
+
+
+************************************************************
+
+
+2022-05-31 20:15:32.557  INFO 6157 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-05-31 20:15:32.562  INFO 6157 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-05-31 20:15:32.576  INFO 6157 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-05-31 20:15:36.414  INFO 6376 --- [restartedMain] c.p.p.PersonalFinanceAppApplication      : Starting PersonalFinanceAppApplication using Java 11.0.13 on Chriss-MBP with PID 6376 (/Users/chrisparker/Documents/personal-finance-app/target/classes started by chrisparker in /Users/chrisparker/Documents/personal-finance-app)
+2022-05-31 20:15:36.415 DEBUG 6376 --- [restartedMain] c.p.p.PersonalFinanceAppApplication      : Running with Spring Boot v2.6.6, Spring v5.3.18
+2022-05-31 20:15:36.416  INFO 6376 --- [restartedMain] c.p.p.PersonalFinanceAppApplication      : No active profile set, falling back to 1 default profile: "default"
+2022-05-31 20:15:36.475  INFO 6376 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-05-31 20:15:36.475  INFO 6376 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-05-31 20:15:37.325  INFO 6376 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-05-31 20:15:37.414  INFO 6376 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 84 ms. Found 9 JPA repository interfaces.
+2022-05-31 20:15:38.040  INFO 6376 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-05-31 20:15:38.047  INFO 6376 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-05-31 20:15:38.047  INFO 6376 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.60]
+2022-05-31 20:15:38.106  INFO 6376 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-05-31 20:15:38.107  INFO 6376 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1632 ms
+2022-05-31 20:15:38.170  WARN 6376 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Cannot deserialize session attribute [SPRING_SECURITY_CONTEXT] for session [63D36359115A243BF20DD4D2CEF56154]
+2022-05-31 20:15:38.247  INFO 6376 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-05-31 20:15:38.267  INFO 6376 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.7.Final
+2022-05-31 20:15:38.357  INFO 6376 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-05-31 20:15:38.403  INFO 6376 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-05-31 20:15:38.540  INFO 6376 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-05-31 20:15:38.548  INFO 6376 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2022-05-31 20:15:39.379  INFO 6376 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-05-31 20:15:39.386  INFO 6376 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-05-31 20:15:39.772  WARN 6376 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-05-31 20:15:40.157  INFO 6376 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2022-05-31 20:15:40.255  INFO 6376 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will not secure any request
+2022-05-31 20:15:40.257  WARN 6376 --- [restartedMain] o.s.s.c.a.web.builders.WebSecurity       : 
+
+********************************************************************
+**********        Security debugging is enabled.       *************
+**********    This may include sensitive information.  *************
+**********      Do not use in a production system!     *************
+********************************************************************
+
+
+2022-05-31 20:15:40.487  INFO 6376 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-05-31 20:15:40.521  INFO 6376 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-05-31 20:15:40.536  INFO 6376 --- [restartedMain] c.p.p.PersonalFinanceAppApplication      : Started PersonalFinanceAppApplication in 4.715 seconds (JVM running for 5.553)
+2022-05-31 20:15:42.213  INFO 6376 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-05-31 20:15:42.216  INFO 6376 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-05-31 20:15:42.217  INFO 6376 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-05-31 20:15:42.226  INFO 6376 --- [http-nio-8080-exec-1] Spring Security Debugger                 : 
+
+************************************************************
+
+Request received for GET '/':
+
+org.apache.catalina.connector.RequestFacade@387d56b5
+
+servletPath:/
+pathInfo:null
+headers: 
+host: localhost:8080
+connection: keep-alive
+sec-ch-ua: " Not A;Brand";v="99", "Chromium";v="101", "Google Chrome";v="101"
+sec-ch-ua-mobile: ?0
+sec-ch-ua-platform: "macOS"
+upgrade-insecure-requests: 1
+user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.64 Safari/537.36
+accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+purpose: prefetch
+sec-fetch-site: none
+sec-fetch-mode: navigate
+sec-fetch-user: ?1
+sec-fetch-dest: document
+accept-encoding: gzip, deflate, br
+accept-language: en-US,en;q=0.9
+cookie: Idea-e9a85424=da753aa3-6eaa-40f2-b7b7-8a2140ca190a; Webstorm-f156c96b=af2df56d-b02c-4e9d-bd4b-6bba820f1549; _ga=GA1.1.1796180098.1648247297; JSESSIONID=63D36359115A243BF20DD4D2CEF56154
+
+
+Security filter chain: [
+  WebAsyncManagerIntegrationFilter
+  SecurityContextPersistenceFilter
+  HeaderWriterFilter
+  LogoutFilter
+  UsernamePasswordAuthenticationFilter
+  RequestCacheAwareFilter
+  SecurityContextHolderAwareRequestFilter
+  AnonymousAuthenticationFilter
+  SessionManagementFilter
+  ExceptionTranslationFilter
+  FilterSecurityInterceptor
+]
+
+
+************************************************************
+
+
+2022-05-31 20:15:42.273  INFO 6376 --- [http-nio-8080-exec-2] Spring Security Debugger                 : 
+
+************************************************************
+
+Request received for GET '/login':
+
+org.apache.catalina.connector.RequestFacade@387d56b5
+
+servletPath:/login
+pathInfo:null
+headers: 
+host: localhost:8080
+connection: keep-alive
+upgrade-insecure-requests: 1
+user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.64 Safari/537.36
+accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+purpose: prefetch
+sec-fetch-site: none
+sec-fetch-mode: navigate
+sec-fetch-user: ?1
+sec-fetch-dest: document
+sec-ch-ua: " Not A;Brand";v="99", "Chromium";v="101", "Google Chrome";v="101"
+sec-ch-ua-mobile: ?0
+sec-ch-ua-platform: "macOS"
+accept-encoding: gzip, deflate, br
+accept-language: en-US,en;q=0.9
+cookie: Idea-e9a85424=da753aa3-6eaa-40f2-b7b7-8a2140ca190a; Webstorm-f156c96b=af2df56d-b02c-4e9d-bd4b-6bba820f1549; _ga=GA1.1.1796180098.1648247297; JSESSIONID=63D36359115A243BF20DD4D2CEF56154
+
+
+Security filter chain: [
+  WebAsyncManagerIntegrationFilter
+  SecurityContextPersistenceFilter
+  HeaderWriterFilter
+  LogoutFilter
+  UsernamePasswordAuthenticationFilter
+  RequestCacheAwareFilter
+  SecurityContextHolderAwareRequestFilter
+  AnonymousAuthenticationFilter
+  SessionManagementFilter
+  ExceptionTranslationFilter
+  FilterSecurityInterceptor
+]
+
+
+************************************************************
+
+
+2022-05-31 20:15:42.503  INFO 6376 --- [http-nio-8080-exec-3] Spring Security Debugger                 : 
+
+************************************************************
+
+Request received for GET '/':
+
+org.apache.catalina.connector.RequestFacade@2f421df4
+
+servletPath:/
+pathInfo:null
+headers: 
+host: localhost:8080
+connection: keep-alive
+sec-ch-ua: " Not A;Brand";v="99", "Chromium";v="101", "Google Chrome";v="101"
+sec-ch-ua-mobile: ?0
+sec-ch-ua-platform: "macOS"
+upgrade-insecure-requests: 1
+user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.64 Safari/537.36
+accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+sec-fetch-site: none
+sec-fetch-mode: navigate
+sec-fetch-user: ?1
+sec-fetch-dest: document
+accept-encoding: gzip, deflate, br
+accept-language: en-US,en;q=0.9
+cookie: Idea-e9a85424=da753aa3-6eaa-40f2-b7b7-8a2140ca190a; Webstorm-f156c96b=af2df56d-b02c-4e9d-bd4b-6bba820f1549; _ga=GA1.1.1796180098.1648247297; JSESSIONID=63D36359115A243BF20DD4D2CEF56154
+
+
+Security filter chain: [
+  WebAsyncManagerIntegrationFilter
+  SecurityContextPersistenceFilter
+  HeaderWriterFilter
+  LogoutFilter
+  UsernamePasswordAuthenticationFilter
+  RequestCacheAwareFilter
+  SecurityContextHolderAwareRequestFilter
+  AnonymousAuthenticationFilter
+  SessionManagementFilter
+  ExceptionTranslationFilter
+  FilterSecurityInterceptor
+]
+
+
+************************************************************
+
+
+2022-05-31 20:15:44.494  INFO 6376 --- [http-nio-8080-exec-2] Spring Security Debugger                 : 
+
+************************************************************
+
+Request received for GET '/login':
+
+org.apache.catalina.connector.RequestFacade@387d56b5
+
+servletPath:/login
+pathInfo:null
+headers: 
+host: localhost:8080
+connection: keep-alive
+upgrade-insecure-requests: 1
+user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.64 Safari/537.36
+accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+sec-fetch-site: none
+sec-fetch-mode: navigate
+sec-fetch-user: ?1
+sec-fetch-dest: document
+sec-ch-ua: " Not A;Brand";v="99", "Chromium";v="101", "Google Chrome";v="101"
+sec-ch-ua-mobile: ?0
+sec-ch-ua-platform: "macOS"
+accept-encoding: gzip, deflate, br
+accept-language: en-US,en;q=0.9
+cookie: Idea-e9a85424=da753aa3-6eaa-40f2-b7b7-8a2140ca190a; Webstorm-f156c96b=af2df56d-b02c-4e9d-bd4b-6bba820f1549; _ga=GA1.1.1796180098.1648247297; JSESSIONID=63D36359115A243BF20DD4D2CEF56154
+
+
+Security filter chain: [
+  WebAsyncManagerIntegrationFilter
+  SecurityContextPersistenceFilter
+  HeaderWriterFilter
+  LogoutFilter
+  UsernamePasswordAuthenticationFilter
+  RequestCacheAwareFilter
+  SecurityContextHolderAwareRequestFilter
+  AnonymousAuthenticationFilter
+  SessionManagementFilter
+  ExceptionTranslationFilter
+  FilterSecurityInterceptor
+]
+
+
+************************************************************
+
+
+2022-05-31 20:15:44.506  INFO 6376 --- [http-nio-8080-exec-5] Spring Security Debugger                 : 
+
+************************************************************
+
+Request received for GET '/css/styles.css':
+
+org.apache.catalina.connector.RequestFacade@2f421df4
+
+servletPath:/css/styles.css
+pathInfo:null
+headers: 
+host: localhost:8080
+connection: keep-alive
+sec-ch-ua: " Not A;Brand";v="99", "Chromium";v="101", "Google Chrome";v="101"
+sec-ch-ua-mobile: ?0
+user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.64 Safari/537.36
+sec-ch-ua-platform: "macOS"
+accept: application/signed-exchange;v=b3;q=0.7,*/*;q=0.8
+purpose: prefetch
+sec-fetch-site: same-origin
+sec-fetch-mode: no-cors
+sec-fetch-dest: style
+referer: http://localhost:8080/login
+accept-encoding: gzip, deflate, br
+accept-language: en-US,en;q=0.9
+cookie: Idea-e9a85424=da753aa3-6eaa-40f2-b7b7-8a2140ca190a; Webstorm-f156c96b=af2df56d-b02c-4e9d-bd4b-6bba820f1549; _ga=GA1.1.1796180098.1648247297; JSESSIONID=63D36359115A243BF20DD4D2CEF56154
+
+
+Security filter chain: [
+  WebAsyncManagerIntegrationFilter
+  SecurityContextPersistenceFilter
+  HeaderWriterFilter
+  LogoutFilter
+  UsernamePasswordAuthenticationFilter
+  RequestCacheAwareFilter
+  SecurityContextHolderAwareRequestFilter
+  AnonymousAuthenticationFilter
+  SessionManagementFilter
+  ExceptionTranslationFilter
+  FilterSecurityInterceptor
+]
+
+
+************************************************************
+
+
+2022-05-31 20:15:44.548  INFO 6376 --- [http-nio-8080-exec-6] Spring Security Debugger                 : 
+
+************************************************************
+
+Request received for GET '/css/styles.css':
+
+org.apache.catalina.connector.RequestFacade@387d56b5
+
+servletPath:/css/styles.css
+pathInfo:null
+headers: 
+host: localhost:8080
+connection: keep-alive
+sec-ch-ua: " Not A;Brand";v="99", "Chromium";v="101", "Google Chrome";v="101"
+sec-ch-ua-mobile: ?0
+user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.64 Safari/537.36
+sec-ch-ua-platform: "macOS"
+accept: text/css,*/*;q=0.1
+sec-fetch-site: same-origin
+sec-fetch-mode: no-cors
+sec-fetch-dest: style
+referer: http://localhost:8080/login
+accept-encoding: gzip, deflate, br
+accept-language: en-US,en;q=0.9
+cookie: Idea-e9a85424=da753aa3-6eaa-40f2-b7b7-8a2140ca190a; Webstorm-f156c96b=af2df56d-b02c-4e9d-bd4b-6bba820f1549; _ga=GA1.1.1796180098.1648247297; JSESSIONID=63D36359115A243BF20DD4D2CEF56154
+
+
+Security filter chain: [
+  WebAsyncManagerIntegrationFilter
+  SecurityContextPersistenceFilter
+  HeaderWriterFilter
+  LogoutFilter
+  UsernamePasswordAuthenticationFilter
+  RequestCacheAwareFilter
+  SecurityContextHolderAwareRequestFilter
+  AnonymousAuthenticationFilter
+  SessionManagementFilter
+  ExceptionTranslationFilter
+  FilterSecurityInterceptor
+]
+
+
+************************************************************
+
+
+2022-05-31 20:15:49.306  INFO 6376 --- [http-nio-8080-exec-7] Spring Security Debugger                 : 
+
+************************************************************
+
+Request received for POST '/login':
+
+org.apache.catalina.connector.RequestFacade@387d56b5
+
+servletPath:/login
+pathInfo:null
+headers: 
+host: localhost:8080
+connection: keep-alive
+content-length: 29
+cache-control: max-age=0
+sec-ch-ua: " Not A;Brand";v="99", "Chromium";v="101", "Google Chrome";v="101"
+sec-ch-ua-mobile: ?0
+sec-ch-ua-platform: "macOS"
+upgrade-insecure-requests: 1
+origin: http://localhost:8080
+content-type: application/x-www-form-urlencoded
+user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.64 Safari/537.36
+accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+sec-fetch-site: same-origin
+sec-fetch-mode: navigate
+sec-fetch-user: ?1
+sec-fetch-dest: document
+referer: http://localhost:8080/login
+accept-encoding: gzip, deflate, br
+accept-language: en-US,en;q=0.9
+cookie: Idea-e9a85424=da753aa3-6eaa-40f2-b7b7-8a2140ca190a; Webstorm-f156c96b=af2df56d-b02c-4e9d-bd4b-6bba820f1549; _ga=GA1.1.1796180098.1648247297; JSESSIONID=63D36359115A243BF20DD4D2CEF56154
+
+
+Security filter chain: [
+  WebAsyncManagerIntegrationFilter
+  SecurityContextPersistenceFilter
+  HeaderWriterFilter
+  LogoutFilter
+  UsernamePasswordAuthenticationFilter
+  RequestCacheAwareFilter
+  SecurityContextHolderAwareRequestFilter
+  AnonymousAuthenticationFilter
+  SessionManagementFilter
+  ExceptionTranslationFilter
+  FilterSecurityInterceptor
+]
+
+
+************************************************************
+
+
+2022-05-31 20:15:49.598  INFO 6376 --- [http-nio-8080-exec-8] Spring Security Debugger                 : 
+
+************************************************************
+
+Request received for GET '/':
+
+org.apache.catalina.connector.RequestFacade@387d56b5
+
+servletPath:/
+pathInfo:null
+headers: 
+host: localhost:8080
+connection: keep-alive
+cache-control: max-age=0
+upgrade-insecure-requests: 1
+user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.64 Safari/537.36
+accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+sec-fetch-site: same-origin
+sec-fetch-mode: navigate
+sec-fetch-user: ?1
+sec-fetch-dest: document
+sec-ch-ua: " Not A;Brand";v="99", "Chromium";v="101", "Google Chrome";v="101"
+sec-ch-ua-mobile: ?0
+sec-ch-ua-platform: "macOS"
+referer: http://localhost:8080/login
+accept-encoding: gzip, deflate, br
+accept-language: en-US,en;q=0.9
+cookie: Idea-e9a85424=da753aa3-6eaa-40f2-b7b7-8a2140ca190a; Webstorm-f156c96b=af2df56d-b02c-4e9d-bd4b-6bba820f1549; _ga=GA1.1.1796180098.1648247297; JSESSIONID=DA6393BE02327B59E798C1B055ABFA32
+
+
+Security filter chain: [
+  WebAsyncManagerIntegrationFilter
+  SecurityContextPersistenceFilter
+  HeaderWriterFilter
+  LogoutFilter
+  UsernamePasswordAuthenticationFilter
+  RequestCacheAwareFilter
+  SecurityContextHolderAwareRequestFilter
+  AnonymousAuthenticationFilter
+  SessionManagementFilter
+  ExceptionTranslationFilter
+  FilterSecurityInterceptor
+]
+
+
+************************************************************
+
+
+2022-05-31 20:15:49.605  INFO 6376 --- [http-nio-8080-exec-9] Spring Security Debugger                 : 
+
+************************************************************
+
+Request received for GET '/login':
+
+org.apache.catalina.connector.RequestFacade@387d56b5
+
+servletPath:/login
+pathInfo:null
+headers: 
+host: localhost:8080
+connection: keep-alive
+cache-control: max-age=0
+upgrade-insecure-requests: 1
+user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.64 Safari/537.36
+accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+sec-fetch-site: same-origin
+sec-fetch-mode: navigate
+sec-fetch-user: ?1
+sec-fetch-dest: document
+sec-ch-ua: " Not A;Brand";v="99", "Chromium";v="101", "Google Chrome";v="101"
+sec-ch-ua-mobile: ?0
+sec-ch-ua-platform: "macOS"
+referer: http://localhost:8080/login
+accept-encoding: gzip, deflate, br
+accept-language: en-US,en;q=0.9
+cookie: Idea-e9a85424=da753aa3-6eaa-40f2-b7b7-8a2140ca190a; Webstorm-f156c96b=af2df56d-b02c-4e9d-bd4b-6bba820f1549; _ga=GA1.1.1796180098.1648247297; JSESSIONID=DA6393BE02327B59E798C1B055ABFA32
+
+
+Security filter chain: [
+  WebAsyncManagerIntegrationFilter
+  SecurityContextPersistenceFilter
+  HeaderWriterFilter
+  LogoutFilter
+  UsernamePasswordAuthenticationFilter
+  RequestCacheAwareFilter
+  SecurityContextHolderAwareRequestFilter
+  AnonymousAuthenticationFilter
+  SessionManagementFilter
+  ExceptionTranslationFilter
+  FilterSecurityInterceptor
+]
+
+
+************************************************************
+
+
+2022-05-31 20:15:49.638  INFO 6376 --- [http-nio-8080-exec-10] Spring Security Debugger                 : 
+
+************************************************************
+
+Request received for GET '/css/styles.css':
+
+org.apache.catalina.connector.RequestFacade@387d56b5
+
+servletPath:/css/styles.css
+pathInfo:null
+headers: 
+host: localhost:8080
+connection: keep-alive
+sec-ch-ua: " Not A;Brand";v="99", "Chromium";v="101", "Google Chrome";v="101"
+sec-ch-ua-mobile: ?0
+user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.64 Safari/537.36
+sec-ch-ua-platform: "macOS"
+accept: text/css,*/*;q=0.1
+sec-fetch-site: same-origin
+sec-fetch-mode: no-cors
+sec-fetch-dest: style
+referer: http://localhost:8080/login
+accept-encoding: gzip, deflate, br
+accept-language: en-US,en;q=0.9
+cookie: Idea-e9a85424=da753aa3-6eaa-40f2-b7b7-8a2140ca190a; Webstorm-f156c96b=af2df56d-b02c-4e9d-bd4b-6bba820f1549; _ga=GA1.1.1796180098.1648247297; JSESSIONID=DA6393BE02327B59E798C1B055ABFA32
+
+
+Security filter chain: [
+  WebAsyncManagerIntegrationFilter
+  SecurityContextPersistenceFilter
+  HeaderWriterFilter
+  LogoutFilter
+  UsernamePasswordAuthenticationFilter
+  RequestCacheAwareFilter
+  SecurityContextHolderAwareRequestFilter
+  AnonymousAuthenticationFilter
+  SessionManagementFilter
+  ExceptionTranslationFilter
+  FilterSecurityInterceptor
+]
+
+
+************************************************************
+
+
+2022-05-31 20:15:51.169  INFO 6376 --- [http-nio-8080-exec-1] Spring Security Debugger                 : 
+
+************************************************************
+
+Request received for GET '/dashboard':
+
+org.apache.catalina.connector.RequestFacade@387d56b5
+
+servletPath:/dashboard
+pathInfo:null
+headers: 
+host: localhost:8080
+connection: keep-alive
+sec-ch-ua: " Not A;Brand";v="99", "Chromium";v="101", "Google Chrome";v="101"
+sec-ch-ua-mobile: ?0
+sec-ch-ua-platform: "macOS"
+upgrade-insecure-requests: 1
+user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.64 Safari/537.36
+accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+sec-fetch-site: same-origin
+sec-fetch-mode: navigate
+sec-fetch-user: ?1
+sec-fetch-dest: document
+referer: http://localhost:8080/login
+accept-encoding: gzip, deflate, br
+accept-language: en-US,en;q=0.9
+cookie: Idea-e9a85424=da753aa3-6eaa-40f2-b7b7-8a2140ca190a; Webstorm-f156c96b=af2df56d-b02c-4e9d-bd4b-6bba820f1549; _ga=GA1.1.1796180098.1648247297; JSESSIONID=DA6393BE02327B59E798C1B055ABFA32
+
+
+Security filter chain: [
+  WebAsyncManagerIntegrationFilter
+  SecurityContextPersistenceFilter
+  HeaderWriterFilter
+  LogoutFilter
+  UsernamePasswordAuthenticationFilter
+  RequestCacheAwareFilter
+  SecurityContextHolderAwareRequestFilter
+  AnonymousAuthenticationFilter
+  SessionManagementFilter
+  ExceptionTranslationFilter
+  FilterSecurityInterceptor
+]
+
+
+************************************************************
+
+
+2022-05-31 20:15:51.249  INFO 6376 --- [http-nio-8080-exec-3] Spring Security Debugger                 : 
+
+************************************************************
+
+Request received for GET '/css/styles.css':
+
+org.apache.catalina.connector.RequestFacade@387d56b5
+
+servletPath:/css/styles.css
+pathInfo:null
+headers: 
+host: localhost:8080
+connection: keep-alive
+sec-ch-ua: " Not A;Brand";v="99", "Chromium";v="101", "Google Chrome";v="101"
+sec-ch-ua-mobile: ?0
+user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.64 Safari/537.36
+sec-ch-ua-platform: "macOS"
+accept: text/css,*/*;q=0.1
+sec-fetch-site: same-origin
+sec-fetch-mode: no-cors
+sec-fetch-dest: style
+referer: http://localhost:8080/dashboard
+accept-encoding: gzip, deflate, br
+accept-language: en-US,en;q=0.9
+cookie: Idea-e9a85424=da753aa3-6eaa-40f2-b7b7-8a2140ca190a; Webstorm-f156c96b=af2df56d-b02c-4e9d-bd4b-6bba820f1549; _ga=GA1.1.1796180098.1648247297; JSESSIONID=DA6393BE02327B59E798C1B055ABFA32
+
+
+Security filter chain: [
+  WebAsyncManagerIntegrationFilter
+  SecurityContextPersistenceFilter
+  HeaderWriterFilter
+  LogoutFilter
+  UsernamePasswordAuthenticationFilter
+  RequestCacheAwareFilter
+  SecurityContextHolderAwareRequestFilter
+  AnonymousAuthenticationFilter
+  SessionManagementFilter
+  ExceptionTranslationFilter
+  FilterSecurityInterceptor
+]
+
+
+************************************************************
+
+
+2022-05-31 20:35:15.952  INFO 6376 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-05-31 20:35:15.958  INFO 6376 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-05-31 20:35:15.973  INFO 6376 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-05-31 20:35:22.024  INFO 6549 --- [restartedMain] c.p.p.PersonalFinanceAppApplication      : Starting PersonalFinanceAppApplication using Java 11.0.13 on Chriss-MBP with PID 6549 (/Users/chrisparker/Documents/personal-finance-app/target/classes started by chrisparker in /Users/chrisparker/Documents/personal-finance-app)
+2022-05-31 20:35:22.025 DEBUG 6549 --- [restartedMain] c.p.p.PersonalFinanceAppApplication      : Running with Spring Boot v2.6.6, Spring v5.3.18
+2022-05-31 20:35:22.026  INFO 6549 --- [restartedMain] c.p.p.PersonalFinanceAppApplication      : No active profile set, falling back to 1 default profile: "default"
+2022-05-31 20:35:22.091  INFO 6549 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-05-31 20:35:22.091  INFO 6549 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-05-31 20:35:22.935  INFO 6549 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-05-31 20:35:23.029  INFO 6549 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 89 ms. Found 9 JPA repository interfaces.
+2022-05-31 20:35:23.679  INFO 6549 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-05-31 20:35:23.686  INFO 6549 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-05-31 20:35:23.686  INFO 6549 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.60]
+2022-05-31 20:35:23.749  INFO 6549 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-05-31 20:35:23.749  INFO 6549 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1657 ms
+2022-05-31 20:35:23.807  WARN 6549 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Cannot deserialize session attribute [SPRING_SECURITY_CONTEXT] for session [DA6393BE02327B59E798C1B055ABFA32]
+2022-05-31 20:35:23.881  INFO 6549 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-05-31 20:35:23.901  INFO 6549 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.7.Final
+2022-05-31 20:35:23.985  INFO 6549 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-05-31 20:35:24.025  INFO 6549 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-05-31 20:35:24.111  INFO 6549 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-05-31 20:35:24.119  INFO 6549 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2022-05-31 20:35:24.920  INFO 6549 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-05-31 20:35:24.928  INFO 6549 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-05-31 20:35:25.299  WARN 6549 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-05-31 20:35:25.702  INFO 6549 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2022-05-31 20:35:25.795  INFO 6549 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will not secure any request
+2022-05-31 20:35:25.797  WARN 6549 --- [restartedMain] o.s.s.c.a.web.builders.WebSecurity       : 
+
+********************************************************************
+**********        Security debugging is enabled.       *************
+**********    This may include sensitive information.  *************
+**********      Do not use in a production system!     *************
+********************************************************************
+
+
+2022-05-31 20:35:26.014  INFO 6549 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-05-31 20:35:26.050  INFO 6549 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-05-31 20:35:26.066  INFO 6549 --- [restartedMain] c.p.p.PersonalFinanceAppApplication      : Started PersonalFinanceAppApplication in 4.633 seconds (JVM running for 5.435)
+2022-05-31 20:35:26.857  INFO 6549 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-05-31 20:35:26.858  INFO 6549 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-05-31 20:35:26.859  INFO 6549 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-05-31 20:35:26.866  INFO 6549 --- [http-nio-8080-exec-1] Spring Security Debugger                 : 
+
+************************************************************
+
+Request received for GET '/':
+
+org.apache.catalina.connector.RequestFacade@5f6967f3
+
+servletPath:/
+pathInfo:null
+headers: 
+host: localhost:8080
+connection: keep-alive
+sec-ch-ua: " Not A;Brand";v="99", "Chromium";v="101", "Google Chrome";v="101"
+sec-ch-ua-mobile: ?0
+sec-ch-ua-platform: "macOS"
+upgrade-insecure-requests: 1
+user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.64 Safari/537.36
+accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+purpose: prefetch
+sec-fetch-site: none
+sec-fetch-mode: navigate
+sec-fetch-user: ?1
+sec-fetch-dest: document
+accept-encoding: gzip, deflate, br
+accept-language: en-US,en;q=0.9
+cookie: Idea-e9a85424=da753aa3-6eaa-40f2-b7b7-8a2140ca190a; Webstorm-f156c96b=af2df56d-b02c-4e9d-bd4b-6bba820f1549; _ga=GA1.1.1796180098.1648247297; JSESSIONID=DA6393BE02327B59E798C1B055ABFA32
+
+
+Security filter chain: [
+  WebAsyncManagerIntegrationFilter
+  SecurityContextPersistenceFilter
+  HeaderWriterFilter
+  LogoutFilter
+  UsernamePasswordAuthenticationFilter
+  RequestCacheAwareFilter
+  SecurityContextHolderAwareRequestFilter
+  AnonymousAuthenticationFilter
+  SessionManagementFilter
+  ExceptionTranslationFilter
+  FilterSecurityInterceptor
+]
+
+
+************************************************************
+
+
+2022-05-31 20:35:26.906  INFO 6549 --- [http-nio-8080-exec-2] Spring Security Debugger                 : 
+
+************************************************************
+
+Request received for GET '/login':
+
+org.apache.catalina.connector.RequestFacade@5f6967f3
+
+servletPath:/login
+pathInfo:null
+headers: 
+host: localhost:8080
+connection: keep-alive
+upgrade-insecure-requests: 1
+user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.64 Safari/537.36
+accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+purpose: prefetch
+sec-fetch-site: none
+sec-fetch-mode: navigate
+sec-fetch-user: ?1
+sec-fetch-dest: document
+sec-ch-ua: " Not A;Brand";v="99", "Chromium";v="101", "Google Chrome";v="101"
+sec-ch-ua-mobile: ?0
+sec-ch-ua-platform: "macOS"
+accept-encoding: gzip, deflate, br
+accept-language: en-US,en;q=0.9
+cookie: Idea-e9a85424=da753aa3-6eaa-40f2-b7b7-8a2140ca190a; Webstorm-f156c96b=af2df56d-b02c-4e9d-bd4b-6bba820f1549; _ga=GA1.1.1796180098.1648247297; JSESSIONID=DA6393BE02327B59E798C1B055ABFA32
+
+
+Security filter chain: [
+  WebAsyncManagerIntegrationFilter
+  SecurityContextPersistenceFilter
+  HeaderWriterFilter
+  LogoutFilter
+  UsernamePasswordAuthenticationFilter
+  RequestCacheAwareFilter
+  SecurityContextHolderAwareRequestFilter
+  AnonymousAuthenticationFilter
+  SessionManagementFilter
+  ExceptionTranslationFilter
+  FilterSecurityInterceptor
+]
+
+
+************************************************************
+
+
+2022-05-31 20:35:27.860  INFO 6549 --- [http-nio-8080-exec-3] Spring Security Debugger                 : 
+
+************************************************************
+
+Request received for GET '/':
+
+org.apache.catalina.connector.RequestFacade@618bfb1c
+
+servletPath:/
+pathInfo:null
+headers: 
+host: localhost:8080
+connection: keep-alive
+sec-ch-ua: " Not A;Brand";v="99", "Chromium";v="101", "Google Chrome";v="101"
+sec-ch-ua-mobile: ?0
+sec-ch-ua-platform: "macOS"
+upgrade-insecure-requests: 1
+user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.64 Safari/537.36
+accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+sec-fetch-site: none
+sec-fetch-mode: navigate
+sec-fetch-user: ?1
+sec-fetch-dest: document
+accept-encoding: gzip, deflate, br
+accept-language: en-US,en;q=0.9
+cookie: Idea-e9a85424=da753aa3-6eaa-40f2-b7b7-8a2140ca190a; Webstorm-f156c96b=af2df56d-b02c-4e9d-bd4b-6bba820f1549; _ga=GA1.1.1796180098.1648247297; JSESSIONID=DA6393BE02327B59E798C1B055ABFA32
+
+
+Security filter chain: [
+  WebAsyncManagerIntegrationFilter
+  SecurityContextPersistenceFilter
+  HeaderWriterFilter
+  LogoutFilter
+  UsernamePasswordAuthenticationFilter
+  RequestCacheAwareFilter
+  SecurityContextHolderAwareRequestFilter
+  AnonymousAuthenticationFilter
+  SessionManagementFilter
+  ExceptionTranslationFilter
+  FilterSecurityInterceptor
+]
+
+
+************************************************************
+
+
+2022-05-31 20:35:29.107  INFO 6549 --- [http-nio-8080-exec-4] Spring Security Debugger                 : 
+
+************************************************************
+
+Request received for GET '/login':
+
+org.apache.catalina.connector.RequestFacade@5f6967f3
+
+servletPath:/login
+pathInfo:null
+headers: 
+host: localhost:8080
+connection: keep-alive
+upgrade-insecure-requests: 1
+user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.64 Safari/537.36
+accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+sec-fetch-site: none
+sec-fetch-mode: navigate
+sec-fetch-user: ?1
+sec-fetch-dest: document
+sec-ch-ua: " Not A;Brand";v="99", "Chromium";v="101", "Google Chrome";v="101"
+sec-ch-ua-mobile: ?0
+sec-ch-ua-platform: "macOS"
+accept-encoding: gzip, deflate, br
+accept-language: en-US,en;q=0.9
+cookie: Idea-e9a85424=da753aa3-6eaa-40f2-b7b7-8a2140ca190a; Webstorm-f156c96b=af2df56d-b02c-4e9d-bd4b-6bba820f1549; _ga=GA1.1.1796180098.1648247297; JSESSIONID=DA6393BE02327B59E798C1B055ABFA32
+
+
+Security filter chain: [
+  WebAsyncManagerIntegrationFilter
+  SecurityContextPersistenceFilter
+  HeaderWriterFilter
+  LogoutFilter
+  UsernamePasswordAuthenticationFilter
+  RequestCacheAwareFilter
+  SecurityContextHolderAwareRequestFilter
+  AnonymousAuthenticationFilter
+  SessionManagementFilter
+  ExceptionTranslationFilter
+  FilterSecurityInterceptor
+]
+
+
+************************************************************
+
+
+2022-05-31 20:35:29.119  INFO 6549 --- [http-nio-8080-exec-5] Spring Security Debugger                 : 
+
+************************************************************
+
+Request received for GET '/css/styles.css':
+
+org.apache.catalina.connector.RequestFacade@618bfb1c
+
+servletPath:/css/styles.css
+pathInfo:null
+headers: 
+host: localhost:8080
+connection: keep-alive
+sec-ch-ua: " Not A;Brand";v="99", "Chromium";v="101", "Google Chrome";v="101"
+sec-ch-ua-mobile: ?0
+user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.64 Safari/537.36
+sec-ch-ua-platform: "macOS"
+accept: application/signed-exchange;v=b3;q=0.7,*/*;q=0.8
+purpose: prefetch
+sec-fetch-site: same-origin
+sec-fetch-mode: no-cors
+sec-fetch-dest: style
+referer: http://localhost:8080/login
+accept-encoding: gzip, deflate, br
+accept-language: en-US,en;q=0.9
+cookie: Idea-e9a85424=da753aa3-6eaa-40f2-b7b7-8a2140ca190a; Webstorm-f156c96b=af2df56d-b02c-4e9d-bd4b-6bba820f1549; _ga=GA1.1.1796180098.1648247297; JSESSIONID=DA6393BE02327B59E798C1B055ABFA32
+
+
+Security filter chain: [
+  WebAsyncManagerIntegrationFilter
+  SecurityContextPersistenceFilter
+  HeaderWriterFilter
+  LogoutFilter
+  UsernamePasswordAuthenticationFilter
+  RequestCacheAwareFilter
+  SecurityContextHolderAwareRequestFilter
+  AnonymousAuthenticationFilter
+  SessionManagementFilter
+  ExceptionTranslationFilter
+  FilterSecurityInterceptor
+]
+
+
+************************************************************
+
+
+2022-05-31 20:35:29.171  INFO 6549 --- [http-nio-8080-exec-6] Spring Security Debugger                 : 
+
+************************************************************
+
+Request received for GET '/css/styles.css':
+
+org.apache.catalina.connector.RequestFacade@5f6967f3
+
+servletPath:/css/styles.css
+pathInfo:null
+headers: 
+host: localhost:8080
+connection: keep-alive
+sec-ch-ua: " Not A;Brand";v="99", "Chromium";v="101", "Google Chrome";v="101"
+sec-ch-ua-mobile: ?0
+user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.64 Safari/537.36
+sec-ch-ua-platform: "macOS"
+accept: text/css,*/*;q=0.1
+sec-fetch-site: same-origin
+sec-fetch-mode: no-cors
+sec-fetch-dest: style
+referer: http://localhost:8080/login
+accept-encoding: gzip, deflate, br
+accept-language: en-US,en;q=0.9
+cookie: Idea-e9a85424=da753aa3-6eaa-40f2-b7b7-8a2140ca190a; Webstorm-f156c96b=af2df56d-b02c-4e9d-bd4b-6bba820f1549; _ga=GA1.1.1796180098.1648247297; JSESSIONID=DA6393BE02327B59E798C1B055ABFA32
+
+
+Security filter chain: [
+  WebAsyncManagerIntegrationFilter
+  SecurityContextPersistenceFilter
+  HeaderWriterFilter
+  LogoutFilter
+  UsernamePasswordAuthenticationFilter
+  RequestCacheAwareFilter
+  SecurityContextHolderAwareRequestFilter
+  AnonymousAuthenticationFilter
+  SessionManagementFilter
+  ExceptionTranslationFilter
+  FilterSecurityInterceptor
+]
+
+
+************************************************************
+
+
+2022-05-31 20:35:33.016  INFO 6549 --- [http-nio-8080-exec-7] Spring Security Debugger                 : 
+
+************************************************************
+
+Request received for POST '/login':
+
+org.apache.catalina.connector.RequestFacade@5f6967f3
+
+servletPath:/login
+pathInfo:null
+headers: 
+host: localhost:8080
+connection: keep-alive
+content-length: 29
+cache-control: max-age=0
+sec-ch-ua: " Not A;Brand";v="99", "Chromium";v="101", "Google Chrome";v="101"
+sec-ch-ua-mobile: ?0
+sec-ch-ua-platform: "macOS"
+upgrade-insecure-requests: 1
+origin: http://localhost:8080
+content-type: application/x-www-form-urlencoded
+user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.64 Safari/537.36
+accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+sec-fetch-site: same-origin
+sec-fetch-mode: navigate
+sec-fetch-user: ?1
+sec-fetch-dest: document
+referer: http://localhost:8080/login
+accept-encoding: gzip, deflate, br
+accept-language: en-US,en;q=0.9
+cookie: Idea-e9a85424=da753aa3-6eaa-40f2-b7b7-8a2140ca190a; Webstorm-f156c96b=af2df56d-b02c-4e9d-bd4b-6bba820f1549; _ga=GA1.1.1796180098.1648247297; JSESSIONID=DA6393BE02327B59E798C1B055ABFA32
+
+
+Security filter chain: [
+  WebAsyncManagerIntegrationFilter
+  SecurityContextPersistenceFilter
+  HeaderWriterFilter
+  LogoutFilter
+  UsernamePasswordAuthenticationFilter
+  RequestCacheAwareFilter
+  SecurityContextHolderAwareRequestFilter
+  AnonymousAuthenticationFilter
+  SessionManagementFilter
+  ExceptionTranslationFilter
+  FilterSecurityInterceptor
+]
+
+
+************************************************************
+
+
+2022-05-31 20:35:33.291  INFO 6549 --- [http-nio-8080-exec-8] Spring Security Debugger                 : 
+
+************************************************************
+
+Request received for GET '/':
+
+org.apache.catalina.connector.RequestFacade@5f6967f3
+
+servletPath:/
+pathInfo:null
+headers: 
+host: localhost:8080
+connection: keep-alive
+cache-control: max-age=0
+upgrade-insecure-requests: 1
+user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.64 Safari/537.36
+accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+sec-fetch-site: same-origin
+sec-fetch-mode: navigate
+sec-fetch-user: ?1
+sec-fetch-dest: document
+sec-ch-ua: " Not A;Brand";v="99", "Chromium";v="101", "Google Chrome";v="101"
+sec-ch-ua-mobile: ?0
+sec-ch-ua-platform: "macOS"
+referer: http://localhost:8080/login
+accept-encoding: gzip, deflate, br
+accept-language: en-US,en;q=0.9
+cookie: Idea-e9a85424=da753aa3-6eaa-40f2-b7b7-8a2140ca190a; Webstorm-f156c96b=af2df56d-b02c-4e9d-bd4b-6bba820f1549; _ga=GA1.1.1796180098.1648247297; JSESSIONID=E1692968F4BEBE0B3EACA5973E527317
+
+
+Security filter chain: [
+  WebAsyncManagerIntegrationFilter
+  SecurityContextPersistenceFilter
+  HeaderWriterFilter
+  LogoutFilter
+  UsernamePasswordAuthenticationFilter
+  RequestCacheAwareFilter
+  SecurityContextHolderAwareRequestFilter
+  AnonymousAuthenticationFilter
+  SessionManagementFilter
+  ExceptionTranslationFilter
+  FilterSecurityInterceptor
+]
+
+
+************************************************************
+
+
+2022-05-31 20:35:33.301  INFO 6549 --- [http-nio-8080-exec-9] Spring Security Debugger                 : 
+
+************************************************************
+
+Request received for GET '/login':
+
+org.apache.catalina.connector.RequestFacade@5f6967f3
+
+servletPath:/login
+pathInfo:null
+headers: 
+host: localhost:8080
+connection: keep-alive
+cache-control: max-age=0
+upgrade-insecure-requests: 1
+user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.64 Safari/537.36
+accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+sec-fetch-site: same-origin
+sec-fetch-mode: navigate
+sec-fetch-user: ?1
+sec-fetch-dest: document
+sec-ch-ua: " Not A;Brand";v="99", "Chromium";v="101", "Google Chrome";v="101"
+sec-ch-ua-mobile: ?0
+sec-ch-ua-platform: "macOS"
+referer: http://localhost:8080/login
+accept-encoding: gzip, deflate, br
+accept-language: en-US,en;q=0.9
+cookie: Idea-e9a85424=da753aa3-6eaa-40f2-b7b7-8a2140ca190a; Webstorm-f156c96b=af2df56d-b02c-4e9d-bd4b-6bba820f1549; _ga=GA1.1.1796180098.1648247297; JSESSIONID=E1692968F4BEBE0B3EACA5973E527317
+
+
+Security filter chain: [
+  WebAsyncManagerIntegrationFilter
+  SecurityContextPersistenceFilter
+  HeaderWriterFilter
+  LogoutFilter
+  UsernamePasswordAuthenticationFilter
+  RequestCacheAwareFilter
+  SecurityContextHolderAwareRequestFilter
+  AnonymousAuthenticationFilter
+  SessionManagementFilter
+  ExceptionTranslationFilter
+  FilterSecurityInterceptor
+]
+
+
+************************************************************
+
+
+2022-05-31 20:35:33.327  INFO 6549 --- [http-nio-8080-exec-10] Spring Security Debugger                 : 
+
+************************************************************
+
+Request received for GET '/css/styles.css':
+
+org.apache.catalina.connector.RequestFacade@5f6967f3
+
+servletPath:/css/styles.css
+pathInfo:null
+headers: 
+host: localhost:8080
+connection: keep-alive
+sec-ch-ua: " Not A;Brand";v="99", "Chromium";v="101", "Google Chrome";v="101"
+sec-ch-ua-mobile: ?0
+user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.64 Safari/537.36
+sec-ch-ua-platform: "macOS"
+accept: text/css,*/*;q=0.1
+sec-fetch-site: same-origin
+sec-fetch-mode: no-cors
+sec-fetch-dest: style
+referer: http://localhost:8080/login
+accept-encoding: gzip, deflate, br
+accept-language: en-US,en;q=0.9
+cookie: Idea-e9a85424=da753aa3-6eaa-40f2-b7b7-8a2140ca190a; Webstorm-f156c96b=af2df56d-b02c-4e9d-bd4b-6bba820f1549; _ga=GA1.1.1796180098.1648247297; JSESSIONID=E1692968F4BEBE0B3EACA5973E527317
+
+
+Security filter chain: [
+  WebAsyncManagerIntegrationFilter
+  SecurityContextPersistenceFilter
+  HeaderWriterFilter
+  LogoutFilter
+  UsernamePasswordAuthenticationFilter
+  RequestCacheAwareFilter
+  SecurityContextHolderAwareRequestFilter
+  AnonymousAuthenticationFilter
+  SessionManagementFilter
+  ExceptionTranslationFilter
+  FilterSecurityInterceptor
+]
+
+
+************************************************************
+
+
+2022-05-31 20:35:34.795  INFO 6549 --- [http-nio-8080-exec-1] Spring Security Debugger                 : 
+
+************************************************************
+
+Request received for GET '/dashboard':
+
+org.apache.catalina.connector.RequestFacade@5f6967f3
+
+servletPath:/dashboard
+pathInfo:null
+headers: 
+host: localhost:8080
+connection: keep-alive
+sec-ch-ua: " Not A;Brand";v="99", "Chromium";v="101", "Google Chrome";v="101"
+sec-ch-ua-mobile: ?0
+sec-ch-ua-platform: "macOS"
+upgrade-insecure-requests: 1
+user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.64 Safari/537.36
+accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+sec-fetch-site: same-origin
+sec-fetch-mode: navigate
+sec-fetch-user: ?1
+sec-fetch-dest: document
+referer: http://localhost:8080/login
+accept-encoding: gzip, deflate, br
+accept-language: en-US,en;q=0.9
+cookie: Idea-e9a85424=da753aa3-6eaa-40f2-b7b7-8a2140ca190a; Webstorm-f156c96b=af2df56d-b02c-4e9d-bd4b-6bba820f1549; _ga=GA1.1.1796180098.1648247297; JSESSIONID=E1692968F4BEBE0B3EACA5973E527317
+
+
+Security filter chain: [
+  WebAsyncManagerIntegrationFilter
+  SecurityContextPersistenceFilter
+  HeaderWriterFilter
+  LogoutFilter
+  UsernamePasswordAuthenticationFilter
+  RequestCacheAwareFilter
+  SecurityContextHolderAwareRequestFilter
+  AnonymousAuthenticationFilter
+  SessionManagementFilter
+  ExceptionTranslationFilter
+  FilterSecurityInterceptor
+]
+
+
+************************************************************
+
+
+2022-05-31 20:35:34.868  INFO 6549 --- [http-nio-8080-exec-3] Spring Security Debugger                 : 
+
+************************************************************
+
+Request received for GET '/css/styles.css':
+
+org.apache.catalina.connector.RequestFacade@5f6967f3
+
+servletPath:/css/styles.css
+pathInfo:null
+headers: 
+host: localhost:8080
+connection: keep-alive
+sec-ch-ua: " Not A;Brand";v="99", "Chromium";v="101", "Google Chrome";v="101"
+sec-ch-ua-mobile: ?0
+user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.64 Safari/537.36
+sec-ch-ua-platform: "macOS"
+accept: text/css,*/*;q=0.1
+sec-fetch-site: same-origin
+sec-fetch-mode: no-cors
+sec-fetch-dest: style
+referer: http://localhost:8080/dashboard
+accept-encoding: gzip, deflate, br
+accept-language: en-US,en;q=0.9
+cookie: Idea-e9a85424=da753aa3-6eaa-40f2-b7b7-8a2140ca190a; Webstorm-f156c96b=af2df56d-b02c-4e9d-bd4b-6bba820f1549; _ga=GA1.1.1796180098.1648247297; JSESSIONID=E1692968F4BEBE0B3EACA5973E527317
+
+
+Security filter chain: [
+  WebAsyncManagerIntegrationFilter
+  SecurityContextPersistenceFilter
+  HeaderWriterFilter
+  LogoutFilter
+  UsernamePasswordAuthenticationFilter
+  RequestCacheAwareFilter
+  SecurityContextHolderAwareRequestFilter
+  AnonymousAuthenticationFilter
+  SessionManagementFilter
+  ExceptionTranslationFilter
+  FilterSecurityInterceptor
+]
+
+
+************************************************************
+
+

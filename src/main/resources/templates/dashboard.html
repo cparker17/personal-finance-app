@@ -62,10 +62,19 @@
                     <div class=" col-md-3 text-center border border-dark dashboard-box">
                         <h4><a href="#" class="text-decoration-none text-dark">Custom Goal</a></h4>
                         <ul class="list">
-                            <li><a class="btn btn-outline-success btn-sm rounded text-decoration-none"
+                            <li th:if="${user.goal} == null"><a class="btn btn-outline-success btn-sm rounded text-decoration-none"
                                    th:href="@{/goal/form}">Add New</a></li>
                             <li><a class="btn btn-outline-success btn-sm rounded text-decoration-none"
                                    th:href="@{/goal/view}">Update</a></li>
+                        </ul>
+                    </div>
+                    <div class=" col-md-3 text-center border border-dark dashboard-box">
+                        <h4><a href="#" class="text-decoration-none text-dark">Retirement Plan</a></h4>
+                        <ul class="list">
+                            <li th:if="${user.retirementPlan} == null"><a class="btn btn-outline-success btn-sm rounded text-decoration-none"
+                                                                th:href="@{/retirement/form}">Add New</a></li>
+                            <li><a class="btn btn-outline-success btn-sm rounded text-decoration-none"
+                                   th:href="@{/retirement/view}">Update</a></li>
                         </ul>
                     </div>
                 </div>

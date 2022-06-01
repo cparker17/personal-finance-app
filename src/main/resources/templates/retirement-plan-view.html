@@ -1,12 +1,42 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.w3.org/1999/xhtml">
 <head>
-    <div th:replace="fragments :: header"/></div>
-    <meta charset="UTF-8">
-    <title>Title</title>
+    <div th:replace="fragments :: header"></div>
+    <title>Retirement Plan</title>
+    <script src="https://kit.fontawesome.com/e8b27fd1d7.js" crossorigin="anonymous"></script>
 </head>
 <body>
-<div th:replace="fragments :: navigation"/>
-<p>RETIREMENT PLAN</p>
+<div th:replace="fragments :: navigation"></div>
+<div>
+    <div id="main-container" class="container-fluid">
+        <div class="row">
+            <div class="col-sm-3 col-md-2 d-none d-sm-block bg-light sidebar shadow-lg">
+                <div th:replace="fragments :: sidebar"></div>
+            </div>
+            <div id="main-content-container" class="col-sm-9 col-md-10 container-fluid align-content-center"
+                 th:object="${plan}">
+                <br>
+                <h1 class="text-center">Retirement Plan</h1>
+                <br>
+                <h4 th:if="${plan.isOnTrack}" th:text="'Retirement on Track: YES''">Target</h4>
+                <h4 th:if="${!plan.isOnTrack}" th:text="'Retirement on Track: NO''">Target</h4>
+                <br>
+                <dl class="row">
+                    <dt class="col-sm-3">Current Age:</dt>
+                    <dd class="col-sm-9" th:text="${plan.currentAge}">Name</dd>
+                    <dt class="col-sm-3">Target Retirement Age:</dt>
+                    <dd class="col-sm-9" th:text="${plan.retirementAge}">Amount Needed</dd>
+                    <dt class="col-sm-3">Amount Needed:</dt>
+                    <dd class="col-sm-9" th:text="${plan.amountNeeded}">Description</dd>
+                </dl>
+                <br><br>
+                <a th:href="@{/retirement/edit}" class="btn btn-outline-success">Update Retirement Plan</a>
+            </div>
+        </div>
+    </div>
+</div>
+<div th:replace="fragments :: footer"></div>
 </body>
 </html>
