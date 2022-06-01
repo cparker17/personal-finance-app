@@ -20,13 +20,14 @@
                 <br>
                 <h1 class="text-center">Custom Goal</h1>
                 <br>
-                <h4 th:text="'Months to Reach Goal:  ' + ${goal.monthsFromGoal} + ' months'">Target</h4>
+                <h4 th:if="${goal.monthsFromGoal} > 0" th:text="'Months to Reach Goal:  ' + ${goal.monthsFromGoal} + ' months'">Target</h4>
+                <h4 th:if="${goal.monthsFromGoal} <= 0" th:text="'You have saved enough money.  Goal reached.'">Target</h4>
                 <br>
                 <dl class="row">
                     <dt class="col-sm-3">Name:</dt>
                     <dd class="col-sm-9" th:text="${goal.name}">Name</dd>
                     <dt class="col-sm-3">Amount Needed:</dt>
-                    <dd class="col-sm-9" th:text="${goal.amountNeeded}">Amount Needed</dd>
+                    <dd class="col-sm-9" th:text="${#numbers.formatCurrency(goal.amountNeeded)}">Amount Needed</dd>
                     <dt class="col-sm-3">Description:</dt>
                     <dd class="col-sm-9" th:text="${goal.description}">Description</dd>
                     <dt class="col-sm-3">Date Created:</dt>
