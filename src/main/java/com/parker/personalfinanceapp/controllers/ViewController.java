@@ -5,6 +5,7 @@ import com.parker.personalfinanceapp.models.SecurityUser;
 import com.parker.personalfinanceapp.models.User;
 import com.parker.personalfinanceapp.models.UserFactory;
 import com.parker.personalfinanceapp.services.AccountService;
+import com.parker.personalfinanceapp.services.FileService;
 import com.parker.personalfinanceapp.services.LoanService;
 import com.parker.personalfinanceapp.services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,6 +14,10 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.multipart.MultipartFile;
+
+import java.io.IOException;
 
 @Controller
 public class ViewController {
@@ -24,6 +29,9 @@ public class ViewController {
 
     @Autowired
     UserService userService;
+
+    @Autowired
+    FileService fileService;
 
     @GetMapping("/")
     public String viewHomePage() {
@@ -77,5 +85,11 @@ public class ViewController {
     public String displayDashboard(Model model, Authentication auth) throws NoSuchUserException {
         model.addAttribute("user", userService.getUserInfo(UserFactory.createUser(auth)));
         return "dashboard";
+    }
+
+    @PostMapping("/file")
+    public String addFile(Authentication auth, @RequestParam MultipartFile formFile) throws IOException {
+        fileService.saveFile(UserFactory.createUser(auth).getId(), formFile);
+        return "redirect:/";
     }
 }
