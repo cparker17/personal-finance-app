@@ -60,12 +60,23 @@ public class GoalService {
         }
     }
 
-    public Goal updateGoal(User user, Goal newGoal) throws NoSuchGoalException {
-        goalRepo.delete(getGoalFromDB(user));
-        setUserGoal(user, newGoal);
-        return goalRepo.save(newGoal);
+    @Transactional
+    public void updateGoal(User user, Goal newGoal) throws NoSuchGoalException, NoSuchUserException {
+        Optional<User> userOptional = userRepo.findById(user.getId());
+        if (userOptional.isPresent()) {
+            user = userOptional.get();
+            Goal goalToDelete = getGoalFromDB(user);
+            setUserGoal(user, null);
+            goalRepo.delete(goalToDelete);
+            goalRepo.save(newGoal);
+            setUserGoal(user, newGoal);
+            goalRepo.save(newGoal);
+        } else {
+            throw new NoSuchUserException("User not found.");
+        }
     }
 
+    @Transactional
     public void deleteGoal(User user) throws NoSuchGoalException {
         goalRepo.delete(getGoalFromDB(user));
         setUserGoal(user, null);

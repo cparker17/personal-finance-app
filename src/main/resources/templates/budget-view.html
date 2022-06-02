@@ -100,7 +100,7 @@
                             <td>
                                 <a class="btn btn-outline-success btn-sm rounded text-decoration-none"
                                    th:href="@{'/budget/edit/' + ${category.id}}">Update</a>
-                                <a class="btn btn-outline-success btn-sm rounded text-decoration-none"
+                                <a th:unless="${category.name} == 'General Savings' or ${category.name} == 'Retirement'" class="btn btn-outline-success btn-sm rounded text-decoration-none"
                                    th:href="@{'/budget/delete/' + ${category.id}}">Delete</a>
                             </td>
                         </tr>

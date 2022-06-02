@@ -4,6 +4,7 @@ import com.parker.personalfinanceapp.exceptions.NoSuchGoalException;
 import com.parker.personalfinanceapp.exceptions.NoSuchUserException;
 import com.parker.personalfinanceapp.exceptions.PersonalFinanceAppException;
 import com.parker.personalfinanceapp.models.Goal;
+import com.parker.personalfinanceapp.models.User;
 import com.parker.personalfinanceapp.models.UserFactory;
 import com.parker.personalfinanceapp.services.GoalService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -44,9 +45,11 @@ public class GoalController {
     }
 
     @RequestMapping("/update")
-    public String updateGoal(Model model, Authentication auth, @RequestParam Goal goal)
-            throws  NoSuchGoalException {
-        model.addAttribute("goal", goalService.updateGoal(UserFactory.createUser(auth), goal));
+    public String updateGoal(Model model, Authentication auth, @ModelAttribute Goal goal)
+            throws PersonalFinanceAppException {
+        User user = UserFactory.createUser(auth);
+        goalService.updateGoal(user, goal);
+        model.addAttribute("goal", goalService.getGoal(user));
         return "goal-view";
     }
 

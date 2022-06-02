@@ -9,50 +9,64 @@
 </head>
 <body>
 <div th:replace="fragments :: navigation"/>
-<div class="container-fluid">
-    <br><br>
-    <h1 class="text-center"><span class="text-success">$$$</span> Personal Finance Plus <span class="text-success">$$$</span></h1>
-    <h4 class="text-center">___________________________________</h4>
-    <br>
-    <h4 class="text-center">Welcome to Personal Finance Plus!</h4>
-    <h4 class="text-center">Sign up today to get your finances in order! </h4>
-
-    <br>
-    <center>
-        <a th:href="@{/register-form}" class="btn btn-outline-success">Sign Up</a>
-    </center>
-    <br><br>
-    <div sec:authorize="!isAuthenticated()" class="container col-4 border bg-light border-dark">
-        <br>
-        <center><h5>Please sign in</h5><br>
-            <div class="mb-3 col-7">
-                <div th:if="${param.error}">
-                    Invalid username and password.
-                </div>
-                <div th:if="${param.logout}">
-                    You have been logged out.
-                </div>
-                <form th:action="@{/login}" method="post">
-                    <div class="input-group mb-3">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text"><i class="fa-solid fa-user p-2"></i></span>
-                        </div>
-                        <input type="text" name="username" class="form-control" placeholder="Username" required/>
-                    </div>
-                    <div class="input-group mb-3">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text"><i class="fa-solid fa-key p-2"></i></span>
-                        </div>
-                        <input type="password" name="password" class="form-control" placeholder="Password" required/>
-                    </div>
-                    <br>
-                    <input type="submit" class="btn btn-outline-success" value="Sign in"/>
-                </form>
+<div>
+    <div id="main-container" class="container-fluid">
+        <div class="row">
+            <div sec:authorize="isAuthenticated()" class="col-sm-3 col-md-2 d-none d-sm-block bg-light sidebar shadow-lg">
+                <div th:replace="fragments :: sidebar"></div>
             </div>
-        </center>
+            <div id="main-content-container" class="col-sm-9 col-md-10 container-fluid align-content-center">
+                <br><br>
+                <h1 class="text-center"><span class="text-success">$$$</span> Personal Finance Plus <span
+                        class="text-success">$$$</span></h1>
+                <h4 class="text-center">___________________________________</h4>
+                <br>
+                <h4 class="text-center">Welcome to Personal Finance Plus!</h4>
+                <h4 class="text-center">Sign up today to get your finances in order! </h4>
+
+                <br>
+                <center>
+                    <a th:href="@{/register-form}" class="btn btn-outline-success">Sign Up</a>
+                </center>
+                <br><br>
+                <div sec:authorize="!isAuthenticated()" class="container col-4 border bg-light border-dark">
+                    <br>
+                    <center><h5>Please sign in</h5><br>
+                        <div class="mb-3 col-7">
+                            <div th:if="${param.error}">
+                                Invalid username and password.
+                            </div>
+                            <div th:if="${param.logout}">
+                                You have been logged out.
+                            </div>
+                            <form th:action="@{/login}" method="post">
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text"><i class="fa-solid fa-user p-2"></i></span>
+                                    </div>
+                                    <input type="text" name="username" class="form-control" placeholder="Username"
+                                           required/>
+                                </div>
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text"><i class="fa-solid fa-key p-2"></i></span>
+                                    </div>
+                                    <input type="password" name="password" class="form-control" placeholder="Password"
+                                           required/>
+                                </div>
+                                <br>
+                                <input type="submit" class="btn btn-outline-success" value="Sign in"/>
+                            </form>
+                        </div>
+                    </center>
+                </div>
+            </div>
+        </div>
     </div>
-</div>
-<div th:replace="fragments :: footer"></div>
+    <div th:replace="fragments :: footer"></div>
 </div>
 </body>
 </html>
+
+
+

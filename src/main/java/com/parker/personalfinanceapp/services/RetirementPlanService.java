@@ -78,14 +78,14 @@ public class RetirementPlanService {
     }
 
     @Transactional
-    public RetirementPlan updateRetirementPlan(User user, RetirementPlan retirementPlan)
+    public void updateRetirementPlan(User user, RetirementPlan retirementPlan)
             throws NoSuchRetirementPlanException, NoSuchUserException {
         Optional<User> userOptional = userRepo.findById(user.getId());
         if (userOptional.isPresent()) {
             user = userOptional.get();
             deleteRetirementPlan(user);
             addRetirementPlanToUser(user, retirementPlan);
-            return retirementPlanRepo.save(retirementPlan);
+            retirementPlanRepo.save(retirementPlan);
         } else {
             throw new NoSuchUserException("User not found.");
         }
