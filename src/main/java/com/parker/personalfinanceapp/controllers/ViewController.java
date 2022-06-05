@@ -86,10 +86,4 @@ public class ViewController {
         model.addAttribute("user", userService.getUserInfo(UserFactory.createUser(auth)));
         return "dashboard";
     }
-
-    @PostMapping("/file")
-    public String addFile(Authentication auth, @RequestParam MultipartFile formFile) throws IOException {
-        fileService.saveFile(UserFactory.createUser(auth).getId(), formFile);
-        return "redirect:/";
-    }
 }
